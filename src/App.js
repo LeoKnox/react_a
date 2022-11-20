@@ -12,7 +12,7 @@ function App() {
   function clickButton() {
     console.log("dddd");
     let newA = a;
-    newA[1] = 9;
+    newA.push(9);
     setA(newA);
     console.log("***"+a);
   }
