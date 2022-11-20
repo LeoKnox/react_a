@@ -1,8 +1,13 @@
 import './App.css';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 function App() {
-  const [a, setA] = useState([1,2]);
+  const [a, setA] = useState([]);
+  const data = [1,2];
+
+  useEffect(() => {
+    setA(data);
+  },[a]);
   
   function clickButton() {
     console.log("dddd");
