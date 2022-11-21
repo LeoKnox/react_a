@@ -2,7 +2,10 @@ import './App.css';
 import {useEffect, useState} from 'react';
 
 function App() {
-  const [a, setA] = useState([]);
+  const [a, setA] = useState(() => {
+    const initialState = [1,2];
+    return initialState;
+  });
   const data = [1,2];
 
   useEffect(() => {
@@ -12,7 +15,7 @@ function App() {
   function clickButton() {
     console.log("dddd");
     let newA = a;
-    newA.push(9);
+    newA[1] = 5;
     setA(newA);
     console.log("***"+a);
   }
