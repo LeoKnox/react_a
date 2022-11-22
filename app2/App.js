@@ -18,6 +18,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Heading</h1>
+        <button onClick={clickButton}>click</button>
         <Abc a={a}/>
       </header>
     </div>
