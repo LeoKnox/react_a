@@ -1,3 +1,9 @@
 export default function Abc(a) {
-    return <h1>abc heading {a.a}</h1>
+    return (
+        <>
+        {a.a.map((b) (
+            <p>{b}</p>
+        ))}
+        </>
+    )
 }
