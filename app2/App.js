@@ -7,7 +7,8 @@ function App() {
   const data = [1,2];
 
   useEffect(() => {
-  },[]);
+    setA(data);
+  },[a]);
   
   function clickButton() {
     console.log("dddd");
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Heading</h1>
-        <Abc />
+        <Abc a={a}/>
       </header>
     </div>
   );

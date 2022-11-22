@@ -1,3 +1,3 @@
-export default function Abc() {
-    return <h1>abc heading</h1>
+export default function Abc(a) {
+    return <h1>abc heading {a.a}</h1>
 }
