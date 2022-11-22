@@ -12,6 +12,9 @@ function App() {
   
   function clickButton() {
     console.log("dddd");
+    let newData = a;
+    newData[1] = 5;
+    setA(newData);
   }
 
   return (
