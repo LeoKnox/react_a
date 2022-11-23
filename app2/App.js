@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     setA(data);
-  },[a]);
+  },[]);
   
   const clickButton = () => {
     console.log("dddd");
