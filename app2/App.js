@@ -13,7 +13,7 @@ function App() {
   const clickButton = () => {
     console.log("dddd");
     let newData = a;
-    newData.push(1);
+    newData[1] = 5;
     setA(newData);
     console.log(a);
   }
