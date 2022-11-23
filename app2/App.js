@@ -10,12 +10,12 @@ function App() {
     setA(data);
   },[a]);
   
-  function clickButton() {
+  const clickButton = () => {
     console.log("dddd");
     let newData = a;
-    newData[1] = 5;
+    newData[1] += 1;
     setA(newData);
-    return(a);
+    console.log(a);
   }
 
   return (
