@@ -15,6 +15,7 @@ function App() {
     let newData = a;
     newData[1] = 5;
     setA(newData);
+    return(a);
   }
 
   return (
