@@ -1,8 +1,8 @@
-export default function Abc({a}) {
+export default function Abc(a) {
     console.log(JSON.stringify(a));
     return (
         <>
-        {a.map((b) => (
+        {a.a.map((b) => (
             <p>{b}</p>
         ))}
         </>
