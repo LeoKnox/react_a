@@ -12,9 +12,9 @@ function App() {
   
   const clickButton = () => {
     console.log("dddd");
-    let newData = a;
-    newData.push(1);
-    setA(newData);
+    //let newData = a;
+    //newData.push(1);
+    setA(a.push(1));
     console.log(a);
   }
 
