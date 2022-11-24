@@ -16,6 +16,7 @@ function App() {
     newData[1] = 5;
     setA(newData);
     console.log(a);
+    return a;
   }
 
   return (
