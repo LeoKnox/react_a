@@ -25,7 +25,7 @@ function App() {
         <h1>Heading</h1>
         <button onClick={clickButton}>click</button>
         {a.map((aa) => (
-          <p>{aa}</p>
+          <p>{aa}x</p>
         ))}
         <Abc a={a}/>
       </header>
