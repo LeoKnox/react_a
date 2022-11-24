@@ -24,6 +24,9 @@ function App() {
       <header className="App-header">
         <h1>Heading</h1>
         <button onClick={clickButton}>click</button>
+        {a.map((aa) => (
+          <p>{aa}</p>
+        ))}
         <Abc a={a}/>
       </header>
     </div>
