@@ -18,11 +18,18 @@ function App() {
   
   const clickButton = () => {
     console.log("dddd");
-    let newData = a;
-    newData[1] = 5;
-    setA(newData);
+    //let newData = a;
+    //newData[1] = 5;
+    //setA(newData);
     console.log(a);
-    return a;
+    setA(aa => {
+      return [
+        ...aa.slice(0),
+        aa[1]+1,
+        ...aa.slice(1),
+        aa[0]=5
+      ]
+    })
   }
 
   return (
