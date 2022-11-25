@@ -24,9 +24,7 @@ function App() {
     console.log(a);
     setA(aa => {
       return [
-        ...aa.slice(0),
-        aa[1]+=1,
-        ...aa.slice(1),
+        aa += 1
         //aa[0]=5
       ]
     })
