@@ -22,10 +22,10 @@ function App() {
     //newData[1] = 5;
     //setA(newData);
     console.log(a);
-    setA(aa => {
+    setA((aa, index) => {
       console.log(aa[0]+"+");
       return [
-        aa[0]  = 5
+        aa[index]  = 5
         //aa[0]=5
       ]
     })
