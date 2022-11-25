@@ -10,6 +10,10 @@ function App() {
   useEffect(() => {
     setA(data);
   },[]);
+
+  const clickB = () => {
+    console.log("Bbb");
+  }
   
   const clickButton = () => {
     console.log("dddd");
@@ -28,7 +32,7 @@ function App() {
         {a.map((aa) => (
           <p>{aa}x</p>
         ))}
-        <p>B: {b}</p>
+        <p>B: {b} <button onClick={clickB}>BBB</button></p>
         <Abc a={a}/>
       </header>
     </div>
