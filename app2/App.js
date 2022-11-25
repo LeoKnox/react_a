@@ -13,6 +13,7 @@ function App() {
 
   const clickB = () => {
     console.log("Bbb");
+    setB(b+1);
   }
   
   const clickButton = () => {
