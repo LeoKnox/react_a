@@ -4,6 +4,7 @@ import Abc from './Abc.js';
 
 function App() {
   const [a, setA] = useState([]);
+  const [b, setB] = useState(1);
   const data = [1,2];
 
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
         {a.map((aa) => (
           <p>{aa}x</p>
         ))}
+        <p>B: {b}</p>
         <Abc a={a}/>
       </header>
     </div>
