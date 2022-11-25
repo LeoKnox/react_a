@@ -41,7 +41,6 @@ function App() {
           <p>{aa}x</p>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
-        <Abc a={a}/>
       </header>
     </div>
   );
