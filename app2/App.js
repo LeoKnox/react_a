@@ -23,7 +23,7 @@ function App() {
     //setA(newData);
     console.log(a);
     setA((aa, index) => {
-      console.log(aa[0]+"+");
+      console.log(aa[0]+"+"+index);
       return [
         aa[index]  = 5
         //aa[0]=5
