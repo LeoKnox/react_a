@@ -23,9 +23,9 @@ function App() {
     //setA(newData);
     console.log(a);
     setA(aa => {
-      console.log(aa+"+");
+      console.log(aa[0]+"+");
       return [
-        aa[0] = 5
+        aa[0]  = 5
         //aa[0]=5
       ]
     })
