@@ -31,12 +31,12 @@ function App() {
       ]
     })*/
     setA((aa) => {
-      return [
+      return (
         aa.map ((aaa) => {
           return (aaa+1)
         }
         )
-      ]
+      )
     })
     console.log(a+"end");
   }
