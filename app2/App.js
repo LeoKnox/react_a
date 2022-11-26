@@ -29,6 +29,7 @@ function App() {
         //aa[0]=5
       ]
     })
+    console.log(a+"end");
   }
 
   return (
@@ -36,8 +37,8 @@ function App() {
       <header className="App-header">
         <h1>Heading</h1>
         <button onClick={clickButton}>click</button>
-        {a.map((aa) => (
-          <p>{aa}x</p>
+        {a.map((aaa) => (
+          <p>{aaa}x</p>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
       </header>
