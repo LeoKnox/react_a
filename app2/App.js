@@ -32,7 +32,10 @@ function App() {
     })*/
     setA((aa) => {
       return [
-        aa+1
+        aa.map ((aaa) => {
+          return (aaa+1)
+        }
+        )
       ]
     })
     console.log(a+"end");
