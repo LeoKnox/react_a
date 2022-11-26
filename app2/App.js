@@ -30,7 +30,11 @@ function App() {
         //aa[0]=5
       ]
     })*/
-    setA(() => {return [2,3]})
+    setA((aa) => {
+      return [
+        aa+1
+      ]
+    })
     console.log(a+"end");
   }
 
