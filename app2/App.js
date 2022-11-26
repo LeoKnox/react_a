@@ -22,13 +22,15 @@ function App() {
     //newData[1] = 5;
     //setA(newData);
     console.log(a);
+    /*
     setA((aa) => {
       console.log(aa+"aa");
       return [
         aa[0] += 1
         //aa[0]=5
       ]
-    })
+    })*/
+    setA(() => {return [2,3]})
     console.log(a+"end");
   }
 
