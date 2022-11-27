@@ -16,8 +16,8 @@ function App() {
     setB(b+1);
   }
   
-  const clickButton = () => {
-    console.log("dddd");
+  const clickButton = (index) => {
+    console.log("dddd" + index);
     //let newData = a;
     //newData[1] = 5;
     //setA(newData);
@@ -46,8 +46,8 @@ function App() {
       <header className="App-header">
         <h1>Heading</h1>
         <button onClick={clickButton}>click</button>
-        {a.map((aaa) => (
-          <p>{aaa}x</p>
+        {a.map((aaa, i) => (
+          <p key={i}>{aaa}x {i}</p>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
       </header>
