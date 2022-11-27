@@ -17,7 +17,7 @@ function App() {
   }
   
   const clickButton = (index) => {
-    console.log("dddd" + index);
+    console.log("dddd" + JSON.stringify(index));
     //let newData = a;
     //newData[1] = 5;
     //setA(newData);
