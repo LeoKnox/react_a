@@ -33,7 +33,7 @@ function App() {
     setA((aa) => {
       return (
         aa.map ((aaa) => {
-          return (aaa+index)
+          return (aaa+index[index])
         }
         )
       )
@@ -45,8 +45,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Heading</h1>
-        {a.map((aaa, i) => (
-          <p key={i} >{aaa}x {i} <button onClick={(i) => clickButton}>click</button></p>
+        {a.map((aaa, index) => (
+          <p key={index} >{aaa}x {index} <button onClick={clickButton(index)}>click</button></p>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
       </header>
