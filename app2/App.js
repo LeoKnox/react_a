@@ -33,7 +33,7 @@ function App() {
     setA((aa) => {
       return (
         aa.map ((aaa) => {
-          return (aaa+1)
+          return (aaa+index)
         }
         )
       )
