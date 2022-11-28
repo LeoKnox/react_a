@@ -17,7 +17,7 @@ function App() {
   }
   
   const clickButton = (index) => {
-    console.log("dddd" + Object.keys(index));
+    console.log("dddd" + Object.keys(index) + ":" + index);
     //let newData = a;
     //newData[1] = 5;
     //setA(newData);
