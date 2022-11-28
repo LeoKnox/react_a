@@ -29,7 +29,7 @@ function App() {
         aa[0] += 1
         //aa[0]=5
       ]
-    })*/
+    })
     setA((aa) => {
       return (
         aa.map ((aaa) => {
@@ -37,7 +37,7 @@ function App() {
         }
         )
       )
-    })
+    })*/
     console.log(a+"end");
   }
 
