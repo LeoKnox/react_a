@@ -16,8 +16,8 @@ function App() {
     setB(b+1);
   }
 
-  const textInput = (ti) => {
-    console.log("Text input: " + ti);
+  const textInput = (ti, e) => {
+    console.log("Text input: " + e.target.value);
     setA(aaa => {
       return [
         ...aaa.slice(0, ti),
