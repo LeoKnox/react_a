@@ -31,14 +31,21 @@ function App() {
       ]
     })
     */
+        /*
     setA((aa) => {
       return (
         aa.map ((aaa) => {
           return (aaa+index)
         }
         )
-      )
-    })
+    */
+   setA(aaa => {
+     return [
+       ...aaa.slice(0, index),
+       aaa[index] + 1,
+       ...aaa.slice(index+1),
+     ]
+   })
     console.log(a+"end");
   }
 
