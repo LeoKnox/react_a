@@ -15,6 +15,10 @@ function App() {
     console.log("Bbb");
     setB(b+1);
   }
+
+  const textInput = () => {
+    console.log("Text input");
+  }
   
   const clickButton = (index) => {
     console.log("dddd" + Object.keys(index) + ":" + index);
@@ -56,7 +60,7 @@ function App() {
         {a.map((aaa, index) => (
           <>
           <p key={index} >{aaa}x {index} <button onClick={() => clickButton(index)}>click</button></p>
-          <p><input value={aaa} /></p>
+          <p><input value={aaa} onClick={textInput} /></p>
           </>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
