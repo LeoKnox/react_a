@@ -46,7 +46,7 @@ function App() {
       <header className="App-header">
         <h1>Heading</h1>
         {a.map((aaa, index) => (
-          <p key={index} >{aaa}x {index} <button onClick={clickButton(index)}>click</button></p>
+          <p key={index} >{aaa}x {index} <button onClick={() => clickButton(index)}>click</button></p>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
       </header>
