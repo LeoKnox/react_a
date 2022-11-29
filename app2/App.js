@@ -67,7 +67,7 @@ function App() {
         {a.map((aaa, index) => (
           <>
           <p key={index} >{aaa}x {index} <button onClick={() => clickButton(index)}>click</button></p>
-          <p><input value={aaa} onChange={() => textInput(aaa)} /></p>
+          <p><input value={aaa} onChange={() => textInput(index)} /></p>
           </>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
