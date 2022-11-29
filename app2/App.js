@@ -16,8 +16,17 @@ function App() {
     setB(b+1);
   }
 
-  const textInput = () => {
-    console.log("Text input");
+  const textInput = (ti) => {
+    console.log("Text input: " + ti);
+    /*
+    setA(aaa => {
+      return [
+        ...aaa.slice(0, index),
+        aaa[index] + 1,
+        ...aaa.slice(index+1),
+      ]
+    })
+    */
   }
   
   const clickButton = (index) => {
@@ -60,7 +69,7 @@ function App() {
         {a.map((aaa, index) => (
           <>
           <p key={index} >{aaa}x {index} <button onClick={() => clickButton(index)}>click</button></p>
-          <p><input value={aaa} onChange={textInput} /></p>
+          <p><input value={aaa} onChange={() => textInput(aaa)} /></p>
           </>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
