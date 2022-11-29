@@ -18,11 +18,11 @@ function App() {
   
   const clickButton = (index) => {
     console.log("dddd" + Object.keys(index) + ":" + index);
-    //let newData = a;
-    //newData[1] = 5;
-    //setA(newData);
-    console.log(a);
     /*
+    let newData = a;
+    newData[1] = 5;
+    setA(newData);
+    console.log(a);
     setA((aa) => {
       console.log(aa+"aa");
       return [
@@ -30,6 +30,7 @@ function App() {
         //aa[0]=5
       ]
     })
+    */
     setA((aa) => {
       return (
         aa.map ((aaa) => {
@@ -37,7 +38,7 @@ function App() {
         }
         )
       )
-    })*/
+    })
     console.log(a+"end");
   }
 
