@@ -16,8 +16,8 @@ function App() {
     setB(b+1);
   }
 
-  const textInput = (ti, e) => {
-    console.log("Text input: " + e.target.value);
+  const textInput = (ti, aaa) => {
+    console.log("Text input: " + ti+ ":" + aaa);
     setA(aaa => {
       return [
         ...aaa.slice(0, ti),
@@ -67,7 +67,7 @@ function App() {
         {a.map((aaa, index) => (
           <>
           <p key={index} >{aaa}x {index} <button onClick={() => clickButton(index)}>click</button></p>
-          <p><input type="number" value={aaa} onChange={() => textInput(index)} /></p>
+          <p><input type="number" value={aaa} onChange={() => textInput(index, aaa)} /></p>
           </>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
