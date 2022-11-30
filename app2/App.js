@@ -16,12 +16,12 @@ function App() {
     setB(b+1);
   }
 
-  const textInput = (ti, aaa) => {
-    console.log("Text input: " + ti+ ":" + aaa);
+  const textInput = (ti, bbb) => {
+    console.log("Text input: " + ti+ ":" + bbb);
     setA(aaa => {
       return [
         ...aaa.slice(0, ti),
-        aaa[ti] = aaa,
+        aaa[ti] = bbb,
         ...aaa.slice(ti+1),
       ]
     })
