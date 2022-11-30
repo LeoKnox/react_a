@@ -21,7 +21,7 @@ function App() {
     setA(aaa => {
       return [
         ...aaa.slice(0, ti),
-        aaa[ti] + 1,
+        aaa[ti] = aaa,
         ...aaa.slice(ti+1),
       ]
     })
