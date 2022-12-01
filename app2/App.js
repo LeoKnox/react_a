@@ -22,7 +22,7 @@ function App() {
     setA(aaa => {
       return [
         ...aaa.slice(0, ti[0]),
-        aaa[ti[0]] = ti[1],
+        aaa.push(ti[1]),
         ...aaa.slice(ti[0]+1),
       ]
     })
