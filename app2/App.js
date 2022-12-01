@@ -16,7 +16,7 @@ function App() {
     setB(b+1);
   }
 
-  const textInput = (e, ti) => {
+  const textInput = (ti, e) => {
     console.log(e+ti);
     console.log("Text input: " + ti[0] + ":" + ti[1]);
     setA(aaa => {
