@@ -26,7 +26,7 @@ function App() {
         aaa.push(ti[1]),
         ...aaa.slice(ti[0]+1),
         */
-       aaa > 0 ? aaa=9 : aaa = 0
+       console.log(`aaa:${aaa} : ti0:${ti[0]} : ti1:${ti[1]}`)
       ]
     })
   }
