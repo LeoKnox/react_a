@@ -21,9 +21,12 @@ function App() {
     console.log("Text input: " + ti[0] + ":" + ti[1]);
     setA(aaa => {
       return [
+        /*
         ...aaa.slice(0, ti[0]),
         aaa.push(ti[1]),
         ...aaa.slice(ti[0]+1),
+        */
+       aaa[0] = "*"
       ]
     })
   }
