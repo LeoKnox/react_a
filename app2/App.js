@@ -26,7 +26,7 @@ function App() {
         aaa.push(ti[1]),
         ...aaa.slice(ti[0]+1),
         */
-       aaa[0] = "*"
+       aaa.push("*")
       ]
     })
   }
