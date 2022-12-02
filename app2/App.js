@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     setA(data);
-  },[]);
+  },[a]);
 
   const clickB = () => {
     console.log("Bbb");
