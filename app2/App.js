@@ -17,8 +17,7 @@ function App() {
   }
 
   const textInput = (ti, e) => {
-    console.log(e+ti);
-    console.log("Text input: " + ti[0] + ":" + ti[1]);
+    console.log(e.target.value);
     setA(aaa => {
       return [
         /*
