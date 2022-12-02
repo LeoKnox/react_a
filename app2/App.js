@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     setA(data);
-  },[a]);
+  },[]);
 
   const clickB = () => {
     console.log("Bbb");
@@ -17,7 +17,7 @@ function App() {
   }
 
   const textInput = (ti, e) => {
-    console.log(e+":"+ti);
+    console.log(e.target.value+":"+ti);
     setA(aaa => {
       return [
         /*
@@ -70,7 +70,7 @@ function App() {
         {a.map((aaa, index) => (
           <>
           <p key={index} >{aaa}x {index} <button onClick={() => clickButton(index)}>click</button></p>
-          <p><input type="number" value={aaa} onChange={() => textInput([index, aaa])} />{aaa}</p>
+          <p><input type="number" value={aaa} onChange={({target: {value}}) => textInput([index, aaa])} />{aaa}</p>
           </>
         ))}
         <p>B: {b} <button onClick={clickB}>BBB</button></p>
