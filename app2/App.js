@@ -18,9 +18,14 @@ function App() {
 
   const textInput = (index, aaa) => {
     console.log(index+":"+aaa);
+    let newA = a.map((b) => {
+      b += 2
+    });
+    console.log(newA);
+    setA(newA);
+        /*
     setA(
       [...a, a.filter((item) => item === aaa ? item+=1 : item=item)]
-        /*
       aaa => {
       return [
         ...aaa.slice(0, ti[0]),
@@ -29,8 +34,8 @@ function App() {
        console.log(`aaa:${aaa} : ti0:${ti[0]} : ti1:${ti[1]}`)
       ]
     }
-        */
     )
+        */
   }
   
   const clickButton = (index) => {
