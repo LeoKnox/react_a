@@ -19,6 +19,9 @@ function App() {
   const textInput = (ti, e) => {
     console.log(e.target.value+":"+ti);
     setA(
+      a.map((b) => {
+        b += 1
+      })
         /*
       aaa => {
       return [
