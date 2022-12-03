@@ -19,7 +19,7 @@ function App() {
   const textInput = (ti, e) => {
     console.log(e.target.value+":"+ti);
     setA(
-      [...a, a.filter((item) => item === ti[0] ? item+=1 : item=item])
+      [...a, a.filter((item) => item === ti[0] ? item+=1 : item=item)]
         /*
       aaa => {
       return [
