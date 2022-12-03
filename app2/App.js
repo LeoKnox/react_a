@@ -18,16 +18,18 @@ function App() {
 
   const textInput = (ti, e) => {
     console.log(e.target.value+":"+ti);
-    setA(aaa => {
-      return [
+    setA(
         /*
+      aaa => {
+      return [
         ...aaa.slice(0, ti[0]),
         aaa.push(ti[1]),
         ...aaa.slice(ti[0]+1),
-        */
        console.log(`aaa:${aaa} : ti0:${ti[0]} : ti1:${ti[1]}`)
       ]
-    })
+    }
+        */
+    )
   }
   
   const clickButton = (index) => {
