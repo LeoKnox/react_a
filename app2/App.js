@@ -23,7 +23,7 @@ function App() {
     }
   } 
 
-  const [state, dispatch] = useReducer(reducer, { age: 42 });
+  const [state, dispatch] = useReducer(reducer, [1,2]);
 
   const textInput = (index, aaa) => {
     console.log(index+":"+aaa);
