@@ -7,15 +7,6 @@ function App() {
   const [b, setB] = useState(1);
   const data = [1,2];
 
-  useEffect(() => {
-    setA(data);
-  },[]);
-
-  const clickB = () => {
-    console.log("Bbb");
-    setB(b+1);
-  }
-
   const reducer = (state, action) => {
     console.log("state:"+state+":"+"action:"+action);
     if (action.type === 1) {
@@ -24,6 +15,15 @@ function App() {
   } 
 
   const [state, dispatch] = useReducer(reducer, [1,2]);
+
+  useEffect(() => {
+    setA(data);
+  },[]);
+
+  const clickB = () => {
+    console.log("Bbb");
+    setB(b+1);
+  }
 
   const textInput = (index, aaa) => {
     console.log(index+":"+aaa);
