@@ -4,7 +4,6 @@ import Abc from './Abc.js';
 
 function App() {
   const [a, setA] = useReducer(reducer, [1,2])
-    const [state, dispatch] = useReducer(reducer, { age: 42 });
   //const [a, setA] = useState([]); before use reducer
   const [b, setB] = useState(1);
   const data = [1,2];
