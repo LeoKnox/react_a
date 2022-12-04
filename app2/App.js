@@ -18,17 +18,8 @@ function App() {
 
   const reducer = (state, action) => {
     console.log("state:"+state+":"+"action:"+action);
-    switch (action.type) {
-      case "COMPLETE":
-        return state.map((aaa) => {
-          if (aaa === 1) {
-            return [aaa+3];
-          } else {
-            return aaa;
-          }
-        })
-      default:
-        return state;
+    if (action.type === 1) {
+      setA(aaa = aaa + 1)
     }
   } 
 
