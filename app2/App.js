@@ -27,6 +27,7 @@ function App() {
 
   const textInput = (index, aaa) => {
     console.log(index+":"+aaa);
+    dispatch([data.map(i=>{console.log(i)}]));
         /*
     let newA = a.map((b) => {
       b += 2
