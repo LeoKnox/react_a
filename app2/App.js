@@ -27,11 +27,14 @@ function App() {
 
   const textInput = (index, aaa) => {
     console.log(index+":"+aaa);
-    dispatch([data.map(i=>{
+    let next = data;
+    dispatch([next.map(i=>{
       if (i === aaa) {
+        next[i] === next[i]+1;
         console.log("equals:"+i+":"+index);
       }
       console.log(i)
+      dispatch(next);
     })]);
         /*
     let newA = a.map((b) => {
