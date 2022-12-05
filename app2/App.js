@@ -28,7 +28,7 @@ function App() {
   const textInput = (index, aaa) => {
     console.log(index+":"+aaa);
     dispatch([data.map(i=>{
-      if (i === index) {
+      if (i === aaa) {
         console.log("equals:"+i+":"+index);
       }
       console.log(i)
