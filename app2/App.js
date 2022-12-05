@@ -10,14 +10,14 @@ function App() {
   const reducer = (state, action) => {
     console.log("state:"+state+":"+"action:"+action);
     if (action.type === 1) {
-      setA(aaa = aaa + 1)
+      (data = data + 1)
     }
   } 
 
   const [state, dispatch] = useReducer(reducer, [1,2]);
 
   useEffect(() => {
-    setA(data);
+    dispatch(data);
   },[]);
 
   const clickB = () => {
@@ -27,12 +27,12 @@ function App() {
 
   const textInput = (index, aaa) => {
     console.log(index+":"+aaa);
+        /*
     let newA = a.map((b) => {
       b += 2
     });
     console.log(newA);
     setA(newA);
-        /*
     setA(
       [...a, a.filter((item) => item === aaa ? item+=1 : item=item)]
       aaa => {
@@ -69,7 +69,6 @@ function App() {
           return (aaa+index)
         }
         )
-    */
    setA(aaa => {
      return [
        ...aaa.slice(0, index),
@@ -78,13 +77,14 @@ function App() {
      ]
    })
     console.log(a+"end");
+    */
   }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Heading</h1>
-        {a.map((aaa, index) => (
+        {data.map((aaa, index) => (
           <>
           <p key={index} >{aaa}x {index} <button onClick={() => clickButton(index)}>click</button></p>
           <p><input type="number" value={aaa} onChange={() => textInput(index, aaa)} />{aaa}</p>
