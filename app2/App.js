@@ -30,7 +30,7 @@ function App() {
     let next = data;
     dispatch([next.map(i=>{
       if (i === aaa) {
-        next[i] === next[i]+1;
+        next[i] = next[i]+1;
         console.log("equals:"+i+":"+index);
       }
       console.log(i)
