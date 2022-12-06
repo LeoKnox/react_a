@@ -94,7 +94,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Heading</h1>
-        {data.map((aaa, index) => (
+        {state.map((aaa, index) => (
           <>
           <p key={index} >{aaa}x {index} <button onClick={() => clickButton(index)}>click</button></p>
           <p><input type="number" value={aaa} onChange={() => textInput(index, aaa)} />{aaa}</p>
