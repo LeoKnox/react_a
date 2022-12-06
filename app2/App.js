@@ -34,7 +34,8 @@ function App() {
         console.log("equals:"+i+":"+index);
       }
       console.log("next"+next)
-      dispatch(next);
+      return(dispatch(next));
+      console.log("data :"+data);
     })]);
         /*
     let newA = a.map((b) => {
