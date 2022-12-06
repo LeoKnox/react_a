@@ -17,7 +17,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, [1,2]);
 
   useEffect(() => {
-    dispatch(data);
+    dispatch([data]);
     console.log("1st state:"+state);
   },[]);
 
