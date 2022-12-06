@@ -33,7 +33,7 @@ function App() {
         next[i] = next[i]+1;
         console.log("equals:"+i+":"+index);
       }
-      console.log(i)
+      console.log("next"+next)
       dispatch(next);
     })]);
         /*
