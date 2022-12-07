@@ -14,7 +14,8 @@ function App() {
     }
   } 
 
-  const [state, dispatch] = useReducer(reducer, [1,2]);
+  const [state, dispatch] = useReducer([1,2]);
+  //const [state, dispatch] = useReducer(reducer, [1,2]);
 
   useEffect(() => {
     dispatch([data]);
