@@ -18,13 +18,18 @@ function App() {
     setA(aData)
   })
 
+  const createDataItem = (room) => {
+    const newRoom = [...data, { room, complete: false }];
+    setData(newRoom);
+  }
+
   return (
     <div className="App">
       <h1>Heading</h1>
       {data.map((aaa, index) => (
         <DataItem key={index} index={index} item={aaa} />
       ))}
-      <DataInput />
+      <DataInput  createDataItem={createDataItem} />
     </div>
   );
 }
