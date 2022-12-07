@@ -7,10 +7,14 @@ function App() {
   const [b, setB] = useState(1);
   const data = [11,22];
 
+  useEffect(() => {
+    setA(data)
+  })
+
   return (
     <div className="App">
       <h1>Heading</h1>
-      {data.map((aaa, index) => (
+      {a.map((aaa, index) => (
         <>
           <p>{aaa} : {index}</p>
         </>
