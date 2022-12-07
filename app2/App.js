@@ -5,19 +5,25 @@ import DataItem from "./components/DataItem";
 
 function App() {
   const [a, setA] = useState([]);
-  const [b, setB] = useState(1);
-  const data = [11,22];
+  const [data, setData] = useState(
+    [
+      {room: 'Entry', width:5, height:5},
+      {room: 'Blue', width:4, height:6},
+      {room: 'Red', width:8, height:7},
+    ]
+  )
+  const aData = [11,22];
 
   useEffect(() => {
-    setA(data)
+    setA(aData)
   })
 
   return (
     <div className="App">
       <h1>Heading</h1>
-      {a.map((aaa, index) => (
+      {data.map((aaa, index) => (
         <>
-          <p>{aaa} : {index}</p>
+          <p>{aaa.room} : {aaa.width} x {aaa.height}</p>
         </>
       ))}
       <DataInput />
