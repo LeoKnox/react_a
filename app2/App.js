@@ -1,6 +1,7 @@
 import './App.css';
 import {useEffect, useState, useReducer} from 'react';
-import Abc from './Abc.js';
+import DataInput from "./components/DataInput";
+import DataItem from "./components/DataItem";
 
 function App() {
   const [a, setA] = useState([]);
@@ -19,6 +20,8 @@ function App() {
           <p>{aaa} : {index}</p>
         </>
       ))}
+      <DataInput />
+      <DataItem />
     </div>
   );
 }
