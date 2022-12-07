@@ -1,6 +1,9 @@
-const DataItem = () => {
+const DataItem = ({item, index}) => {
+    console.log("data:"+item);
     return (
-        <div>Single Data Item</div>
+        <div>
+            <li>{item}</li>
+        </div>
     )
 }
 

@@ -22,12 +22,9 @@ function App() {
     <div className="App">
       <h1>Heading</h1>
       {data.map((aaa, index) => (
-        <>
-          <p>{aaa.room} : {aaa.width} x {aaa.height}</p>
-        </>
+        <DataItem key={index} index={index} item={aaa} />
       ))}
       <DataInput />
-      <DataItem />
     </div>
   );
 }
