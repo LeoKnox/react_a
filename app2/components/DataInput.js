@@ -13,7 +13,7 @@ const DataInput = ({createRoom}) => {
     }
 
     return (
-        <form onSubmit={console.log('red')}>
+        <form>
         <input type="text" placehold="create room" value={room} onChange={(e) => setRoom(e.target.value)} />
         <button onClick={handleSubmit}>Create</button>
         <div>Data input</div>
