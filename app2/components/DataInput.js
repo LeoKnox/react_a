@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const DataInput = ({createRoom}) => {
+const DataInput = ({createDataItem}) => {
     const [room, setRoom] = useState("");
 
     const handleSubmit = e => {
@@ -8,7 +8,7 @@ const DataInput = ({createRoom}) => {
         if (room === "") {
             return console.log("add some rooms")
         }
-        createRoom(room)
+        createDataItem(room)
         setRoom("");
     }
 
