@@ -8,7 +8,7 @@ const DataInput = ({createRoom}) => {
         if (room === "") {
             return console.log("add some rooms")
         }
-        DataInput(room)
+        createRoom(room)
         setRoom("");
     }
 
