@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     setA(aData)
-  })
+  }, [])
 
   const createDataItem = (room) => {
     const newRoom = [...data, { room, complete: false }];
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <h1>Heading</h1>
-      <DataInput  createDataItem={createDataItem} />
+      <DataInput  createDataItem={() => createDataItem} />
       {data.map((aaa, index) => (
         <DataItem key={index} index={index} item={aaa} />
       ))}
