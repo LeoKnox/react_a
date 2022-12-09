@@ -35,7 +35,7 @@ function App() {
       <h1>Heading</h1>
       <DataInput  createDataItem={createDataItem} />
       {data.map((aaa, index) => (
-        <DataItem key={index} index={index} item={aaa} />
+        <DataItem key={index} index={index} item={aaa} deleteDataItem={deleteDataItem} />
       ))}
     </div>
   );
