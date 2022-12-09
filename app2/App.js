@@ -23,6 +23,13 @@ function App() {
     setData(newRoom);
   }
 
+  const deleteDataItem = (room) => {
+    const deleteData = [...data]
+    deleteData.splice(index, 1);
+    console.log("delete data:"+deleteData);
+    setData(deleteData);
+  }
+
   return (
     <div className="App">
       <h1>Heading</h1>
