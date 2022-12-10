@@ -3,7 +3,7 @@ const DataItem = ({item, index, deleteDataItem, completeDataItem}) => {
     console.log("data:"+item.room);
     return (
         <div>
-            <li>
+            <li style={{textDecoration: item.complete ? "line-through" : ""}}>
                 {item.room}:{item.width}x{item.height} &emsp;
                 <button onClick={() => completeDataItem(index)}>Complete</button> &emsp;
                 <button onClick={() => deleteDataItem(index)}>X</button>
