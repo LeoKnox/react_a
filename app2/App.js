@@ -18,6 +18,14 @@ function App() {
     setA(aData)
   }, [])
 
+  const completeDataItem = (index) => {
+    const newDataItems = [...data];
+    newDataItems[index].complete === false
+      ? (newDataItems[index].complete = true)
+      : (newDataItems[index].complete = false);
+      setData(newDataItems)
+  };
+
   const createDataItem = (room) => {
     const newRoom = [...data, {room, complete: false }];
     setData(newRoom);
