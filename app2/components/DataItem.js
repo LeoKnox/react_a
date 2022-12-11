@@ -1,4 +1,4 @@
-const DataItem = ({item, index, deleteDataItem, completeDataItem}) => {
+const DataItem = ({item, index, updateDataItem, deleteDataItem, completeDataItem}) => {
     //console.log("data:"+JSON.stringify(item));
     console.log("data:"+item.room);
     return (
@@ -6,6 +6,7 @@ const DataItem = ({item, index, deleteDataItem, completeDataItem}) => {
             <li style={{textDecoration: item.complete ? "line-through" : ""}}>
                 {item.room}:{item.width}x{item.height} &emsp;
                 <button onClick={() => completeDataItem(index)}>Complete</button> &emsp;
+                <button onClick={() => updateDataItem(index)}>Update</button>&emsp;
                 <button onClick={() => deleteDataItem(index)}>X</button>
             </li>
         </div>
