@@ -13,7 +13,7 @@ const DataInput = ({createDataItem}) => {
         console.log("hs"+width)
         roomObj.room = room;
         roomObj.width = width;
-        console.log("HHSS"+roomObj);
+        console.log("HHSS"+JSON.stringify(roomObj));
         createDataItem(roomObj);
         setRoom("");
     }
