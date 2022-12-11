@@ -5,12 +5,16 @@ const DataInput = ({createDataItem}) => {
     const [width, setWidth] = useState(1);
 
     const handleSubmit = e => {
+        let roomObj = {}
         e.preventDefault();
         if (room === "") {
             return console.log("add some rooms")
         }
         console.log("hs"+width)
-        createDataItem(room)
+        roomObj.room = room;
+        roomObj.width = width;
+        console.log("HHSS"+roomObj);
+        createDataItem(roomObj);
         setRoom("");
     }
 
