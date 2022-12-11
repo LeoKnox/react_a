@@ -22,11 +22,13 @@ const DataInput = ({createDataItem}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-        <input type="text" placehold="create room" value={room} onChange={(e) => setRoom(e.target.value)} />
-        <input type="number" placeholder="1" value={width} onChange={(e) => setWidth(e.target.value)} />
-        <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
-        <button onClick={handleSubmit}>Create</button>
-        <div>Data input</div>
+            <label>Room Name</label>
+            <input type="text" placehold="create room" value={room} onChange={(e) => setRoom(e.target.value)} />
+            <label>Width</label>
+            <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} />
+            <label>Height</label>
+            <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} />
+            <button onClick={handleSubmit}>Create</button>
         </form>
     )
 }
