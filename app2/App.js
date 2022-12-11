@@ -18,6 +18,20 @@ function App() {
     setA(aData)
   }, [])
 
+  const updateDataItem = (index) => {
+    const newDataItems = [...data];
+    const item = newDataItems[index];
+    let newItem = prompt(`Update ${item.room}?`, item.room);
+    let dataObj = { room: newItem, complete: false };
+    newDataItems.splice(index, 1, dataObj);
+    if (newItem === null || newItem === "") {
+      return;
+    } else {
+      item.room = newItem;
+    }
+    setData(newDataItems);
+  };
+
   const completeDataItem = (index) => {
     const newDataItems = [...data];
     newDataItems[index].complete === false
@@ -43,7 +57,7 @@ function App() {
       <h1>Heading</h1>
       <DataInput  createDataItem={createDataItem} />
       {data.map((aaa, index) => (
-        <DataItem key={index} index={index} item={aaa} deleteDataItem={deleteDataItem} compleDataItem={completeDataItem} />
+        <DataItem key={index} index={index} item={aaa} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
       ))}
     </div>
   );
