@@ -9,6 +9,7 @@ const DataInput = ({createDataItem}) => {
         if (room === "") {
             return console.log("add some rooms")
         }
+        console.log("hs"+width)
         createDataItem(room)
         setRoom("");
     }
