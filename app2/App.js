@@ -18,11 +18,20 @@ function App() {
     setA(aData)
   }, [])
 
+  const whatDataItem = (index) => {
+    const newDataItems = [...data];
+    const item = newDataItems[index];
+    console.log("what say what " + JSON.stringify(item));
+  }
+
   const updateDataItem = (index) => {
     const newDataItems = [...data];
     const item = newDataItems[index];
-    let newItem = prompt(`Update ${item.room}?`, item.room);
+    let newItem = prompt(
+      `Update ${item.room}?`, item.room
+    );
     let dataObj = { room: newItem, complete: false };
+    newItem = prompt(`update ${item.width}?`);
     newDataItems.splice(index, 1, dataObj);
     if (newItem === null || newItem === "") {
       return;
@@ -41,7 +50,7 @@ function App() {
   };
 
   const createDataItem = (room) => {
-    const newRoom = [...data, {room, complete: false }];
+    const newRoom = [...data, room];
     setData(newRoom);
   }
 
@@ -57,7 +66,7 @@ function App() {
       <h1>Heading</h1>
       <DataInput  createDataItem={createDataItem} />
       {data.map((aaa, index) => (
-        <DataItem key={index} index={index} item={aaa} updateDataItem={updateDataItem} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
+        <DataItem key={index} index={index} item={aaa} whatDataItem={whatDataItem} updateDataItem={updateDataItem} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
       ))}
     </div>
   );
