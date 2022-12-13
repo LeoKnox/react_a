@@ -4,14 +4,13 @@ const dataUpdate = ({createUpdateItem}) => {
     console.log("tt"+createUpdateItem);
     return (
         <>
-        <h3>update room</h3>
         <form>
-            <li>Rooom:</li>
+            <label>Rooom:</label>
             <input type="text" />
-            <li>Width:</li>
+            <label>Width:</label>
             <input type="text" />
-            <li>Length:</li>
-            <input type="text" />
+            <label>Length:</label>
+            <input type="text" /><br/>
         </form>
         </>
     )
