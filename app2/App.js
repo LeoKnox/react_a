@@ -2,6 +2,7 @@ import './App.css';
 import {useEffect, useState, useReducer} from 'react';
 import DataInput from "./components/DataInput";
 import DataItem from "./components/DataItem";
+import DataUpdate from "./components/DataUpdate";
 
 function App() {
   const [a, setA] = useState([]);
@@ -66,7 +67,10 @@ function App() {
       <h1>Heading</h1>
       <DataInput  createDataItem={createDataItem} />
       {data.map((aaa, index) => (
+        <>
         <DataItem key={index} index={index} item={aaa} whatDataItem={whatDataItem} updateDataItem={updateDataItem} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
+        <DataUpdate whatDataItem={whatDataItem} />
+        </>
       ))}
     </div>
   );
