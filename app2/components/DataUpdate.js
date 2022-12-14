@@ -10,7 +10,7 @@ const dataUpdate = ({index, item, whatDataItem}) => {
             <input type="text" />
             <label>Length:</label>
             <input type="text" /><br/>
-            <button onClick={() => whatDataItem(item)}>Click</button>
+            <button onClick={() => whatDataItem(index)}>Click</button>
         </form>
         </>
     )
