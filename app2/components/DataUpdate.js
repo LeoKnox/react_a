@@ -1,7 +1,5 @@
-import {useState} from 'react';
-
-const dataUpdate = {index, item, whatDataItem}) => {
-    console.log("tt"+createUpdateItem);
+const dataUpdate = ({index, item, whatDataItem}) => {
+    console.log("tt"+whatDataItem);
     //console.log(JSON.stringify(aaa));
     return (
         <>
