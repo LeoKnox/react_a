@@ -1,5 +1,5 @@
 const dataUpdate = ({index, item, whatDataItem}) => {
-    console.log("tt"+whatDataItem);
+    console.log("tt"+JSON.stringify(item));
     //console.log(JSON.stringify(aaa));
     return (
         <>
