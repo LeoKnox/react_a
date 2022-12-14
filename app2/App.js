@@ -70,7 +70,7 @@ function App() {
       {data.map((aaa, index) => (
         <>
         <DataItem key={index} index={index} item={aaa} whatDataItem={whatDataItem} updateDataItem={updateDataItem} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
-        <DataUpdate index={index} item={aaa} whatDataItem={whatDataItem} />
+        <DataUpdate key={index*2} index={index} item={aaa} whatDataItem={whatDataItem} />
         </>
       ))}
     </div>
