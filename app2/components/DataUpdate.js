@@ -1,6 +1,6 @@
 const dataUpdate = ({index, item, whatDataItem}) => {
     console.log("tt"+JSON.stringify(item));
-    //console.log(JSON.stringify(aaa));
+    console.log(index+"::"+whatDataItem);
     return (
         <>
         <form>
