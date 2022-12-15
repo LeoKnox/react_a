@@ -23,7 +23,7 @@ function App() {
     console.log("what"+index);
     const newDataItems = [...data];
     const item = newDataItems[index];
-    console.log("what say what " + JSON.stringify());
+    console.log("what say what " + JSON.stringify(item));
   }
 
   const updateDataItem = (index) => {
