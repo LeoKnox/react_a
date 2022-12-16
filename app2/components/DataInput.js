@@ -17,7 +17,7 @@ const DataInput = ({createDataItem}) => {
         roomObj.height = height;
         console.log("HHSS"+JSON.stringify(roomObj));
         createDataItem(roomObj);
-        setRoom("");
+        //setRoom("");
     }
 
     return (
