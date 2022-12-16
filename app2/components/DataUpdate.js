@@ -9,7 +9,7 @@ const dataUpdate = ({index, item, whatDataItem}) => {
         <>
         <form onSubmit={handleSubmit}>
             <label>Rooom:</label>
-            <input type="text" value={item.room} />
+            <input type="text" defaultValue={item.room} />
             <label>Width:</label>
             <input type="text" />
             <label>Length:</label>
