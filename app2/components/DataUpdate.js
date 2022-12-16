@@ -4,12 +4,12 @@ const dataUpdate = ({index, item, whatDataItem}) => {
     const handleSubmit = e => {
         e.preventDefault();
     }
-    
+
     return (
         <>
         <form onSubmit={handleSubmit}>
             <label>Rooom:</label>
-            <input type="text" />
+            <input type="text" value={item.room} />
             <label>Width:</label>
             <input type="text" />
             <label>Length:</label>
