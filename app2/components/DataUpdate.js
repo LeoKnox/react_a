@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const dataUpdate = ({index, item, whatDataItem}) => {
+const DataUpdate = ({index, item, whatDataItem}) => {
     const [room, setRoom] = useState("");
 
     console.log("tt"+JSON.stringify(item));
@@ -24,4 +24,4 @@ const dataUpdate = ({index, item, whatDataItem}) => {
     )
 }
 
-export default dataUpdate;
+export default DataUpdate;
