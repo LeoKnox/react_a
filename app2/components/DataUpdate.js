@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 const DataUpdate = ({index, item, whatDataItem}) => {
     const [room, setRoom] = useState(item.room);
-    const [width, setWidth] = useState(parseInt(item.width));
+    const [width, setWidth] = useState(item.width);
     const [length, setLength] = useState(item.length);
 
     console.log("tt"+JSON.stringify(item));
@@ -17,7 +17,7 @@ const DataUpdate = ({index, item, whatDataItem}) => {
         <form onSubmit={handleSubmit}>
             <label>Rooom:</label>
             <input type="text" value={room} onChange={(e) => setRoom(e.target.value)} />
-            <label type="number" value={width} onChange={(e) => setWidth(e.target.value)}>Width:</label>
+            <label type="number" value={parseInt(width)} onChange={(e) => setWidth(e.target.value)}>Width:</label>
             <input type="number" value={length} onChange={(e) => setLength(e.target.value)} />
             <label>Length:</label>
             <input type="text" /><br/>
