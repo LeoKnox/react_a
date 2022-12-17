@@ -17,8 +17,8 @@ const DataUpdate = ({index, item, whatDataItem}) => {
         <form onSubmit={handleSubmit}>
             <label>Rooom:</label>
             <input type="text" value={item.room} onChange={(e) => setRoom(e.target.value)} />
-            <label type="number" value={item.width} onChange={(e) => setWidth(e.target.value)}>Width:</label>
-            <input type="number" value={item.length} onChange={(e) => setLength(e.target.value)} />
+            <label type="integer" value={item.width} onChange={(e) => setWidth(e.target.value)}>Width:</label>
+            <input type="integer" value={item.length} onChange={(e) => setLength(e.target.value)} />
             <label>Length:</label>
             <input type="text" /><br/>
             <button onClick={() => whatDataItem(index)}>Click</button>
