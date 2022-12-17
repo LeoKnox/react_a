@@ -9,6 +9,7 @@ const DataUpdate = ({index, item, whatDataItem}) => {
     console.log(index+"::"+whatDataItem);
     const handleSubmit = e => {
         e.preventDefault();
+        setRoom(e.value);
     }
 
     return (
