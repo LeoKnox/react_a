@@ -23,7 +23,7 @@ const DataInput = ({createDataItem}) => {
     return (
         <form onSubmit={handleSubmit}>
             <label>Room Name</label>
-            <input type="text" placehold="create room" value={room} onChange={(e) => setRoom(e.target.value)} />
+            <input type="text" value={room} onChange={(e) => setRoom(e.target.value)} />
             <label>Width</label>
             <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} />
             <label>Height</label>
