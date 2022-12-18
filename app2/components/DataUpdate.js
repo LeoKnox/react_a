@@ -3,7 +3,7 @@ import {useState} from 'react';
 const DataUpdate = ({index, item, whatDataItem}) => {
     const [room, setRoom] = useState(item.room);
     const [width, setWidth] = useState(item.width);
-    const [height, setHeight] = useState(item.Height);
+    const [height, setHeight] = useState(item.height);
 
     console.log("tt"+JSON.stringify(item));
     console.log(width+"::"+whatDataItem);
