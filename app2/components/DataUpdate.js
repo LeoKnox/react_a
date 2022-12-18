@@ -17,7 +17,7 @@ const DataUpdate = ({index, item, whatDataItem}) => {
         <form onSubmit={handleSubmit}>
             <label>Rooom:</label>
             <input type="text" value={room} onChange={(e) => setRoom(e.target.value)} />
-            <label type="text" value={parseInt(width)} onChange={(e) => setWidth(e.target.value)}>Width:</label>
+            <label type="text" value={width} onChange={(e) => setWidth(parseInt(e.target.value))}>Width:</label>
             <input type="number" value={length} onChange={(e) => setLength(e.target.value)} />
             <label>Length:</label>
             <input type="text" /><br/>
