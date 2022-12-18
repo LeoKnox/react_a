@@ -6,7 +6,7 @@ const DataInput = ({createDataItem}) => {
     const [height, setHeight] = useState(1);
 
     const handleSubmit = e => {
-        let roomObj = {}
+        let roomObj = {};
         e.preventDefault();
         if (room === "") {
             return console.log("add some rooms")
