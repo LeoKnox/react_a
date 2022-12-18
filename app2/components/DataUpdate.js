@@ -7,21 +7,26 @@ const DataUpdate = ({index, item, whatDataItem}) => {
 
     console.log("tt"+JSON.stringify(item));
     console.log(width+"::"+whatDataItem);
-    const handleSubmit = e => {
+    const handleUpdate = e => {
+        let updateObj = {};
+        updateObj.room = room;
+        updateObj.width = width;
+        updateObj.height = height;
+        console.log("obj" + updateObj);
         e.preventDefault();
         setRoom(e.value);
     }
 
     return (
         <>
-        <form onSubmit={handleSubmit}>
+        <form>
             <label>Rooom:</label>
             <input type="text" value={room} onChange={(e) => setRoom(e.target.value)} />
             <label>Width:</label>
             <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} />
             <label>Length:</label>
             <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} /><br/>
-            <button onClick={() => whatDataItem(index)}>Click</button>
+            <button onClick={handleUpdate}>Click</button>
         </form>
         </>
     )
