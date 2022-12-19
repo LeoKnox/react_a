@@ -19,11 +19,10 @@ function App() {
     setA(aData)
   }, [])
 
-  const whatDataItem = (index) => {
-    console.log("what"+index);
+  const whatDataItem = (dataItem) => {
+    console.log("what"+dataItem);
     const newDataItems = [...data];
-    const item = newDataItems[index];
-    console.log("what say what " + JSON.stringify(item));
+    console.log("what say what " + JSON.stringify(dataItem));
   }
 
   const updateDataItem = (index) => {
