@@ -19,8 +19,8 @@ function App() {
     setA(aData)
   }, [])
 
-  const whatDataItem = (dataItem) => {
-    console.log("what"+dataItem);
+  const whatDataItem = (dataItem, index) => {
+    console.log("what"+dataItem+"item"+index);
     const newItem = [...data];
     console.log("what say what " + JSON.stringify(newItem));
     setData(newItem);
