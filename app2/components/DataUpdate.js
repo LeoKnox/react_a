@@ -8,8 +8,8 @@ const DataUpdate = ({index, item, whatDataItem}) => {
     console.log("tt"+JSON.stringify(item));
     console.log(width+"::"+whatDataItem);
     const handleUpdate = e => {
-        e.preventDefault();
         let updateObj = {};
+        e.preventDefault();
         updateObj.room = room;
         updateObj.width = width;
         updateObj.height = height;
