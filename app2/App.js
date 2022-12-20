@@ -20,6 +20,7 @@ function App() {
   }, [])
 
   const whatDataItem = (dataItem, index) => {
+    console.log("&&&&&&&&  why");
     console.log("what"+dataItem+"item"+index);
     const newItem = [...data];
     console.log("what say what " + JSON.stringify(newItem));
