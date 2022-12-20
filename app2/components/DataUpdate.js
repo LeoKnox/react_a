@@ -14,12 +14,12 @@ const DataUpdate = ({index, item, whatDataItem}) => {
         updateObj.width = width;
         updateObj.height = height;
         console.log("obj" + updateObj);
-        whatDataItem(updateObj, item);
+        whatDataItem(updateObj, index);
     }
 
     return (
         <>
-        <form>
+        <form onSubmit={handleUpdate}>
             <label>Rooom:</label>
             <input type="text" value={room} onChange={(e) => setRoom(e.target.value)} />
             <label>Width:</label>
