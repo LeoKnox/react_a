@@ -23,7 +23,7 @@ function App() {
     console.log("&&&&&&&&  why");
     console.log("what"+JSON.stringify(dataItem)+"item"+index);
     const newItem = data;
-    newItem.map((i) => i.room=='Red' ? dataItem[index].room="boo" : i)
+    newItem.map((i) => i.room=='Red' ? dataItem.room="boo" : i)
     console.log("what say what " + JSON.stringify(newItem));
     setData(newItem);
   }
