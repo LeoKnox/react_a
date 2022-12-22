@@ -26,7 +26,7 @@ function App() {
     //newItem.map((i) => i.room=='Red' ? dataItem.room="boo" : i)
     newItem[index].room = "boo";
     console.log("what say what " + JSON.stringify(newItem));
-    setData(newItem);
+    return (() => setData(newItem));
   }
 
   const updateDataItem = (index) => {
