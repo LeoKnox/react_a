@@ -19,7 +19,8 @@ function App() {
     setA(aData)
   }, [])
 
-  const whatDataItem = (dataItem, index) => {
+  const whatDataItem = (e, dataItem, index) => {
+    e.preventDefault();
     console.log("&&&&&&&&  why");
     console.log("what"+JSON.stringify(dataItem)+"item"+index);
     const newItem = data;
@@ -73,7 +74,7 @@ function App() {
       {data.map((aaa, index) => (
         <>
         <DataItem key={index} index={index} item={aaa} updateDataItem={updateDataItem} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
-        <DataUpdate key={index*2} index={index} item={aaa} whatDataItem={whatDataItem} />
+        <DataUpdate key={index*2} index={index} item={aaa} whatDataItem={(e) => whatDataItem} />
         </>
       ))}
     </div>
