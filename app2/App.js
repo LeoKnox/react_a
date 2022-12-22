@@ -63,7 +63,7 @@ function App() {
     const deleteData = [...data]
     deleteData.splice(room, 1);
     console.log("delete data:"+deleteData);
-    setData(deleteData);
+    return(() => {setData(deleteData)});
   }
 
   return (
