@@ -7,14 +7,13 @@ const DataUpdate = ({index, item, whatDataItem}) => {
 
     console.log("tt"+JSON.stringify(item));
     console.log(width+"::"+whatDataItem);
-    const handleUpdate = e => {
+    const handleUpdate = () =>{
         let updateObj = {};
-        e.preventDefault();
         updateObj.room = room;
         updateObj.width = width;
         updateObj.height = height;
         console.log("obj" + updateObj);
-        return (() => {whatDataItem(e, updateObj, index)});
+        return (() => {whatDataItem(updateObj, index)});
     }
 
     return (
