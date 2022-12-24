@@ -19,13 +19,23 @@ const DataUpdate = ({index, item, whatDataItem}) => {
     return (
         <>
         <form onSubmit={handleUpdate}>
-            <label>Rooom:</label>
-            <input type="text" value={room} onChange={(e) => setRoom(e.target.value)} />
-            <label>Width:</label>
-            <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} />
-            <label>Length:</label>
-            <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} /><br/>
-            <button onClick={handleUpdate}>Click</button>
+            <tr>
+                <td>
+                <label>Rooom:</label>
+                <input type="text" value={room} onChange={(e) => setRoom(e.target.value)} />
+                </td>
+                <td>
+                <label>Width:</label>
+                <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} />
+                </td>
+                <td>
+                <label>Length:</label>
+                <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} /><br/>
+                </td>
+                <td>
+                <button onClick={handleUpdate}>Click</button>
+                </td>
+            </tr>
         </form>
         </>
     )
