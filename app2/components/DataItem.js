@@ -14,8 +14,14 @@ const DataItem = ({item, index, whatDataItem, updateDataItem, deleteDataItem, co
             </td>
             <td>
             <button onClick={() => completeDataItem(index)}>Complete</button> &emsp;
+            </td>
+            <td>
             <button onClick={() => updateDataItem(index)}>Update</button>&emsp;
+            </td>
+            <td>
             <button onClick={() => whatDataItem(index)}>What</button>&emsp;
+            </td>
+            <td>
             <button onClick={() => deleteDataItem(index)}>X</button>
             </td>
         </div>
