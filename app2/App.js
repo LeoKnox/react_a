@@ -72,12 +72,8 @@ function App() {
       <DataInput  createDataItem={createDataItem} />
       {data.map((aaa, index) => (
         <>
-        <tr>
         <DataItem key={index} index={index} item={aaa} updateDataItem={updateDataItem} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
-        </tr>
-        <tr>
         <DataUpdate key={index*2} index={index} item={aaa} whatDataItem={whatDataItem} />
-        </tr>
         </>
       ))}
     </div>
