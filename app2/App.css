@@ -4,7 +4,11 @@
 
 td, tr {
   padding:15px;
-  width: 50px;
+  min-width: 50px;
+}
+
+input {
+  margin-right: 10px;
 }
 
 .App-logo {
