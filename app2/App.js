@@ -22,11 +22,11 @@ function App() {
   const whatDataItem = (dataItem, index) => {
     console.log("&&&&&&&&  why");
     console.log("what"+JSON.stringify(dataItem)+"item"+index);
-    const newItem = data;
+    const newItem = data[index];
     //newItem.map((i) => i.room=='Red' ? dataItem.room="boo" : i)
-    newItem[index].room = "boo";
+    newItem.room = "boo";
     console.log("what say what " + JSON.stringify(newItem));
-    return (setData(newItem));
+    setData(newItem);
   }
 
   const updateDataItem = (index) => {
@@ -73,7 +73,7 @@ function App() {
       {data.map((aaa, index) => (
         <>
         <DataItem key={index} index={index} item={aaa} updateDataItem={updateDataItem} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
-        <DataUpdate key={index*2+1} index={index} item={aaa} whatDataItem={whatDataItem} />
+        <DataUpdate key={index+"a"} index={index} item={aaa} whatDataItem={whatDataItem} />
         </>
       ))}
     </div>
