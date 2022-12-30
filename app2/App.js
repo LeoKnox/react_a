@@ -41,6 +41,7 @@ function App() {
     if (newItem === null || newItem === "") {
       return;
     } else {
+      console.log("**** update data item ****" + newItem);
       item.room = newItem;
     }
     setData(newDataItems);
