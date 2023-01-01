@@ -5,14 +5,14 @@ const DataUpdate = ({index, item, whatDataItem}) => {
     const [width, setWidth] = useState(item.width);
     const [height, setHeight] = useState(item.height);
 
-    console.log("tt"+JSON.stringify(item));
-    console.log(width+"::"+whatDataItem);
+    //console.log("tt"+JSON.stringify(item));
+    //console.log(width+"::"+whatDataItem);
     const handleUpdate = () =>{
         let updateObj = {};
         updateObj.room = room;
         updateObj.width = width;
         updateObj.height = height;
-        console.log("obj" + updateObj);
+        //console.log("obj" + updateObj);
         whatDataItem(updateObj, index);
     }
 
