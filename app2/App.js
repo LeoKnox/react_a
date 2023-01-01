@@ -26,6 +26,7 @@ function App() {
     newItem[1].room = "boo!";
     console.log("what say what " + JSON.stringify(newItem));
     setData(newItem);
+    alert(JSON.stringify(data));
   }
 
   const updateDataItem = (index) => {
