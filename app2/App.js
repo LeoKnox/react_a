@@ -23,8 +23,8 @@ function App() {
     const newItem = data;
     console.log("what say what " + JSON.stringify(newItem));
     //newItem.map((i) => i.room=='Red' ? dataItem.room="boo" : i)
-    newItem[1].name = "boo!";
-    console.log("what say what " + JSON.stringify(newItem));
+    newItem[1].room = "boo!";
+    alert("what say what " + JSON.stringify(newItem));
     setData(newItem);
   }
 
