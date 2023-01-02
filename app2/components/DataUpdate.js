@@ -13,7 +13,7 @@ const DataUpdate = ({index, item, whatDataItem}) => {
         updateObj.width = width;
         updateObj.height = height;
         //console.log("obj" + updateObj);
-        whatDataItem(updateObj, index);
+        return(whatDataItem(updateObj, index));
     }
 
     return (
