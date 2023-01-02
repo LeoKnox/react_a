@@ -25,7 +25,7 @@ function App() {
     //newItem.map((i) => i.room=='Red' ? dataItem.room="boo" : i)
     newItem[1].room = "boo!";
     console.log("what say what " + JSON.stringify(newItem));
-    return(setData(newItem));
+    return(() => setData(newItem));
     alert(JSON.stringify(data));
   }
 
