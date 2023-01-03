@@ -12,7 +12,7 @@ const DataUpdate = ({index, item, whatDataItem}) => {
         updateObj.room = room;
         updateObj.width = width;
         updateObj.height = height;
-        //console.log("obj" + updateObj);
+        alert("obj" + updateObj+":"+index);
         whatDataItem(updateObj, index);
     }
 
