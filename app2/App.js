@@ -3,6 +3,7 @@ import {useEffect, useState, useReducer} from 'react';
 import DataInput from "./components/DataInput";
 import DataItem from "./components/DataItem";
 import DataUpdate from "./components/DataUpdate";
+import Test from "./test";
 
 function App() {
   const [a, setA] = useState([]);
@@ -70,6 +71,7 @@ function App() {
   return (
     <div className="App">
       <h1>Heading</h1>
+      <Test />
       <DataInput  createDataItem={createDataItem} />
       {data.map((aaa, index) => (
         <>
