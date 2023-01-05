@@ -72,7 +72,7 @@ function App() {
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Test />
+      <Data />
       <DataInput  createDataItem={createDataItem} />
       {data.map((aaa, index) => (
         <>
