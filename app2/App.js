@@ -3,6 +3,7 @@ import {useEffect, useState, useReducer} from 'react';
 import DataInput from "./components/DataInput";
 import DataItem from "./components/DataItem";
 import DataUpdate from "./components/DataUpdate";
+import Data from './main/data';
 import Test from "./test";
 
 function App() {
