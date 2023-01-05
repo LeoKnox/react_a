@@ -1,3 +1,3 @@
-export default data => {
-    return (<h1>Data Page</h1>);
-}
+export default Data => {
+    return (<h1>Much data</h1>);
+};
