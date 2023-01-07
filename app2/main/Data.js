@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 export default data => {
     const [creation, setCreation] = (useState([{a:1, b:2}, {a:5, b:6}]))
     const oneClick = () => {
-        setCreation([{a:3}]);
+        setCreation([{a:3}, {a:9}]);
     }
     return (
         <>
