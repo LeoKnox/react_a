@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import dataField from './dataField';
 
 export default data => {
     const [creation, setCreation] = (useState([{a:1}, {a:5}]))
@@ -12,6 +13,7 @@ export default data => {
             <>
             <p>{a.a}</p>
             <button onClick={oneClick} index={i}>red {i}</button>
+            <dataField />
             </>
         ))}
         </>
