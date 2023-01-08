@@ -1,8 +1,10 @@
-export default DataField = ({i, a, oneClick}) => {
+const DataField = ({i, a, oneClick}) => {
     return(
         <>
-        <p>{a.a}</p>
+        <input type="Number" value={a.a} />
         <button onClick={oneClick} index={i}>red {i}</button>
         </>
     );
 }
+
+export default DataField;
