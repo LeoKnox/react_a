@@ -11,9 +11,7 @@ export default data => {
         <h1>Much data</h1>
         {creation.map((a, i) => (
             <>
-            <p>{a.a}</p>
-            <button onClick={oneClick} index={i}>red {i}</button>
-            <DataField />
+            <DataField i={i} a={a} oneClick={oneClick} />
             </>
         ))}
         </>

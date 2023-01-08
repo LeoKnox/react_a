@@ -1,3 +1,8 @@
-export default dataField => {
-    return(<p>blue</p>);
+export default DataField = ({i, a, oneClick}) => {
+    return(
+        <>
+        <p>{a.a}</p>
+        <button onClick={oneClick} index={i}>red {i}</button>
+        </>
+    );
 }
