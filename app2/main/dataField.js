@@ -3,7 +3,7 @@ const DataField = ({i, a, oneClick}) => {
         <>
         <label>{a.a}</label>=
         <input type="Number" value={a.a} />
-        <button onClick={console.log("i++"+i)} index={i}>red {i}</button>
+        <button onClick={() => console.log("i++"+i)} index={i}>red {i}</button>
         </>
     );
 }
