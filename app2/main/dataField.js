@@ -1,9 +1,10 @@
 const DataField = ({i, a, oneClick}) => {
+    let j = 88;
     return(
         <>
         <label>{a.a}</label>=
         <input type="Number" value={a.a} />
-        <button onClick={oneClick(i)} index={i}>red {i}</button>
+        <button onClick={oneClick(j)} index={i}>red {i}</button>
         </>
     );
 }
