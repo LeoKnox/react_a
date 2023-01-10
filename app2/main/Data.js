@@ -3,7 +3,7 @@ import DataField from './dataField';
 
 export default data => {
     const [creation, setCreation] = (useState([{a:1}, {a:5}]))
-    const oneClick = () => {
+    const oneClick = (index) => {
         setCreation([{a:index}, {a:9}]);
     }
     return (
