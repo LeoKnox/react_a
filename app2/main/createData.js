@@ -1,6 +1,6 @@
 const createData = (createClick) => {
     return (
-        <form onClick={}>
+        <form onClick={createClick}>
             <label>x:</label>
             <label>y:</label>
             <button>Submit</button>
