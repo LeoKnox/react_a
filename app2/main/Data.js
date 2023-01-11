@@ -1,10 +1,16 @@
 import {useEffect, useState} from 'react';
 import DataField from './dataField';
+import createData from './createData.js';
 
 export default data => {
     const [creation, setCreation] = (useState([{a:1, b:4}, {a:5, b: 6}]))
     const oneClick = (index) => {
         setCreation([{a:index}, {a:9}]);
+    }
+    function createClick(x) {
+        let inputData = creation;
+        inputData.append(x);
+        setCreation(inputData);
     }
     return (
         <>
