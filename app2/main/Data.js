@@ -9,7 +9,7 @@ export default data => {
     }
     function createClick(x) {
         let inputData = creation;
-        inputData.append({a:8,b:9});
+        inputData.push({a:8,b:9});
         setCreation(inputData);
     }
     return (
