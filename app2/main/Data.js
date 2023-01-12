@@ -10,7 +10,7 @@ export default data => {
     function createClick(x) {
         let inputData = creation;
         inputData.push({a:8,b:9});
-        alert(inputData);
+        //alert(JSON.stringify(inputData));
         setCreation(inputData);
     }
     return (
@@ -21,7 +21,7 @@ export default data => {
             <DataField i={i} a={a} />
             </>
         ))}
-        <CreateData />
+        <CreateData createClick={createClick} />
         </>
     );
 };
