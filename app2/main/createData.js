@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const createData = ({createClick}) => {
+const CreateData = ({createClick}) => {
     const [myA, setA] = useState(1);
     const [myB, setB] = useState(2);
 
@@ -15,4 +15,4 @@ const createData = ({createClick}) => {
     )
 }
 
-export default createData;
+export default CreateData;
