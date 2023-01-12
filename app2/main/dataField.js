@@ -1,4 +1,4 @@
-const DataField = ({i, a, oneClick}) => {
+const DataField = ({i, a, createClick}) => {
     const j = i;
     return(
         <>

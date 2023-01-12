@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import DataField from './dataField';
-import createData from './createData.js';
+import CreateData from './createData.js';
 
 export default data => {
     const [creation, setCreation] = (useState([{a:1, b:4}, {a:5, b: 6}]))
@@ -20,6 +20,7 @@ export default data => {
             <DataField i={i} a={a} />
             </>
         ))}
+        <CreateData />
         </>
     );
 };
