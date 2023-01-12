@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-const createData = (createClick) => {
+const createData = ({createClick}) => {
     const [myA, setA] = useState(1);
     const [myB, setB] = useState(2);
 
     return (
-        <form onClick={createClick}>
+        <form onSubmit={createClick}>
             <label>x:</label>
             <input type="Number" onChange={(e) => setA(e.target.value)} />
             <label>y:</label>
