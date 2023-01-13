@@ -10,8 +10,8 @@ export default data => {
     function createClick(x) {
         let inputData = creation;
         inputData.push({a:8,b:9});
-        //alert(JSON.stringify(inputData));
         setCreation(inputData);
+        alert(JSON.stringify(creation));
     }
     return (
         <>
