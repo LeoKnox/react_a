@@ -4,10 +4,22 @@ import DataInput from "./components/DataInput";
 import DataItem from "./components/DataItem";
 import DataUpdate from "./components/DataUpdate";
 import Data from './main/Data';
+import Quiz from './quiz/Quiz';
 import Test from "./test";
 
 function App() {
   const [a, setA] = useState([]);
+  const [quiz, setQuiz] = useState(
+    [
+      {q: "one", a:1, c:"red"},
+      {q: "two", a:2, c:"orange"},
+      {q: "three", a:3, c:"yellow"},
+      {q: "four", a:4, c:"green"},
+      {q: "five", a:5, c:"blue"},
+      {q: "six", a:6, c:"indigo"},
+      {q: "seven", a:7, c:"violet"}
+    ]
+  );
   const [data, setData] = useState(
     [
       {room: 'Entry', width:5, height:5},
@@ -24,6 +36,7 @@ function App() {
   return (
     <div className="App">
       <h1>Heading</h1>
+      <Quiz q={quiz} />
       <Data />
     </div>
   )
