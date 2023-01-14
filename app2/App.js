@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz q={quiz} />
+      <Quiz questions={quiz} />
       <Data />
     </div>
   )
