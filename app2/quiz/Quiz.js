@@ -1,4 +1,6 @@
-const Quiz (questions) => {
+const Quiz = ({questions}) => {
+    console.log(questions);
+
     return (
         <h1>quiz me</h1>
     )
