@@ -1,5 +1,5 @@
 const Quiz = ({questions, answer}) => {
-    console.log(questions);
+    console.log(JSON.stringify(answer)+"!!!!!!");
 
     return (
         <>
