@@ -4,7 +4,7 @@ const Quiz = ({questions, answer}) => {
     return (
         <>
         <h1>quiz me</h1>
-        <p>ans: {answer}</p>
+        <p>ans: {answer.a}</p>
         {questions.map((q) => (
             <p>{q.q}</p>
         ))}
