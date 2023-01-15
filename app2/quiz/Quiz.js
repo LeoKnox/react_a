@@ -1,10 +1,13 @@
+import {useState} from 'react';
+
 const Quiz = ({questions, answer}) => {
     console.log(JSON.stringify(answer)+"!!!!!!");
+    const [ans, setAns] = useState(questions[Math.floor(Math.random()*questions.length)]);
 
     return (
         <>
         <h1>quiz me</h1>
-        <p>ans: {answer.a}</p>
+        <p>ans: {ans.a}</p>
         {questions.map((q) => (
             <p>{q.q}</p>
         ))}
