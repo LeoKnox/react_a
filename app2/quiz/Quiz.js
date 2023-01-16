@@ -4,7 +4,7 @@ const Quiz = ({questions, answer}) => {
     console.log(ans.a+"++");
 
     function checkAns(e) {
-        console.log('red'+e.target.getAttribue('value'));
+        console.log('red'+e.target.value);
     }
 
     return (
@@ -12,7 +12,7 @@ const Quiz = ({questions, answer}) => {
         <h1>quiz me</h1>
         <p>ans: {ans}</p>
         {questions.map((q, i) => (
-            <button onClick={(e) => alert(e.target.value)} value={i}>{q.q}</button>
+            <button onClick={(e) => checkAns} value={i}>{q.q}</button>
         ))}
         </>
     )
