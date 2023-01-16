@@ -4,7 +4,7 @@ const Quiz = ({questions, answer}) => {
     console.log(ans.a+"++");
 
     function checkAns(e) {
-        console.log('red'+e.target.value);
+        console.log('red'+e.target.id);
     }
 
     return (
@@ -12,7 +12,7 @@ const Quiz = ({questions, answer}) => {
         <h1>quiz me</h1>
         <p>ans: {ans}</p>
         {questions.map((q, i) => (
-            <p onClick={(e) => checkAns} value={i}>{q.q}</p>
+            <p onClick={(e) => checkAns} id={i}>{q.q}</p>
         ))}
         </>
     )
