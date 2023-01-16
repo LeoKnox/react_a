@@ -4,7 +4,7 @@ const Quiz = ({questions, answer}) => {
     console.log(ans.a+"++");
 
     function checkAns(e) {
-        console.log('red'+e.target.id);
+        console.log('red'+e.target.getAttribue('value'));
     }
 
     return (
