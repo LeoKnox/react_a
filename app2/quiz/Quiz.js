@@ -12,7 +12,7 @@ const Quiz = ({questions, answer}) => {
         <h1>quiz me</h1>
         <p>ans: {ans}</p>
         {questions.map((q, i) => (
-            <p onClick={(e) => checkAns} id={i}>{q.q}</p>
+            <p onClick={checkAns} id={i}>{q.q}</p>
         ))}
         </>
     )
