@@ -4,8 +4,7 @@ const Quiz = ({questions, answer}) => {
     console.log(ans.a+"++");
 
     function checkAns(e) {
-        alert('a');
-        console.log('red'+e.target.value);
+        console.log(e);
     }
 
     return (
