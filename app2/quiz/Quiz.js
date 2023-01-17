@@ -4,8 +4,8 @@ const Quiz = ({questions, answer}) => {
     console.log(ans.a+"++");
 
     function checkAns(e) {
-        console.log(e.target.value);
-        if (e.target.value === ans) {
+        console.log(e.target.value+":::"+ans);
+        if (e.target.value == ans) {
             console.log("you go it correct");
         }
     }
