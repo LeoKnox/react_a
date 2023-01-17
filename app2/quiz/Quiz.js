@@ -5,7 +5,7 @@ const Quiz = ({questions, answer}) => {
 
     function checkAns(e) {
         console.log(e.target.value);
-        if (e.target.value === answer) {
+        if (e.target.value === ans) {
             console.log("you go it correct");
         }
     }
