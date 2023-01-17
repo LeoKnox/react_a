@@ -5,6 +5,9 @@ const Quiz = ({questions, answer}) => {
 
     function checkAns(e) {
         console.log(e.target.value);
+        if (e.target.value === answer) {
+            console.log("you go it correct");
+        }
     }
 
     return (
@@ -12,7 +15,7 @@ const Quiz = ({questions, answer}) => {
         <h1>quiz me</h1>
         <p>ans: {ans}</p>
         {questions.map((q, i) => (
-            <button onClick={checkAns} value={i}>{q.q}:{i}</button>
+            <button onClick={checkAns} value={q.a}>{q.q}:{i}</button>
         ))}
         </>
     )
