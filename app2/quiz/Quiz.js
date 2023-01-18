@@ -16,9 +16,9 @@ const Quiz = ({questions, answer}) => {
     return (
         <>
         <h1>quiz me</h1>
-        <p>ans: {ans}</p>
+        <p>ans: </p>
         {questions.map((q, i) => (
-            <button onClick={checkAns} value={q.a}>{q.q}:{i}</button>
+            <button onClick={checkAns} value={q}>{q}:{i}</button>
         ))}
         </>
     )
