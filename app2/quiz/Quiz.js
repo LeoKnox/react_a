@@ -1,6 +1,8 @@
+import {useEffect} from 'react';
+
 const Quiz = ({questions, answer}) => {
     console.log(JSON.stringify(answer)+"!!!!!!");
-    const ans = questions[Math.floor(Math.random()*questions.length)].a;
+    const [ans, setAns] = (questions[Math.floor(Math.random()*questions.length)].a);
     console.log(ans.a+"++");
 
     function checkAns(e) {
@@ -8,6 +10,7 @@ const Quiz = ({questions, answer}) => {
         if (e.target.value == ans) {
             console.log("you go it correct");
         }
+        setAns(questions[Math.floor(Math.random()*questions.length)].a)
     }
 
     return (
