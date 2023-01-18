@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 const Quiz = ({questions, answer}) => {
     console.log(JSON.stringify(answer)+"!!!!!!");
-    const [ans, setAns] = (useState(questions[Math.floor(Math.random()*questions.length)].a));
+    const [ans, setAns] = (useState(questions[Math.floor(Math.random()*questions.length)]));
     console.log(ans.a+"++");
 
     function checkAns(e) {
