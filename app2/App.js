@@ -31,12 +31,18 @@ function App() {
 
   useEffect(() => {
     setA(aData)
+    getQuiz();
   }, [])
+
+function getQuiz() {
+  console.log("gq"+quiz);
+  setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 2))
+}
 
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz questions={quiz} />
+      <Quiz answer={1} questions={getQuiz} />
       <Data />
     </div>
   )
