@@ -20,6 +20,7 @@ function App() {
       {q: "seven", a:7, c:"violet"}
     ]
   );
+  const [newQuiz, setNewQuiz] = useState(quiz[Math.floor(Math.random()*quiz.length)]);
   const [data, setData] = useState(
     [
       {room: 'Entry', width:5, height:5},
