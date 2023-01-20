@@ -43,7 +43,7 @@ function getQuiz() {
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz answer={newQuiz[Math.floor(Math.random()*quiz.length)]} questions={{q:"zz", a:99}} />
+      <Quiz answer={newQuiz[Math.floor(Math.random()*quiz.length)] || 5} questions={{q:"zz", a:99}} />
       <Data />
     </div>
   )
