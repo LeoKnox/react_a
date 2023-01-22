@@ -3,9 +3,9 @@ import {useState} from 'react';
 const Quiz = ({questions}) => {
     //console.log(JSON.stringify(answer)+"!!!!!!");
     console.log("quest"+JSON.stringify(questions));
-    let x=Math.floor(Math.random()*questions.length);
+    let x=Math.floor(Math.random()*8);
     console.log(x);
-    const [ans, setAns] = (useState(questions[x]));
+    const [ans, setAns] = (useState(questions[1]));
     console.log("ans"+JSON.stringify(ans));
 
     function checkAns(e) {
@@ -19,7 +19,7 @@ const Quiz = ({questions}) => {
     return (
         <>
         <h1>quiz me</h1>
-        <p>ans: </p>
+        <p>ans: {ans}</p>
         {questions.map((q, i) => (
             <button onClick={checkAns} value={q.a}>{q.q}:{i}</button>
         ))}
