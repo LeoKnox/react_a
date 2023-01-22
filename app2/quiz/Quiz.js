@@ -5,7 +5,7 @@ const Quiz = ({questions}) => {
     console.log("quest"+JSON.stringify(questions));
     let x=Math.floor(Math.random()*questions.length);
     console.log(x);
-    const [ans, setAns] = (useState(questions[x].a));
+    const [ans, setAns] = (useState(questions[Math.floor(Math.random()*questions.length)].a));
     console.log("ans"+JSON.stringify(ans));
 
     function checkAns(e) {
