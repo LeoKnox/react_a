@@ -36,14 +36,14 @@ function App() {
   }, [])
 
 function getQuiz() {
-  console.log("gq"+quiz);
+  //console.log("gq"+quiz);
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 2))
 }
 
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz answer={newQuiz[Math.floor(Math.random()*quiz.length)] || 5} questions={[quiz]} />
+      <Quiz answer={5} questions={quiz} />
       <Data />
     </div>
   )
