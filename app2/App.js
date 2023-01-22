@@ -37,7 +37,7 @@ function App() {
 
 function getQuiz() {
   //console.log("gq"+quiz);
-  setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 2))
+  setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4))
 }
 
   return (
