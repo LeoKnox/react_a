@@ -1,10 +1,11 @@
 import {useState} from 'react';
 
-const Quiz = ({questions}) => {
+const Quiz = ({questions, getQuiz}) => {
     //console.log(JSON.stringify(answer)+"!!!!!!");
     console.log("quest"+JSON.stringify(questions));
     let x=Math.floor(Math.random()*questions.length);
     console.log(x);
+    const [quizes, setQuizes] = questions;
     const [ans, setAns] = (useState(questions[Math.floor(Math.random()*questions.length)].a));
     console.log("ans"+JSON.stringify(ans));
 
@@ -14,6 +15,7 @@ const Quiz = ({questions}) => {
             console.log("you go it correct");
         }
         setAns(questions[Math.floor(Math.random()*questions.length)].a)
+        setQuizes(getQuiz());
     }
 
     return (
