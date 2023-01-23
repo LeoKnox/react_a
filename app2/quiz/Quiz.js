@@ -13,7 +13,7 @@ const Quiz = ({questions, getQuiz}) => {
             console.log("you go it correct");
         }
         setAns(questions[Math.floor(Math.random()*questions.length)].a)
-        setQuizes(getQuiz());
+        getQuiz();
     }
 
     return (
