@@ -43,7 +43,7 @@ function getQuiz() {
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz answer={5} questions={quiz} />
+      <Quiz answer={5} questions={quiz} getQuiz={getQuiz} />
       <Data />
     </div>
   )
