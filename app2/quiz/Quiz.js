@@ -2,15 +2,13 @@ import {useState} from 'react';
 
 const Quiz = ({questions, getQuiz}) => {
     //console.log(JSON.stringify(answer)+"!!!!!!");
-    console.log("quest"+JSON.stringify(questions));
-    let x=Math.floor(Math.random()*questions.length);
-    console.log(x);
+    //console.log("quest"+JSON.stringify(questions));
     const [quizes, setQuizes] = questions;
     const [ans, setAns] = (useState(questions[Math.floor(Math.random()*questions.length)].a));
-    console.log("ans"+JSON.stringify(ans));
+    //console.log("ans"+JSON.stringify(ans));
 
     function checkAns(e) {
-        console.log(e.target.value+":::"+ans);
+        //console.log(e.target.value+":::"+ans);
         if (e.target.value == ans) {
             console.log("you go it correct");
         }
