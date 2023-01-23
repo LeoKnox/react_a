@@ -36,7 +36,6 @@ function App() {
   }, [])
 
 function getQuiz() {
-  console.log("gq"+JSON.stringify(quiz));
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4))
 }
 
