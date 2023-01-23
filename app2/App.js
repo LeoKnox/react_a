@@ -8,8 +8,7 @@ import Quiz from './quiz/Quiz';
 import Test from "./test";
 
 function App() {
-  const [a, setA] = useState([]);
-  const [quiz, setQuiz] = useState(
+  let quizData =
     [
       {q: "one", a:1, c:"red"},
       {q: "two", a:2, c:"orange"},
@@ -18,8 +17,9 @@ function App() {
       {q: "five", a:5, c:"blue"},
       {q: "six", a:6, c:"indigo"},
       {q: "seven", a:7, c:"violet"}
-    ]
-  );
+    ];
+  const [a, setA] = useState([]);
+  const [quiz, setQuiz] = useState(quizData.sort(() => Math.random() - Math.random()).slice(0, 4));
   const [newQuiz, setNewQuiz] = useState(quiz[Math.floor(Math.random()*quiz.length)]);
   const [data, setData] = useState(
     [
