@@ -10,13 +10,13 @@ import Test from "./test";
 function App() {
   let quizData =
     [
-      {q: "one", a:1, c:"red"},
-      {q: "two", a:2, c:"orange"},
-      {q: "three", a:3, c:"yellow"},
-      {q: "four", a:4, c:"green"},
-      {q: "five", a:5, c:"blue"},
-      {q: "six", a:6, c:"indigo"},
-      {q: "seven", a:7, c:"violet"}
+      {q: "ichi", a:1, c:"red"},
+      {q: "ni", a:2, c:"orange"},
+      {q: "san", a:3, c:"yellow"},
+      {q: "yon", a:4, c:"green"},
+      {q: "go", a:5, c:"blue"},
+      {q: "roku", a:6, c:"indigo"},
+      {q: "nana", a:7, c:"violet"}
     ];
   const [a, setA] = useState([]);
   const [quiz, setQuiz] = useState(quizData.sort(() => Math.random() - Math.random()).slice(0, 4));
