@@ -40,14 +40,15 @@ function getQuiz() {
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4))
 }
 
-function addQuiz() {
+function addQuiz(e) {
   console.log("adding quiz!!!!!");
+  e.preventDefault();
 }
 
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz answer={5} questions={quiz} getQuiz={getQuiz} />
+      <Quiz answer={5} questions={quiz} getQuiz={(e) => getQuiz} />
       <CreateQuiz addQuiz={addQuiz} />
       <Data />
     </div>
