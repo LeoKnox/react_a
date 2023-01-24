@@ -48,7 +48,7 @@ function addQuiz() {
     <div className="App">
       <h1>Heading</h1>
       <Quiz answer={5} questions={quiz} getQuiz={getQuiz} />
-      <CreateQuiz />
+      <CreateQuiz addQuiz={addQuiz} />
       <Data />
     </div>
   )
