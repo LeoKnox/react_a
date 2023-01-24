@@ -41,7 +41,7 @@ function getQuiz() {
 }
 
 function addQuiz(e) {
-  console.log("adding quiz!!!!!");
+  console.log("adding quiz!!!!!"+e.target.value);
   e.preventDefault();
 }
 
