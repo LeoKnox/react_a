@@ -1,9 +1,13 @@
+import {useState} from 'react';
+
 const CreateQuiz = ({addQuiz}) => {
+    const [newQuiz, setNewQuiz] = useState("");
+
     return (
         <>
-            <form>
-                <input type="text" name="q" />
-                <input type="button" onClick={addQuiz}>Add</input>
+            <form onSubmit={addQuiz}>
+                <input type="text" value={newQuiz} onChange={(e) => setNewQuiz(e.target.value)} />
+                <input type="submit" value="Add" />
             </form>
         </>
     )
