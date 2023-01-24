@@ -1,7 +1,8 @@
 import {useState} from 'react';
 
 const CreateQuiz = ({addQuiz}) => {
-    const [newQuiz, setNewQuiz] = useState("");
+    const [newQuiz, setNewQuiz] = useState("z");
+    console.log("a:"+newQuiz);
 
     return (
         <>
