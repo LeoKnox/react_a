@@ -5,6 +5,7 @@ import DataItem from "./components/DataItem";
 import DataUpdate from "./components/DataUpdate";
 import Data from './main/Data';
 import Quiz from './quiz/Quiz';
+import CreateQuiz from './quiz/CreateQuiz';
 import Test from "./test";
 
 function App() {
@@ -43,6 +44,7 @@ function getQuiz() {
     <div className="App">
       <h1>Heading</h1>
       <Quiz answer={5} questions={quiz} getQuiz={getQuiz} />
+      <CreateQuiz />
       <Data />
     </div>
   )
