@@ -40,6 +40,10 @@ function getQuiz() {
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4))
 }
 
+function addQuiz() {
+  console.log("adding quiz!!!!!");
+}
+
   return (
     <div className="App">
       <h1>Heading</h1>
