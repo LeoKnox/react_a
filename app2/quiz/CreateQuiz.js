@@ -1,7 +1,10 @@
 const CreateQuiz = ({addQuiz}) => {
     return (
         <>
-            <h1>create quiz</h1>
+            <form>
+                <input type="text" name="q" />
+                <input type="button" onClick={addQuiz}>Add</input>
+            </form>
         </>
     )
 }
