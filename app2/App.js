@@ -40,8 +40,7 @@ function getQuiz() {
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4))
 }
 
-function addQuiz(e, test) {
-  console.log(test);
+function addQuiz(e) {
   console.log("adding quiz!!!!!"+e.target.value);
   e.preventDefault();
 }
