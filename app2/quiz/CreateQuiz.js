@@ -4,10 +4,15 @@ const CreateQuiz = ({addQuiz}) => {
     const [newQuiz, setNewQuiz] = useState("z");
     console.log("a:"+newQuiz);
 
+    const subQuiz = e => {
+        setNewQuiz(e.target.value);
+        addQuiz(newQuiz);
+    }
+
     return (
         <>
             <form onSubmit={addQuiz}>
-                <input type="text" value="123" onChange={(e) => setNewQuiz(e.target.value)} />
+                <input type="text" value="123" onChange={(e) => subQuiz(e.target.value)} />
                 <input type="submit" value="Add" />
             </form>
         </>
