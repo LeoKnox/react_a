@@ -41,7 +41,11 @@ function getQuiz() {
 }
 
 function addQuiz(pushQuiz) {
-  alert("adding quiz!!!!!"+pushQuiz);
+  console.log("adding quiz!!!!!"+pushQuiz);
+  let x = quiz;
+  x.push({a:pushQuiz});
+  setQuiz(x);
+  console.log(quiz);
 }
 
   return (
