@@ -4,8 +4,9 @@ const CreateQuiz = ({addQuiz}) => {
     const [newQuiz, setNewQuiz] = useState("z");
     console.log("a:"+newQuiz);
 
-    const subQuiz = e => {
-        alert(e.target.value);
+    const subQuiz = (e) => {
+        e.preventDefault();
+        console.log(e.target.value);
         setNewQuiz(e.target.value);
         alert("create quiz"+newQuiz);
         addQuiz(newQuiz);
@@ -13,7 +14,7 @@ const CreateQuiz = ({addQuiz}) => {
 
     return (
         <>
-            <form onSubmit={(e) => subQuiz}>
+            <form onSubmit={subQuiz}>
                 <input type="text" value="123" onChange={e => subQuiz()} />
                 <input type="submit" value="Add" />
             </form>
