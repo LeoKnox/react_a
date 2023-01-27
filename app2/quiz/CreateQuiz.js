@@ -6,6 +6,7 @@ const CreateQuiz = ({addQuiz}) => {
 
     const subQuiz = e => {
         setNewQuiz(e.target.value);
+        alert("create quiz"+newQuiz);
         addQuiz(newQuiz);
     }
 
