@@ -10,8 +10,6 @@ const CreateQuiz = ({addQuiz}) => {
 
     const subQuiz = (e) => {
         e.preventDefault();
-        console.log(e.target.value);
-        setNewQuiz(e.target.value);
         alert("create quiz"+newQuiz);
         addQuiz(newQuiz);
     }
@@ -19,7 +17,7 @@ const CreateQuiz = ({addQuiz}) => {
     return (
         <>
             <form onSubmit={subQuiz}>
-                <input type="text" value="123" onChange={changeForm} />
+                <input type="text" value={newQuiz} onChange={(e) =>setNewQuiz(e.target.value)} />
                 <input type="submit" value="Add" />
             </form>
         </>
