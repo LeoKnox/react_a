@@ -41,7 +41,7 @@ function getQuiz() {
 }
 
 function addQuiz(pushQuiz) {
-  console.log("adding quiz!!!!!"+pushQuiz);
+  alert("adding quiz!!!!!"+pushQuiz);
 }
 
   return (
