@@ -51,7 +51,7 @@ function addQuiz(pushQuiz) {
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz questions={quiz} getQuiz={(e) => getQuiz} />
+      <Quiz questions={quiz} quizData={quizData} getQuiz={(e) => getQuiz} />
       <CreateQuiz addQuiz={addQuiz} />
       <Data />
     </div>
