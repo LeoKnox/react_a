@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const Quiz = ({questions, getQuiz}) => {
+const Quiz = ({questions, getQuiz, quizData}) => {
     const [ans, setAns] = useState(questions[Math.floor(Math.random()*questions.length)].a);
 
     function checkAns(e) {
