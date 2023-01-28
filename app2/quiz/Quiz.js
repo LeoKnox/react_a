@@ -20,6 +20,10 @@ const Quiz = ({questions, getQuiz}) => {
         {questions.map((q, i) => (
             <button onClick={checkAns} value={q.a}>{q.q}</button>
         ))}
+        <p>All</p>
+        {quizData.map((qd) => (
+            <p>{qd.a}:{qd.q}::{qd.c}</p>
+        ))}
         </>
     )
 };
