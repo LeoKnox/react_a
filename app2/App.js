@@ -45,7 +45,7 @@ function addQuiz(pushQuiz) {
   let x = quiz;
   x.push({a:pushQuiz});
   setQuiz(x);
-  quizData.push({a:pushQuiz});
+  return(quizData.push({a:pushQuiz}));
   console.log("last"+JSON.stringify(quiz));
 }
 
