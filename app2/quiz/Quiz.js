@@ -21,9 +21,6 @@ const Quiz = ({questions, getQuiz, quizData}) => {
             <button onClick={checkAns} value={q.a}>{q.q}</button>
         ))}
         <p>All</p>
-        {questions.map((qd) => (
-            <p>{qd.a}:{qd.q}::{qd.c}</p>
-        ))}
         </>
     )
 };
