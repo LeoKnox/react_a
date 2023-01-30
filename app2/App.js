@@ -34,9 +34,10 @@ function App() {
   useEffect(() => {
     setA(aData)
     getQuiz();
-  }, [])
+  }, [quiz])
 
-function getQuiz() {
+function getQuiz(e) {
+  e.preventDeafult();
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
 }
 
