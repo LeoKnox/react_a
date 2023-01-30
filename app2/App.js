@@ -38,7 +38,6 @@ function App() {
 
 function getQuiz() {
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
-  return(quiz);
 }
 
 function addQuiz(pushQuiz) {
