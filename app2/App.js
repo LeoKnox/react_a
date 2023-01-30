@@ -37,14 +37,15 @@ function App() {
   }, [])
 
 function getQuiz() {
-  setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4))
+  setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
+  return(quiz);
 }
 
 function addQuiz(pushQuiz) {
   console.log("adding quiz!!!!!"+pushQuiz);
   let x = quiz;
   x.push({a:pushQuiz});
-  setQuiz(getQuiz());
+  setQuiz(x);
   quizData.push({a:pushQuiz});
   console.log("last"+JSON.stringify(quiz));
 }
