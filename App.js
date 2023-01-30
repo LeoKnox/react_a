@@ -5,21 +5,23 @@ import DataItem from "./components/DataItem";
 import DataUpdate from "./components/DataUpdate";
 import Data from './main/Data';
 import Quiz from './quiz/Quiz';
+import CreateQuiz from './quiz/CreateQuiz';
 import Test from "./test";
 
 function App() {
-  const [a, setA] = useState([]);
-  const [quiz, setQuiz] = useState(
+  let quizData =
     [
-      {q: "one", a:1, c:"red"},
-      {q: "two", a:2, c:"orange"},
-      {q: "three", a:3, c:"yellow"},
-      {q: "four", a:4, c:"green"},
-      {q: "five", a:5, c:"blue"},
-      {q: "six", a:6, c:"indigo"},
-      {q: "seven", a:7, c:"violet"}
-    ]
-  );
+      {q: "ichi", a:1, c:"red"},
+      {q: "ni", a:2, c:"orange"},
+      {q: "san", a:3, c:"yellow"},
+      {q: "yon", a:4, c:"green"},
+      {q: "go", a:5, c:"blue"},
+      {q: "roku", a:6, c:"indigo"},
+      {q: "nana", a:7, c:"violet"}
+    ];
+  const [a, setA] = useState([]);
+  const [quiz, setQuiz] = useState(quizData.sort(() => Math.random() - Math.random()).slice(0, 4));
+  const [newQuiz, setNewQuiz] = useState(quiz[Math.floor(Math.random()*quiz.length)]);
   const [data, setData] = useState(
     [
       {room: 'Entry', width:5, height:5},
@@ -30,18 +32,31 @@ function App() {
   const aData = [11,22];
 
   useEffect(() => {
-    //setA(aData)
+    setA(aData)
     getQuiz();
   }, [])
 
 function getQuiz() {
-  setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 2))
+  return(setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4)));
+}
+
+function addQuiz(pushQuiz) {
+  console.log("adding quiz!!!!!"+pushQuiz);
+  let x = quiz;
+  x.push({a:pushQuiz});
+  setQuiz(x);
+  quizData.push({a:pushQuiz});
+  console.log("last"+JSON.stringify(quiz));
 }
 
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz answer={quiz[Math.floor(Math.random()*quiz.length)]} questions={getQuiz} />
+      <Quiz questions={quiz} quizData={quizData} getQuiz={(e) => getQuiz} />
+      <CreateQuiz addQuiz={addQuiz} />
+      {quizData.map((qd) => (
+        <p>{qd.a}:{qd.q}::{qd.c}</p>
+      ))}
       <Data />
     </div>
   )
