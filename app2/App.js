@@ -37,7 +37,7 @@ function App() {
   }, [])
 
 function getQuiz(e) {
-  e.preventDeafult();
+  //e.preventDeafult();
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
 }
 
@@ -53,7 +53,7 @@ function addQuiz(pushQuiz) {
   return (
     <div className="App">
       <h1>Heading</h1>
-      <Quiz questions={quiz} quizData={quizData} getQuiz={getQuiz(e)} />
+      <Quiz questions={quiz} quizData={quizData} getQuiz={(e) => getQuiz} />
       <CreateQuiz addQuiz={addQuiz} />
       {quizData.map((qd) => (
         <p>{qd.a}:{qd.q}::{qd.c}</p>
