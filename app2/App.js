@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     setA(aData)
     getQuiz();
-  }, [quiz])
+  }, [])
 
 function getQuiz(e) {
   e.preventDeafult();
