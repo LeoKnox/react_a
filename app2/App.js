@@ -36,8 +36,8 @@ function App() {
     getQuiz();
   }, [quizData])
 
-function getQuiz(event) {
-  event.preventDeafult();
+const getQuiz = e => {
+  e.preventDeafult();
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
 }
 
