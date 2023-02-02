@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const CreateQuiz = ({addQuiz}) => {
+const CreateQuiz = ({addQuiz, getQuiz}) => {
     const [newQuiz, setNewQuiz] = useState("z");
     console.log("a:"+newQuiz);
 
@@ -16,7 +16,7 @@ const CreateQuiz = ({addQuiz}) => {
 
     return (
         <>
-            <form onSubmit={subQuiz}>
+            <form onSubmit={getQuiz}>
                 <input type="text" value={newQuiz} onChange={(e) =>setNewQuiz(e.target.value)} />
                 <input type="submit" value="Add" />
             </form>
