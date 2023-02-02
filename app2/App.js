@@ -36,7 +36,7 @@ function App() {
     getQuiz();
   }, [quizData])
 
-const getQuiz = (e) => {
+function getQuiz(e) {
   e.preventDeafult();
   setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
 }
