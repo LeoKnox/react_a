@@ -37,8 +37,11 @@ function App() {
   }, [quizData])
 
 function getQuiz(e) {
-  e.preventDeafult();
-  setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
+  //e.preventDeafult();
+  let x = quiz.sort(() => Math.random() - Math.random()).slice(0, 4);
+  console.log(x);
+  setQuiz(x);
+  //setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
 }
 
 function addQuiz(pushQuiz) {
