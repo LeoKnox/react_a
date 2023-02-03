@@ -39,6 +39,7 @@ function App() {
 function getQuiz(e) {
   //e.preventDeafult();
   let x = quiz.sort(() => Math.random() - Math.random()).slice(0, 4);
+  console.log("x:");
   console.log(x);
   setQuiz(x);
   //setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
