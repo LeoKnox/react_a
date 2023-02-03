@@ -6,7 +6,7 @@ const Quiz = ({questions, getQuiz, quizData}) => {
     function checkAns(e) {
         if (e.target.value == ans) {
             console.log("you go it correct");
-            setAns(questions[Math.floor(Math.random()*questions.length)].a)
+            //setAns(questions[Math.floor(Math.random()*questions.length)].a)
             return(getQuiz());
         } else {
             console.log("WRONG!!!!");
