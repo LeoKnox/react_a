@@ -9,6 +9,9 @@ const Quiz = ({questions, getQuiz, quizData}) => {
             //setAns(questions[Math.floor(Math.random()*questions.length)].a)
             getQuiz();
             setAns(questions[Math.floor(Math.random()*questions.length)].a);
+            console.log("a");
+            console.log(questions);
+            console.log(ans);
         } else {
             console.log("WRONG!!!!");
         }
