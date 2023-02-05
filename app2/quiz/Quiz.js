@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 
 const Quiz = ({questions, getQuiz, quizData}) => {
-    const [ans, setAns] = useState(questions[Math.floor(Math.random()*questions.length)].a);
+    const [ans, setAns] = useState();
 
     useEffect(() => {
         console.log("use efffect quiz");
