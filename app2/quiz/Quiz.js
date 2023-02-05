@@ -1,7 +1,12 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 const Quiz = ({questions, getQuiz, quizData}) => {
     const [ans, setAns] = useState(questions[Math.floor(Math.random()*questions.length)].a);
+
+    useEffect(() => {
+        console.log("use efffect quiz");
+        setAns(questions[Math.floor(Math.random()*questions.length)].a);
+    })
 
     function checkAns(e) {
         if (e.target.value == ans) {
