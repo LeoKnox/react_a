@@ -17,7 +17,7 @@ const CreateQuiz = ({addQuiz, getQuiz}) => {
     return (
         <>
             <form onSubmit={addQuiz}>
-                <input type="text" value={newQuiz} onChange={(e) =>setNewQuiz(e.target.value)} />
+                <input type="text" value={newQuiz} onChange={subQuiz} />
                 <input type="submit" value="Add" />
             </form>
         </>
