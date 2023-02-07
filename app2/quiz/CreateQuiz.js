@@ -11,12 +11,12 @@ const CreateQuiz = ({addQuiz, getQuiz}) => {
 
     const subQuiz = (e) => {
         e.preventDefault();
-        setNewQuiz(e.target.value);
+        addQuiz(e.target.value);
     }
 
     return (
         <>
-            <form onSubmit={addQuiz}>
+            <form onSubmit={subQuiz}>
                 <input type="text" value={newQuiz} onChange={changeForm} />
                 <input type="submit" value="Add" />
             </form>
