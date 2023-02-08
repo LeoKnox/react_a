@@ -14,7 +14,7 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
         let x= e.targetvalue;
         console.log("x---");
         console.log(x);
-        quizData.append(x);
+        quizData.push(x);
     }
 
     return (
