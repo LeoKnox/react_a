@@ -6,12 +6,15 @@ const CreateQuiz = ({addQuiz, getQuiz}) => {
 
     const changeForm = (e) => {
         e.preventDefault();
-        setNewQuiz(e.target.value);
+        return(setNewQuiz(e.target.value));
     }
 
     const subQuiz = (e) => {
         e.preventDefault();
-        addQuiz(e.target.value);
+        let x= e.targetvalue;
+        console.log("x---");
+        console.log(x);
+        addQuiz(x);
     }
 
     return (
