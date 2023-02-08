@@ -13,7 +13,7 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
         e.preventDefault();
         let x= e.targetvalue;
         console.log("x---");
-        console.log(x);
+        console.log(typeof(x));
         quizData.push(x);
     }
 
