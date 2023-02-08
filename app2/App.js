@@ -58,7 +58,7 @@ function addQuiz(pushQuiz) {
     <div className="App">
       <h1>Heading</h1>
       <Quiz questions={quiz} quizData={quizData} getQuiz={getQuiz} />
-      <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} />
+      <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quiData={quizData} />
       {quizData.map((qd) => (
         <p>{qd.a}:{qd.q}::{qd.c}</p>
       ))}
