@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const CreateQuiz = ({addQuiz, getQuiz}) => {
+const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
     const [newQuiz, setNewQuiz] = useState("z");
     console.log("a:"+newQuiz);
 
@@ -14,7 +14,7 @@ const CreateQuiz = ({addQuiz, getQuiz}) => {
         let x= e.targetvalue;
         console.log("x---");
         console.log(x);
-        addQuiz(x);
+        quizData.append(x);
     }
 
     return (
