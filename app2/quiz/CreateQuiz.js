@@ -9,6 +9,7 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
         console.log("x---");
         console.log(e.target.value);
         setNewQuiz(e.target.value);
+        console.log(newQuiz);
     }
 
     const subQuiz = (e) => {
