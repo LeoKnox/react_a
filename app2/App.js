@@ -9,7 +9,7 @@ import CreateQuiz from './quiz/CreateQuiz';
 import Test from "./test";
 
 function App() {
-  const [quizData, setQuizData] =
+  let quizData =
     [
       {q: "ichi", a:1, c:"red"},
       {q: "ni", a:2, c:"orange"},
@@ -49,7 +49,7 @@ function addQuiz(pushQuiz) {
   console.log("adding quiz!!!!!"+JSON.stringify(pushQuiz));
   let x = quiz;
   x.push({a:pushQuiz});
-  setQuizData(pushQuiz);
+  quizData = x;
   //setQuiz(x);
   console.log("last"+JSON.stringify(quiz));
 }
