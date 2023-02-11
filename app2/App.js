@@ -39,7 +39,7 @@ function App() {
 
 function getQuiz(e) {
   //e.preventDeafult();
-  let x = quizData.sort(() => Math.random() - Math.random()).slice(0, 4);
+  let x = qdOne.sort(() => Math.random() - Math.random()).slice(0, 4);
   console.log("x:");
   console.log(x);
   setQuiz(x);
