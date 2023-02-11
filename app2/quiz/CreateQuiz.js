@@ -2,6 +2,7 @@ import {useState} from 'react';
 
 const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
     const [newQuiz, setNewQuiz] = useState("z");
+    const [newAns, setNewAns] = useState("orage");
     console.log("a:"+newQuiz);
 
     const changeForm = (e) => {
@@ -22,7 +23,7 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
         <>
             <form onSubmit={subQuiz}>
                 <input type="text" value={newQuiz} onChange={changeForm} />
-                <input type="text" value="orange" />
+                <input type="text" value={newAns} />
                 <input type="submit" value="Add" />
             </form>
         </>
