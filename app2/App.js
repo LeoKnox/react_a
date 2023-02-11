@@ -19,6 +19,7 @@ function App() {
       {q: "roku", a:6, c:"indigo"},
       {q: "nana", a:7, c:"violet"}
     ];
+  const [qdOne, setQdOne] = useState(quizData);
   const [a, setA] = useState([]);
   const [quiz, setQuiz] = useState(quizData.sort(() => Math.random() - Math.random()).slice(0, 4));
   const [newQuiz, setNewQuiz] = useState(quiz[Math.floor(Math.random()*quiz.length)]);
@@ -47,11 +48,11 @@ function getQuiz(e) {
 
 function addQuiz(pushQuiz) {
   console.log("adding quiz!!!!!"+JSON.stringify(pushQuiz));
-  let x = quiz;
+  let x = qdOne;
   x.push({a:pushQuiz});
-  quizData = x;
+  setQdOne(x);
   //setQuiz(x);
-  console.log("last"+JSON.stringify(quiz));
+  console.log("last"+JSON.stringify(qdOne));
 }
 
   return (
