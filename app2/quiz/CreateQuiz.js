@@ -22,6 +22,7 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
         <>
             <form onSubmit={subQuiz}>
                 <input type="text" value={newQuiz} onChange={changeForm} />
+                <input type="text" value="orange" />
                 <input type="submit" value="Add" />
             </form>
         </>
