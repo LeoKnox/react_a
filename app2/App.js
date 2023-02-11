@@ -40,18 +40,13 @@ function App() {
 function getQuiz(e) {
   //e.preventDeafult();
   let x = qdOne.sort(() => Math.random() - Math.random()).slice(0, 4);
-  console.log("x:");
-  console.log(x);
   setQuiz(x);
-  //setQuiz(quiz.sort(() => Math.random() - Math.random()).slice(0, 4));
 }
 
 function addQuiz(pushQuiz) {
-  console.log("adding quiz!!!!!"+JSON.stringify(pushQuiz));
   let x = qdOne;
   x.push({a:pushQuiz});
   setQdOne(x);
-  //setQuiz(x);
   console.log("last"+JSON.stringify(qdOne));
 }
 
