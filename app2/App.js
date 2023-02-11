@@ -45,7 +45,7 @@ function getQuiz(e) {
 
 function addQuiz(pushQuiz) {
   let x = qdOne;
-  x.push({a:pushQuiz});
+  x.push({q:"akai", a:pushQuiz});
   setQdOne(x);
   console.log("last"+JSON.stringify(qdOne));
 }
