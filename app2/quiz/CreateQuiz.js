@@ -1,8 +1,8 @@
 import {useState} from 'react';
 
 const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
-    const [q, setNewQuiz] = useState("z");
-    const [a, setNewAns] = useState("orage");
+    const [q, setNewQuiz] = useState("");
+    const [a, setNewAns] = useState("");
     console.log("a:"+q);
 
     const changeEntry = (e) => {
