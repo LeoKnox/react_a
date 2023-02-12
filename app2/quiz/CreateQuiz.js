@@ -15,6 +15,7 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
 
     const subQuiz = (e) => {
         e.preventDefault();
+        console.log("selected:"+e.target.name);
         let x= e.targetvalue;
         addQuiz({q, a});
     }
@@ -22,7 +23,7 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
     return (
         <>
             <form onSubmit={subQuiz}>
-                <input type="text" value={q} onChange={changeForm} />
+                <input type="text" name="question" value={q} onChange={changeForm} />
                 <input type="text" value={a} />
                 <input type="submit" value="Add" />
             </form>
