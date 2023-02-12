@@ -19,6 +19,9 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
         if (e.target.name === "ans") {
             setNewAns(e.target.value);
         }
+        if (e.target.name === "quest") {
+            setNewQuiz(e.target.value);
+        }
     }
 
     const subQuiz = (e) => {
@@ -30,7 +33,7 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
     return (
         <>
             <form onSubmit={subQuiz}>
-                <input type="text" name="question" value={q} onChange={changeForm} />
+                <input type="text" name="quest" value={q} onChange={changeEntry} />
                 <input type="text" name="ans" value={a} onChange={changeEntry} />
                 <input type="submit" value="Add" />
             </form>
