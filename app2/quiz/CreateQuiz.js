@@ -5,15 +5,6 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
     const [a, setNewAns] = useState("orage");
     console.log("a:"+q);
 
-    const changeForm = (e) => {
-        e.preventDefault();
-        console.log("x---");
-        console.log(e.target.value);
-        console.log("selected:"+e.target.name);
-        setNewQuiz(e.target.value);
-        console.log("="+q);
-    }
-
     const changeEntry = (e) => {
         e.preventDefault();
         if (e.target.name === "ans") {
