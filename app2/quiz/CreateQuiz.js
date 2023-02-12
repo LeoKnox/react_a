@@ -9,13 +9,13 @@ const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
         e.preventDefault();
         console.log("x---");
         console.log(e.target.value);
+        console.log("selected:"+e.target.name);
         setNewQuiz(e.target.value);
         console.log("="+q);
     }
 
     const subQuiz = (e) => {
         e.preventDefault();
-        console.log("selected:"+e.target.name);
         let x= e.targetvalue;
         addQuiz({q, a});
     }
