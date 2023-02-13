@@ -47,7 +47,6 @@ function addQuiz(pushQuiz) {
   let x = qdOne;
   x.push(pushQuiz);
   setQdOne(x);
-  console.log("last"+JSON.stringify(qdOne));
 }
 
   return (
