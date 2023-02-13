@@ -11,12 +11,8 @@ const Quiz = ({questions, getQuiz, quizData}) => {
     function checkAns(e) {
         if (e.target.value == ans) {
             console.log("you go it correct");
-            //setAns(questions[Math.floor(Math.random()*questions.length)].a)
             getQuiz();
             setAns(questions[Math.floor(Math.random()*questions.length)].a);
-            console.log("a");
-            console.log(questions);
-            console.log(ans);
         } else {
             console.log("WRONG!!!!");
         }
