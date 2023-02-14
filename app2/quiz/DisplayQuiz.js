@@ -13,9 +13,9 @@ const DisplayQuiz = ({quizes}) => {
     setMyQuizes(x);
     }
 
-    function addQuiz(pushQuiz) {
+    function addQuiz(e) {
     let x = myQuizes;
-    x.push(pushQuiz);
+    x.push(e.target.value);
     setMyQuizes(x);
     }
 
