@@ -6,7 +6,12 @@ const DisplayQuiz = ({quizes}) => {
     console.log(myQuizes);
 
     return (
+        <>
         <h1>sub quizes</h1>
+        {myQuizes.map((mq) => (
+            <p>{mq.a}</p>
+        ))}
+        </>
     )
 }
 
