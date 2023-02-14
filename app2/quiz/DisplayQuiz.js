@@ -24,7 +24,7 @@ const DisplayQuiz = ({quizes}) => {
         <h1>sub quizes</h1>
         <CreateQuiz addQuiz={addQuiz} quizData={myQuizes} />
         {myQuizes.map((mq) => (
-            <p>{mq.a}</p>
+            <p>answer:{mq.a} question:{mq.q}</p>
         ))}
         </>
     )
