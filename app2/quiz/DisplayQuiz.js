@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import CreateQuiz from './quiz/CreateQuiz';
+import CreateQuiz from './CreateQuiz';
 
 const DisplayQuiz = ({quizes}) => {
     const [myQuizes, setMyQuizes] = useState(quizes);
@@ -10,19 +10,19 @@ const DisplayQuiz = ({quizes}) => {
     //e.preventDeafult();
     //let x = qdOne.sort(() => Math.random() - Math.random()).slice(0, 4);
     let x = 1;
-    setQuiz(x);
+    setMyQuizes(x);
     }
 
     function addQuiz(pushQuiz) {
     let x = myQuizes;
     x.push(pushQuiz);
-    setQdOne(x);
+    setMyQuizes(x);
     }
 
     return (
         <>
         <h1>sub quizes</h1>
-        <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quiData={quizData} />
+        <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quiData={myQuizes} />
         {myQuizes.map((mq) => (
             <p>{mq.a}</p>
         ))}
