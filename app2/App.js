@@ -6,6 +6,7 @@ import DataUpdate from "./components/DataUpdate";
 import Data from './main/Data';
 import Quiz from './quiz/Quiz';
 import CreateQuiz from './quiz/CreateQuiz';
+import DisplayQuiz from './quiz/DisplayQuiz';
 import Test from "./test";
 
 function App() {
@@ -54,6 +55,7 @@ function addQuiz(pushQuiz) {
       <h1>Heading</h1>
       <Quiz questions={quiz} quizData={quizData} getQuiz={getQuiz} />
       <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quiData={quizData} />
+      <DisplayQuiz />
       {qdOne.map((qd) => (
         <p>{qd.a}:{qd.q}::{qd.c}</p>
       ))}
