@@ -22,7 +22,7 @@ const DisplayQuiz = ({quizes}) => {
     return (
         <>
         <h1>sub quizes</h1>
-        <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quiData={myQuizes} />
+        <CreateQuiz addQuiz={addQuiz} quizData={myQuizes} />
         {myQuizes.map((mq) => (
             <p>{mq.a}</p>
         ))}

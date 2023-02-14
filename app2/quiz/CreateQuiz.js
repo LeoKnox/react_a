@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const CreateQuiz = ({addQuiz, getQuiz, quizData}) => {
+const CreateQuiz = ({addQuiz, quizData}) => {
     const [q, setNewQuiz] = useState("");
     const [a, setNewAns] = useState("");
 
