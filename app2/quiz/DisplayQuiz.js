@@ -19,16 +19,16 @@ const DisplayQuiz = ({quizes}) => {
     setMyQuizes(x);
     }
 
-    function deleteQuiz() {
-        console.log("akai");
+    function deleteQuiz(index) {
+        console.log("akai"+index);
     }
 
     return (
         <>
         <h1>sub quizes</h1>
         <CreateQuiz addQuiz={addQuiz} quizData={myQuizes} />
-        {myQuizes.map((mq) => (
-            <p>answer:{mq.a} question:{mq.q}<button onClick={deleteQuiz}>Delete</button></p>
+        {myQuizes.map((mq, i) => (
+            <p>answer:{mq.a} question:{mq.q}<button onSubmit={deleteQuiz(i)}>Delete</button></p>
         ))}
         </>
     )
