@@ -1,5 +1,6 @@
 import './App.css';
 import {useEffect, useState, useReducer} from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import DataInput from "./components/DataInput";
 import DataItem from "./components/DataItem";
 import DataUpdate from "./components/DataUpdate";
@@ -60,6 +61,11 @@ function addQuiz(pushQuiz) {
         <p>{qd.a}:{qd.q}::{qd.c}</p>
       ))}
       <Data />
+      <BrowserRouter>
+        <Routes>
+          <Route path="display" element={<DisplayQuiz />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
