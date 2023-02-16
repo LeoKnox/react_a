@@ -63,7 +63,7 @@ function addQuiz(pushQuiz) {
       <Data />
       <BrowserRouter>
         <Routes>
-          <Route path="display" element={<DisplayQuiz />} />
+          <Route path="display" element={<DisplayQuiz quizes={quizData} />} />
         </Routes>
       </BrowserRouter>
     </div>
