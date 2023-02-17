@@ -19,6 +19,10 @@ const DisplayQuiz = ({quizes}) => {
     setMyQuizes(x);
     }
 
+    function deleteQuiz(id=99) {
+    console.log("this is id: " + id);
+    }
+
     function deleteQuiz(index=3) {
         console.log("akai"+index);
     }
