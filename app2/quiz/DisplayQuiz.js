@@ -19,10 +19,6 @@ const DisplayQuiz = ({quizes}) => {
     setMyQuizes(x);
     }
 
-    function deleteQuiz(id=99) {
-    console.log("this is id: " + id);
-    }
-
     function deleteQuiz(index=3) {
         console.log("akai"+index);
     }
@@ -32,7 +28,10 @@ const DisplayQuiz = ({quizes}) => {
         <h1>sub quizes</h1>
         <CreateQuiz addQuiz={addQuiz} quizData={myQuizes} />
         {myQuizes.map((mq, i) => (
-            <p>answer:{mq.a} question:{mq.q}<button deleteQuiz={() => deleteQuiz}>Delete</button></p>
+            <p>answer:{mq.a} question:{mq.q}
+                <button deleteQuiz={() => deleteQuiz}>Delete</button>
+                
+            </p>
         ))}
         </>
     )
