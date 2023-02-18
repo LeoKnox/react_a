@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import CreateQuiz from './CreateQuiz';
 
-const DisplayQuiz = ({quizes}) => {
+const DisplayQuiz = ({quizes, removeQuiz}) => {
     const [myQuizes, setMyQuizes] = useState(quizes);
     console.log("quizes");
     console.log(myQuizes);
@@ -21,6 +21,7 @@ const DisplayQuiz = ({quizes}) => {
 
     function deleteQuiz(index=3) {
         console.log("akai"+JSON.stringify(index));
+        removeQuiz();
     }
 
     return (
