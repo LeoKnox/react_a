@@ -66,7 +66,11 @@ function removeQuiz(i = 3) {
       <Quiz questions={quiz} quizData={quizData} getQuiz={getQuiz} />
       <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quizData={quizData} />
       {qdOne.map((qd) => (
-        <p>{qd.a}:{qd.q}::{qd.c}</p>
+        <p>{qd.a}:{qd.q}::{qd.c}
+          <button onClick={removeQuiz}>
+            Del
+          </button>
+        </p>
       ))}
       <Data />
       <BrowserRouter>
