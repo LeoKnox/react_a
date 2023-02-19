@@ -53,6 +53,7 @@ function addQuiz(pushQuiz) {
 
 function removeQuiz(i = 3) {
   console.log("removeIndex");
+  console.log(JSON.stringify(qdOne));
   let newQd = qdOne;
   //newQd = newQd.splice(i, 1);
   delete newQd[i];
