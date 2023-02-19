@@ -49,21 +49,29 @@ function addQuiz(pushQuiz) {
   let x = qdOne;
   x.push(pushQuiz);
   setQdOne(x);
-}
+};
+
+function removeQuiz(i = 3) {
+  console.log("removeIndex");
+  let newQd = qdOne;
+  //newQd = newQd.splice(i, 1);
+  delete newQd[i];
+  console.log("newQd"+JSON.stringify(newQd));
+  setQdOne(newQd); 
+};
 
   return (
     <div className="App">
       <h1>Heading</h1>
       <Quiz questions={quiz} quizData={quizData} getQuiz={getQuiz} />
-      <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quiData={quizData} />
-      <DisplayQuiz quizes={quizData} />
+      <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quizData={quizData} />
       {qdOne.map((qd) => (
         <p>{qd.a}:{qd.q}::{qd.c}</p>
       ))}
       <Data />
       <BrowserRouter>
         <Routes>
-          <Route path="display" element={<DisplayQuiz quizes={quizData} />}>
+          <Route path="display" element={<DisplayQuiz quizes={qdOne} removeQuiz={removeQuiz} />}>
           </Route>
         </Routes>
       </BrowserRouter>
