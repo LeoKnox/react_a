@@ -61,7 +61,7 @@ function removeQuiz(event) {
   console.log(event.target.value);
   delete newQd[event.target.value];
   console.log("newQd"+JSON.stringify(newQd));
-  return(setQdOne(newQd)); 
+  setQdOne(newQd); 
 };
 
   return (
