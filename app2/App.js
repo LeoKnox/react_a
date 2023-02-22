@@ -53,12 +53,12 @@ function addQuiz(pushQuiz) {
   setQdOne(x);
 };
 
-function removeQuiz(i = 3) {
+function removeQuiz(i, event) {
   console.log("removeIndex");
   console.log(JSON.stringify(qdOne));
   let newQd = qdOne;
   //newQd = newQd.splice(i, 1);
-  console.log("i:"+JSON.stringify(i));
+  console.log(event.target.value);
   delete newQd[i];
   console.log("newQd"+JSON.stringify(newQd));
   return(setQdOne(newQd)); 
@@ -71,7 +71,7 @@ function removeQuiz(i = 3) {
       <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quizData={quizData} />
       {qdOne.map((qd) => (
         <p>{qd.a}:{qd.q}::{qd.c}
-          <button onClick={removeQuiz}>
+          <button value="3" onClick={removeQuiz}>
             Del
           </button>
         </p>
