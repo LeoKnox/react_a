@@ -69,9 +69,9 @@ function removeQuiz(event) {
       <h1>Heading</h1>
       <Quiz questions={quiz} quizData={quizData} getQuiz={getQuiz} />
       <CreateQuiz addQuiz={addQuiz} getQuiz={getQuiz} quizData={quizData} />
-      {qdOne.map((qd) => (
+      {qdOne.map((qd, i) => (
         <p>{qd.a}:{qd.q}::{qd.c}
-          <button value="4" onClick={removeQuiz}>
+          <button value={i} onClick={removeQuiz}>
             Del
           </button>
         </p>
