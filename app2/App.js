@@ -37,11 +37,11 @@ function App() {
   const aData = [11,22];
 
   useEffect((event) => {
-    event.preventDefault();
+    //event.preventDefault();
     setA(aData)
     getQuiz();
-    setQdOne(quizData);
-  }, [qdOne])
+    return(setQdOne(quizData));
+  }, [])
 
 function getQuiz(e) {
   //e.preventDeafult();
