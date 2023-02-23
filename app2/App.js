@@ -39,6 +39,7 @@ function App() {
   useEffect(() => {
     setA(aData)
     getQuiz();
+    setQdOne(quizData);
   }, [])
 
 function getQuiz(e) {
