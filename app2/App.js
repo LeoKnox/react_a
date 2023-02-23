@@ -40,8 +40,8 @@ function App() {
     //event.preventDefault();
     setA(aData)
     getQuiz();
-    return(setQdOne(quizData));
-  }, [])
+    let tt = setQdOne(quizData);
+  }, [tt])
 
 function getQuiz(e) {
   //e.preventDeafult();
