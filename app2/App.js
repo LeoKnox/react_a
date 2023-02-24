@@ -54,8 +54,8 @@ function addQuiz(pushQuiz) {
   setQdOne(x);
 };
 
-function removeQuiz(event) {
-  console.log("removeIndex");
+function removeQuiz(event, index) {
+  console.log("removeIndex" + index);
   console.log(JSON.stringify(qdOne));
   let newQd = qdOne;
   //newQd = newQd.splice(i, 1);
