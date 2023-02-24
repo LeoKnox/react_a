@@ -19,9 +19,9 @@ const DisplayQuiz = ({quizes, removeQuiz}) => {
     setMyQuizes(x);
     }
 
-    function deleteQuiz(index=3) {
+    function deleteQuiz(index) {
         console.log("akai"+JSON.stringify(index));
-        removeQuiz();
+        removeQuiz(index);
     }
 
     return (
