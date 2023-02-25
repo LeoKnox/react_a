@@ -40,6 +40,7 @@ function App() {
     //event.preventDefault();
     setA(aData)
     getQuiz();
+    setQdOne(quizData)
   }, [qdOne.c])
 
 function getQuiz(e) {
