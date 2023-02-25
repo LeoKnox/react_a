@@ -55,13 +55,13 @@ function addQuiz(pushQuiz) {
   setQdOne(x);
 };
 
-function removeQuiz(event, index) {
-  console.log("removeIndex" + index);
+function removeQuiz(event) {
+  console.log("removeIndex");
   console.log(JSON.stringify(qdOne));
   let newQd = qdOne;
   //newQd = newQd.splice(i, 1);
   //console.log(event.target.value);
-  delete newQd[index];
+  delete newQd[event.target.value];
   console.log("newQd"+JSON.stringify(newQd));
   setQdOne(newQd); 
 };
