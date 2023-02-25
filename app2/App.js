@@ -60,6 +60,8 @@ function removeQuiz(event) {
   console.log(JSON.stringify(qdOne));
   let newQd = qdOne;
   newQd.splice(event.target.value, 1);
+  console.log("spliced");
+  console.log(newQd);
   //console.log(event.target.value);
   //delete newQd[event.target.value];
   console.log("newQd"+JSON.stringify(newQd));
