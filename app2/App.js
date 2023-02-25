@@ -40,7 +40,7 @@ function App() {
     //event.preventDefault();
     setA(aData)
     getQuiz();
-  }, [])
+  }, [qdOne.c])
 
 function getQuiz(e) {
   //e.preventDeafult();
