@@ -29,7 +29,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/kanjiList" element={<KanjiList />} />
+          <Route path="/kanji" element={<KanjiList />} />
         </Routes>
       </BrowserRouter>
     </div>
