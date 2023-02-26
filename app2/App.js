@@ -3,6 +3,7 @@ import {useEffect, useState, useReducer} from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import KanjiList from "./pages/KanjiList";
 import Home from "./pages/Home";
+import One from "./pages/One";
 
 function App() {
   let quizData =
@@ -29,7 +30,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/kanji" element={<KanjiList />} />
+          <Route path="/kanji" element={<KanjiList />}>
+            <Route path="one" element={<One />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
