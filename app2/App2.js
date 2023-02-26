@@ -1,99 +1,87 @@
 import './App.css';
 import {useEffect, useState, useReducer} from 'react';
-import Abc from './Abc.js';
+import DataInput from "./components/DataInput";
+import DataItem from "./components/DataItem";
+import DataUpdate from "./components/DataUpdate";
+import Data from './main/Data';
+import Test from "./test";
 
 function App() {
-  //const [a, setA] = useState([]); before use reducer
-  const [b, setB] = useState(1);
-  const data = [1,2];
-
-  const reducer = (state, action) => {
-    console.log("state:"+state+":"+"action:"+action);
-    if (action.type === 1) {
-      (data = data + 1)
-    }
-  } 
-
-  const [state, dispatch] = useReducer([1,2]);
-  //const [state, dispatch] = useReducer(reducer, [1,2]);
+  const [a, setA] = useState([]);
+  const [data, setData] = useState(
+    [
+      {room: 'Entry', width:5, height:5},
+      {room: 'Blue', width:4, height:6},
+      {room: 'Red', width:8, height:7},
+    ]
+  )
+  const aData = [11,22];
 
   useEffect(() => {
-    dispatch([data]);
-    console.log("1st state:"+state);
-  },[]);
+    setA(aData)
+  }, [])
 
-  const clickB = () => {
-    console.log("Bbb");
-    setB(b+1);
+  const whatDataItem = (dataItem, index) => {
+    const newItem = data;
+    console.log("what say what " + JSON.stringify(newItem));
+    //newItem.map((i) => i.room=='Red' ? dataItem.room="boo" : i)
+    newItem[index] = dataItem;
+    console.log("what say what " + JSON.stringify(newItem));
+    return(() => setData(newItem));
+    alert(JSON.stringify(data));
   }
 
-  const textInput = (index, aaa) => {
-    console.log(index+":"+aaa);
-    let next = data;
-    dispatch([next.map(i=>{
-      if (i === aaa) {
-        next[i] = next[i]+1;
-        console.log("equals:"+i+":"+index);
-      }
-      console.log("next"+next)
-      return(dispatch(next));
-      console.log("data :"+data);
-    })]);
-        /*
-    let newA = a.map((b) => {
-      b += 2
-    });
-    console.log(newA);
-    setA(newA);
-    setA(
-      [...a, a.filter((item) => item === aaa ? item+=1 : item=item)]
-      aaa => {
-      return [
-        ...aaa.slice(0, ti[0]),
-        aaa.push(ti[1]),
-        ...aaa.slice(ti[0]+1),
-       console.log(`aaa:${aaa} : ti0:${ti[0]} : ti1:${ti[1]}`)
-      ]
+  const updateDataItem = (index) => {
+    const newDataItems = [...data];
+    const item = newDataItems[index];
+    let newItem = prompt(
+      `Update ${item.room}?`, item.room
+    );
+    let dataObj = { room: newItem, complete: false };
+    newItem = prompt(`update ${item.width}?`);
+    newDataItems.splice(index, 1, dataObj);
+    if (newItem === null || newItem === "") {
+      return;
+    } else {
+      console.log("**** update data item ****" + newItem);
+      item.room = newItem;
     }
-    )
-        */
+    setData(newDataItems);
+  };
+
+  const completeDataItem = (index) => {
+    const newDataItems = [...data];
+    newDataItems[index].complete === false
+      ? (newDataItems[index].complete = true)
+      : (newDataItems[index].complete = false);
+      setData(newDataItems)
+  };
+
+  const createDataItem = (room) => {
+    const newRoom = [...data, room];
+    setData(newRoom);
   }
-  
-  const clickButton = (index) => {
-    console.log("dddd" + Object.keys(index) + ":" + index);
-    /*
-    let newData = a;
-    newData[1] = 5;
-    setA(newData);
-    console.log(a);
-    setA((aa) => {
-      console.log(aa+"aa");
-      return [
-        aa[0] += 1
-        //aa[0]=5
-      ]
-    })
-    */
-        /*
-    setA((aa) => {
-      return (
-        aa.map ((aaa) => {
-          return (aaa+index)
-        }
-        )
-   setA(aaa => {
-     return [
-       ...aaa.slice(0, index),
-       aaa[index] + 1,
-       ...aaa.slice(index+1),
-     ]
-   })
-    console.log(a+"end");
-    */
+
+  const deleteDataItem = (room) => {
+    const deleteData = [...data]
+    deleteData.splice(room, 1);
+    console.log("delete data:"+deleteData);
+    setData(deleteData);
   }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Heading</h1>
-        {data.map((aaa, index) => (
+      <h1>Heading</h1>
+      <Data />
+      <DataInput  createDataItem={createDataItem} />
+      {data.map((aaa, index) => (
+        <>
+        <DataItem key={index} index={index} item={aaa} updateDataItem={updateDataItem} deleteDataItem={deleteDataItem} completeDataItem={completeDataItem} />
+        <DataUpdate key={index+"a"} index={index} item={aaa} whatDataItem={whatDataItem} />
+        </>
+      ))}
+    </div>
+  );
+}
+
+export default App;
