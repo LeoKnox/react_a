@@ -27,7 +27,7 @@ function App() {
       <h1>Heading</h1>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<KanjiList/>} />
+          <Route index element={<KanjiList/>} />
         </Routes>
       </BrowserRouter>
     </div>
