@@ -30,7 +30,7 @@ const DisplayQuiz = ({quizes, removeQuiz}) => {
         <CreateQuiz addQuiz={addQuiz} quizData={myQuizes} />
         {myQuizes.map((mq, i) => (
             <p>answer:{mq.a} question:{mq.q}
-                <button onClick={() => deleteQuiz(i)}>Delete</button>
+                <button onClick={() => deleteQuiz}>Delete</button>
             </p>
         ))}
         </>
