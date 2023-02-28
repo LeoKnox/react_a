@@ -20,13 +20,13 @@ function KanjiList() {
 
     useEffect((event) => {
         console.log(listKanji);
-    }, [])
+    }, [listKanji])
 
     function addKanji() {
         console.log("add kanji");
         let tempKanji = listKanji;
         tempKanji.push({q: "d", a:777, c:"dnd"})
-        console.log(tempKanji);
+        setListKanji(tempKanji);
     }
 
     return (
