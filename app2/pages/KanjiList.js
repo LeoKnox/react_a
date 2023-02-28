@@ -16,7 +16,10 @@ function KanjiList() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ];
 
+    const [listKanji, setListKanji] = useState(quizData);
+
     useEffect((event) => {
+        console.log(listKanji);
     }, [])
 
     return (
