@@ -22,6 +22,10 @@ function KanjiList() {
         console.log(listKanji);
     }, [])
 
+    function addKanji() {
+        console.log("add kanji");
+    }
+
     return (
         <>
         <p>List of Kanji</p>
@@ -29,6 +33,7 @@ function KanjiList() {
         {listKanji.map((lk) => (
             <p>{lk.q}</p>
         ))}
+        <button onClick={addKanji}>add</button>
         </>
     )
 }
