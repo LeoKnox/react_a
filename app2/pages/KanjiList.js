@@ -20,7 +20,7 @@ function KanjiList() {
 
     useEffect((event) => {
         console.log(listKanji);
-    }, [listKanji])
+    }, [listKanji.length])
 
     function addKanji() {
         console.log("add kanji");
