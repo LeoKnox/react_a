@@ -26,7 +26,9 @@ function KanjiList() {
         <>
         <p>List of Kanji</p>
         <Outlet />
-        {}
+        {listKanji.map((lk) => (
+            <p>{lk.q}</p>
+        ))}
         </>
     )
 }
