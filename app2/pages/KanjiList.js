@@ -30,10 +30,6 @@ function KanjiList() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ]);
 
-    useEffect((event) => {
-        console.log(listKanji);
-    }, [])
-
     function addKanji() {
         console.log("add kanji");
         let tempKanji = listKanji;
