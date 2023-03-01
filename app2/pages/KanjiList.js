@@ -31,11 +31,27 @@ function KanjiList() {
     ]);
 
     function addKanji() {
+        /*
         console.log("add kanji");
         let tempKanji = listKanji;
         tempKanji.push({q: "d", a:777, c:"dnd"})
         setListKanji(tempKanji);
         console.log(listKanji);
+        */
+       setListKanji(
+            [
+            {q: "ichi", a:1, c:"red"},
+            {q: "ni", a:2, c:"orange"},
+            {q: "san", a:3, c:"yellow"},
+            {q: "yon", a:4, c:"green"},
+            {q: "go", a:5, c:"blue"},
+            {q: "roku", a:6, c:"indigo"},
+            {q: "nana", a:7, c:"violet"},
+            {q: "hachi", a:8, c:"ultraviolet"},
+            {q: "kyu", a:9, c:"ultraultraviolet"},
+            {q: "ju", a:0, c:"ultrablack"}
+            ]
+       )
     }
 
     return (
