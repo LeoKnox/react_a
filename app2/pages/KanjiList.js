@@ -52,6 +52,7 @@ function KanjiList() {
             {q: "ju", a:0, c:"ultrablack"}
             ]
        )
+       console.log(listKanji);
     }
 
     return (
