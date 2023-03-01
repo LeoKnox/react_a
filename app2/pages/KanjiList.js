@@ -31,14 +31,13 @@ function KanjiList() {
     ]);
 
     function addKanji() {
-        /*
         console.log("add kanji");
         let tempKanji = listKanji;
-        tempKanji.push({q: "d", a:777, c:"dnd"})
-        setListKanji(tempKanji);
+        tempKanji.push({q: "ju", a:777, c:"dnd"})
         console.log(listKanji);
-        */
-       return setListKanji(
+        setListKanji(tempKanji);
+        /*
+       setListKanji(
             [
             {q: "ichi", a:1, c:"red"},
             {q: "ni", a:2, c:"orange"},
@@ -52,6 +51,7 @@ function KanjiList() {
             {q: "ju", a:0, c:"ultrablack"}
             ]
        )
+        */
        console.log(listKanji);
     }
 
