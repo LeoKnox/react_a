@@ -38,7 +38,7 @@ function KanjiList() {
         setListKanji(tempKanji);
         console.log(listKanji);
         */
-       setListKanji(
+       return setListKanji(
             [
             {q: "ichi", a:1, c:"red"},
             {q: "ni", a:2, c:"orange"},
