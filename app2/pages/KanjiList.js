@@ -35,7 +35,7 @@ function KanjiList() {
         let tempKanji = listKanji;
         tempKanji.push({q: "ju", a:777, c:"dnd"})
         console.log(listKanji);
-        setListKanji([tempKanji]);
+        setListKanji(tempKanji);
         /*
        setListKanji(
             [
