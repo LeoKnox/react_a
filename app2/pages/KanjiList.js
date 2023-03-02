@@ -33,6 +33,7 @@ function KanjiList() {
     function addKanji() {
         console.log("add kanji");
         let tempKanji = listKanji;
+        console.log(typeof tempKanji);
         tempKanji.push({q: "ju", a:777, c:"dnd"})
         console.log(typeof listKanji);
         setListKanji(tempKanji);
