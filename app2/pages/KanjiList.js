@@ -31,19 +31,17 @@ function KanjiList() {
     ]);
 
     function addKanji() {
-        /*
         console.log("add kanji");
         let tempKanji = listKanji;
         console.log(typeof tempKanji);
-        tempKanji.push({q: "ju", a:777, c:"dnd"})
-        tempKanji.pop();
-        setListKanji(tempKanji);
+        let d = {q: "ju", a:0, c:"ultrablack"};
+        setListKanji(...tempKanji+d);
         if (listKanji === tempKanji) {
             console.log("equals!!!!!")
         }
         console.log(typeof listKanji);
         setListKanji(tempKanji);
-        */
+        /*
        let d = {q: "ju", a:0, c:"ultrablack"};
        setListKanji(
             [
@@ -59,6 +57,7 @@ function KanjiList() {
             d
             ]
        )
+        */
        console.log(listKanji);
     }
 
