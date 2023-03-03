@@ -31,13 +31,11 @@ function KanjiList() {
     ]);
 
     function addKanji() {
-        console.log("add kanji");
-        let tempKanji = listKanji;
-        console.log(typeof tempKanji);
         let d = {q: "ju", a:0, c:"ultrablack"};
-        setListKanji(...tempKanji+d);
-        console.log(typeof listKanji);
-        //setListKanji(tempKanji);
+        const temp = [
+            ...listKanji, d
+        ];
+        setListKanji(temp);
         /*
        let d = {q: "ju", a:0, c:"ultrablack"};
        setListKanji(
