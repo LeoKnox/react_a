@@ -31,6 +31,7 @@ function KanjiList() {
     ]);
 
     function addKanji() {
+        /*
         console.log("add kanji");
         let tempKanji = listKanji;
         console.log(typeof tempKanji);
@@ -42,7 +43,8 @@ function KanjiList() {
         }
         console.log(typeof listKanji);
         setListKanji(tempKanji);
-        /*
+        */
+       let d = {q: "ju", a:0, c:"ultrablack"};
        setListKanji(
             [
             {q: "ichi", a:1, c:"red"},
@@ -54,10 +56,9 @@ function KanjiList() {
             {q: "nana", a:7, c:"violet"},
             {q: "hachi", a:8, c:"ultraviolet"},
             {q: "kyu", a:9, c:"ultraultraviolet"},
-            {q: "ju", a:0, c:"ultrablack"}
+            d
             ]
        )
-        */
        console.log(listKanji);
     }
 
