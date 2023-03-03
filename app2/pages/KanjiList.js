@@ -36,11 +36,8 @@ function KanjiList() {
         console.log(typeof tempKanji);
         let d = {q: "ju", a:0, c:"ultrablack"};
         setListKanji(...tempKanji+d);
-        if (listKanji === tempKanji) {
-            console.log("equals!!!!!")
-        }
         console.log(typeof listKanji);
-        setListKanji(tempKanji);
+        //setListKanji(tempKanji);
         /*
        let d = {q: "ju", a:0, c:"ultrablack"};
        setListKanji(
