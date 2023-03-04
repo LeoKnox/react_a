@@ -32,7 +32,7 @@ function KanjiList() {
     ]);
 
     function addKanji(event) {
-        console.log("event" + JSON.stringify(event.target.value));
+        console.log(JSON.stringify(event.target.value, null, 4));
         let d = event.target.value;
         const temp = [
             ...listKanji, d
