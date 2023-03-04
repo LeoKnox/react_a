@@ -17,6 +17,7 @@ function KanjiList() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ]; */
 
+    let newData = {q: "JU", a:0, c:"ultrablack"};
     const [listKanji, setListKanji] = useState(
     [
       {q: "ichi", a:1, c:"red"},
@@ -64,7 +65,7 @@ function KanjiList() {
         {listKanji.map((lk) => (
             <p>{lk.q}</p>
         ))}
-        <button onClick={addKanji} value={{q: "JU", a:0, c:"ultrablack"}}>add</button>
+        <button onClick={addKanji} value={newData}>add</button>
         </>
     )
 }
