@@ -30,8 +30,10 @@ function KanjiList() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ]);
 
-    function addKanji() {
-        let d = {q: "ju", a:0, c:"ultrablack"};
+    function addKanji(event) {
+        console.log("event");
+        console.log(event.target.value);
+        let d = event.target.value;
         const temp = [
             ...listKanji, d
         ];
@@ -63,7 +65,7 @@ function KanjiList() {
         {listKanji.map((lk) => (
             <p>{lk.q}</p>
         ))}
-        <button onClick={addKanji}>add</button>
+        <button onClick={addKanji} value={{q: "JU", a:0, c:"ultrablack"}}>add</button>
         </>
     )
 }
