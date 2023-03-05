@@ -18,6 +18,7 @@ function KanjiList() {
     ]; */
 
     let newData = {q: "JU", a:0, c:"ultrablack"};
+    const [newQ, setNewQuiz] = useState("type here");
     const [listKanji, setListKanji] = useState(
     [
       {q: "ichi", a:1, c:"red"},
@@ -65,7 +66,8 @@ function KanjiList() {
         {listKanji.map((lk) => (
             <p>{lk.q}</p>
         ))}
-        <button onClick={addKanji} value={"ju"}>add</button>
+        <input value={newQ} onChange={e => setNewQuiz(e.target.value)} type="text" />
+        <button onClick={addKanji} value={newQ}>add</button>
         </>
     )
 }
