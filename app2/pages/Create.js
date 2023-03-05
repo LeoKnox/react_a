@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 
-function Create(addKanji) {
+function Create({addKanji}) {
     const [newQ, setNewQuiz] = useState("type here");
     const [newA, setNewAns] = useState("type here");
     const [newC, setNewCol] = useState("type here");
