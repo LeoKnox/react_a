@@ -18,9 +18,6 @@ function KanjiList() {
     ]; */
 
     let newData = {q: "JU", a:0, c:"ultrablack"};
-    const [newQ, setNewQuiz] = useState("type here");
-    const [newA, setNewAns] = useState("type here");
-    const [newC, setNewCol] = useState("type here");
     const [listKanji, setListKanji] = useState(
     [
       {q: "ichi", a:1, c:"red"},
@@ -38,7 +35,8 @@ function KanjiList() {
         let d = event.target.value;
         console.log(d);
         const temp = [
-            ...listKanji, {q:newQ, a:newA, c:newC}
+            ...listKanji, {q:"asdfasd", a:"asdfasf", c:"dasfafda"}
+            //...listKanji, {q:newQ, a:newA, c:newC}
         ];
         setListKanji(temp);
         /*
@@ -64,14 +62,10 @@ function KanjiList() {
     return (
         <>
         <p>List of Kanji</p>
-        <Outlet />
         {listKanji.map((lk) => (
             <p>{lk.q}</p>
         ))}
-        <input value={newQ} onChange={e => setNewQuiz(e.target.value)} type="text" />
-        <input value={newA} onChange={e => setNewAns(e.target.value)} type="text" />
-        <input value={newC} onChange={e => setNewCol(e.target.value)} type="text" />
-        <button onClick={addKanji} value={newQ}>add</button>
+        <Outlet addKanji={addKanji} />
         </>
     )
 }
