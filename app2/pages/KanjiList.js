@@ -65,7 +65,7 @@ function KanjiList() {
         {listKanji.map((lk) => (
             <p>{lk.q}</p>
         ))}
-        <Outlet addKanji={addKanji()} />
+        <Outlet addKanji={setListKanji} />
         </>
     )
 }
