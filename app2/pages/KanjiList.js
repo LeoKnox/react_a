@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {Outlet} from 'react-router-dom';
 import One from './One.js';
+import Create from './Create.js';
 
 function KanjiList() {
     /*
@@ -65,7 +66,7 @@ function KanjiList() {
         {listKanji.map((lk) => (
             <p>{lk.q}</p>
         ))}
-        <Outlet addKanji={"setListKanji"} />
+        <Create addKanji={setListKanji} />
         </>
     )
 }
