@@ -5,6 +5,8 @@ function Create({addKanji}) {
     const [newA, setNewAns] = useState("type here");
     const [newC, setNewCol] = useState("type here");
 
+    console.log(addKanji);
+
     return(
         <>
         <input value={newQ} onChange={e => setNewQuiz(e.target.value)} type="text" />
