@@ -69,7 +69,7 @@ function KanjiList() {
         <>
         <p>List of Kanji</p>
         {listKanji.map((lk, i) => (
-            <p>{lk.q}<Delete value={i} deleteKanji={deleteKanji(i)} /></p>
+            <p>{lk.q}<Delete value={i} deleteKanji={() => deleteKanji("i")} /></p>
         ))}
         <Create addKanji={addKanji} />
         </>
