@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import {Outlet} from 'react-router-dom';
 import One from './One.js';
 import Create from './Create.js';
+import Delete from './Delete.js';
 
 function KanjiList() {
     /*
@@ -31,6 +32,11 @@ function KanjiList() {
       {q: "hachi", a:8, c:"ultraviolet"},
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ]);
+
+    function deleteKanji(event) {
+        event.target.preventDefault();
+        console.log("deleted")
+    }
 
     function addKanji(event) {
         let d = event.target.value;
@@ -64,7 +70,7 @@ function KanjiList() {
         <>
         <p>List of Kanji</p>
         {listKanji.map((lk) => (
-            <p>{lk.q}</p>
+            <p>{lk.q}<Delete deleteKanji /></p>
         ))}
         <Create addKanji={addKanji} />
         </>
