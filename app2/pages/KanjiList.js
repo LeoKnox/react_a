@@ -34,7 +34,6 @@ function KanjiList() {
     ]);
 
     function deleteKanji(event) {
-        event.target.preventDefault();
         console.log("deleted")
     }
 
@@ -70,7 +69,7 @@ function KanjiList() {
         <>
         <p>List of Kanji</p>
         {listKanji.map((lk) => (
-            <p>{lk.q}<Delete deleteKanji /></p>
+            <p>{lk.q}<Delete deleteKanji={deleteKanji} /></p>
         ))}
         <Create addKanji={addKanji} />
         </>

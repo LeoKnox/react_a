@@ -1,6 +1,6 @@
 function Delete({deleteKanji}) {
     return(
-        <button>Delete</button>
+        <button onClick={deleteKanji}>Delete</button>
     )
 }
 
