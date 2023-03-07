@@ -33,8 +33,8 @@ function KanjiList() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ]);
 
-    function deleteKanji(event) {
-        console.log("deleted" + event.target.value);
+    function deleteKanji({i}) {
+        console.log("deleted" + i);
     }
 
     function addKanji(event) {
@@ -71,7 +71,7 @@ function KanjiList() {
         {listKanji.map((lk, i) => (
             <p>{lk.q}<Delete value={i} deleteKanji={deleteKanji} /></p>
         ))}
-        <Create addKanji={addKanji} />
+        <Create addKanji={(i) => addKanji(i)} />
         </>
     )
 }
