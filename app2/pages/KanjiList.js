@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react';
 import {Outlet} from 'react-router-dom';
 import One from './One.js';
 import Create from './Create.js';
-import Delete from './Delete.js';
 
 function KanjiList() {
     /*
@@ -35,7 +34,6 @@ function KanjiList() {
 
     function deleteKanji(event) {
         setListKanji(listKanji.filter((value, i) => i != event.target.value));
-        console.log(listKanji);
     }
 
     function addKanji(event) {
