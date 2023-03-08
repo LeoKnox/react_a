@@ -34,7 +34,7 @@ function KanjiList() {
     ]);
 
     function deleteKanji(event) {
-        let xKanji = [...listKanji.slice(event.target.value), ...listKanji.slice(event.target.value+1)];
+        let xKanji = listKanji.slice(listKanji.indexOf(event.target.value, 1));
         console.log(xKanji);
     }
 
