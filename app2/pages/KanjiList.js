@@ -52,7 +52,7 @@ function KanjiList() {
         <>
         <p>List of Kanji</p>
         {listKanji.map((lk, i) => (
-            <p>{lk.q}<button onClick={deleteKanji(i)}>X</button></p>
+            <p>{lk.q}<button value={i} onClick={deleteKanji}>X</button></p>
         ))}
         <Create addKanji={addKanji} />
         </>
