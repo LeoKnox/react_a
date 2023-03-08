@@ -33,8 +33,8 @@ function KanjiList() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ]);
 
-    function deleteKanji(xKanji) {
-        console.log("xKanji");
+    function deleteKanji(event) {
+        console.log(event.target.value);
     }
 
     function addKanji(event) {
