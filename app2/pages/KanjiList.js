@@ -37,7 +37,7 @@ function KanjiList() {
     }
 
     function addKanji(newC, event) {
-        console.log("t"+newC);
+        //console.log("t"+newC);
         let d = event.target.value;
         console.log(d);
         const temp = [
