@@ -9,7 +9,7 @@ function Create({addKanji}) {
     function changeGeneric(event) {
         let temp={};
         if (event.target.id=="z") {
-            temp.z = "red";
+            temp.z = event.target.value;
         }
         setGeneric(temp);
         console.log(generic);
@@ -17,7 +17,7 @@ function Create({addKanji}) {
 
     return(
         <>
-        <input id="z" value="red" onChange={changeGeneric} type="text" />
+        <input id="z" value={generic.z} onChange={changeGeneric} type="text" />
         <input id="q" value={newQ.q} onChange={e => setNewQuiz(e.target.value)} type="text" />
         <input value={newQ.a} onChange={e => setNewAns(e.target.value)} type="text" />
         <input value={newC} onChange={e => setNewCol(e.target.value)} type="text" />
