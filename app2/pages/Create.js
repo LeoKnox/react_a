@@ -6,7 +6,7 @@ function Create({addKanji}) {
     const [newC, setNewCol] = useState("type here");
 
     function addKanji2(event) {
-        console.log("k2"+event.target.id);
+        console.log(event);
     }
 
     return(
