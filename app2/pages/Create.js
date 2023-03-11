@@ -20,7 +20,7 @@ function Create({addKanji}) {
     return(
         <>
         <input id="z" value={generic.z} onChange={changeGeneric} type="text" />
-        <input id="q" value={generic.q} onChange={e => setNewQuiz(e.target.value)} type="text" />
+        <input id="q" value={generic.q} onChange={changeGeneric} type="text" />
         <input value={newQ.a} onChange={e => setNewAns(e.target.value)} type="text" />
         <input value={newC} onChange={e => setNewCol(e.target.value)} type="text" />
         <button onClick={() => addKanji(generic)} value={newQ}>add</button>
