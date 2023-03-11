@@ -4,15 +4,16 @@ function Create({addKanji}) {
     const [newQ, setNewQuiz] = useState({q:"type here", a:"ans here"});
     const [newA, setNewAns] = useState("type here");
     const [newC, setNewCol] = useState("type here");
-    const [generic, setGeneric] = useState({});
+    const [generic, setGeneric] = useState({z:"", q:""});
 
     function changeGeneric(event) {
         let temp={};
         if (event.target.id=="z") {
-            temp.z = event.target.value;
+            temp[z] = event.target.value;
         } else if (event.target.id=="q") {
-            temp.q = event.target.value;
+            temp[q] = event.target.value;
         }
+        console.log(temp);
         setGeneric(temp);
         console.log(generic);
     }
