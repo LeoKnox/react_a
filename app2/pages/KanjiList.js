@@ -36,7 +36,7 @@ function KanjiList() {
         setListKanji(listKanji.filter((value, i) => i != event.target.value));
     }
 
-    function addKanji(param) {
+    function addKanji2(param) {
         console.log(param);
     }
 
@@ -58,7 +58,7 @@ function KanjiList() {
         {listKanji.map((lk, i) => (
             <p>{lk.q}<button value={i} onClick={deleteKanji}>X</button></p>
         ))}
-        <Create addKanji={addKanji} />
+        <Create addKanji={addKanji2} />
         </>
     )
 }
