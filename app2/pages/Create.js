@@ -8,11 +8,13 @@ function Create({addKanji}) {
 
     function changeGeneric(event) {
         let temp=generic;
+        console.log('t');
+        console.log(temp);
         if (event.target.id=="z") {
-            temp[z] = event.target.value;
+            temp.z = event.target.value;
         };
         if (event.target.id=="q") {
-            temp[q] = event.target.value;
+            temp.q = event.target.value;
         };
         console.log(temp);
         setGeneric(temp);
