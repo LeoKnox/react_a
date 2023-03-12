@@ -11,13 +11,14 @@ function Create({addKanji}) {
         console.log('t');
         console.log(temp);
         if (event.target.id=="z") {
-            setGeneric(event.target.value);
+            temp.z = event.target.value;
+            temp.q = temp.q;
         };
         if (event.target.id=="q") {
             temp.q = event.target.value;
         };
         console.log(temp);
-        //setGeneric(temp);
+        setGeneric(temp);
         console.log(generic);
     }
 
