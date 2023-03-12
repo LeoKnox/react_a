@@ -49,7 +49,7 @@ function KanjiList() {
             //...listKanji, {q:newQ, a:newA, c:newC}
         ];
         setListKanji(temp);
-       console.log(listKanji);
+        console.log(listKanji);
     }
 
     return (
