@@ -7,9 +7,6 @@ function Create({addKanji}) {
     const [generic, setGeneric] = useState({z:"", q:""});
 
     function changeGeneric(event) {
-        let temp=generic;
-        console.log('t');
-        console.log(temp);
         if (event.target.id=="a") {
             setNewAns(event.target.value);
         };
@@ -22,9 +19,7 @@ function Create({addKanji}) {
     }
 
     function submitKanji() {
-        console.log("gg");
         let temp ={q: newQ, a:newA, c:newC};
-        console.log(temp);
         addKanji(temp);
     }
 

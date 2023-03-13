@@ -36,18 +36,11 @@ function KanjiList() {
         setListKanji(listKanji.filter((value, i) => i != event.target.value));
     }
 
-    function addKanji2(param) {
-        console.log(param);
-    }
-
     function addKanji(newKanji) {
-        console.log("addKanji");
-        console.log(newKanji);
         const temp = [
             ...listKanji, newKanji
             //...listKanji, {q:newQ, a:newA, c:newC}
         ];
-        console.log(temp);
         setListKanji(temp);
     }
 
