@@ -25,8 +25,11 @@ function Create({addKanji}) {
 
     return(
         <>
+        <label>Q: </label>
         <input id="q" value={newQ} onChange={changeGeneric} type="text" />
+        <label>A: </label>
         <input id="a" value={newA} onChange={changeGeneric} type="text" />
+        <label>C: </label>
         <input id="c" value={newC} onChange={changeGeneric} type="text" />
         <button onClick={submitKanji} value={newQ}>add</button>
         </>
