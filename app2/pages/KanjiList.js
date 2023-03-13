@@ -40,16 +40,14 @@ function KanjiList() {
         console.log(param);
     }
 
-    function addKanji(event) {
+    function addKanji(newKanji) {
         //console.log("t"+newC);
-        let d = event.target.value;
-        console.log(d.a);
         const temp = [
-            ...listKanji, {q:"asdfasd", a:"asdfasf", c:"dasfafda"}
+            ...listKanji, newKanji
             //...listKanji, {q:newQ, a:newA, c:newC}
         ];
+        console.log(temp);
         setListKanji(temp);
-        console.log(listKanji);
     }
 
     return (
