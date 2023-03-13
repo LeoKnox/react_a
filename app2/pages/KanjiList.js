@@ -42,7 +42,9 @@ function KanjiList() {
 
     function addKanji(newKanji) {
         //console.log("t"+newC);
-        const temp = [
+        let temp = listKanji;
+        console.log(temp);
+        temp = [
             ...listKanji, newKanji
             //...listKanji, {q:newQ, a:newA, c:newC}
         ];
