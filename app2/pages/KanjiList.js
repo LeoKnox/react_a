@@ -41,10 +41,9 @@ function KanjiList() {
     }
 
     function addKanji(newKanji) {
-        //console.log("t"+newC);
-        let temp = listKanji;
-        console.log(temp);
-        temp = [
+        console.log("addKanji");
+        console.log(newKanji);
+        const temp = [
             ...listKanji, newKanji
             //...listKanji, {q:newQ, a:newA, c:newC}
         ];
@@ -58,7 +57,7 @@ function KanjiList() {
         {listKanji.map((lk, i) => (
             <p>{lk.q}<button value={i} onClick={deleteKanji}>X</button></p>
         ))}
-        <Create addKanji={addKanji2} />
+        <Create addKanji={addKanji} />
         </>
     )
 }
