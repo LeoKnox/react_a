@@ -25,8 +25,9 @@ function Create({addKanji}) {
 
     function submitKanji() {
         console.log("gg");
-        console.log(generic);
-        addKanji(generic);
+        let temp ={z: newZ, q:"qq", a:"aa", c:"cc"};
+        console.log(temp);
+        addKanji(temp);
     }
 
     return(
