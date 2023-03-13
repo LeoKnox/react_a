@@ -11,7 +11,7 @@ function Create({addKanji}) {
         console.log('t');
         console.log(temp);
         if (event.target.id=="z") {
-            temp.z += event.target.value;
+            temp.q = event.target.value;
             console.log(temp);
             temp.q = temp.q;
         };
@@ -22,13 +22,19 @@ function Create({addKanji}) {
         console.log(generic);
     }
 
+    function submitKanji() {
+        console.log("gg");
+        console.log(generic);
+        addKanji(generic);
+    }
+
     return(
         <>
         <input id="z" value={generic.z} onChange={changeGeneric} type="text" />
         <input id="q" value={generic.q} onChange={changeGeneric} type="text" />
         <input value={newQ.a} onChange={e => setNewAns(e.target.value)} type="text" />
         <input value={newC} onChange={e => setNewCol(e.target.value)} type="text" />
-        <button onClick={() => addKanji(generic)} value={newQ}>add</button>
+        <button onClick={submitKanji} value={newQ}>add</button>
         </>
     )
 }
