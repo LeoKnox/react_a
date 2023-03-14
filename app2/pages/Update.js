@@ -1,7 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+
+function HandleRoute() {
+    let navigate = useNavigate();
+    console.log("red");
+}
+
 function Update() {
     return (
         <>
             <h3>update</h3>
+            <button onClick={HandleRoute}>Home</button>
         </>
     )
 }
