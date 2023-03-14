@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 function HandleRoute() {
-    let navigate = useNavigate();
+    useNavigate("/");
     console.log("red");
 }
 
