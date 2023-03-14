@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-function HandleRoute() {
-    useNavigate("/kanji");
+function handleRoute() {
     console.log("red");
 }
 
@@ -9,7 +8,7 @@ function Update() {
     return (
         <>
             <h3>update</h3>
-            <button onClick={HandleRoute}>Home</button>
+            <button onClick={handleRoute}>Home</button>
         </>
     )
 }
