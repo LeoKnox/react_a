@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 function HandleRoute() {
-    useNavigate("/");
+    useNavigate("/kanji");
     console.log("red");
 }
 
