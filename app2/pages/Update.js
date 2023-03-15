@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 
 function Update() {
-    const { kanjiId } = useParams();
-    console.log(kanjiId);
+    const { kanjiId, newId } = useParams();
+    console.log(kanjiId + ":" + newId);
 
     return (
         <>
