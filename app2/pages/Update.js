@@ -1,9 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 
-function handleRoute() {
-    console.log("red");
-}
-
 function Update() {
     return (
         <>
