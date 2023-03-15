@@ -8,7 +8,7 @@ function Update() {
     return (
         <>
             <h3>update</h3>
-            <button onClick={handleRoute}>Home</button>
+            <button><a href={'/kanji/'}>Home</a></button>
         </>
     )
 }
