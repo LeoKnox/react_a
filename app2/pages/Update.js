@@ -1,9 +1,9 @@
-import { useLoaderData } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function Update() {
-    const { kanjiId } = useLoaderData();
+    const { kanjiId } = useParams();
     console.log(kanjiId);
-    
+
     return (
         <>
             <h3>update</h3>
