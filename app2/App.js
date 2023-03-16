@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import KanjiList from "./pages/KanjiList";
 import Home from "./pages/Home";
 import One from "./pages/One";
+import Update from "./pages/Update";
 import Create from "./pages/Create";
 
 function App() {
@@ -31,9 +32,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/update/:kanjiId/" element={<Update />} />
           <Route path="/kanji" element={<KanjiList />}>
-            <Route path="one" element={<One />} />
-            <Route path="create" element={<Create />} />
+            <Route path="create/" element={<Create />} />
           </Route>
         </Routes>
       </BrowserRouter>
