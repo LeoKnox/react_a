@@ -21,8 +21,8 @@ function KanjiList({homeKanji}) {
     ]; */
 
     let newData = {q: "JU", a:0, c:"ultrablack"};
-    const [listKanji2, setListKanji2] = useState(homeKanji);
-    const [listKanji, setListKanji] = useState(
+    const [listKanji, setListKanji] = useState(homeKanji);
+    const [listKanji2, setListKanji2] = useState(
     [
       {q: "ichi", a:1, c:"red"},
       {q: "ni", a:2, c:"orange"},
