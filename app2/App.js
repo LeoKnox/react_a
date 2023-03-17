@@ -33,7 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/update/:kanjiId/" element={<Update />} />
-          <Route path="/kanji" element={<KanjiList />}>
+          <Route path="/kanji" element={<KanjiList homeKanji={homeKanji} />}>
             <Route path="create/" element={<Create />} />
           </Route>
         </Routes>
