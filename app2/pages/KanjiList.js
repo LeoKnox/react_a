@@ -3,7 +3,7 @@ import {Outlet} from 'react-router-dom';
 import One from './One.js';
 import Create from './Create.js';
 
-function KanjiList(homeKanji) {
+function KanjiList({homeKanji}) {
     console.log("homeKanji");
     console.log(JSON.stringify(homeKanji))
     /*
@@ -21,9 +21,9 @@ function KanjiList(homeKanji) {
     ]; */
 
     let newData = {q: "JU", a:0, c:"ultrablack"};
+    const [listKanji2, setListKanji2] = useState(homeKanji);
     const [listKanji, setListKanji] = useState(
-        homeKanji
-    /*[
+    [
       {q: "ichi", a:1, c:"red"},
       {q: "ni", a:2, c:"orange"},
       {q: "san", a:3, c:"yellow"},
@@ -33,7 +33,7 @@ function KanjiList(homeKanji) {
       {q: "nana", a:7, c:"violet"},
       {q: "hachi", a:8, c:"ultraviolet"},
       {q: "kyu", a:9, c:"ultraultraviolet"}
-    ]*/);
+    ]);
 
     function deleteKanji(event) {
         setListKanji(listKanji.filter((value, i) => i != event.target.value));
