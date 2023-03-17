@@ -3,7 +3,9 @@ import {Outlet} from 'react-router-dom';
 import One from './One.js';
 import Create from './Create.js';
 
-function KanjiList() {
+function KanjiList(homeKanji) {
+    console.log("homeKanji");
+    console.log(JSON.stringify(homeKanji))
     /*
   let quizData =
     [
