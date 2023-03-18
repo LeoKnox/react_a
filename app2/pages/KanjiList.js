@@ -35,7 +35,7 @@ function KanjiList({homeKanji}) {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ]);
 
-    console.log("tt" + useLoaderData());
+    //console.log("tt" + useLoaderData());
 
     function deleteKanji(event) {
         setListKanji(listKanji.filter((value, i) => i != event.target.value));
