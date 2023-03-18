@@ -32,8 +32,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/update/:kanjiId/" element={<Update />} />
-          <Route path="/kanji" element={<KanjiList homeKanji={homeKanji} />}>
+          <Route path="/update/:kanjiId/" loader={quizData[2]} element={<Update />} />
+          <Route path="/kanji" element={<KanjiList homeKanji={quizData} />}>
             <Route path="create/" element={<Create />} />
           </Route>
         </Routes>
