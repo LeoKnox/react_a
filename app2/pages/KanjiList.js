@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useLoaderData} from 'react';
 import {Outlet} from 'react-router-dom';
 import One from './One.js';
 import Create from './Create.js';
@@ -34,6 +34,8 @@ function KanjiList({homeKanji}) {
       {q: "hachi", a:8, c:"ultraviolet"},
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ]);
+
+    console.log("tt" + useLoaderData());
 
     function deleteKanji(event) {
         setListKanji(listKanji.filter((value, i) => i != event.target.value));
