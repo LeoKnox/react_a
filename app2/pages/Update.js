@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useLoaderData } from 'react';
-import {test} from './KanjiList';
+import test from './KanjiList';
 
 function Update({oldKanji}) {
     const { kanjiId, newId } = useParams();
