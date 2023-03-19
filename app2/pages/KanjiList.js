@@ -1,4 +1,4 @@
-import {useEffect, useState, useLoaderData} from 'react';
+import {useEffect, useState, Link, useLoaderData} from 'react';
 import {Outlet} from 'react-router-dom';
 import One from './One.js';
 import Create from './Create.js';
@@ -54,7 +54,7 @@ function KanjiList({homeKanji}) {
         <>
         <p>List of Kanji</p>
         {listKanji.map((lk, i) => (
-            <p>{lk.q}<button value={i} onClick={deleteKanji}>X</button><button onClick={""}>Update</button></p>
+            <p>{lk.q}<button value={i} onClick={deleteKanji}>X</button><button><Link to={`update/${i}`}>Update</Link></button></p>
         ))}
         <Create addKanji={addKanji} />
         </>
