@@ -49,6 +49,9 @@ function KanjiList({homeKanji}) {
         setListKanji(temp);
     }
     //<a href={`/update/${i}/`}>Update</a>
+    export function test() {
+        console.log("sucessful test");
+    }
 
     return (
         <>
