@@ -37,7 +37,7 @@ function KanjiList({homeKanji}) {
 
     //console.log("tt" + useLoaderData());
 
-    function deleteKanji(event) {
+    export default function deleteKanji(event) {
         setListKanji(listKanji.filter((value, i) => i != event.target.value));
     }
 
@@ -64,4 +64,4 @@ function KanjiList({homeKanji}) {
     )
 }
 
-export default {KanjiList, test};
+export default KanjiList;
