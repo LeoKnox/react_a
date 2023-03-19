@@ -62,3 +62,7 @@ function KanjiList({homeKanji}) {
 }
 
 export default KanjiList;
+
+export function test() {
+    console.log("tested");
+}
