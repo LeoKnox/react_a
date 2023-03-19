@@ -1,5 +1,5 @@
-import {useEffect, useState, Link, useLoaderData} from 'react';
-import {Outlet} from 'react-router-dom';
+import {useEffect, useState, useLoaderData} from 'react';
+import {Link} from 'react-router-dom';
 import One from './One.js';
 import Create from './Create.js';
 
