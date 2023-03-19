@@ -54,7 +54,7 @@ function KanjiList({homeKanji}) {
         <>
         <p>List of Kanji</p>
         {listKanji.map((lk, i) => (
-            <p>{lk.q}<button value={i} onClick={deleteKanji}>X</button><button><Link to={`update/${i}`}>Update</Link></button></p>
+            <p>{lk.q}<button value={i} onClick={deleteKanji}>X</button><button><Link to={`/update/${i}`}>Update</Link></button></p>
         ))}
         <Create addKanji={addKanji} />
         </>
