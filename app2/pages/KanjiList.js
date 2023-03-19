@@ -1,9 +1,11 @@
 import {useEffect, useState, useLoaderData} from 'react';
 import {Link} from 'react-router-dom';
 import One from './One.js';
+import { test } from './Update.js';
 import Create from './Create.js';
 
 function KanjiList({homeKanji}) {
+    test();
     console.log("homeKanji");
     console.log(JSON.stringify(homeKanji))
     /*
@@ -37,7 +39,7 @@ function KanjiList({homeKanji}) {
 
     //console.log("tt" + useLoaderData());
 
-    export default function deleteKanji(event) {
+    export function deleteKanji(event) {
         setListKanji(listKanji.filter((value, i) => i != event.target.value));
     }
 
@@ -49,9 +51,6 @@ function KanjiList({homeKanji}) {
         setListKanji(temp);
     }
     //<a href={`/update/${i}/`}>Update</a>
-    function Test() {
-        console.log("sucessful test");
-    }
 
     return (
         <>

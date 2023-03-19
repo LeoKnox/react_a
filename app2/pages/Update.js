@@ -3,13 +3,14 @@ import { useState, useLoaderData } from 'react';
 import { test } from './KanjiList.js';
 
 function Update({oldKanji}) {
+    export function Test() {
+        console.log("sucessful test");
+    }
     const { kanjiId, newId } = useParams();
     const {newQ, setQ} = useState("");
     const {newC, setC} = useState("");
     const {newA, setA} = useState("");
     console.log(oldKanji);
-
-    test();
 
     return (
         <>
