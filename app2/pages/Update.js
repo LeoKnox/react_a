@@ -8,6 +8,7 @@ function Update({oldKanji}) {
     const {newC, setC} = useState("");
     const {newA, setA} = useState("");
     console.log(oldKanji);
+
     test();
 
     return (

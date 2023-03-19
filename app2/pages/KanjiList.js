@@ -49,7 +49,7 @@ function KanjiList({homeKanji}) {
         setListKanji(temp);
     }
     //<a href={`/update/${i}/`}>Update</a>
-    export function test() {
+    function Test() {
         console.log("sucessful test");
     }
 
@@ -64,4 +64,4 @@ function KanjiList({homeKanji}) {
     )
 }
 
-export default KanjiList;
+export default {KanjiList, test};
