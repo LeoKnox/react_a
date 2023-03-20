@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import One from "./pages/One";
 import Update from "./pages/Update";
 import Create from "./pages/Create";
+import {displayKanji} from "./kanjiQuiz/kanji";
 
 function App() {
   let quizData =
@@ -22,8 +23,16 @@ function App() {
     ];
   const [qdOne, setQdOne] = useState(quizData);
   const [quiz, setQuiz] = useState(quizData.sort(() => Math.random() - Math.random()).slice(0, 4));
+  /*
+          <Route path="/update/:kanjiId/" element={<Update />} />
+          <Route path="/kanji" element={<KanjiList homeKanji={quizData} />}>
+            <Route path="create/" element={<Create />} />
+          </Route>
+  */
 
   useEffect((event) => {
+    let x = displayKanji();
+    console.log(x);
   }, [])
 
   return (
@@ -32,10 +41,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/update/:kanjiId/" loader={quizData[2]} element={<Update />} />
-          <Route path="/kanji" element={<KanjiList homeKanji={quizData} />}>
-            <Route path="create/" element={<Create />} />
-          </Route>
         </Routes>
       </BrowserRouter>
     </div>
