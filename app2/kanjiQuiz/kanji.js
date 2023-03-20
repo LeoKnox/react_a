@@ -1,5 +1,5 @@
 function displayKanji() {
-    console.log("display kanji");
+    return("display kanji");
 }
 
 export default {displayKanji};
