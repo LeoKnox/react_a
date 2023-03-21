@@ -1,4 +1,4 @@
-import {showKanji} from "./kanjiQuiz/kanji.js";
+import showKanji from "./kanjiQuiz/kanji.js";
 
 function App() {
   let quizData =

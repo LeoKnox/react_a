@@ -6,4 +6,4 @@ function showKanji() {
     console.log("show kanji");
 }
 
-export default {displayKanji, showKanji};
+export default showKanji;
