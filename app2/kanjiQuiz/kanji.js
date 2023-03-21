@@ -3,7 +3,7 @@ function displayKanji() {
 }
 
 function showKanji() {
-    return("show kanji");
+    console.log("show kanji");
 }
 
-export default {displayKanji};
+export default {displayKanji, showKanji};
