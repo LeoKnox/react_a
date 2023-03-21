@@ -1,5 +1,5 @@
 function displayKanji() {
-    return("display kanji");
+    console.log("display Kanji");
 }
 
 function showKanji() {
