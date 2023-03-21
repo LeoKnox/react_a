@@ -14,7 +14,7 @@ function App() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ];
 
-    displayKanji();
+    console.log(displayKanji());
 
   return (
     <div className="App">
