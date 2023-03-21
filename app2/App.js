@@ -1,4 +1,4 @@
-import displayKanji from "./kanjiQuiz/kanji.js";
+import {showKanji} from "./kanjiQuiz/kanji.js";
 
 function App() {
   let quizData =
@@ -14,7 +14,7 @@ function App() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ];
 
-    console.log(displayKanji());
+    console.log(showKanji());
 
   return (
     <div className="App">
