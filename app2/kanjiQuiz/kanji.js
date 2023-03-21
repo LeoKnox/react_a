@@ -3,7 +3,7 @@ function displayKanji() {
 }
 
 function showKanji() {
-    retun("show kanji");
+    return("show kanji");
 }
 
 export default displayKanji;
