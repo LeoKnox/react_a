@@ -1,4 +1,5 @@
 import showKanji from "./kanjiQuiz/kanji.js";
+import displayKanji from "./kanjiQuiz/kanji.js";
 
 function App() {
   let quizData =
@@ -15,6 +16,7 @@ function App() {
     ];
 
     console.log(showKanji());
+    console.log(displayKanji());
 
   return (
     <div className="App">
