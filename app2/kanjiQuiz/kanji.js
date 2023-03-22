@@ -1,10 +1,11 @@
-const ourKanjis =
+let ourKanjis =
     [
         {id:1, q:"one", a:"ichi"}
     ]
+const test = "tested";
 
 export function displayKanji() {
-    console.log("display Kanji" + this.ourKanjis.a);
+    console.log("display Kanji" + test);
 }
 
 export function showKanji() {
