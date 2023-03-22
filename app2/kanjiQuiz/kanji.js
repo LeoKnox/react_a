@@ -12,5 +12,5 @@ export function displayKanji() {
 
 export function showKanji() {
     //console.log("show kanji"+ourKanjis[0].a);
-    return(ourKanjis[0]);
+    return(ourKanjis);
 }
