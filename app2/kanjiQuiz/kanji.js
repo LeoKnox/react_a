@@ -1,9 +1,7 @@
-function displayKanji() {
+export function displayKanji() {
     console.log("display Kanji");
 }
 
-function showKanji() {
+export function showKanji() {
     console.log("show kanji");
 }
-
-export default showKanji;
