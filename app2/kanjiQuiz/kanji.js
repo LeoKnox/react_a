@@ -9,5 +9,5 @@ export function displayKanji() {
 }
 
 export function showKanji() {
-    console.log("show kanji");
+    console.log("show kanji"+ourKanjis[0].a);
 }
