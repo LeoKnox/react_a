@@ -17,11 +17,12 @@ function App() {
     const [sk, setSK] = useState([]);
     const [a, setA] = useState("");
 
-    useEffect(() => {
+    useEffect((e) => {
+      e.preventDefault();
       setSK(showKanji());
       console.log("sk");
       console.log(sk);
-    }, [])
+    }, [sk.a])
 
     console.log(showKanji());
     console.log(displayKanji());
