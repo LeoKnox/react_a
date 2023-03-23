@@ -14,3 +14,7 @@ export function showKanji() {
     //console.log("show kanji"+ourKanjis[0].a);
     return(ourKanjis);
 }
+
+export function addKanji() {
+    console.log("adding kanji");
+}
