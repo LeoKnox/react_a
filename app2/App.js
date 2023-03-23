@@ -37,7 +37,7 @@ function App() {
         <p>{tt.a}</p>
       ))}
       <p><input type="text" value={a} onChange={updateA} /></p>
-      <button onClick={() => addKanji(5)}>Add</button>
+      <button onClick={() => addKanji({a:a})}>Add</button>
     </div>
   )
 }
