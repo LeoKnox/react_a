@@ -21,10 +21,14 @@ function App() {
       setSK(showKanji());
       console.log("sk");
       console.log(sk);
-    }, [sk.a])
+    }, [])
 
     console.log(showKanji());
     console.log(displayKanji());
+
+    function updateA(e) {
+      setA(e.target.value);
+    }
 
   return (
     <div className="App">
@@ -32,7 +36,7 @@ function App() {
       {sk.map ((tt) => (
         <p>{tt.a}</p>
       ))}
-      <p><input type="text" value={a} onChange={setA} /></p>
+      <p><input type="text" value={a} onChange={updateA} /></p>
       <button onClick={() => addKanji(5)}>Add</button>
     </div>
   )
