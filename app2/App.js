@@ -15,6 +15,8 @@ function App() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ];
     const [sk, setSK] = useState([]);
+    const [a, setA] = useState();
+
     useEffect(() => {
       setSK(showKanji());
       console.log("sk");
@@ -30,6 +32,7 @@ function App() {
       {sk.map ((tt) => (
         <p>{tt.a}</p>
       ))}
+      <p><input type="text" value={a} onChange={setA} /></p>
       <button onClick={addKanji(5)}>Add</button>
     </div>
   )
