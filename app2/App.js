@@ -21,7 +21,7 @@ function App() {
       setSK(showKanji());
       console.log("sk");
       console.log(sk);
-    }, [])
+    }, [a])
 
     console.log(showKanji());
     console.log(displayKanji());
