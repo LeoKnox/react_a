@@ -15,7 +15,7 @@ function App() {
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ];
     const [sk, setSK] = useState([]);
-    const [a, setA] = useState();
+    const [a, setA] = useState("");
 
     useEffect(() => {
       setSK(showKanji());
