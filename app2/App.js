@@ -1,5 +1,5 @@
-import showKanji from "./kanjiQuiz/kanji.js";
-import displayKanji from "./kanjiQuiz/kanji.js";
+import {showKanji, displayKanji, addKanji} from "./kanjiQuiz/kanji.js";
+import {useEffect, useState} from "react";
 
 function App() {
   let quizData =
@@ -14,6 +14,12 @@ function App() {
       {q: "hachi", a:8, c:"ultraviolet"},
       {q: "kyu", a:9, c:"ultraultraviolet"}
     ];
+    const [sk, setSK] = useState([]);
+    useEffect(() => {
+      setSK(showKanji());
+      console.log("sk");
+      console.log(sk);
+    }, [])
 
     console.log(showKanji());
     console.log(displayKanji());
@@ -21,6 +27,10 @@ function App() {
   return (
     <div className="App">
       <h1>Heading</h1>
+      {sk.map ((tt) => (
+        <p>{tt.a}</p>
+      ))}
+      <button onClick={addKanji}>Add</button>
     </div>
   )
 }
