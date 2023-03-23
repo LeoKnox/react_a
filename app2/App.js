@@ -30,7 +30,7 @@ function App() {
       {sk.map ((tt) => (
         <p>{tt.a}</p>
       ))}
-      <button onClick={addKanji}>Add</button>
+      <button onClick={addKanji(5)}>Add</button>
     </div>
   )
 }
