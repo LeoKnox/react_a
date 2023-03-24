@@ -30,6 +30,10 @@ function App() {
       setA(e.target.value);
     }
 
+    function updateKanji() {
+      addKanji({a:a});
+    }
+
   return (
     <div className="App">
       <h1>Heading</h1>
@@ -37,7 +41,7 @@ function App() {
         <p>{tt.a}</p>
       ))}
       <p><input type="text" value={a} onChange={updateA} /></p>
-      <button onClick={() => addKanji({a:a})}>Add</button>
+      <button onClick={updateKanji}>Add</button>
     </div>
   )
 }
