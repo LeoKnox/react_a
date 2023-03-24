@@ -15,9 +15,8 @@ export function showKanji() {
     return(ourKanjis);
 }
 
-export function addKanji(newId) {
-    console.log(newId);
-    let newKanji = {id:4, q:"four", a:"you"};
+export function addKanji(newKanji) {
+    console.log(newKanji);
     ourKanjis = [...ourKanjis, newKanji];
     console.log(ourKanjis);
 }
