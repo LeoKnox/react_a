@@ -31,6 +31,8 @@ function App() {
     }
 
     function updateKanji() {
+      console.log("updateKanji");
+      console.log(a);
       addKanji({a:a});
       setSK(showKanji());
     }
