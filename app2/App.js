@@ -16,6 +16,8 @@ function App() {
     ];
     const [sk, setSK] = useState([]);
     const [a, setA] = useState("");
+    const [q, setQ] = useState("");
+    const [i, setId] = useState();
 
     useEffect(() => {
       setSK(showKanji());
@@ -26,14 +28,21 @@ function App() {
     console.log(showKanji());
     console.log(displayKanji());
 
-    function updateA(e) {
-      setA(e.target.value);
+    function updateNew(e) {
+      if (e.target.name === "a") {
+        setA(e.target.value);
+      }
+      if (e.target.name === "q") {
+        setQ(e.target.value);
+      }
+      if (e.target.name === "a") {
+        setId(e.target.value);
+      }
     }
 
     function updateKanji() {
-      console.log("updateKanji");
-      console.log(a);
-      addKanji({a:a});
+      let newKanji = {a:a, q:q, id:i};
+      addKanji(newKanji);
       setSK(showKanji());
     }
 
@@ -43,7 +52,11 @@ function App() {
       {sk.map ((tt) => (
         <p>{tt.a}</p>
       ))}
-      <p><input type="text" value={a} onChange={updateA} /></p>
+      <p>
+        <input type="text" name="ans" value={a} onChange={updateNew} />
+        <input type="text" name="ques" value={q} onChange={updateNew} />
+        <input type="number" name="id" value={i} onChange={updateNew} />
+      </p>
       <button onClick={updateKanji}>Add</button>
     </div>
   )
