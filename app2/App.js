@@ -32,6 +32,7 @@ function App() {
 
     function updateKanji() {
       addKanji({a:a});
+      setSK(showKanji());
     }
 
   return (
