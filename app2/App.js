@@ -1,4 +1,4 @@
-import {showKanji, addKanji} from "./kanjiQuiz/kanji.js";
+import {showKanji, addKanji, deleteKanji} from "./kanjiQuiz/kanji.js";
 import {useEffect, useState} from "react";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       setSK(showKanji());
     }, [])
 
-    function updateNew(e) {
+    function updateEntry(e) {
       if (e.target.name === "ans") {
         setA(e.target.value);
       }
@@ -44,16 +44,16 @@ function App() {
   return (
     <div className="App">
       <h1>Heading</h1>
-      {sk.map ((tt) => (
-        <p>{tt.a}</p>
+      {sk.map ((tt, i) => (
+        <p>{tt.a}<button onClick={() => deleteKanji(i)}>X</button></p>
       ))}
       <p>
         <label>&nbsp;answer:</label>
-        <input type="text" name="ans" value={a} onChange={updateNew} />
+        <input type="text" name="ans" value={a} onChange={updateEntry} />
         <label>&nbsp;question:</label>
-        <input type="text" name="ques" value={q} onChange={updateNew} />
+        <input type="text" name="ques" value={q} onChange={updateEntry} />
         <label>&nbsp;id:</label>
-        <input type="number" name="id" value={i} onChange={updateNew} />
+        <input type="number" name="id" value={i} onChange={updateEntry} />
       </p>
       <button onClick={updateKanji}>Add</button>
     </div>

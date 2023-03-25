@@ -10,7 +10,9 @@ export function showKanji() {
 }
 
 export function addKanji(newKanji) {
-    console.log(newKanji);
     ourKanjis = [...ourKanjis, newKanji];
-    console.log(ourKanjis);
+}
+
+export function deleteKanji(id) {
+    console.log("delete kanji " + id);
 }
