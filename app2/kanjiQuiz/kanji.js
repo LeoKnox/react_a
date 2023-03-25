@@ -13,6 +13,10 @@ export function addKanji(newKanji) {
     ourKanjis = [...ourKanjis, newKanji];
 }
 
-export function deleteKanji(id) {
-    console.log("delete kanji " + id);
+export function deleteKanji(xid) {
+    console.log("delete kanji ");
+    let myArray = ourKanjis.filter(function(kanji) {
+        return kanji.id !== xid;
+    })
+    console.log(myArray);
 }
