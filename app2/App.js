@@ -41,11 +41,16 @@ function App() {
       setSK(showKanji());
     }
 
+    function removeKanji(id) {
+      deleteKanji(id);
+      showKanji();
+    }
+
   return (
     <div className="App">
       <h1>Heading</h1>
       {sk.map ((tt, i) => (
-        <p>{tt.a}<button onClick={() => deleteKanji(i)}>X</button></p>
+        <p>{tt.a}<button onClick={removeKanji}>X</button></p>
       ))}
       <p>
         <label>&nbsp;answer:</label>
