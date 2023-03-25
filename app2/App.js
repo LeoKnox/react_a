@@ -43,7 +43,7 @@ function App() {
 
     function removeKanji(id) {
       deleteKanji(id);
-      showKanji();
+      setSK(showKanji());
     }
 
   return (
