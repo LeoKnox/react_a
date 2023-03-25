@@ -14,7 +14,7 @@ export function addKanji(newKanji) {
 }
 
 export function deleteKanji(id) {
-    console.log("delete kanji ");
-    ourKanjis.remove(id);
+    console.log("delete kanji " + id);
+    ourKanjis.splice(id, 1);
     console.log(ourKanjis);
 }
