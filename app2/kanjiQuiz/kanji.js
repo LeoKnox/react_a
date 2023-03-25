@@ -4,10 +4,8 @@ let ourKanjis =
         {id:2, q:"two", a:"ni"},
         {id:3, q:"three", a:"san"}
     ]
-const test = "tested";
 
 export function showKanji() {
-    //console.log("show kanji"+ourKanjis[0].a);
     return(ourKanjis);
 }
 
