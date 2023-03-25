@@ -29,13 +29,13 @@ function App() {
     console.log(displayKanji());
 
     function updateNew(e) {
-      if (e.target.name === "a") {
+      if (e.target.name === "ans") {
         setA(e.target.value);
       }
-      if (e.target.name === "q") {
+      if (e.target.name === "ques") {
         setQ(e.target.value);
       }
-      if (e.target.name === "a") {
+      if (e.target.name === "id") {
         setId(e.target.value);
       }
     }
