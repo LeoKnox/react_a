@@ -14,8 +14,6 @@ export function addKanji(newKanji) {
 }
 
 export function deleteKanji({id}) {
-    console.log("delete kanji ");
-    console.log(id);
-    ourKanjis.splice(id, 1);
-    console.log(ourKanjis);
+    const arr = ourKanjis.filter((item) => item.id !== id);
+    console.log(arr);
 }
