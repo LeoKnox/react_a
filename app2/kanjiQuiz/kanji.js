@@ -13,7 +13,8 @@ export function addKanji(newKanji) {
     ourKanjis = [...ourKanjis, newKanji];
 }
 
-export function deleteKanji({id}) {
-    const arr = ourKanjis.filter((item) => item.id !== id);
+export function deleteKanji(id) {
+    let xid = 1;
+    const arr = ourKanjis.filter((item) => item.id !== xid);
     console.log(arr);
 }
