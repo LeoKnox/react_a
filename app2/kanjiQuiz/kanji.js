@@ -16,7 +16,7 @@ export function addKanji(newKanji) {
 export function deleteKanji(id) {
     console.log(typeof id);
     let xid = 1;
-    console.log(typeof xid);
+    console.log(id);
     const arr = ourKanjis.filter((item) => item.id != id+1);
     console.log(arr);
 }
