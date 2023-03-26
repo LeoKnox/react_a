@@ -41,8 +41,8 @@ function App() {
       setSK(showKanji());
     }
 
-    function removeKanji(id) {
-      deleteKanji(id);
+    function removeKanji(e) {
+      deleteKanji(e.target.value);
       setSK(showKanji());
     }
 
@@ -50,7 +50,7 @@ function App() {
     <div className="App">
       <h1>Heading</h1>
       {sk.map ((tt, i) => (
-        <p>{tt.a}<button onClick={removeKanji}>X</button></p>
+        <p>{tt.a}<button value={tt.id} onClick={removeKanji}>X</button></p>
       ))}
       <p>
         <label>&nbsp;answer:</label>
