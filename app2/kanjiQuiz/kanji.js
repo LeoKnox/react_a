@@ -17,6 +17,6 @@ export function deleteKanji(id) {
     console.log(typeof id);
     let xid = 1;
     console.log(id);
-    const arr = ourKanjis.filter((item) => item.id != id+1);
+    const arr = ourKanjis.filter((item) => item.id !== Number(id));
     console.log(arr);
 }
