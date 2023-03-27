@@ -36,7 +36,6 @@ function Home() {
 
   return (
     <div className="App">
-      <h1>Heading</h1>
       {sk.map ((tt, i) => (
         <p>{tt.a}<button value={tt.id} onClick={removeKanji}>X</button></p>
       ))}
