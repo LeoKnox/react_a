@@ -36,7 +36,7 @@ function App() {
     }
 
     function updateKanji() {
-      let newKanji = {a:a, q:q, id:i};
+      let newKanji = {a:a, q:q, id:Number(i)};
       addKanji(newKanji);
       setSK(showKanji());
     }
