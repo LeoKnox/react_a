@@ -13,6 +13,10 @@ export function oneKanji(kId) {
     return ourKanjis[kId];
 }
 
+export function updateKanji(i, newKanji) {
+    ourKanjis[i] = newKanji
+}
+
 export function addKanji(newKanji) {
     ourKanjis = [...ourKanjis, newKanji];
 }

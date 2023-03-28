@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useParams } from 'react-router-dom';
-import { oneKanji } from "./kanji";
+import { useParams, Link } from 'react-router-dom';
+import { oneKanji, updateKanji } from "./kanji";
 
 function Update() {
     const {id} = useParams();
@@ -8,8 +8,6 @@ function Update() {
     const [q, setQ] = useState(single.q);
     const [a, setA] = useState(single.a);
     const [i, setId] = useState(single.id);
-
-    console.log(single);
 
     function updateEntry(e) {
         if (e.target.name === "ques") {
@@ -21,6 +19,10 @@ function Update() {
         if (e.target.name === "id") {
             setId(e.target.value)
         }
+    }
+
+    function submitKanji() {
+        updateKanji(id, {a:a, q:q, id:i})
     }
 
     return (
@@ -38,6 +40,8 @@ function Update() {
                 I:
                 <input type="number" name="id" value={i} onChange={updateEntry} />
             </p>
+            <button onClick={submitKanji}>Update</button>
+            <button><Link to={`/`}>Home</Link></button>
         </>
     )
 }
