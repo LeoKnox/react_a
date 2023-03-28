@@ -16,10 +16,10 @@ function Update() {
             setQ(e.target.value)
         }
         if (e.target.name === "ans") {
-            setQ(e.target.value)
+            setA(e.target.value)
         }
         if (e.target.name === "id") {
-            setQ(e.target.value)
+            setId(e.target.value)
         }
     }
 
