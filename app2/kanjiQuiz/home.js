@@ -40,7 +40,7 @@ function Home() {
       {sk.map ((tt, i) => (
         <p>{tt.a}
             <button value={tt.id} onClick={removeKanji}>X</button>
-            <button><Link to={`update/`}>Update</Link></button>
+            <button><Link to={`update/${tt.id}`}>Update</Link></button>
         </p>
       ))}
       <p>
