@@ -11,8 +11,16 @@ function Update() {
 
     console.log(single);
 
-    function updateEntry() {
-        console.log("update entry");
+    function updateEntry(e) {
+        if (e.target.name === "ques") {
+            setQ(e.target.value)
+        }
+        if (e.target.name === "ans") {
+            setQ(e.target.value)
+        }
+        if (e.target.name === "id") {
+            setQ(e.target.value)
+        }
     }
 
     return (
@@ -28,7 +36,7 @@ function Update() {
             </p>
             <p>
                 I:
-                <input type="text" name="id" value={i} onChange={updateEntry} />
+                <input type="number" name="id" value={i} onChange={updateEntry} />
             </p>
         </>
     )
