@@ -1,5 +1,6 @@
 import {showKanji, addKanji, deleteKanji} from "./kanji";
 import {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
     const [sk, setSK] = useState([]);
@@ -48,6 +49,7 @@ function Home() {
         <input type="number" name="id" value={i} onChange={updateEntry} />
       </p>
       <button onClick={updateKanji}>Add</button>
+      <Link to={`update/`}>Update</Link>
     </div>
   )
 }
