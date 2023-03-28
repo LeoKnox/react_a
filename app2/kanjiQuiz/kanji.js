@@ -9,8 +9,8 @@ export function showKanji() {
     return(ourKanjis);
 }
 
-export function oneKanji() {
-    console.log("show one kanji");
+export function oneKanji(kId) {
+    console.log(`kanji id ${kId}`);
 }
 
 export function addKanji(newKanji) {
