@@ -14,7 +14,7 @@ export function oneKanji(kId) {
 }
 
 export function updateKanji(i, newKanji) {
-    ourKanjis[i] = newKanji
+    ourKanjis[i-1] = newKanji
     console.log(ourKanjis);
 }
 

@@ -22,7 +22,7 @@ function Update() {
     }
 
     function submitKanji() {
-        updateKanji(id, {a:a, q:q, id:i})
+        updateKanji(id, {a:a, q:q, id:Number(i)})
     }
 
     return (
