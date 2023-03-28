@@ -10,7 +10,7 @@ export function showKanji() {
 }
 
 export function oneKanji(kId) {
-    return ourKanjis[kId];
+    return ourKanjis[kId-1];
 }
 
 export function updateKanji(i, newKanji) {
