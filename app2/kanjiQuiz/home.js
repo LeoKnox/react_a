@@ -38,7 +38,10 @@ function Home() {
   return (
     <div className="App">
       {sk.map ((tt, i) => (
-        <p>{tt.a}<button value={tt.id} onClick={removeKanji}>X</button></p>
+        <p>{tt.a}
+            <button value={tt.id} onClick={removeKanji}>X</button>
+            <button><Link to={`update/`}>Update</Link></button>
+        </p>
       ))}
       <p>
         <label>&nbsp;answer:</label>
@@ -49,7 +52,7 @@ function Home() {
         <input type="number" name="id" value={i} onChange={updateEntry} />
       </p>
       <button onClick={updateKanji}>Add</button>
-      <Link to={`update/`}>Update</Link>
+      
     </div>
   )
 }
