@@ -27,7 +27,7 @@ function Home() {
     }
 
     function updateKanji() {
-      let newKanji = {a:a, q:q, id:sk[sk.length-1].id+1};
+      let newKanji = {a:a, q:q, id:sk.length+1};
       addKanji(newKanji);
       setSK(showKanji());
     }
@@ -51,7 +51,7 @@ function Home() {
         <label>&nbsp;question:</label>
         <input type="text" name="ques" value={q} onChange={updateEntry} />
         <label>&nbsp;id:</label>
-        <input type="number" name="id" value={sk[sk.length-1].id} />
+        <input type="number" name="id" value={sk[i].id} />
       </p>
       <button onClick={updateKanji}>Add</button>
       
