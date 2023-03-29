@@ -27,7 +27,7 @@ function Home() {
     }
 
     function updateKanji() {
-      let newKanji = {a:a, q:q, id:sk.length+1};
+      let newKanji = {a:a, q:q, id:sk[sk.length-1].id+1};
       addKanji(newKanji);
       setSK(showKanji());
     }
