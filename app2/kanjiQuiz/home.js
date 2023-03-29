@@ -10,6 +10,7 @@ function Home() {
 
     useEffect(() => {
       setSK(showKanji());
+      setId(sk.length);
     }, [])
 
     function updateEntry(e) {
@@ -49,7 +50,7 @@ function Home() {
         <label>&nbsp;question:</label>
         <input type="text" name="ques" value={q} onChange={updateEntry} />
         <label>&nbsp;id:</label>
-        <input type="number" name="id" value={sk[sk.length()-1].id} />
+        <input type="number" name="id" value={i} />
       </p>
       <button onClick={updateKanji}>Add</button>
       
