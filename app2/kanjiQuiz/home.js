@@ -10,8 +10,7 @@ function Home() {
 
     useEffect(() => {
       setSK(showKanji());
-      setId(sk.length);
-      console.log("iii"+i);
+      setId(sk.length-1);
     }, [])
 
     function updateEntry(e) {
