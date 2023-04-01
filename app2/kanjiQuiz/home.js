@@ -12,7 +12,8 @@ function Home() {
       setSK(showKanji());
       setId(sk.length-1);
       console.log("o");
-      console.log(i);
+      console.log(showKanji().length);
+      console.log(sk);
     }, [])
 
     function updateEntry(e) {
@@ -52,7 +53,7 @@ function Home() {
         <label>&nbsp;question:</label>
         <input type="text" name="ques" value={q} onChange={updateEntry} />
         <label>&nbsp;id:</label>
-        <input type="number" name="id" value={sk[2].id} />
+        <input type="number" name="id" value={sk[0].id} />
       </p>
       <button onClick={updateKanji}>Add</button>
       
