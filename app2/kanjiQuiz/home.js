@@ -6,7 +6,7 @@ function Home() {
     const [sk, setSK] = useState([]);
     const [a, setA] = useState("");
     const [q, setQ] = useState("");
-    const [i, setId] = useState();
+    const [i, setId] = useState(0);
 
     useEffect(() => {
       setSK(showKanji());
@@ -52,7 +52,7 @@ function Home() {
         <label>&nbsp;question:</label>
         <input type="text" name="ques" value={q} onChange={updateEntry} />
         <label>&nbsp;id:</label>
-        <input type="number" name="id" value={sk[i].id} />
+        <input type="number" name="id" value={sk[2].id} />
       </p>
       <button onClick={updateKanji}>Add</button>
       
