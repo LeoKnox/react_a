@@ -30,10 +30,10 @@ function Home() {
 
     function updateKanji() {
       setId(showKanji()[showKanji().length-1].id);
+      console.log("uk id "+i);
       let newKanji = {a:a, q:q, id:i};
       addKanji(newKanji);
       setSK(showKanji());
-      console.log("uk id ");
     }
 
     function removeKanji(e) {
