@@ -12,7 +12,7 @@ function Home() {
       setSK(showKanji());
       setId(showKanji().length-1);
       console.log("o");
-      console.log(showKanji().length);
+      console.log(showKanji()[showKanji().length-1].id);
       console.log(i);
     }, [])
 
