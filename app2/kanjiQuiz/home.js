@@ -54,7 +54,7 @@ function Home() {
         <label>&nbsp;question:</label>
         <input type="text" name="ques" value={q} onChange={updateEntry} />
         <label>&nbsp;id:</label>
-        <input type="number" name="id" value={showKanji()[i].id} />
+        <input type="number" name="id" value={showKanji()[1].id} />
       </p>
       <button onClick={updateKanji}>Add</button>
       
