@@ -57,6 +57,7 @@ function Home() {
         <label>&nbsp;id:</label>
         <input type="number" name="id" value={showKanji()[1].id} />
       </p>
+      <p>{i}</p>
       <button onClick={updateKanji}>Add</button>
       
     </div>
