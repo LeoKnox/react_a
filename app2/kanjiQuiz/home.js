@@ -13,7 +13,7 @@ function Home() {
       setId(showKanji().length-1);
       console.log("o");
       console.log(showKanji().length);
-      console.log(sk);
+      console.log(i);
     }, [])
 
     function updateEntry(e) {
@@ -29,10 +29,11 @@ function Home() {
     }
 
     function updateKanji() {
+      setId(showKanji[showKanji().length-1].id);
       let newKanji = {a:a, q:q, id:i};
       addKanji(newKanji);
       setSK(showKanji());
-      setId(showKanji[showKanji().length-1].id)
+      console.log("uk id ");
     }
 
     function removeKanji(e) {
