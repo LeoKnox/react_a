@@ -29,7 +29,7 @@ function Home() {
     }
 
     function updateKanji() {
-      setId(showKanji[showKanji().length-1].id);
+      setId(showKanji()[showKanji().length-1].id);
       let newKanji = {a:a, q:q, id:i};
       addKanji(newKanji);
       setSK(showKanji());
