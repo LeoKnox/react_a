@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
       setSK(showKanji());
-      setId(showKanji().length-1);
+      //setId(showKanji().length-1);
       console.log("o");
       console.log(showKanji()[showKanji().length-1].id);
       console.log(i);
@@ -30,7 +30,7 @@ function Home() {
 
     function updateKanji() {
       setId(showKanji()[showKanji().length-1].id);
-      console.log("uk id "+i);
+      console.log("kuk id "+i);
       let newKanji = {a:a, q:q, id:i};
       addKanji(newKanji);
       setSK(showKanji());
