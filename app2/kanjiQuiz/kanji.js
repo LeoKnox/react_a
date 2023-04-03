@@ -20,7 +20,7 @@ export function updateKanji(i, newKanji) {
 
 export function addKanji(newKanji) {
     console.log("addKanji "+ourKanjis[ourKanjis.length-1].id)
-    newKanji.id = ("addKanji "+ourKanjis[ourKanjis.length-1].id)
+    newKanji.id = (ourKanjis[ourKanjis.length-1].id+1)
     ourKanjis = [...ourKanjis, newKanji];
 }
 
