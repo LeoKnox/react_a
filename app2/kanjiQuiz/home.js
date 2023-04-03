@@ -10,6 +10,7 @@ function Home() {
 
     useEffect(() => {
       setSK(showKanji());
+      setId(showKanji()[showKanji().length-1].id+1);
       //setId(showKanji().length-1);
       console.log("o");
       console.log(showKanji()[showKanji().length-1].id);
@@ -29,7 +30,7 @@ function Home() {
     }
 
     function updateKanji() {
-      setId(showKanji()[showKanji().length-1].id);
+      setId(showKanji()[showKanji().length-1].id+1);
       console.log("kuk id "+i);
       let newKanji = {a:a, q:q, id:i};
       addKanji(newKanji);
@@ -55,7 +56,7 @@ function Home() {
         <label>&nbsp;question:</label>
         <input type="text" name="ques" value={q} onChange={updateEntry} />
         <label>&nbsp;id:</label>
-        <input type="number" name="id" value={showKanji()[1].id} />
+        <input type="number" name="id" value={i} />
       </p>
       <p>{i}</p>
       <button onClick={updateKanji}>Add</button>
