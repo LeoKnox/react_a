@@ -33,6 +33,8 @@ function Home() {
       let newKanji = {a:a, q:q, id:i};
       addKanji(newKanji);
       setSK(showKanji());
+      setA("");
+      setQ("");
     }
 
     function removeKanji(e) {
