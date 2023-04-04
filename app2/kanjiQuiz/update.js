@@ -41,7 +41,7 @@ function Update() {
                 <input type="number" name="id" value={i} />
             </p>
             <button onClick={submitKanji}>Update</button>
-            <button><Link to={`/`}>Home</Link></button>
+            <button><Link to={`/home`}>Home</Link></button>
         </>
     )
 }
