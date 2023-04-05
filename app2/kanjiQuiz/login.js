@@ -5,6 +5,13 @@ import { Outlet } from 'react-router-dom';
 function Login() {
     const [u, setU] = useState("");
     const [p, setP] = useState("");
+    const [user, setUser] = useState({});
+
+    const handleChange = (event) => {
+        const name = event.target.u;
+        const pass = event.target.p;
+        setUser(values => ({...values, [name]: pass}));
+    }
     return (
         <>
             <h3>Login page</h3>
@@ -12,12 +19,16 @@ function Login() {
                 <label>User Name:</label>
                 <input
                     type="text"
-                    value={u}
+                    name="username"
+                    value={user.u}
+                    onChange={handleChange}
                 />
                 <label>Password:</label>
                 <input
                     type="text"
-                    value={p}
+                    name="password"
+                    value={user.p}
+                    onChange={handleChange}
                 />
                 <button>Login</button>
             </form>
