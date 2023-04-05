@@ -6,5 +6,5 @@ let Users =
     ]
 
 export function confirmUser() {
-    return(<p>user confirmed</p>)
+    console.log("read");
 }
