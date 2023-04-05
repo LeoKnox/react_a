@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Outlet } from 'react-router-dom';
 
 function Login() {
-    const [u, setU] = useState("a");
-    const [p, setP] = useState("p");
+    const [u, setU] = useState("");
+    const [p, setP] = useState("");
     return (
         <>
             <h3>Login page</h3>

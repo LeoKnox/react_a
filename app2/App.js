@@ -10,6 +10,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />}>
+            <Route path=":user" element={<p>tt</p>} />
+          </Route>
           <Route path="/home" element={<Home />} />
           <Route path="update/:id" element={<Update />} />
         </Routes>
