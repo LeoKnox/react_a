@@ -14,7 +14,7 @@ function Login() {
     }
 
     function handleSubmit(event) {
-        event.prevent.default();
+        event.preventDefault();
         console.log("submitted");
     }
     return (
