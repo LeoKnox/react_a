@@ -35,7 +35,7 @@ function Login() {
                     value={user.p}
                     onChange={handleChange}
                 />
-                <button>Login</button>
+                <input type="submit" />
             </form>
             <Outlet />
         </>
