@@ -15,7 +15,7 @@ function Login() {
     return (
         <>
             <h3>Login page</h3>
-            <form onClick={confirmUser()}>
+            <form onClick={() => confirmUser()}>
                 <label>User Name:</label>
                 <input
                     type="text"
