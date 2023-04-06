@@ -13,7 +13,8 @@ function Login() {
         setUser(values => ({...values, [name]: pass}));
     }
 
-    function handleSubmit() {
+    function handleSubmit(event) {
+        event.prevent.default();
         console.log("submitted");
     }
     return (
