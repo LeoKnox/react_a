@@ -12,10 +12,14 @@ function Login() {
         const pass = event.target.p;
         setUser(values => ({...values, [name]: pass}));
     }
+
+    function handleSubmit() {
+        console.log("submitted");
+    }
     return (
         <>
             <h3>Login page</h3>
-            <form onClick={() => confirmUser()}>
+            <form onClick={() => handleSubmit}>
                 <label>User Name:</label>
                 <input
                     type="text"
