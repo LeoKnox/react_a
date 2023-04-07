@@ -21,7 +21,7 @@ function Login() {
     return (
         <>
             <h3>Login page</h3>
-            <form onSubmit={() => handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label>User Name:</label>
                 <input
                     type="text"
