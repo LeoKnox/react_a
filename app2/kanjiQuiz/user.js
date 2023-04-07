@@ -5,7 +5,7 @@ let Users =
         {useName:"use3", password:"pass3", kanjiNum:[1,5,8]}
     ]
 
-export function confirmUser() {
-    alert("T");
+export function confirmUser({test}) {
     console.log("read");
+    console.log(test);
 }

@@ -14,9 +14,8 @@ function Login() {
     }
 
     function handleSubmit(event) {
-        confirmUser();
+        confirmUser(event.target.value.name);
         event.preventDefault();
-        alert("submitted");
     }
     return (
         <>
