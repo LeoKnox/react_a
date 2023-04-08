@@ -14,8 +14,8 @@ function Login() {
     }
 
     function handleSubmit(event) {
-        alert(user.name);
-        confirmUser(user);
+        alert(user.username);
+        confirmUser(user.username);
     }
     return (
         <>
