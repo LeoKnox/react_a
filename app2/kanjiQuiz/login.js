@@ -14,7 +14,7 @@ function Login() {
     }
 
     function handleSubmit(event) {
-        confirmUser("test");
+        confirmUser(event.target.value);
     }
     return (
         <>
