@@ -14,8 +14,9 @@ function Login() {
     }
 
     function handleSubmit(event) {
-        alert(JSON.stringify(user));
-        confirmUser(user.username);
+        //alert(JSON.stringify(user));
+        alert(user.pass);
+        confirmUser(user.pass);
     }
     return (
         <>
