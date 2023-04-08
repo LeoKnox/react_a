@@ -6,5 +6,5 @@ let Users =
     ]
 
 export function confirmUser() {
-    console.log("read");
+    alert("read");
 }
