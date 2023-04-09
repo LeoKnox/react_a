@@ -10,7 +10,7 @@ function Login() {
     const handleChange = (event) => {
         const name = event.target.u;
         const pass = event.target.p;
-        setUser(values => ({...values, [name]: pass}));
+        setUser({u:name, p:pass});
         console.log(user.p);
     }
 
