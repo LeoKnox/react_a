@@ -11,7 +11,7 @@ function Login() {
         const name = event.target.u;
         const pass = event.target.p;
         setUser({u:name, p:pass});
-        console.log(user.p);
+        console.log(user.u);
     }
 
     function handleSubmit(event) {
