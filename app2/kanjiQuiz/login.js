@@ -5,12 +5,12 @@ import { Outlet } from 'react-router-dom';
 function Login() {
     const [u, setU] = useState("");
     const [p, setP] = useState("");
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState([]);
 
     const handleChange = (event) => {
         const name = event.target.u;
         const pass = event.target.p;
-        setUser({u:name, p:pass});
+        setUser([name, pass]);
         console.log(user.u);
     }
 
@@ -27,14 +27,14 @@ function Login() {
                 <input
                     type="text"
                     name="username"
-                    value={user.u}
+                    value={user[0]}
                     onChange={handleChange}
                 />
                 <label>Password:</label>
                 <input
                     type="text"
                     name="password"
-                    value={user.p}
+                    value={user[1]}
                     onChange={handleChange}
                 />
                 <input type="submit" />
