@@ -8,11 +8,11 @@ function Login() {
     const [user, setUser] = useState([]);
 
     const handleChange = (event) => {
-        let name = event.target.u;
+        setU(event.target.u);
         let pass = event.target.p;
         console.log();
         console.log(pass);
-        setUser([event.target.u, pass]);
+        setUser([u, pass]);
         console.log(user);
     }
 
