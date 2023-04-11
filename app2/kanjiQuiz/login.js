@@ -10,12 +10,12 @@ function Login() {
     const handleChange = (event) => {
         if (event.target.name === "username") {
             console.log("user !!!!");
-            console.log(event.name.username);
-            setU(event.target.username);
+            setU(event.target.value);
         }
         let pass = event.target.p;
         console.log(u);
         setUser([u, pass]);
+        console.log(user[0])
     }
 
     function handleSubmit(event) {
