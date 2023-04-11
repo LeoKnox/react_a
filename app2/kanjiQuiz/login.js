@@ -12,7 +12,7 @@ function Login() {
         let pass = event.target.p;
         let newarr = [u];
         console.log(newarr[0]);
-        console.log(pass);
+        console.log(u);
         setUser([u, pass]);
         console.log(user);
     }
