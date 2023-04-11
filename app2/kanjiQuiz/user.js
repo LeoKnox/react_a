@@ -6,5 +6,7 @@ let Users =
     ]
 
 export function confirmUser(test) {
-    alert("read" + test);
+    alert(test);
+    console.log(Users.indexOf(test[0]));
+    console.log("red");
 }
