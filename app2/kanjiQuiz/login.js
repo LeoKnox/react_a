@@ -8,16 +8,13 @@ function Login() {
     const [user, setUser] = useState([]);
 
     const handleChange = (event) => {
-        setU(event.target.username);
         if (event.target.name === "username") {
             console.log("user !!!!");
+            setU(event.target.username);
         }
         let pass = event.target.p;
-        let newarr = [u];
-        console.log(newarr[0]);
         console.log(u);
         setUser([u, pass]);
-        console.log(user);
     }
 
     function handleSubmit(event) {
