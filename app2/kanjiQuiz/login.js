@@ -16,7 +16,6 @@ function Login() {
             console.log("pass !!!!");
             setP(event.target.value);
         }
-        let pass = event.target.value;
         console.log(u);
         console.log(user)
         setUser([u, p]);
