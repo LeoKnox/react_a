@@ -12,10 +12,10 @@ function Login() {
             console.log("user !!!!");
             setU(event.target.value);
         }
-        let pass = event.target.p;
+        let pass = event.target.value;
         console.log(u);
+        console.log(user)
         setUser([u, pass]);
-        console.log(user[0])
     }
 
     function handleSubmit(event) {
