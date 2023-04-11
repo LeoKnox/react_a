@@ -12,10 +12,14 @@ function Login() {
             console.log("user !!!!");
             setU(event.target.value);
         }
+        if (event.target.name === "password") {
+            console.log("pass !!!!");
+            setP(event.target.value);
+        }
         let pass = event.target.value;
         console.log(u);
         console.log(user)
-        setUser([u, pass]);
+        setUser([u, p]);
     }
 
     function handleSubmit(event) {
