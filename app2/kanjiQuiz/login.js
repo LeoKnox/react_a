@@ -10,6 +10,7 @@ function Login() {
     const handleChange = (event) => {
         if (event.target.name === "username") {
             console.log("user !!!!");
+            console.log(event.name.username);
             setU(event.target.username);
         }
         let pass = event.target.p;
