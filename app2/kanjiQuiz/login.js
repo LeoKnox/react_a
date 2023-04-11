@@ -18,6 +18,9 @@ function Login() {
     }
 
     function handleSubmit(event) {
+        if (event.target.name === "username") {
+            console.log("user !!!!");
+        }
         //alert(JSON.stringify(user));
         alert(user.pass);
         confirmUser(user.pass);
@@ -30,7 +33,7 @@ function Login() {
                 <input
                     type="text"
                     name="username"
-                    value={user[0]}
+                    value={u}
                     onChange={handleChange}
                 />
                 <label>Password:</label>
