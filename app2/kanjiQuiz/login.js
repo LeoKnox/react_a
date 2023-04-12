@@ -22,7 +22,7 @@ function Login() {
     }
 
     function handleSubmit(event) {
-        confirmUser("use1");
+        confirmUser(user);
         //confirmUser(user);
     }
     return (

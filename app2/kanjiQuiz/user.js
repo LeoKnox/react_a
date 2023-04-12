@@ -7,4 +7,5 @@ let Users =
 
 export function confirmUser(test) {
     alert(test[0]);
+    console.log(Users.findIndex(u => u.useName === test[0]));
 }
