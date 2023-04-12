@@ -5,7 +5,8 @@ let Users =
         {useName:"use3", password:"pass3", kanjiNum:[1,5,8]}
     ]
 
-export function confirmUser(test) {
-    Users.map(u => console.log(u));
+export function confirmUser(event, test) {
+    event.preventDefault();
+    Users.map(u => alert("u"));
     alert(Users[0].useName);
 }
