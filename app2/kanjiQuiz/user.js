@@ -6,6 +6,6 @@ let Users =
     ]
 
 export function confirmUser(test) {
+    Users.map(u => console.log(u));
     alert(Users[0].useName);
-    console.log(Users.findIndex(u => u.useName === test[0]));
 }
