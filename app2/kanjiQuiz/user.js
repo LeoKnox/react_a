@@ -5,10 +5,10 @@ let Users =
         {useName:"use3", password:"pass3", kanjiNum:[1,5,8]}
     ]
 
-export function confirmUser(event, test) {
+export function confirmUser(test, event) {
     alert("madzu");
-    alert(test);
-    event.preventDefault();
+    alert(test[0]);
     Users.map((u) => alert("u"));
+    event.preventDefault();
     alert(Users[0].useName);
 }
