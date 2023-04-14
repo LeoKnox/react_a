@@ -45,7 +45,6 @@ function Login() {
                 />
                 <input type="submit" />
             </form>
-            {setUser}
             <Outlet />
         </>
     )

@@ -9,11 +9,9 @@ export function confirmUser(event, test) {
     event.preventDefault();
     Users.map((u) => alert("u"));
     alert(Users[0].useName);
-    render() {
-        return (
-            <>
-                <h3>ffff</h3>
-            </>
-        )
-    };
+    return (
+        <>
+            <h3>ffff</h3>
+        </>
+    )
 }
