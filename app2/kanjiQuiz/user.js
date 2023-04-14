@@ -7,11 +7,7 @@ let Users =
 
 export function confirmUser(event, test) {
     event.preventDefault();
+    alert(test);
     Users.map((u) => alert("u"));
     alert(Users[0].useName);
-    return (
-        <>
-            <h3>ffff</h3>
-        </>
-    )
 }
