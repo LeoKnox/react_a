@@ -8,7 +8,7 @@ let Users =
 export function confirmUser(test, event) {
     alert("madzu");
     alert(test[0]);
-    Users.map((u) => alert("u"));
+    alert(Users.indexOf(test[0]));
     event.preventDefault();
     alert(Users[0].useName);
 }
