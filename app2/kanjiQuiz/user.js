@@ -6,10 +6,11 @@ let Users =
     ]
 
 export function confirmUser(test, event) {
+    event.preventDefault();
     alert("madzu");
-    let x = Users.find(u => u.useName == "use1");
+    let y = Users.find(u => u.useName == "use1");
+    let x = Users.find(u => u.useName == test[0]); 
     alert(x.password);
     alert(test[0]);
-    //event.preventDefault();
     alert(Users[0].useName);
 }
