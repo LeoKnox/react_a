@@ -7,7 +7,8 @@ let Users =
 
 export function confirmUser(test, event) {
     alert("madzu");
-    console.log(Users.find(u => u.useName == "use2"));
+    let x = Users.find(u => u.useName == test);
+    alert(x);
     alert(test[0]);
     //event.preventDefault();
     alert(Users[0].useName);
