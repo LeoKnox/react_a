@@ -7,9 +7,8 @@ let Users =
 
 export function confirmUser(test, event) {
     alert("madzu");
-    //let x = Users.find((u) => u.useName == test[0]); 
-    //alert(x+"aa");
-    Users.find((u) => console.log(u.useName));
+    let x = Users.find((u) => u.useName == test[0]); 
+    console.log(x);
     alert(test[0]);
     alert(Users[0].useName);
     alert("red");
