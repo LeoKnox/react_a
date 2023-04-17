@@ -16,7 +16,7 @@ function Login() {
             console.log("pass !!!!");
             setP(event.target.value);
         }
-        console.log(u);
+        console.log("user");
         console.log(user)
         setUser([u, p]);
     }
@@ -33,7 +33,7 @@ function Login() {
                 <input
                     type="text"
                     name="username"
-                    value={u}
+                    value={user[0]}
                     onChange={handleChange}
                 />
                 <label>Password:</label>
