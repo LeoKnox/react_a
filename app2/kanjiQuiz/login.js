@@ -33,14 +33,14 @@ function Login() {
                 <input
                     type="text"
                     name="username"
-                    value={user[0]}
+                    value={u}
                     onChange={handleChange}
                 />
                 <label>Password:</label>
                 <input
                     type="text"
                     name="password"
-                    value={user[1]}
+                    value={p}
                     onChange={handleChange}
                 />
                 <input type="submit" />
