@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 function Login() {
     const [u, setU] = useState("");
     const [p, setP] = useState("");
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState();
 
     const handleChange = (event) => {
         if (event.target.name === "username") {
@@ -19,7 +19,7 @@ function Login() {
     }
 
     function handleSubmit(event) {
-        setUser([u, p]);
+        setUser({u:u, p:p});
         console.log("user");
         console.log(user);
         confirmUser(user);
