@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 function Login() {
     const [u, setU] = useState("");
     const [p, setP] = useState("");
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState();
 
     const handleChange = (event) => {
         if (event.target.name === "username") {
@@ -16,13 +16,13 @@ function Login() {
             console.log("pass !!!!");
             setP(event.target.value);
         }
-        console.log("user");
-        console.log(u+":"+p);
     }
 
     function handleSubmit(event) {
-        setUser([u, p]);
-        confirmUser(user);
+        //setUser({u:u, p:p});
+        console.log("user");
+        console.log(user);
+        confirmUser(u, p);
         //confirmUser(user);
     }
     return (
