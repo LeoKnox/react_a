@@ -10,7 +10,6 @@ export function confirmUser(u, p) {
     let x = Users.find((u) => u == test[0]); 
     console.log(x);
     alert(u);
-    alert(p);
     alert(Users[0].useName);
     alert("red");
     //event.preventDefault();

@@ -21,7 +21,7 @@ function Login() {
     function handleSubmit(event) {
         //setUser({u:u, p:p});
         console.log("user");
-        console.log(user);
+        console.log(u);
         confirmUser(u, p);
         //confirmUser(user);
     }
