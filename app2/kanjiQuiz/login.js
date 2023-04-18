@@ -17,11 +17,11 @@ function Login() {
             setP(event.target.value);
         }
         console.log("user");
-        console.log(user)
-        setUser([u, p]);
+        console.log(u+":"+p);
     }
 
     function handleSubmit(event) {
+        setUser([u, p]);
         confirmUser(user);
         //confirmUser(user);
     }
