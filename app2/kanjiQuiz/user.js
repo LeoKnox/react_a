@@ -7,7 +7,7 @@ let Users =
 
 export function confirmUser(u, {p}) {
     alert("madzu");
-    let x = Users.find((z) => z == u); 
+    let x = Users.find((z) => z.useName == u); 
     alert(x);
     alert(u);
     alert(Users[0].useName);
