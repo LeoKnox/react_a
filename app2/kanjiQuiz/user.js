@@ -5,12 +5,11 @@ let Users =
         {useName:"use3", password:"pass3", kanjiNum:[1,5,8]}
     ]
 
-export function confirmUser(u, {p}) {
-    alert("madzu");
+export function confirmUser(u, p, event) {
     let x = Users.find((z) => z.useName == u); 
-    alert(x);
-    alert(u);
-    alert(Users[0].useName);
-    alert("red");
+    if (x.password === p) {
+        alert("you win");
+    }
+    console.log(x);
     //event.preventDefault();
 }
