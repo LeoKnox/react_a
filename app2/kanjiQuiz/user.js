@@ -7,9 +7,8 @@ let Users =
 
 export function confirmUser(u, {p}) {
     alert("madzu");
-    alert(typeof(u));
-    let x = Users.find((u) => u == test[0]); 
-    console.log(x);
+    let x = Users.find((z) => z == u); 
+    alert(x);
     alert(u);
     alert(Users[0].useName);
     alert("red");
