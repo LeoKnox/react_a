@@ -5,8 +5,9 @@ let Users =
         {useName:"use3", password:"pass3", kanjiNum:[1,5,8]}
     ]
 
-export function confirmUser({u}, {p}) {
+export function confirmUser(u, {p}) {
     alert("madzu");
+    alert(typeof(u));
     let x = Users.find((u) => u == test[0]); 
     console.log(x);
     alert(u);
