@@ -8,7 +8,7 @@ let Users =
 export function confirmUser(u, p) {
     let x = Users.find((z) => z.useName === u); 
     if (x.password === p) {
-        alert("you win");
+        alert(x.kanjiNum);
     }
     console.log(x);
     //event.preventDefault();
