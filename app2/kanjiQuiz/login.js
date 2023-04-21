@@ -1,8 +1,9 @@
 import { confirmUser } from "./user.js";
 import { useState } from "react";
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 function Login() {
+    const navigate = useNavigate();
     const [u, setU] = useState("");
     const [p, setP] = useState("");
     const [user, setUser] = useState();
@@ -23,6 +24,7 @@ function Login() {
         console.log("user");
         console.log(u);
         confirmUser(u, p);
+        navigate('/login/1');
         //confirmUser(user);
     }
     return (
