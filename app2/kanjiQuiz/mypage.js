@@ -6,7 +6,7 @@ function Mypage({user}) {
     return(
         <>
         <h3>I'm loggged in</h3>
-        <p>{user.useName}</p>
+        <p>{user}</p>
         </>
     )
 }
