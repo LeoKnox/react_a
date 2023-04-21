@@ -24,7 +24,7 @@ function Login() {
         console.log("user");
         console.log(u);
         confirmUser(u, p);
-        navigate('/login/1');
+        navigate('/logged');
         //confirmUser(user);
     }
     return (
