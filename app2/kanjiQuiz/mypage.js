@@ -6,7 +6,7 @@ function Mypage({user}) {
     return(
         <>
         <h3>I'm loggged in</h3>
-        {user.kanjiNum.map((uk) => (
+        {user[kanjiNum].map((uk) => (
             <p>{uk}</p>
         ))}
         </>
