@@ -1,4 +1,4 @@
-function Mypage(u) {
+function Mypage({u}) {
     console.log("xx");
     console.log(u);
     return(
