@@ -1,6 +1,7 @@
 import Home from "./kanjiQuiz/home.js";
 import Update from "./kanjiQuiz/update.js";
 import Login from "./kanjiQuiz/login.js";
+import Mypage from "./kanjiQuiz/mypage.js";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
             <Route path=":user" element={<p>tt</p>} />
           </Route>
           <Route path="/home" element={<Home />} />
+          <Route path="/logged/:id" element={<Mypage />} />
           <Route path="update/:id" element={<Update />} />
+          <Route path="logged" element={<Mypage />} />
         </Routes>
       </BrowserRouter>
     </div>
