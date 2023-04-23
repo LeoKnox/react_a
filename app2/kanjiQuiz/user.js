@@ -15,5 +15,6 @@ export function confirmUser(u, p) {
         alert(x.kanjiNum);
     }
     console.log(x);
+    return(Users.map(e => e.useName).indexOf(u));
     //event.preventDefault();
 }
