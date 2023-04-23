@@ -1,5 +1,3 @@
-import { useNavigate } from 'react-router-dom';
-
 let Users =
     [
         {useName:"use1", password:"pass1", kanjiNum:[1,3]},
@@ -11,13 +9,11 @@ export function singleUser(id) {
     console.log("one user"+ id);
 }
 
-export function ConfirmUser(u, p) {
-    const navigate = useNavigate();
+export function confirmUser(u, p) {
     let x = Users.find((z) => z.useName === u); 
     if (x.password === p) {
         alert(x.kanjiNum);
     }
     console.log(x);
-    navigate('/logged', 1);
     //event.preventDefault();
 }
