@@ -1,4 +1,4 @@
-import { confirmUser } from "./user.js";
+import { ConfirmUser } from "./user.js";
 import { useState } from "react";
 import { Outlet, useNavigate } from 'react-router-dom';
 
