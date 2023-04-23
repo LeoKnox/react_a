@@ -5,6 +5,10 @@ let Users =
         {useName:"use3", password:"pass3", kanjiNum:[1,5,8]}
     ]
 
+export function singleUser(id) {
+    console.log("one user"+ id);
+}
+
 export function confirmUser(u, p) {
     let x = Users.find((z) => z.useName === u); 
     if (x.password === p) {
