@@ -25,7 +25,7 @@ function Login() {
         console.log(u);
         let x = 1;
         confirmUser(u, p);
-        navigate('/logged/{id}', 1);
+        navigate(`/logged/${x}`, x);
         //confirmUser(user);
     }
     return (
