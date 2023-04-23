@@ -23,8 +23,8 @@ function Login() {
         //setUser({u:u, p:p});
         console.log("user");
         console.log(u);
-        let x = 1;
-        confirmUser(u, p);
+        let x = 99;
+        x = confirmUser(u, p);
         navigate(`/logged/${x}`, x);
         //confirmUser(user);
     }
