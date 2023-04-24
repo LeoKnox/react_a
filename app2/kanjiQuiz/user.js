@@ -7,6 +7,7 @@ let Users =
 
 export function singleUser(id=2) {
     console.log("one user"+ Users[id]);
+    return(Users[id]);
 }
 
 export function confirmUser(u, p) {
