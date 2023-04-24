@@ -5,8 +5,8 @@ let Users =
         {useName:"use3", password:"pass3", kanjiNum:[1,5,8]}
     ]
 
-export function singleUser(id) {
-    console.log("one user"+ id);
+export function singleUser(id=2) {
+    console.log("one user"+ Users[id]);
 }
 
 export function confirmUser(u, p) {
