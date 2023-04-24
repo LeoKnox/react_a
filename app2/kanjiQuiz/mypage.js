@@ -11,6 +11,9 @@ function Mypage({user}) {
         <>
         <h3>I'm loggged in</h3>
         <p>Welcome {myInfo.useName}</p>
+        {myInfo.kanjiNum.map((x, i) => (
+            <p>{x}</p>
+        ))}
         </>
     )
 }
