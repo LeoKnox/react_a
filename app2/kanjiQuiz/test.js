@@ -3,3 +3,5 @@ function Test() {
         <p>This is test component</p>
     )
 }
+
+export default Test;
