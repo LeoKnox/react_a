@@ -1,4 +1,6 @@
 import Home from "./kanjiQuiz/home.js";
+import Test from "./kanjiQuiz/test.js";
+import TestParam from "./kanjiQuiz/testParam.js";
 import Update from "./kanjiQuiz/update.js";
 import Login from "./kanjiQuiz/login.js";
 import Mypage from "./kanjiQuiz/mypage.js";
@@ -18,6 +20,8 @@ function App() {
           <Route path="/logged/:id" element={<Mypage />} />
           <Route path="update/:id" element={<Update />} />
           <Route path="logged" element={<Mypage />} />
+          <Route path="test" element={<Test />} />
+          <Route path="test/:id" element={<TestParam />} />
         </Routes>
       </BrowserRouter>
     </div>
