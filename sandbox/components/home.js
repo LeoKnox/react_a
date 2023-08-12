@@ -18,7 +18,7 @@ const Home = () => {
     <div>
       <h1>I'm Home</h1>
       <h3>{firstState}</h3>
-      <FirstComp />
+      <FirstComp changeState={setFirstState} />
       <button onClick={() => firstClick()}>click</button>
       {dungeon.map((d) => (
         <p>{d.name}</p>
