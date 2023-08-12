@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FirstComp from "./firstComp.js";
 
 const Home = () => {
   const dungeon = [
@@ -17,6 +18,7 @@ const Home = () => {
     <div>
       <h1>I'm Home</h1>
       <h3>{firstState}</h3>
+      <FirstComp />
       <button onClick={() => firstClick()}>click</button>
       {dungeon.map((d) => (
         <p>{d.name}</p>
