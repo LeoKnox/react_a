@@ -1,9 +1,9 @@
 const FirstComp = ({ changeState }) => {
   function test() {
-    changeState("blue");
+    changeState();
     alert("blue");
   }
-  return <button onClick={changeState}>first comp</button>;
+  return <button onClick={test}>first comp</button>;
 };
 
 export default FirstComp;
