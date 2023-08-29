@@ -1,0 +1,9 @@
+.myDiv {
+  display: flex;
+  backgroud-color: red;
+  justify-content: center;
+}
+
+.myButton {
+  flex-grow: .5;
+}
