@@ -1,8 +1,33 @@
 .container {
-  width: 10%;
-  height: 5%;
+  width: 40%;
+  height: 20%;
   margin: auto;
   background: lightgray;
   margin-top: 50px;
   border-radius: 15px;
+  padding: 20px 0;
+}
+
+.weather-temp {
+  display: flex;
+  justify-content: center;
+  color: darkblue;
+  font-size: 1.8em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.weather-location {
+  display: flex;
+  justify-content: center;
+  color: darkblue;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.data-container {
+  margin-top: 50px;
+  color: darkblue;
+  display: flex;
+  justify-content: center;
 }
