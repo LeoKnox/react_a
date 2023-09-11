@@ -1,6 +1,6 @@
 import {Room} from './Nav.js';
 
-const Nav = ({setCurrPage}) => {
+const Nav = ({changePage}) => {
   function changeRoom() {
     setCurrPage(<Room />)
     alert("red");
@@ -9,7 +9,7 @@ const Nav = ({setCurrPage}) => {
   return (
     <div>
       <button>Home</button>
-      <button onClick={changeRoom}>Room</button>
+      <button onClick={changePage}>Room</button>
     </div>
   )
 }
