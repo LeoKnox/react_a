@@ -1,6 +1,6 @@
 import {Room} from './Nav.js';
 
-const Nav = (setCurrPage) => {
+const Nav = ({setCurrPage}) => {
   function changeRoom() {
     setCurrPage(<Room />)
     alert("red");
