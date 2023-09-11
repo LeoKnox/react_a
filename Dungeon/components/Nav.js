@@ -8,7 +8,7 @@ const Nav = ({changePage}) => {
   return (
     <div>
       <button>Home</button>
-      <button onClick={() => changePage(<Room />)}>Room</button>
+      <button onClick={() -> changePage(<><Room /></>)}>Room</button>
     </div>
   )
 }
