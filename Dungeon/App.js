@@ -7,8 +7,8 @@ import Nav from './components/Nav.js';
 export default function App() {
   const [currPage, setCurrPage] = useState(<Home />)
 
-  function changePage() {
-    setCurrPage(<Room />)
+  function changePage(x) {
+    setCurrPage(x)
   }
 
   return (
