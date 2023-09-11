@@ -1,6 +1,13 @@
 const Nav = () => {
+  function changeRoom() {
+    alert("red");
+  }
+  
   return (
-    <p>Nav bar</p>
+    <div>
+      <button>Home</button>
+      <button onClick={changeRoom}>Room</button>
+    </div>
   )
 }
 
