@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Build Dungeons</h1>
-      <Nav />
+      <Nav changePage={setCurrPage} />
       {currPage}
       <p>1111</p>
     </div>
