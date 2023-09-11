@@ -1,7 +1,17 @@
-const Nav = () => {
-  return (
-    <p>Nav bar</p>
-  )
-}
+import { useState } from 'react';
+import "./styles.css";
+import Home from './components/Home.js';
+import Nav from './components/Nav.js';
 
-export default Nav;
+export default function App() {
+  const [currPage, setCurrPage] = useState(<Home />)
+
+  return (
+    <div className="App">
+      <h1>Build Dungeons</h1>
+      <Nav />
+      {currPage}
+      <p>1111</p>
+    </div>
+  );
+}
