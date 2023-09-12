@@ -1,16 +1,11 @@
-import {Room} from './Nav.js';
+import Home from './Home.js';
 
-const Nav = ({changePage}) => {
-  let y = <Room />;
-  function changeRoom() {
-    changePage(y)
-  }
-
+const Nav = () => {
   return (
-    <div>
-      <button>Home</button>
-      <button onClick={changeRoom}>Room</button>
-    </div>
+    <>
+    <p>New Nav</p>
+    <Home />
+    </>
   )
 }
 
