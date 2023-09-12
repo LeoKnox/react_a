@@ -2,13 +2,13 @@ import {Room} from './Nav.js';
 
 const Nav = ({changePage}) => {
   function changeRoom() {
-    alert("red");
+    changePage(<Room />)
   }
 
   return (
     <div>
       <button>Home</button>
-      <button onClick={() => changePage(<><Room /></>)}>Room</button>
+      <button onClick={changeRoom}>Room</button>
     </div>
   )
 }
