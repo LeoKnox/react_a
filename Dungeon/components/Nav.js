@@ -1,8 +1,9 @@
 import {Room} from './Nav.js';
 
 const Nav = ({changePage}) => {
+  let y = <Room />;
   function changeRoom() {
-    changePage(<Room />)
+    changePage(y)
   }
 
   return (
