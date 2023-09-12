@@ -1,6 +1,6 @@
 import {Room} from './Nav.js';
 
-const Nav = (changePage) => {
+const Nav = ({changePage}) => {
   function changeRoom() {
     alert("red");
   }
@@ -8,7 +8,7 @@ const Nav = (changePage) => {
   return (
     <div>
       <button>Home</button>
-      <button onClick={() => changePage(<Room />)}>Room</button>
+      <button onClick={() => changePage(<><Room /></>)}>Room</button>
     </div>
   )
 }
