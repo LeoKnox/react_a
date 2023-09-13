@@ -14,9 +14,10 @@ export default function App() {
   return (
     <div className="App">
       <h1>Build Dungeons</h1>
-      <Nav changePage={changePage} />
+      <Nav changePage={setCurrPage} data={currPage} />
+      <div className="nav">
+      </div>
       {currPage}
-      <p>1111</p>
     </div>
   );
 }
