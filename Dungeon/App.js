@@ -14,9 +14,9 @@ export default function App() {
   return (
     <div className="App">
       <h1>Build Dungeons</h1>
-      <button onClick={()=>setCurrPage(<Home />)}>Home</button>
-      <button onClick={()=>setCurrPage(<Room />)}>Room</button>
       <div className="nav">
+        <button onClick={()=>setCurrPage(<Home />)}>Home</button>
+        <button onClick={()=>setCurrPage(<Room />)}>Room</button>
       </div>
       {currPage}
     </div>
