@@ -1,14 +1,16 @@
-import Home from './Home.js';
-import Room from './Room.js';
-import { useState } from 'react';
+import {Room} from './Nav.js';
 
-const Nav = () => {
-  const [page, setPage] = useState(<Home />)
+const Nav = ({changePage, data}) => {
+  let y = <Room />;
+  function changeRoom() {
+    changePage(y)
+  }
+
   return (
-    <>
-    <p onClick={() => setPage(<Room />)}>New Nav</p>
-    {page}
-    </>
+    <div>
+      <button>Home</button>
+      <button onClick={changePage(<Room />)}>Room</button>
+    </div>
   )
 }
 
