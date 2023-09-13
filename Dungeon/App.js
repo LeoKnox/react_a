@@ -14,7 +14,8 @@ export default function App() {
   return (
     <div className="App">
       <h1>Build Dungeons</h1>
-      <Nav changePage={setCurrPage} data={currPage} />
+      <button onClick={()=>setCurrPage(<Home />)}>Home</button>
+      <button onClick={()=>setCurrPage(<Room />)}>Room</button>
       <div className="nav">
       </div>
       {currPage}
