@@ -5,8 +5,5 @@ const dungeon = [
 ]
 
 export function displayAll() {
-  dungeon.map((x) => {
-  return (
-    <p>all data</p>
-  )}
-  )}
+  return {dungeon}
+}
