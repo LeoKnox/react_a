@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import "./styles.css";
+import './App.css';
 import Home from './components/Home.js';
 import Room from './components/Room.js';
+import {displayAll} from './components/roomData.js';
 
 export default function App() {
   const [currPage, setCurrPage] = useState(<Home />)
@@ -14,6 +15,7 @@ export default function App() {
         <button onClick={()=>setCurrPage(<Room />)}>Room</button>
       </div>
       {currPage}
+      {displayAll}
     </div>
   );
 }
