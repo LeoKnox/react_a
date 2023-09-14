@@ -15,7 +15,7 @@ export default function App() {
         <button onClick={()=>setCurrPage(<Room />)}>Room</button>
       </div>
       {currPage}
-      {displayAll}
+      {displayAll()}
     </div>
   );
 }
