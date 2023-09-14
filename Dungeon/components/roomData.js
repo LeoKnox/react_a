@@ -1,9 +1,21 @@
-const dungeon = [
-  {name: "Entry", description:"Engrance", length: 5, width: 5},
-  {name: "Guard Room", description:"Guards", length: 7, width: 8},
-  {name: "Throne room", description:"Throne", length: 7, width: 6}
-]
+import { useState } from "react";
+import "./styles.css";
+import Home from "./components/Home.js";
+import Room from "./components/Room.js";
+import { displayAll } from "./components/roomData.js";
 
-export function displayAll() {
-  return {dungeon}
+export default function App() {
+  const [currPage, setCurrPage] = useState(<Home />);
+
+  return (
+    <div className="App">
+      <h1>Build Dungeons</h1>
+      <div className="nav">
+        <button onClick={() => setCurrPage(<Home />)}>Home</button>
+        <button onClick={() => setCurrPage(<Room />)}>Room</button>
+      </div>
+      {currPage}
+      {displayAll().dungeon}
+    </div>
+  );
 }
