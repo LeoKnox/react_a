@@ -5,7 +5,7 @@ const dungeon = [
   ]
   
   export function displayAll() {
-    return (<p>all data</p>)
+    return "all data"
   }
 
   export function displayOne() {
