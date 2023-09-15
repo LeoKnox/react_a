@@ -16,7 +16,12 @@ export default function App() {
       </div>
       {currPage}
       {displayAll().dungeon.map((room) => (
-        <p>{room.name}</p>
+        <tr>
+          <td>{room.name}</td>
+          <td>{room.description}</td>
+          <td>{room.width}</td>
+          <td>{room.length}</td>
+        </tr>
       ))}
     </div>
   );
