@@ -16,6 +16,9 @@ const Home = () => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
+          <td>
+            <button>Map</button>
+          </td>
         </tr>
       ))}
     </table>
