@@ -1,6 +1,6 @@
 import {displayAll} from './roomData.js';
 
-const Home = () => {
+const Home = ({changePage}) => {
   return (
     <div className="Home">
     <table>
@@ -17,7 +17,7 @@ const Home = () => {
           <td>{room.width}</td>
           <td>{room.length}</td>
           <td>
-            <button>Map</button>
+            <button onClick={() => changePage()}>Map</button>
           </td>
         </tr>
       ))}
