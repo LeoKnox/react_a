@@ -15,7 +15,9 @@ export default function App() {
         <button onClick={() => setCurrPage(<Room />)}>Room</button>
       </div>
       {currPage}
-      {displayAll().dungeon[0].name}
+      {displayAll().dungeon.map((room) => (
+        <p>{room.name}</p>
+      ))}
     </div>
   );
 }
