@@ -1,7 +1,7 @@
 import {displayAll} from './roomData.js';
 
-const Home = (changePage) => {
-  alert({changePage})
+const Home = ({changePage}) => {
+  alert(Object.keys(changePage))
   return (
     <div className="Home">
     <table>
