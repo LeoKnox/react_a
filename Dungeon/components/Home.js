@@ -18,7 +18,7 @@ const Home = ({changePage}) => {
           <td>{room.width}</td>
           <td>{room.length}</td>
           <td>
-            <button onClick={changePage.changePage}>Map</button>
+            <button onClick={() => changePage()}>Map</button>
           </td>
         </tr>
       ))}
