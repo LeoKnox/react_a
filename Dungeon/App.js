@@ -8,6 +8,7 @@ export default function App() {
   const [currPage, setCurrPage] = useState(<Home />);
 
   function changePage() {
+    alert("red");
     setCurrPage(<Room />)
   }
 
