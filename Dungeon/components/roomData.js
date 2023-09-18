@@ -5,5 +5,7 @@ let roomData = [
 ]
 
 export displayAll() {
-  console.log("all rooms");
+  return (
+    console.log("all rooms")
+  )
 }
