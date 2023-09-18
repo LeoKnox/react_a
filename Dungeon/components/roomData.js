@@ -6,6 +6,6 @@ let roomData = [
 
 export function displayAll() {
   return (
-    console.log("all rooms")
+    roomData
   )
 }
