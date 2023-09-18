@@ -4,7 +4,7 @@ let roomData = [
   {name:"Guard", description:"Guard room", width:6, lenght:8}
 ]
 
-export displayAll() {
+export function displayAll() {
   return (
     console.log("all rooms")
   )
