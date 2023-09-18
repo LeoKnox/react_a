@@ -1,7 +1,9 @@
 import {displayAll} from './roomData.js';
 
 const Home = ({changePage}) => {
-  
+  function newPage() {
+    {changePage}
+  }
   return (
     <div className="Home">
     <table>
@@ -18,7 +20,7 @@ const Home = ({changePage}) => {
           <td>{room.width}</td>
           <td>{room.length}</td>
           <td>
-            <button onClick={changePage}>Map</button>
+            <button onClick={() => newPage())}>Map</button>
           </td>
         </tr>
       ))}
