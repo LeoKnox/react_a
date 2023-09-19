@@ -5,7 +5,5 @@ let roomData = [
 ]
 
 export function displayAll() {
-  return (
-    {roomData}
-  )
+  return {roomData}
 }
