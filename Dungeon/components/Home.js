@@ -4,6 +4,7 @@ const Home = ({changePage}) => {
   function newPage() {
     {changePage}
   }
+  alert({displayAll[0]});
   return (
     <div className="Home">
     <table>
