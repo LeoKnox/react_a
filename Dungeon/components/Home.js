@@ -13,7 +13,7 @@ const Home = ({changePage}) => {
           <th>Width</th>
           <th>Length</th>
         </tr>
-      {displayAll().dungeon.map((room) => (
+      {displayAll().map((room) => (
         <tr>
           <td>{room.name}</td>
           <td>{room.description}</td>
