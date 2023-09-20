@@ -14,7 +14,7 @@ const Home = ({changePage}) => {
           <th>Width</th>
           <th>Length</th>
         </tr>
-      {displayAll.map((room) => (
+      {displayAll.roomData.map((room) => (
         <tr>
           <td>{room.name}</td>
           <td>{room.description}</td>
