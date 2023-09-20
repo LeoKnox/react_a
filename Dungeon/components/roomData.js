@@ -7,7 +7,10 @@ let roomData = [
 export function displayAll() {
   roomData.map(room => {
     return (
+      <>
       <td>{room.name}</td>
+      <td>{room.description}</td>
+      </>
     )
   })
 }
