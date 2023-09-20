@@ -4,7 +4,7 @@ const Home = ({changePage}) => {
   function newPage() {
     {changePage}
   }
-  alert({JSON.stringify(displayAll)})
+  alert(<>{JSON.stringify(displayAll)}</>)
   return (
     <div className="Home">
     <table>
