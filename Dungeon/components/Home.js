@@ -1,8 +1,10 @@
-import {displayAll} from './roomData.js';
+import { displayAll } from "./roomData.js";
 
-const Home = ({changePage}) => {
+const Home = ({ changePage }) => {
   function newPage() {
-    {changePage}
+    {
+      changePage;
+    }
   }
   /*
   {displayAll.map((room) => (
@@ -17,19 +19,22 @@ const Home = ({changePage}) => {
         </tr>
       ))}
   */
+  console.log(displayAll());
   return (
     <div className="Home">
-    <table>
+      <table>
         <tr>
           <th>Room Name</th>
           <th>Description</th>
           <th>Width</th>
           <th>Length</th>
         </tr>
-        {displayAll}
-    </table>
+        {displayAll().map(room =>(
+          <td>{room.name}</td>
+        ))}
+      </table>
     </div>
-  )
-}
+  );
+};
 
 export default Home;
