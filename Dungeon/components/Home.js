@@ -30,7 +30,12 @@ const Home = ({ changePage }) => {
           <th>Length</th>
         </tr>
         {displayAll().map(room =>(
+          <tr>
           <td>{room.name}</td>
+          <td>{room.description}</td>
+          <td>{room.width}</td>
+          <td>{room.length}</td>
+          </tr>
         ))}
       </table>
     </div>
