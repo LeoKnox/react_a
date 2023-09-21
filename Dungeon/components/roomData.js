@@ -5,6 +5,5 @@ let roomData = [
 ]
 
 export function displayAll() {
-  roomData.map(room => {
-    return room.name
-})}
+  return roomData
+}
