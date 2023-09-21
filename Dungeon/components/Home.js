@@ -4,17 +4,8 @@ const Home = ({changePage}) => {
   function newPage() {
     {changePage}
   }
-  alert(<>{JSON.stringify(displayAll)}</>)
-  return (
-    <div className="Home">
-    <table>
-        <tr>
-          <th>Room Name</th>
-          <th>Description</th>
-          <th>Width</th>
-          <th>Length</th>
-        </tr>
-      {displayAll.map((room) => (
+  /*
+  {displayAll.map((room) => (
         <tr>
           <td>{room.name}</td>
           <td>{room.description}</td>
@@ -25,6 +16,17 @@ const Home = ({changePage}) => {
           </td>
         </tr>
       ))}
+  */
+  return (
+    <div className="Home">
+    <table>
+        <tr>
+          <th>Room Name</th>
+          <th>Description</th>
+          <th>Width</th>
+          <th>Length</th>
+        </tr>
+        {displayAll}
     </table>
     </div>
   )
