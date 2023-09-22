@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles.css";
+//import "./styles.css";
 import Home from "./components/Home.js";
 import Room from "./components/Room.js";
 import { displayAll } from "./components/roomData.js";
@@ -8,7 +8,6 @@ export default function App() {
   const [currPage, setCurrPage] = useState(<Home />);
 
   function changePage() {
-    alert("red");
     setCurrPage(<Room />)
   }
 
