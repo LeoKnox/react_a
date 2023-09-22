@@ -22,7 +22,7 @@ const Home = ({ changePage }) => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
-          <td onClick={changePage}>Room</td>
+          <td><button onClick={changePage}>Room</button></td>
           </tr>
         ))}
       </table>
