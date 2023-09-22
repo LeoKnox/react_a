@@ -3,7 +3,7 @@ import { displayAll } from "./roomData.js";
 const Home = ({ changePage }) => {
   function newPage() {
     {
-      changePage;
+      {changePage};
     }
   }
   console.log(displayAll());
@@ -22,7 +22,7 @@ const Home = ({ changePage }) => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
-          <td><button onClick={() => changePage(3)}>Room</button></td>
+          <td><button onClick={newPage}>Room</button></td>
           </tr>
         ))}
       </table>
