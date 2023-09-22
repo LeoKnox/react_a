@@ -6,19 +6,6 @@ const Home = ({ changePage }) => {
       changePage;
     }
   }
-  /*
-  {displayAll.map((room) => (
-        <tr>
-          <td>{room.name}</td>
-          <td>{room.description}</td>
-          <td>{room.width}</td>
-          <td>{room.length}</td>
-          <td>
-            <button onClick={() => newPage()}>Map</button>
-          </td>
-        </tr>
-      ))}
-  */
   console.log(displayAll());
   return (
     <div className="Home">
@@ -35,6 +22,7 @@ const Home = ({ changePage }) => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
+          <td onClick={changePage}>Room</td>
           </tr>
         ))}
       </table>
