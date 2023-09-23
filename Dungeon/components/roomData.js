@@ -9,5 +9,5 @@ export function displayAll() {
 }
 
 export function displayOne() {
-  return roomData[1].name
+  return roomData
 }
