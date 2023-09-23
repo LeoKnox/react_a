@@ -1,24 +1,31 @@
-import { useState } from "react";
-//import "./styles.css";
-import Home from "./components/Home.js";
-import Room from "./components/Room.js";
-import { displayAll } from "./components/roomData.js";
+import { displayAll } from "./roomData.js";
 
-export default function App() {
-  const [currPage, setCurrPage] = useState(<Home />);
-
-  function changePage() {
-    setCurrPage(<Room />)
+const Home = ({ changePage }) => {
+  function newPage() {
+      changePage();
   }
-
+  console.log(displayAll());
   return (
-    <div className="App">
-      <h1>Build Dungeons</h1>
-      <div className="nav">
-        <button onClick={() => setCurrPage(<Home changePage={changePage} />)}>Home</button>
-        <button onClick={() => setCurrPage(<Room />)}>Room</button>
-      </div>
-      {currPage}
+    <div className="Home">
+      <table>
+        <tr>
+          <th>Room Name</th>
+          <th>Description</th>
+          <th>Width</th>
+          <th>Length</th>
+        </tr>
+        {displayAll().map(room =>(
+          <tr>
+          <td>{room.name}</td>
+          <td>{room.description}</td>
+          <td>{room.width}</td>
+          <td>{room.length}</td>
+          <td onClick={() => newPage()}>Room</td>
+          </tr>
+        ))}
+      </table>
     </div>
   );
-}
+};
+
+export default Home;
