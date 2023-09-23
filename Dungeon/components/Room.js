@@ -4,7 +4,7 @@ const Room = () => {
   return (
     <>
     <p>Room page</p>
-    {displayOne}
+    {displayOne[1]}
     </>
   )
 }
