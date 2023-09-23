@@ -1,7 +1,8 @@
 import { displayAll } from "./roomData.js";
 
 const Home = ({ changePage }) => {
-  const newPage = () => {
+  const newPage = (x) => {
+    alert(x);
     changePage()
   }
 
@@ -20,7 +21,7 @@ const Home = ({ changePage }) => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
-          <td onClick={newPage}>Room</td>
+          <td onClick={() => newPage(1)}>Room</td>
           </tr>
         ))}
       </table>
