@@ -2,9 +2,9 @@ import { displayAll } from "./roomData.js";
 
 const Home = ({ changePage }) => {
   function newPage() {
-      changePage();
+    {changePage}
   }
-  console.log(displayAll());
+
   return (
     <div className="Home">
       <table>
@@ -20,7 +20,7 @@ const Home = ({ changePage }) => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
-          <td onClick={() => newPage()}>Room</td>
+          <td onClick={newPage}>Room</td>
           </tr>
         ))}
       </table>
