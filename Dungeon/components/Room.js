@@ -1,14 +1,14 @@
-let roomData = [
-  {id: 1, name:"Entry", description:"Entrance", width:5, length:5},
-  {id: 2, name:"Throne", description:"Throne room", width:7, length:6},
-  {id: 3, name:"Guard", description:"Guard room", width:6, length:8}
-]
+import {displayOne} from './roomData.js';
 
-export function displayAll() {
-  return roomData
+const Room = (roomId) => {
+  alert({roomId});
+  let currentRoom = displayOne(roomId);
+  return (
+    <>
+    <p>Room page</p>
+    <p>Name: {currentRoom.name}</p>
+    </>
+  )
 }
 
-export function displayOne(roomId) {
-  //alert(roomData.at(roomId).name);
-  return roomData.at(roomId)
-}
+export default Room;
