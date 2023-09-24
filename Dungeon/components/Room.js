@@ -1,10 +1,11 @@
 import {displayOne} from './roomData.js';
 
 const Room = () => {
+  let currentRoom = displayOne();
   return (
     <>
     <p>Room page</p>
-    {displayOne[1]}
+    <p>Name: {currentRoom.name}</p>
     </>
   )
 }
