@@ -8,6 +8,6 @@ export function displayAll() {
   return roomData
 }
 
-export function displayOne() {
-  return roomData[0]
+export function displayOne(roomId) {
+  return roomData[roomData.find(roomId)]
 }
