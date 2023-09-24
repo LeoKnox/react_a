@@ -2,7 +2,8 @@ import { displayAll } from "./roomData.js";
 
 const Home = ({ changePage }) => {
   const newPage = (x) => {
-    changePage(x)
+    alert(changePage());
+    //changePage()
   }
 
   return (
