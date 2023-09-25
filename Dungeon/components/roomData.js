@@ -9,7 +9,5 @@ export function displayAll() {
 }
 
 export function displayOne(roomId) {
-  let x = roomData.find(roomId).name;
-  alert(x);
-  return roomData[0]
+  return roomData[roomId-1]
 }
