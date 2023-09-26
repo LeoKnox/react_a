@@ -8,7 +8,7 @@ export default function App() {
   const [currPage, setCurrPage] = useState(<Home />);
 
   const changePage = (x) => {
-    setCurrPage(<Room roomId=1 />)
+    setCurrPage(<Room />)
   }
 
   return (
