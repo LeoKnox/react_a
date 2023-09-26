@@ -9,6 +9,5 @@ export function displayAll() {
 }
 
 export function displayOne(roomId) {
-  alert(roomData[roomId].name)
-  return roomData[roomId]
+  return (roomData[roomId])
 }
