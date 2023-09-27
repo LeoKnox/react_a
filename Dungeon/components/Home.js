@@ -1,4 +1,4 @@
-import { displayAll } from "./roomData.js";
+import { displayAll, displayOne } from "./roomData.js";
 
 const Home = ({ changePage }) => {
   const newPage = () => {
@@ -20,7 +20,7 @@ const Home = ({ changePage }) => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
-          <td onClick={() => newPage()}>Room {room.id}</td>
+          <td onClick={() => displayOne()}>Room {room.id}</td>
           </tr>
         ))}
       </table>
