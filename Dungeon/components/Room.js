@@ -2,8 +2,8 @@ import {displayOne} from './roomData.js';
 
 const Room = (roomId=1) => {
   
-  let currentRoom = displayOne(roomId);
-  alert(currentRoom.name);
+  let currentRoom = displayOne(roomId.keys);
+  alert(roomId);
   return (
     <>
     <p>Room page</p>
