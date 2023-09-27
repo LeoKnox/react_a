@@ -1,8 +1,8 @@
 import {displayOne} from './roomData.js';
 
-const Room = (roomId=1) => {
+const Room = ({roomId=1}) => {
   
-  let currentRoom = displayOne(roomId.keys);
+  let currentRoom = displayOne(roomId);
   alert(roomId);
   return (
     <>
