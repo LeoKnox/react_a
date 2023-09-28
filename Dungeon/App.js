@@ -7,7 +7,7 @@ import { displayAll } from "./components/roomData.js";
 export default function App() {
   const [currPage, setCurrPage] = useState(<Home />);
 
-  const changePage = (x) => {
+  const changePage = () => {
     setCurrPage(<Room />)
   }
 
