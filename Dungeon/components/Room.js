@@ -1,6 +1,6 @@
 import {displayOne} from './roomData.js';
 
-const Room = ({roomId=1}) => {
+const Room = (roomId) => {
   
   let currentRoom = displayOne(roomId);
   alert(roomId);
