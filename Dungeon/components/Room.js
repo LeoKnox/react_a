@@ -2,7 +2,7 @@ import {displayOne} from './roomData.js';
 
 const Room = ({roomId=1}) => {
   
-  let currentRoom = displayOne(2);
+  let currentRoom = displayOne(roomId);
   alert(roomId);
   return (
     <>
