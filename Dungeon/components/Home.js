@@ -3,8 +3,8 @@ import { displayAll, displayOne } from "./roomData.js";
 const Home = ({ changePage }) => {
   const newPage = (x) => {
     alert("new page " + x)
-    alert({changePage})
-    changePage({x})
+    alert(typeof(changePage))
+    changePage(x)
   }
 
   return (
