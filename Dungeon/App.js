@@ -7,7 +7,8 @@ import { displayAll } from "./components/roomData.js";
 export default function App() {
   const [currPage, setCurrPage] = useState(<Home />);
 
-  const changePage = (x=1) => {
+  const changePage = () => {
+    let x = 1
     alert("change page " + x)
     setCurrPage(<Room roomId={x} />)
   }
@@ -16,7 +17,7 @@ export default function App() {
     <div className="App">
       <h1>Build Dungeons</h1>
       <div className="nav">
-        <button onClick={() => setCurrPage(<Home changePage={changePage()} />)}>Home</button>
+        <button onClick={() => setCurrPage(<Home changePage={() => changePage()} />)}>Home</button>
         <button onClick={() => setCurrPage(<Room />)}>Room</button>
       </div>
       {currPage}
