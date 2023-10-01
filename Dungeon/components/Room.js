@@ -1,15 +1,34 @@
-import {displayOne} from './roomData.js';
+import { displayAll, displayOne } from "./roomData.js";
 
-const Room = (roomId) => {
-  
-  let currentRoom = displayOne(roomId);
-  alert(roomId);
+const Home = ({changePage}) => {
+  const newPage = (x) => {
+    alert("new page " + x)
+    alert(JSON.stringify(changePage))
+    changePage()
+  }
+
   return (
-    <>
-    <p>Room page</p>
-    <p>Name: {currentRoom.name}</p>
-    </>
-  )
-}
+    <div className="Home">
+      <table>
+        <tr>
+          <th>Room Name</th>
+          <th>Description</th>
+          <th>Width</th>
+          <th>Length</th>
+        </tr>
+        {displayAll().map(room =>(
+          <tr>
+          <td>{room.name}</td>
+          <td>{room.description}</td>
+          <td>{room.width}</td>
+          <td>{room.length}</td>
+          <td onClick={changePage}>Room {room.id}</td>
+          </tr>
+        ))}
+      </table>
+    </div>
+  );
+};
 
-export default Room;
+export default Home;
+
