@@ -7,7 +7,7 @@ const Room = ({roomId}) => {
   return (
     <>
     <p>Room page</p>
-    <p>Name: </p>
+    <p>Name: {currentRoom.name}</p>
     </>
   )
 }
