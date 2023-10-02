@@ -4,12 +4,12 @@ const Home = ({changePage}) => {
   const newPage = (x) => {
     alert("new page " + x)
     //alert(changePage())
-    changePage.changePage
+    //changePage.changePage
   }
 
   return (
     <div className="Home">
-      <button onClick={changePage}>click</button>
+      <button onClick={() => changePage}>click</button>
       <table>
         <tr>
           <th>Room Name</th>
