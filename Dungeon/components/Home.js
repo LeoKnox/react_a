@@ -4,7 +4,7 @@ const Home = ({changePage}) => {
   const newPage = (x) => {
     alert("new page " + x)
     alert(JSON.stringify(changePage))
-    changePage.changePage()
+    changePage()
   }
 
   return (
@@ -22,7 +22,7 @@ const Home = ({changePage}) => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
-          <td onClick={() => newPage(room.id)}>Room {room.id}</td>
+          <td onClick={() => changePage(room.id)}>Room {room.id}</td>
           </tr>
         ))}
       </table>
