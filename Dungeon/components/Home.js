@@ -9,6 +9,7 @@ const Home = ({changePage}) => {
 
   return (
     <div className="Home">
+      <button onClick={changePage}>click</button>
       <table>
         <tr>
           <th>Room Name</th>
