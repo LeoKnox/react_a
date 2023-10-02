@@ -4,7 +4,7 @@ const Home = ({changePage}) => {
   const newPage = (x) => {
     alert("new page " + x)
     //alert(changePage())
-    changePage.changePage()
+    {changePage.changePage()}
   }
 
   return (
