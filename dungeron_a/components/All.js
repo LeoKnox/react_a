@@ -3,9 +3,9 @@ const All = ({rooms}) => {
   return (
     <div>
       <h3>All Rooms</h3>
-      {rooms.map = (room) => (
+      {rooms.map(room => (
         <p>{room.name}</p>
-      )}
+      ))}
     </div>
   )
 }
