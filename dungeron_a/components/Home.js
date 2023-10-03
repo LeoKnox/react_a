@@ -1,6 +1,8 @@
+import {useState} from "react";
 import All from "./All.js";
 
 const Home = () => {
+  const [current, setCurrent] = useState(<All />);
   const roomData = [
     {name: "entry", description: "enter", width: 5, length:5 },
     {name: "throne", description: "King", width: 9, length:7 },
@@ -9,7 +11,7 @@ const Home = () => {
 
   return (
     <div>
-      <All />
+      {current}
     </div>
   )
 }
