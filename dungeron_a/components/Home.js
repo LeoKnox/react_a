@@ -1,5 +1,6 @@
 import {useState} from "react";
 import All from "./All.js";
+import Room from "./Room.js";
 
 const Home = () => {
   const roomData = [
@@ -9,6 +10,7 @@ const Home = () => {
   ]
   const selectRoom = () => {
     alert("select room")
+    setCurrent(<Room />)
   }
   const [current, setCurrent] = useState(<All rooms={roomData} selectRoom={selectRoom} />);
 
