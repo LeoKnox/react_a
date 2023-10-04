@@ -13,7 +13,8 @@ const Home = () => {
     'room':<Room />
   }
   const goHome = () => {
-    setCurrent(<All rooms={roomData} selectRoom={selectRoom} />)
+    setCurrent(nav.room)
+    //setCurrent(<All rooms={roomData} selectRoom={selectRoom} />)
   }
   const selectRoom = (roomId) => {
     setCurrent(<Room goHome={goHome()} />);
@@ -24,6 +25,7 @@ const Home = () => {
   return (
     <div>
       {current}
+      {nav.room}
     </div>
   )
 }
