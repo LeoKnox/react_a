@@ -9,8 +9,8 @@ const Home = () => {
     {name: "guard", description: "Guards", width: 8, length:6 }
   ]
   const selectRoom = () => {
-    alert("select room")
     setCurrent(<Room />)
+    alert("select room")
   }
   const [current, setCurrent] = useState(<All rooms={roomData} selectRoom={selectRoom} />);
 
