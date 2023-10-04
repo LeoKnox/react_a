@@ -4,7 +4,7 @@ const All = ({rooms}) => {
     <div>
       <h3>All Rooms</h3>
       {rooms.map(room => (
-        <p>{room.name}</p>
+        <p><button>{room.name}</button></p>
       ))}
     </div>
   )
