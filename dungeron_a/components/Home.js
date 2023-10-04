@@ -8,6 +8,10 @@ const Home = () => {
     {id:2, name: "throne", description: "King", width: 9, length:7 },
     {id:3, name: "guard", description: "Guards", width: 8, length:6 }
   ]
+  const nav={
+    'home':<Home />,
+    'room':<Room />
+  }
   const goHome = () => {
     setCurrent(<All rooms={roomData} selectRoom={selectRoom} />)
   }
