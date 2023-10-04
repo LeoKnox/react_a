@@ -1,10 +1,10 @@
-const All = ({rooms}) => {
+const All = ({rooms, selectRoom}) => {
   console.log(rooms);
   return (
     <div>
       <h3>All Rooms</h3>
       {rooms.map(room => (
-        <p><button>{room.name}</button></p>
+        <p><button onClick={selectRoom}>{room.name}</button></p>
       ))}
     </div>
   )
