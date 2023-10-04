@@ -1,4 +1,5 @@
 const Room = (goHome) => {
+  console.log(`gh ${JSON.stringify(goHome)}`)
   return(
     <div>
       <button onClick={goHome.goHome}>click</button>
