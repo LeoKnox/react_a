@@ -14,7 +14,7 @@ const Home = () => {
     //setCurrent(<All rooms={roomData} selectRoom={selectRoom} />)
   }
   const selectRoom = (roomId) => {
-    setCurrent(<Room goHome={goHome()} />);
+    setCurrent(<Room goHome={() => goHome()} />);
     //alert("select room"+roomId)
   }
   const nav={
