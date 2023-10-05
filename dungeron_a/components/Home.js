@@ -8,10 +8,6 @@ const Home = () => {
     {id:2, name: "throne", description: "King", width: 9, length:7 },
     {id:3, name: "guard", description: "Guards", width: 8, length:6 }
   ]
-  const nav={
-    'all':<All />,
-    'room':<Room />
-  }
   const goHome = () => {
     setCurrent(nav.room)
     console.log(current);
@@ -20,6 +16,10 @@ const Home = () => {
   const selectRoom = (roomId) => {
     setCurrent(<Room goHome={goHome()} />);
     //alert("select room"+roomId)
+  }
+  const nav={
+    'all':<All rooms={roomData} selectRoom={selectRoom} />,
+    'room':<Room />
   }
   const [current, setCurrent] = useState(<All rooms={roomData} selectRoom={selectRoom} />);
 
