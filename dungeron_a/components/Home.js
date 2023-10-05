@@ -9,11 +9,12 @@ const Home = () => {
     {id:3, name: "guard", description: "Guards", width: 8, length:6 }
   ]
   const nav={
-    'home':<Home />,
+    'all':<All />,
     'room':<Room />
   }
   const goHome = () => {
     setCurrent(nav.room)
+    console.log(current);
     //setCurrent(<All rooms={roomData} selectRoom={selectRoom} />)
   }
   const selectRoom = (roomId) => {
@@ -24,8 +25,9 @@ const Home = () => {
 
   return (
     <div>
+      <h3>one</h3>
       {current}
-      {nav.room}
+      {nav.all}
     </div>
   )
 }
