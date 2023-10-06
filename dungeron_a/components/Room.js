@@ -1,4 +1,4 @@
-const Room = (goHome) => {
+const Room = ({goHome}) => {
   console.log(`gh ${goHome.values}`)
   return(
     <div>
