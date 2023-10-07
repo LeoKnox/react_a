@@ -1,11 +1,15 @@
-import {All} from './All.js';
 
-const Home = () => {
+import Home from "./Home.js";
+import { useState } from "react";
+
+export default function App() {
+  const [currPage, setCurrPage] = useState("home");
+  const pages = {
+    'home': <Home />
+  }
   return (
-    <div>
-      <All />
+    <div className="App">
+      {pages.currPage}
     </div>
-  )
+  );
 }
-
-export default Home;
