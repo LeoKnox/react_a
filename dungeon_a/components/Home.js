@@ -1,10 +1,13 @@
 import {allRooms} from './dungeonData.js';
 
 const Home = () => {
-  console.log(allRooms());
+  let dungeon = allRooms();
   return (
     <div>
       <h1>Dungeon</h1>
+      {dungeon.map(room => (
+        <td>{room.name}</td>
+      ))}
     </div>
   )
 }
