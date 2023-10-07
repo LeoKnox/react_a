@@ -2,6 +2,10 @@ import {allRooms} from './dungeonData.js';
 
 const Home = () => {
   let dungeon = allRooms();
+  function showRoom(roomId = 1) {
+    //alert("red");
+    console.log("red "+roomId)
+  }
   return (
     <div>
       <h1>Dungeon</h1>
@@ -18,6 +22,7 @@ const Home = () => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
+          <td><button onClick={() => showRoom(room.id)}>Show</button></td>
         </tr>
       ))}
       </table>
