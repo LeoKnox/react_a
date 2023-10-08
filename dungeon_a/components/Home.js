@@ -1,13 +1,13 @@
-import {useState} from "react";
+import { useState } from "react";
 import Room from "./Room.js";
 
 const Home = () => {
-  const [currPage, setCurrPage] = useState("Room")
+  const [currPage, setCurrPage] = useState("Room");
   const thisPage = {
-    "room": <Room />
-  }
+    room: <Room />
+  };
 
-  return thisPage.room
+  return thisPage.currPage;
 };
 
 export default Home;
