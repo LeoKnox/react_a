@@ -1,6 +1,5 @@
-
 import All from "./All.js";
-import Room from "./Room.js";
+import {Room} from "./Room.js";
 //import { useState } from "react";
 
 const Home = () => {
