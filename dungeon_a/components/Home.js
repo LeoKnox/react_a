@@ -3,8 +3,11 @@ import Room from "./Room.js";
 
 const Home = () => {
   const [currPage, setCurrPage] = useState("Room")
-  
-  return <Room />
+  const thisPage = {
+    "room": <Room />
+  }
+
+  return thisPage.room
 };
 
 export default Home;
