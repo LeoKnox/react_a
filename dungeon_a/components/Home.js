@@ -1,6 +1,6 @@
-import "./styles.css";
-import Home from "./components/Home.js";
-import { useState } from "React";
+
+import Home from "./Home.js";
+import { useState } from "react";
 
 export default function App() {
   const [currPage, setCurrPage] = useState("home");
