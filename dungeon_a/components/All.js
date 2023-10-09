@@ -1,7 +1,7 @@
-const All = (props) => {
+const All = ({changePage}) => {
   const allChange = () => {
     //console.log(changePage)
-    props.changePage("room")
+    changePage("room")
   }
   return (
     <div>
