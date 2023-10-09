@@ -4,7 +4,8 @@ import All from "./All.js";
 
 const Home = () => {
   const [currPage, setCurrPage] = useState("room");
-  function changePage() {
+  function changePage(page="all") {
+    console.log("change page "+page)
     setCurrPage("all");
   }
   const thisPage = {
