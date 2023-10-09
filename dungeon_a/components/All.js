@@ -1,8 +1,11 @@
-const All = ({changePage}) => {
+const All = (changePage) => {
+  const allChange = () => {
+    changePage("room")
+  }
   return (
     <div>
       <h3>All</h3>
-      <button onClick={() => changePage("room")} value="room">Change</button>
+      <button onClick={allChange} value="room">Change</button>
     </div>
   );
 };
