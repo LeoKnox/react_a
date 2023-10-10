@@ -9,7 +9,7 @@ const Home = () => {
     setCurrPage("all");
   }
   const thisPage = {
-    room: <Room changePage={changePage} />,
+    room: <Room changePage={() => changePage()} />,
     all: <All />
   };
 
