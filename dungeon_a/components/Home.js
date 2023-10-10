@@ -4,9 +4,9 @@ import All from "./All.js";
 
 const Home = () => {
   const [currPage, setCurrPage] = useState("room");
-  const changePage = (e) => {
-    console.log("change page "+e.target.value)
-    setCurrPage(e.target.value);
+  const changePage = (event) => {
+    console.log("change page "+event.target.value)
+    setCurrPage(event.target.value);
   }
   const thisPage = {
     room: <Room changePage={changePage} />,
