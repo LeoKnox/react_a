@@ -6,7 +6,7 @@ const Home = () => {
   const [currPage, setCurrPage] = useState("room");
   const changePage = (e) => {
     console.log("change page "+e.target.value)
-    setCurrPage("all");
+    setCurrPage(e.target.value);
   }
   const thisPage = {
     room: <Room changePage={changePage} />,
