@@ -10,7 +10,7 @@ const Home = () => {
   }
   const thisPage = {
     room: <Room changePage={changePage} />,
-    all: <All />
+    all: <All changPage={changePage} />
   };
 
   return (thisPage[currPage]);
