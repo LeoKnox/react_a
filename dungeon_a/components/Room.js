@@ -1,10 +1,10 @@
-const All = (changePage) => {
+const Room = ({changePage}) => {
   return (
     <div>
-      <h3>All</h3>
-      <button onClick={changePage.changePage} value="room">Change</button>
+      <h3>Room</h3>
+      <button onClick={changePage} value="all">Change</button>
     </div>
   );
 };
 
-export default All;
+export default Room;
