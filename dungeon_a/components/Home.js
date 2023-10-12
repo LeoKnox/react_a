@@ -16,6 +16,7 @@ const Home = () => {
   return (
     <div>
       <button onClick={changePage} value="all">All</button>
+      <button onClick={changePage} value="room">Room</button>
       {thisPage[currPage]}
     </div>
   )};
