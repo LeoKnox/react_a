@@ -13,7 +13,10 @@ const Home = () => {
     all: <All changPage={() => changePage()} />
   };
 
-  return (thisPage[currPage]);
-};
+  return (
+    <div>
+      {thisPage[currPage]}
+    </div>
+  )};
 
 export default Home;
