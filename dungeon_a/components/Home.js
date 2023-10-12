@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div>
-      <button onClick={() => setCurrPage("all")}>All</button>
+      <button onClick={changePage} value="all">All</button>
       {thisPage[currPage]}
     </div>
   )};
