@@ -1,8 +1,10 @@
-const All = ({changePage}) => {
+import allRooms from './dungeonData.js';
+
+const All = () => {
+  console.log(allRooms)
   return (
     <div>
       <h3>All</h3>
-      <button onClick={changePage} value="room">Change</button>
     </div>
   );
 };
