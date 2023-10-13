@@ -1,7 +1,7 @@
-import allRooms from './dungeonData.js';
+import {allRooms} from './dungeonData.js';
 
 const All = () => {
-  console.log(allRooms)
+  console.log(allRooms())
   return (
     <div>
       <h3>All</h3>
