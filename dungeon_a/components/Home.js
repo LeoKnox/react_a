@@ -9,8 +9,8 @@ const Home = () => {
     setCurrPage(event.target.value);
   }
   const thisPage = {
-    room: <Room changePage={changePage} />,
-    all: <All changPage={changePage} />
+    room: <Room />,
+    all: <All />
   };
 
   return (
