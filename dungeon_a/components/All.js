@@ -1,10 +1,13 @@
 import {allRooms} from './dungeonData.js';
 
 const All = () => {
-  console.log(allRooms())
+  let rooms = allRooms();
   return (
     <div>
       <h3>All</h3>
+      {rooms.map(room => (
+        <p>{room.name}</p>
+      ))}
     </div>
   );
 };
