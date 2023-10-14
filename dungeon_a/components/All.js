@@ -1,6 +1,6 @@
 import {allRooms} from './dungeonData.js';
 
-const All = () => {
+const All = (setRoom) => {
   let rooms = allRooms();
   return (
     <div>
@@ -11,6 +11,7 @@ const All = () => {
           <th>Description</th>
           <th>Width</th>
           <th>Length</th>
+          <th>Action</th>
         </tr>
       {rooms.map(room => (
         <tr>
@@ -18,6 +19,9 @@ const All = () => {
           <td>{room.description}</td>
           <td>{room.width}</td>
           <td>{room.length}</td>
+          <td>
+            <button value="red" onClick={() => setRoom("blue")}>Room</button>
+          </td>
         </tr>
       ))}
       </table>
