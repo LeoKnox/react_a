@@ -20,7 +20,7 @@ const All = (setRoom) => {
           <td>{room.width}</td>
           <td>{room.length}</td>
           <td>
-            <button value="red" onClick={() => setRoom("blue")}>Room</button>
+            <button value="red" onClick={(event) => setRoom(event)}>Room</button>
           </td>
         </tr>
       ))}
