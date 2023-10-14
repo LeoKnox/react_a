@@ -9,9 +9,13 @@ const Home = () => {
     console.log("change page "+event.target.value)
     setCurrPage(event.target.value);
   }
+  
+  function setRoom(event) {
+    setCurrRoom(event.target.value)
+  }
   const thisPage = {
     room: <Room />,
-    all: <All />
+    all: <All setRoom = {() => setRoom(value)} />
   };
 
   return (
