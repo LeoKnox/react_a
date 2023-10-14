@@ -5,9 +5,22 @@ const All = () => {
   return (
     <div>
       <h3>All</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Width</th>
+          <th>Length</th>
+        </tr>
       {rooms.map(room => (
-        <p>{room.name}</p>
+        <tr>
+          <td>{room.name}</td>
+          <td>{room.description}</td>
+          <td>{room.width}</td>
+          <td>{room.length}</td>
+        </tr>
       ))}
+      </table>
     </div>
   );
 };
