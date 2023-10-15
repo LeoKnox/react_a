@@ -1,6 +1,6 @@
 import {allRooms} from './dungeonData.js';
 
-const All = (setRoom) => {
+const All = (setCurrRoom) => {
   let rooms = allRooms();
   return (
     <div>
@@ -20,7 +20,7 @@ const All = (setRoom) => {
           <td>{room.width}</td>
           <td>{room.length}</td>
           <td>
-            <button value="red" onClick={(event) => setRoom(event)}>Room</button>
+            <button value="red" onClick={setCurrRoom}>Room</button>
           </td>
         </tr>
       ))}
