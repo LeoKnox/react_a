@@ -15,7 +15,7 @@ const Home = () => {
   }
   const thisPage = {
     room: <Room />,
-    all: <All setRoom = {setRoom} />
+    all: <All setRoom = {setCurrRoom} />
   };
 
   return (
