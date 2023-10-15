@@ -20,7 +20,7 @@ const All = (setCurrRoom) => {
           <td>{room.width}</td>
           <td>{room.length}</td>
           <td>
-            <button value="red" onClick={setCurrRoom}>Room</button>
+            <button value="red" onClick={() => setCurrRoom(room.name)}>Room</button>
           </td>
         </tr>
       ))}
