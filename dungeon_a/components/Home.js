@@ -11,8 +11,8 @@ const Home = () => {
   }
   
   function setRoom(event) {
-    console.log("set room")
-    setCurrRoom(event.target.value)
+    console.log("set room "+event)
+    setCurrRoom(event)
   }
   const thisPage = {
     room: <Room />,
