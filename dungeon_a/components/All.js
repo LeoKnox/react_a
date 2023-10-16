@@ -1,7 +1,14 @@
+import {useState} from 'react';
 import {allRooms} from './dungeonData.js';
 
 const All = (setCurrRoom) => {
   let rooms = allRooms();
+  const [currValue, setCurrValue] = useState()
+  function changeValue(e) {
+    let value = e.target.value;
+    console.log(value)
+    setCurrValue(value)
+  }
   return (
     <div>
       <h3>All</h3>
@@ -20,7 +27,7 @@ const All = (setCurrRoom) => {
           <td>{room.width}</td>
           <td>{room.length}</td>
           <td>
-            <button value="red" onClick={setCurrRoom}>Room</button>
+            <button value="red" onClick={changeValue}>Room</button>
           </td>
         </tr>
       ))}
