@@ -5,17 +5,18 @@ import All from "./All.js";
 const Home = () => {
   const [currPage, setCurrPage] = useState("room");
   const [currRoom, setCurrRoom] = useState();
-  const changePage = (value) => {
+  const changePage = (event) => {
     console.log("change page "+event.target.value)
-    setCurrPage(value);
+    setCurrPage(event.target.value);
   }
   
   function setRoom(event) {
+    console.log("set room")
     setCurrRoom(event.target.value)
   }
   const thisPage = {
     room: <Room />,
-    all: <All setRoom = {(event) => setCurrRoom(event.target.value)} />
+    all: <All setRoom = {setRoom} />
   };
 
   return (
