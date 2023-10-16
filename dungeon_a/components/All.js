@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {allRooms} from './dungeonData.js';
 
-const All = (setRoom) => {
+const All = ({setRoom}) => {
   let rooms = allRooms();
   const [currValue, setCurrValue] = useState()
   function changeValue(e) {
