@@ -1,31 +1,39 @@
-import { useState } from "react";
-import Room from "./Room.js";
-import All from "./All.js";
+import {useState} from 'react';
+import {allRooms} from './dungeonData.js';
 
-const Home = () => {
-  const [currPage, setCurrPage] = useState("room");
-  const [currRoom, setCurrRoom] = useState();
-  const changePage = (event) => {
-    console.log("change page "+event.target.value)
-    setCurrPage(event.target.value);
+const All = (setRoom) => {
+  let rooms = allRooms();
+  const [currValue, setCurrValue] = useState()
+  function changeValue(e) {
+    let value = e.target.value;
+    console.log(value)
+    setRoom(value)
   }
-  
-  function setRoom(event) {
-    console.log("set room")
-    setCurrRoom(event.target.value)
-  }
-  const thisPage = {
-    room: <Room />,
-    all: <All setRoom = {setRoom} />
-  };
-
   return (
     <div>
-      <h1>Title {currRoom}</h1>
-      <button onClick={changePage} value="all">All</button>
-      <button onClick={changePage} value="room">Room</button>
-      {thisPage[currPage]}
+      <h3>All</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Width</th>
+          <th>Length</th>
+          <th>Action</th>
+        </tr>
+      {rooms.map(room => (
+        <tr>
+          <td>{room.name}</td>
+          <td>{room.description}</td>
+          <td>{room.width}</td>
+          <td>{room.length}</td>
+          <td>
+            <button value="red" onClick={changeValue}>Room</button>
+          </td>
+        </tr>
+      ))}
+      </table>
     </div>
-  )};
+  );
+};
 
-export default Home;
+export default All;
