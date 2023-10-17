@@ -10,9 +10,9 @@ const Home = () => {
     setCurrPage(event.target.value);
   }
   
-  function setRoom(event) {
-    console.log("set room "+event)
-    setCurrRoom(event)
+  function setRoom(room) {
+    console.log("set room "+room)
+    setCurrRoom(room)
   }
   const thisPage = {
     room: <Room />,
