@@ -12,7 +12,7 @@ const Home = () => {
   
   function setRoom(room) {
     console.log("set room "+room)
-    setCurrRoom(room)
+    setCurrRoom("room")
   }
   const thisPage = {
     room: <Room />,
