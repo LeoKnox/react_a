@@ -1,4 +1,4 @@
-const Room = ({roomNum}) => {
+const Room = ({roomNum=0}) => {
   console.log("room " + {roomNum})
   return (
     <div>
