@@ -16,7 +16,7 @@ const Home = () => {
     setCurrRoom(thisPage["room"])
   }
   const thisPage = {
-    room: <Room />,
+    room: <Room roomNum={currRoom} />,
     all: <All setRoom = {setRoom} />
   };
 
