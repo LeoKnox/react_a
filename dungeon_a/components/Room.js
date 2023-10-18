@@ -1,7 +1,7 @@
-const Room = ({changePage}) => {
+const Room = ({roomNum}) => {
   return (
     <div>
-      <h3>Room</h3>
+      <h3>Room {roomNum}</h3>
     </div>
   );
 };
