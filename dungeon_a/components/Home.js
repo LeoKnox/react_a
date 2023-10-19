@@ -3,7 +3,7 @@ import Room from "./Room.js";
 import All from "./All.js";
 
 const Home = () => {
-  const [currPage, setCurrPage] = useState("room");
+  const [currPage, setCurrPage] = useState("all");
   const [currRoom, setCurrRoom] = useState();
   const changePage = (event) => {
     console.log("change page "+event.target.value)
