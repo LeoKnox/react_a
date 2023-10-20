@@ -14,7 +14,7 @@ const Home = () => {
     console.log("set room "+room)
     setCurrRoom(room)
     console.log(currRoom)
-    setCurrPage(thisPage["room"])
+    setCurrPage("room")
   }
   const thisPage = {
     room: <Room roomNum={currRoom} />,
