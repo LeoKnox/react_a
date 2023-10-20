@@ -2,10 +2,10 @@ import {roomData } from './dungeonData.js'
 
 const Room = ({roomNum=0}) => {
   let room = roomData(roomNum)
-  console.log("room " + room)
+  console.log("room ")
   return (
     <div>
-      <h3>Room {room.Name}</h3>
+      <h3>Room {room}</h3>
     </div>
   );
 };
