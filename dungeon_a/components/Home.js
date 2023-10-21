@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Title {currRoom}</h1>
+      <h1>Title</h1>
       <button onClick={changePage} value="all">All</button>
       <button onClick={changePage} value="room">Room</button>
       {thisPage[currPage]}
