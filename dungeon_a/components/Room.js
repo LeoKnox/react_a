@@ -5,10 +5,10 @@ const Room = ({roomNum=0}) => {
   return (
     <div>
       <h3>Room {room.name}</h3>
-      <label className="roomInfo">
+      <div className="roomInfo">
       <p><b>Description</b></p>
       <p>{room.description}</p>
-      </label>
+      </div>
       <p>
         <label className="roomInfo">
         Width x Length: &#160;
