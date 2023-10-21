@@ -5,6 +5,8 @@ const Room = ({roomNum=0}) => {
   return (
     <div>
       <h3>Room {room.name}</h3>
+      <p><b>Description</b></p>
+      <p>{room.description}</p>
     </div>
   );
 };
