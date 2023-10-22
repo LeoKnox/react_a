@@ -4,6 +4,7 @@ import {allRooms} from './dungeonData.js';
 const All = ({setRoom}) => {
   let rooms = allRooms();
   const [currValue, setCurrValue] = useState()
+  const [newRoom, setNewRoom] = useState({name:"red",description:"",width:"",length:""})
   function changeValue(e) {
     let value = e.target.value;
     console.log(value)
@@ -32,7 +33,7 @@ const All = ({setRoom}) => {
         </tr>
       ))}
       <tr>
-          <td><input type="text" name="name" /></td>
+          <td><input type="text" name="name" value={newRoom.name}/></td>
           <td><input type="text" name="description" /></td>
           <td><input type="number" name="width" /></td>
           <td><input type="number" name="length" /></td>
