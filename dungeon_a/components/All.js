@@ -10,6 +10,10 @@ const All = ({setRoom}) => {
     console.log(value)
     setRoom(value)
   }
+  function changeRoom(e) {
+    let tempRoom = newRoom;
+    console.log(tempRoom[e.target.name])
+  }
   return (
     <div>
       <h3>All</h3>
@@ -33,7 +37,7 @@ const All = ({setRoom}) => {
         </tr>
       ))}
       <tr>
-          <td><input type="text" name="name" value={newRoom.name}/></td>
+          <td><input type="text" name="name" value={newRoom.name} onChange={changeRoom} /></td>
           <td><input type="text" name="description" /></td>
           <td><input type="number" name="width" /></td>
           <td><input type="number" name="length" /></td>
