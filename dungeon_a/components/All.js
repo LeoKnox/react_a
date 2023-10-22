@@ -32,9 +32,13 @@ const All = ({setRoom}) => {
         </tr>
       ))}
       <tr>
-        <form>
-          <td><label>a</label><input type="text" id="name"/></td>
-        </form>
+          <td><input type="text" name="name" /></td>
+          <td><input type="text" name="description" /></td>
+          <td><input type="number" name="width" /></td>
+          <td><input type="number" name="length" /></td>
+          <td>
+            <buttton>Create</buttton>
+          </td>
       </tr>
       </table>
     </div>
