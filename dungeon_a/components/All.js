@@ -31,6 +31,12 @@ const All = ({setRoom}) => {
           </td>
         </tr>
       ))}
+      <tr>
+        <form>
+          <label>:</label>
+          <td><input type="text" id="name" /></td>
+        </form>
+      </tr>
       </table>
     </div>
   );
