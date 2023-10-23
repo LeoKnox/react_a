@@ -13,6 +13,7 @@ const All = ({setRoom}) => {
   function changeRoom(e) {
     let tempRoom = newRoom;
     console.log(tempRoom[e.target.name])
+    setNewRoom(tempRoom[e.target.value])
   }
   return (
     <div>
@@ -38,9 +39,9 @@ const All = ({setRoom}) => {
       ))}
       <tr>
           <td><input type="text" name="name" value={newRoom.name} onChange={changeRoom} /></td>
-          <td><input type="text" name="description" /></td>
-          <td><input type="number" name="width" /></td>
-          <td><input type="number" name="length" /></td>
+          <td><input type="text" name="description" value={newRoom.description} onChange={changeRoom} /></td>
+          <td><input type="number" name="width" value={newRoom.width} onChange={changeRoom} /></td>
+          <td><input type="number" name="length" value={newRoom.length} onChange={changeRoom} /></td>
           <td>
             <buttton>Create</buttton>
           </td>
