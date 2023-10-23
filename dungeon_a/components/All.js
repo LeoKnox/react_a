@@ -11,7 +11,7 @@ const All = ({setRoom}) => {
     setRoom(value)
   }
   function changeRoom(e) {
-    let tempRoom = newRoom[e.target.name];
+    let tempRoom = newRoom;
     console.log(tempRoom)
     tempRoom[e.target.name] = e.target.value
     setNewRoom(tempRoom)
