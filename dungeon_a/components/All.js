@@ -13,7 +13,8 @@ const All = ({setRoom}) => {
   function changeRoom(e) {
     let tempRoom = newRoom;
     console.log(tempRoom[e.target.name])
-    setNewRoom(tempRoom[e.target.name])
+    tempRoom[e.target.name] = e.target.value
+    setNewRoom(tempRoom)
   }
   return (
     <div>
