@@ -10,10 +10,10 @@ const All = ({setRoom}) => {
     console.log(value)
     setRoom(value)
   }
-  function changeRoom(e) {
+  function changeRoom(event) {
     let tempRoom = newRoom;
     console.log(tempRoom)
-    tempRoom[e.target.name] = e.target.value
+    tempRoom[event.target.name] = event.target.value
     setNewRoom(tempRoom)
   }
   return (
