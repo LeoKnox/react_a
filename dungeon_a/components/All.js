@@ -10,6 +10,10 @@ const All = ({setRoom}) => {
     console.log(value)
     setRoom(value)
   }
+  function submitRoom() {
+    console.log("submit room")
+    console.log(newRoom)
+  }
   function changeRoom(event) {
     let tempRoom = newRoom;
     console.log(tempRoom)
@@ -44,7 +48,7 @@ const All = ({setRoom}) => {
           <td><input type="number" name="width" value={newRoom.width} onChange={changeRoom} /></td>
           <td><input type="number" name="length" value={newRoom.length} onChange={changeRoom} /></td>
           <td>
-            <buttton>Create</buttton>
+            <buttton onClick={submitRoom}>Create</buttton>
           </td>
       </tr>
       </table>
