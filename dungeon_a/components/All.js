@@ -43,7 +43,7 @@ const All = ({setRoom}) => {
         </tr>
       ))}
       <tr>
-          <td><input type="text" name="name" value={newRoom.name} onChange={(e) => setNewRoom(e.target.value)} /></td>
+          <td><input type="text" name="name" value={newRoom.name} onChange={changeRoom} /></td>
           <td><input type="text" name="description" value={newRoom.description} onChange={changeRoom} /></td>
           <td><input type="number" name="width" value={newRoom.width} onChange={changeRoom} /></td>
           <td><input type="number" name="length" value={newRoom.length} onChange={changeRoom} /></td>
