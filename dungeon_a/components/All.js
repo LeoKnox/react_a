@@ -16,7 +16,13 @@ const All = ({setRoom}) => {
   }
   function submitRoom() {
     console.log("submit room")
-    console.log(newRoom)
+    let tempRoom = {
+      name: {name},
+      description: {description},
+      width: {width},
+      length: {length}
+    };
+    console.log(tempRoom)
   }
   function changeRoom(event) {
     let tempRoom = {
@@ -25,8 +31,8 @@ const All = ({setRoom}) => {
       width: {width},
       length: {length}
     };
-    /*
     console.log(tempRoom)
+    /*
     tempRoom[event.target.name] = event.target.value
     setNewRoom(tempRoom)
     console.log(newRoom)
