@@ -19,11 +19,18 @@ const All = ({setRoom}) => {
     console.log(newRoom)
   }
   function changeRoom(event) {
-    let tempRoom = newRoom;
+    let tempRoom = {
+      name: {name},
+      description: {description},
+      width: {width},
+      length: {length}
+    };
+    /*
     console.log(tempRoom)
     tempRoom[event.target.name] = event.target.value
     setNewRoom(tempRoom)
     console.log(newRoom)
+    */
   }
   return (
     <div>
