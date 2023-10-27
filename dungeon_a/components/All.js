@@ -5,6 +5,9 @@ const All = ({setRoom}) => {
   let rooms = allRooms();
   const [currValue, setCurrValue] = useState()
   const [name, setName] = useState("")
+  const [description, setDescription] = useState("")
+  const [width, setWidth] = useState(0)
+  const [length, setLength] = useState(0)
   const [newRoom, setNewRoom] = useState({name:"red",description:"",width:"",length:""})
   function changeValue(e) {
     let value = e.target.value;
@@ -46,9 +49,9 @@ const All = ({setRoom}) => {
       ))}
       <tr>
           <td><input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} /></td>
-          <td><input type="text" name="description" value={newRoom.description} onChange={changeRoom} /></td>
-          <td><input type="number" name="width" value={newRoom.width} onChange={changeRoom} /></td>
-          <td><input type="number" name="length" value={newRoom.length} onChange={changeRoom} /></td>
+          <td><input type="text" name="description" value={description} onChange={e => setDescription(e.target.value)} /></td>
+          <td><input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} /></td>
+          <td><input type="number" name="length" value={length} onChange={e => setLength(e.target.value)} /></td>
           <td>
             <buttton onClick={submitRoom}>Create</buttton>
           </td>
