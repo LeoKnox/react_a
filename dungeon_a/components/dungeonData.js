@@ -11,3 +11,7 @@ export function allRooms() {
 export function roomData(id) {
   return(dungeonData[id-1])
 }
+
+export function addRoom(newRoom) {
+  console.log(newRoom)
+}
