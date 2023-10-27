@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {allRooms} from './dungeonData.js';
+import {allRooms, addRoom} from './dungeonData.js';
 
 const All = ({setRoom}) => {
   let rooms = allRooms();
@@ -23,7 +23,8 @@ const All = ({setRoom}) => {
       length: {length}
     };
     setNewRoom(tempRoom)
-    console.log(newRoom)
+    //console.log(newRoom)
+    addRoom(tempRoom)
   }
 
   return (
