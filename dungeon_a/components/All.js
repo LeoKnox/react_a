@@ -17,14 +17,14 @@ const All = ({setRoom}) => {
   function submitRoom() {
     console.log("submit room")
     let tempRoom = {
-      name: this.name,
+      name: {name},
       description: {description},
       width: {width},
       length: {length}
     };
     setNewRoom(tempRoom)
     //console.log(newRoom)
-    addRoom(tempRoom)
+    addRoom(newRoom)
   }
 
   return (
