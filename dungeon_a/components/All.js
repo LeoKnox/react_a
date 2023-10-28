@@ -23,7 +23,7 @@ const All = ({setRoom}) => {
       length: {length}
     };
     setNewRoom(tempRoom)
-    //console.log(newRoom)
+    console.log(newRoom)
     addRoom(newRoom)
   }
 
