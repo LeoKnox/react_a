@@ -17,7 +17,7 @@ const All = ({setRoom}) => {
   function submitRoom() {
     console.log("submit room")
     let tempRoom = {
-      name: {name},
+      name: this.name,
       description: {description},
       width: {width},
       length: {length}
