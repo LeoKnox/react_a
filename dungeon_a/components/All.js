@@ -8,7 +8,7 @@ const All = ({setRoom}) => {
   const [description, setDescription] = useState("")
   const [width, setWidth] = useState(0)
   const [length, setLength] = useState(0)
-  const [newRoom, setNewRoom] = useState({name:"red",description:"",width:"",length:""})
+  const [newRoom, setNewRoom] = useState({})
   function changeValue(e) {
     let value = e.target.value;
     console.log(value)
