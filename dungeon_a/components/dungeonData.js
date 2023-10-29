@@ -13,7 +13,7 @@ export function roomData(id) {
 }
 
 export function addRoom(newRoom) {
-  newRoom.id = newRoom.length++
+  newRoom.id = dungeonData.length++
   console.log(newRoom)
   dungeonData.push(newRoom)
   console.log(dungeonData)
