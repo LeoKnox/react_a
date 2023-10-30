@@ -1,66 +1,22 @@
-import {useState} from 'react';
-import {allRooms, addRoom} from './dungeonData.js';
+let dungeonData = [
+  {id: 1, name:"entry", description:"Entrance", width:5, length:5},
+  {id: 2, name:"throne", description:"Throne Room", width:6, length:7},
+  {id: 3, name:"guard", description:"Guard Room", width:9, length:8}
+]
 
-const All = ({setRoom}) => {
-  let rooms = allRooms();
-  const [currValue, setCurrValue] = useState()
-  const [name, setName] = useState("")
-  const [description, setDescription] = useState("")
-  const [width, setWidth] = useState(0)
-  const [length, setLength] = useState(0)
-  const [newRoom, setNewRoom] = useState()
-  function changeValue(e) {
-    let value = e.target.value;
-    console.log(value)
-    setRoom(value)
-  }
-  function submitRoom(event) {
-    console.log("submit room")
-    let tempRoom = {
-      name: event.target.value,
-      description: {description},
-      width: {width},
-      length: {length}
-    };
-    setNewRoom(tempRoom)
-    console.log(newRoom)
-    addRoom(newRoom)
-  }
+export function allRooms() {
+  return (dungeonData)
+}
 
-  return (
-    <div>
-      <h3>All</h3>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Width</th>
-          <th>Length</th>
-          <th>Action</th>
-        </tr>
-      {rooms.map(room => (
-        <tr>
-          <td>{room.name}</td>
-          <td>{room.description}</td>
-          <td>{room.width}</td>
-          <td>{room.length}</td>
-          <td>
-            <button value={room.id} onClick={changeValue}>Room</button>
-          </td>
-        </tr>
-      ))}
-      <tr>
-          <td><input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} /></td>
-          <td><input type="text" name="description" value={description} onChange={e => setDescription(e.target.value)} /></td>
-          <td><input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} /></td>
-          <td><input type="number" name="length" value={length} onChange={e => setLength(e.target.value)} /></td>
-          <td>
-            <buttton onClick={event => submitRoom(event)}>Create</buttton>
-          </td>
-      </tr>
-      </table>
-    </div>
-  );
-};
+export function roomData(id) {
+  return(dungeonData[id-1])
+}
 
-export default All;
+export function addRoom(newRoom) {
+  //newRoom.id = dungeonData.length++
+  console.log(dungeonData.length++)
+  console.log(newRoom)
+  dungeonData = [...dungeonData, newRoom]
+  //dungeonData.push({newRoom})
+  console.log(dungeonData)
+}
