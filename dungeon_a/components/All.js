@@ -56,7 +56,7 @@ const All = ({setRoom}) => {
           <td><input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} /></td>
           <td><input type="number" name="length" value={length} onChange={e => setLength(e.target.value)} /></td>
           <td>
-            <buttton onClick={((event) => submitRoom(event))}>Create</buttton>
+            <buttton onClick={submitRoom}>Create</buttton>
           </td>
       </tr>
       </table>
