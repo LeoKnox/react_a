@@ -16,7 +16,7 @@ const All = ({setRoom}) => {
   }
   function submitRoom(event) {
     console.log("submit room")
-    console.log(event.target.value)
+    console.log({name})
     let tempRoom = {
       name: {name},
       description: {description},
