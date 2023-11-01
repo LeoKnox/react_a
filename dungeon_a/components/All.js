@@ -51,12 +51,12 @@ const All = ({setRoom}) => {
         </tr>
       ))}
       <tr>
-          <td><input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} /></td>
+          <td><input type="text" name="name" value={name} onChange={e => setName(e.target.value)} /></td>
           <td><input type="text" name="description" value={description} onChange={e => setDescription(e.target.value)} /></td>
           <td><input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} /></td>
           <td><input type="number" name="length" value={length} onChange={e => setLength(e.target.value)} /></td>
           <td>
-            <buttton onClick={submitRoom}>Create</buttton>
+            <buttton onClick={e => submitRoom(e)}>Create</buttton>
           </td>
       </tr>
       </table>
