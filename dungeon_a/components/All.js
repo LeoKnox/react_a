@@ -16,7 +16,7 @@ const All = ({setRoom}) => {
   }
   function submitRoom() {
     console.log("submit room")
-    console.log({name})
+    //console.log({name})
     let tempRoom = {
       name: {name},
       description: {description},
@@ -25,7 +25,7 @@ const All = ({setRoom}) => {
     };
     setNewRoom(tempRoom)
     console.log(tempRoom)
-    addRoom(newRoom)
+    addRoom(tempRoom)
   }
 
   return (
