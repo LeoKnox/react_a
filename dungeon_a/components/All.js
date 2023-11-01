@@ -11,12 +11,12 @@ const All = ({setRoom}) => {
   const [newRoom, setNewRoom] = useState()
   function changeValue(e) {
     let value = e.target.value;
-    console.log(e.target.value)
+    console.log(value)
     setRoom(value)
   }
-  function submitRoom(e) {
+  function submitRoom(event) {
     console.log("submit room")
-    console.log(name[name])
+    console.log(event.target.value)
     let tempRoom = {
       name: {name},
       description: {description},
@@ -56,7 +56,7 @@ const All = ({setRoom}) => {
           <td><input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} /></td>
           <td><input type="number" name="length" value={length} onChange={e => setLength(e.target.value)} /></td>
           <td>
-            <buttton onClick={e => submitRoom(e)}>Create</buttton>
+            <buttton onClick={event => submitRoom(event)}>Create</buttton>
           </td>
       </tr>
       </table>
