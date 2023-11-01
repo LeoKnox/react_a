@@ -11,7 +11,7 @@ const All = ({setRoom}) => {
   const [newRoom, setNewRoom] = useState()
   function changeValue(e) {
     let value = e.target.value;
-    console.log(value)
+    console.log(e.target.value)
     setRoom(value)
   }
   function submitRoom(e) {
