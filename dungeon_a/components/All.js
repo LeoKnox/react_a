@@ -16,7 +16,7 @@ const All = ({setRoom}) => {
     setRoom(value)
   }
   function submitRoom(e) {
-    e.prevent.default;
+    e.prevent.default();
     console.log("submit room")
     //console.log({name})
     let tempRoom = {
@@ -26,7 +26,7 @@ const All = ({setRoom}) => {
       length: {length}
     };
     setNewRoom(tempRoom)
-    console.log(tempRoom)
+    alert(tempRoom)
     addRoom(tempRoom)
   }
 
