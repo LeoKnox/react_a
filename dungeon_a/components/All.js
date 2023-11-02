@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useCallback} from 'react';
 import {allRooms, addRoom} from './dungeonData.js';
 
 const All = ({setRoom}) => {
@@ -9,6 +9,7 @@ const All = ({setRoom}) => {
   const [width, setWidth] = useState(0)
   const [length, setLength] = useState(0)
   const [newRoom, setNewRoom] = useState()
+  const newName = useCallback()
   function changeValue(e) {
     let value = e.target.value;
     console.log(value)
