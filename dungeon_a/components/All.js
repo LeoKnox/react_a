@@ -15,8 +15,8 @@ const All = ({setRoom}) => {
     console.log(value)
     setRoom(value)
   }
-  function submitRoom(event) {
-    event.prevent.default;
+  function submitRoom(e) {
+    e.prevent.default;
     console.log("submit room")
     //console.log({name})
     let tempRoom = {
@@ -53,7 +53,7 @@ const All = ({setRoom}) => {
         </tr>
       ))}
         <div>
-          <form onSubmit={() => submitRoom()}>
+          <form onSubmit={(e) => submitRoom(e)}>
           <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} />
           <input type="text" name="description" value={description} onChange={e => setDescription(e.target.value)} />
           <input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} />
