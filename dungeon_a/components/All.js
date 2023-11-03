@@ -53,7 +53,7 @@ const All = ({setRoom}) => {
         </tr>
       ))}
         <div>
-          <form onSubmit={submitRoom}>
+          <form onSubmit={() => submitRoom()}>
           <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} />
           <input type="text" name="description" value={description} onChange={e => setDescription(e.target.value)} />
           <input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} />
