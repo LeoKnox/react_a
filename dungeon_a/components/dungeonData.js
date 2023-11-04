@@ -22,4 +22,5 @@ export function addRoom(e, newRoom) {
   e.prevent.default
   alert("red")
   console.log(dungeonData)
+  return(dungeonData)
 }
