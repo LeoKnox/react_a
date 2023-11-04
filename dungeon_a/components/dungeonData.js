@@ -14,11 +14,12 @@ export function roomData(id) {
 
 export function addRoom(e, newRoom) {
   //newRoom.id = dungeonData.length++
-  e.prevent.default
   console.log(dungeonData.length++)
   console.log(newRoom)
   //dungeonData = [...dungeonData, newRoom]
   //dungeonData.push({newRoom})
   dungeonData[dungeonData.length++] = newRoom
+  e.prevent.default
+  alert("red")
   console.log(dungeonData)
 }
