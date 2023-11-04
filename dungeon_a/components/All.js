@@ -25,9 +25,9 @@ const All = ({setRoom}) => {
       width: {width},
       length: {length}
     };
-    setNewRoom(tempRoom)
+    //setNewRoom(tempRoom)
     alert(tempRoom)
-    addRoom(tempRoom)
+    setNewRooom(addRoom(tempRoom))
   }
 
   return (
