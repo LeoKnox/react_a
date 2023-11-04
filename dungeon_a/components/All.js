@@ -29,7 +29,7 @@ const All = ({setRoom}) => {
     alert(tempRoom)
     console.log("red");
     console.log(addRoom(tempRoom))
-    console.log("blue")
+    return("blue")
   }
 
   return (
