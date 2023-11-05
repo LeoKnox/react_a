@@ -13,6 +13,8 @@ export function roomData(id) {
 }
 
 export function addRoom(e, newRoom) {
+  console.log(newRoom)
+  /*
   //newRoom.id = dungeonData.length++
   e.prevent.default
   console.log(dungeonData.length++)
@@ -23,4 +25,5 @@ export function addRoom(e, newRoom) {
   alert("red")
   console.log(dungeonData)
   //return(dungeonData)
+  */
 }
