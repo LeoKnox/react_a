@@ -28,7 +28,7 @@ const All = ({setRoom}) => {
     //setNewRoom(tempRoom)
     alert(tempRoom)
     console.log("red");
-    addRoom(tempRoom)
+    addRoom({tempRoom})
     console.log(addRoom(tempRoom))
     alert("blue")
   }
