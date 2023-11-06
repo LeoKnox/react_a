@@ -26,7 +26,7 @@ const All = ({setRoom}) => {
       length: {length}
     };
     //setNewRoom(tempRoom)
-    alert(tempRoom)
+    alert(JSON.stringify(tempRoom))
     console.log("red");
     addRoom({tempRoom})
     console.log(addRoom(tempRoom))
