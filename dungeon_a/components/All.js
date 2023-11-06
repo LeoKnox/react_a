@@ -20,7 +20,7 @@ const All = ({setRoom}) => {
     console.log("submit room")
     //console.log({name})
     let tempRoom = {
-      name: {name},
+      name: {name.name},
       description: {description},
       width: {width},
       length: {length}
