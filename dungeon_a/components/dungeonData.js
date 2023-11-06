@@ -15,7 +15,7 @@ export function roomData(id) {
 export function addRoom(newRoom) {
   console.log(newRoom)
   //newRoom.id = dungeonData.length++
-  e.prevent.default
+  //e.prevent.default
   console.log(dungeonData.length++)
   console.log(newRoom)
   //dungeonData = [...dungeonData, newRoom]
