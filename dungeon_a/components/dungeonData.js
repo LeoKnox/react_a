@@ -18,9 +18,9 @@ export function addRoom(newRoom) {
   //e.prevent.default
   console.log(dungeonData.length++)
   console.log(newRoom)
-  //dungeonData = [...dungeonData, newRoom]
+  dungeonData = [...dungeonData, newRoom]
   //dungeonData.push({newRoom})
-  dungeonData[dungeonData.length++] = newRoom
+  //dungeonData[dungeonData.length++] = newRoom
   console.log(dungeonData)
   alert("red")
   //return(dungeonData)
