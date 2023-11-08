@@ -28,9 +28,9 @@ const All = ({setRoom}) => {
     //setNewRoom(tempRoom)
     alert(JSON.stringify(tempRoom))
     console.log("ora");
+    alert("blue")
     rooms = addRoom({tempRoom})
     //console.log(addRoom(tempRoom))
-    alert("blue")
   }
 
   return (
