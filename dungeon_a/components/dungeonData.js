@@ -23,5 +23,5 @@ export function addRoom(newRoom) {
   dungeonData[dungeonData.length++] = newRoom
   console.log(JSON.stringify(dungeonData))
   alert("red")
-  //return(dungeonData)
+  return(dungeonData)
 }
