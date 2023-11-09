@@ -12,6 +12,10 @@ export function roomData(id) {
   return(dungeonData[id-1])
 }
 
+export function deleteRoom() {
+  alert("delete")
+}
+
 export function addRoom(newRoom) {
   console.log(newRoom)
   //newRoom.id = dungeonData.length++
