@@ -52,7 +52,7 @@ const All = ({setRoom}) => {
           <td>{room.length}</td>
           <td>
             <button value={room.id} onClick={changeValue}>Room</button>
-            <button onClick={deleteRoom}>Delete</button>
+            <button onClick={() => deleteRoom(room.id)}>Delete</button>
             <button>Edit</button>
           </td>
         </tr>
