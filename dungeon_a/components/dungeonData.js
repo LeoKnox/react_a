@@ -12,8 +12,9 @@ export function roomData(id) {
   return(dungeonData[id-1])
 }
 
-export function deleteRoom() {
-  alert("delete")
+export function deleteRoom(roomId) {
+  alert("delete "+roomId)
+  dungeonData.pop();
 }
 
 export function addRoom(newRoom) {
