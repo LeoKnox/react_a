@@ -1,5 +1,5 @@
 import {useState, useCallback} from 'react';
-import {allRooms, addRoom} from './dungeonData.js';
+import {allRooms, addRoom, deleteRoom} from './dungeonData.js';
 
 const All = ({setRoom}) => {
   let rooms = allRooms();
@@ -52,7 +52,7 @@ const All = ({setRoom}) => {
           <td>{room.length}</td>
           <td>
             <button value={room.id} onClick={changeValue}>Room</button>
-            <button>Delete</button>
+            <button onClick={deleteRoom}>Delete</button>
             <button>Edit</button>
           </td>
         </tr>
