@@ -52,6 +52,8 @@ const All = ({setRoom}) => {
           <td>{room.length}</td>
           <td>
             <button value={room.id} onClick={changeValue}>Room</button>
+            <button>Delete</button>
+            <button>Edit</button>
           </td>
         </tr>
       ))}
