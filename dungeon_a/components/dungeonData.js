@@ -1,3 +1,5 @@
+import { useCallback } from 'react'
+
 let dungeonData = [
   {id: 1, name:"entry", description:"Entrance", width:5, length:5},
   {id: 2, name:"throne", description:"Throne Room", width:6, length:7},
@@ -23,8 +25,8 @@ export function addRoom(newRoom) {
   //e.prevent.default
   console.log(dungeonData.length++)
   console.log(newRoom[tempRoom])
-  //dungeonData = [...dungeonData, newRoom]
-  dungeonData.push(newRoom)
+  dungeonData = useCallback((dd) => ([...dd, newRoom]))
+  //dungeonData.push(newRoom)
   //dungeonData[dungeonData.length++] = newRoom
   console.log(JSON.stringify(dungeonData))
   alert("red")
