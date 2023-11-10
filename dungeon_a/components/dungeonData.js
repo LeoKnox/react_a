@@ -25,8 +25,8 @@ export function addRoom(newRoom) {
   //e.prevent.default
   console.log(dungeonData.length++)
   console.log(newRoom[tempRoom])
-  dungeonData = useCallback((dd) => ([...dd, newRoom]))
-  //dungeonData.push(newRoom)
+  //dungeonData = useCallback((dd) => ([...dd, newRoom]))
+  dungeonData.push(newRoom)
   //dungeonData[dungeonData.length++] = newRoom
   console.log(JSON.stringify(dungeonData))
   alert("red")
