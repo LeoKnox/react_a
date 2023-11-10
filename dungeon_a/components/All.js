@@ -58,12 +58,13 @@ const All = ({setRoom}) => {
         </tr>
       ))}
         <div>
-          <form onSubmit={submitRoom}>
+          {/* <form onSubmit={submitRoom}> */}
+          <form>
           <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} />
           <input type="text" name="description" value={description} onChange={e => setDescription(e.target.value)} />
           <input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} />
           <input type="number" name="length" value={length} onChange={e => setLength(e.target.value)} />
-          <button type="submit">create</button>
+          <button onClick={submitRoom}>create</button>
           </form>
         </div>
       </table>
