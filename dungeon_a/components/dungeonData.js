@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useReducer } from 'react'
 
 let dungeonData = [
   {id: 1, name:"entry", description:"Entrance", width:5, length:5},
@@ -31,4 +31,8 @@ export function addRoom(newRoom) {
   console.log(JSON.stringify(dungeonData))
   alert("red")
   //return(dungeonData)
+}
+
+const redRoom = (state, action) => {
+  console.log("red room")
 }
