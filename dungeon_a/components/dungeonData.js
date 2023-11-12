@@ -1,38 +1,73 @@
-import { useCallback, useReducer } from 'react'
+import {useState, useCallback} from 'react';
+import {allRooms, addRoom, deleteRoom, redRoom} from './dungeonData.js';
 
-let dungeonData = [
-  {id: 1, name:"entry", description:"Entrance", width:5, length:5},
-  {id: 2, name:"throne", description:"Throne Room", width:6, length:7},
-  {id: 3, name:"guard", description:"Guard Room", width:9, length:8}
-]
+const All = ({setRoom}) => {
+  let rooms = allRooms();
+  const [currValue, setCurrValue] = useState()
+  const [name, setName] = useState("")
+  const [description, setDescription] = useState("")
+  const [width, setWidth] = useState(0)
+  const [length, setLength] = useState(0)
+  const [newRoom, setNewRoom] = useState()
+  const newName = useCallback()
+  function changeValue(e) {
+    let value = e.target.value;
+    console.log(value)
+    setRoom(value)
+  }
+  function submitRoom() {
+    //e.prevent.default;
+    console.log("submit room")
+    //console.log({name})
+    let tempRoom = {
+      name: name,
+      description: description,
+      width: width,
+      length: length
+    };
+    //setNewRoom(tempRoom)
+    alert(JSON.stringify(tempRoom))
+    alert("submit room")
+    rooms = addRoom({tempRoom})
+    //console.log(addRoom(tempRoom))
+  }
 
-export function allRooms() {
-  return (dungeonData)
-}
+  return (
+    <div>
+      <h3>All</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Width</th>
+          <th>Length</th>
+          <th>Action</th>
+        </tr>
+      {rooms.map(room => (
+        <tr>
+          <td>{room.name}</td>
+          <td>{room.description}</td>
+          <td>{room.width}</td>
+          <td>{room.length}</td>
+          <td>
+            <button value={room.id} onClick={changeValue}>Room</button>
+            <button onClick={() => deleteRoom(room.id)}>Delete</button>
+            <button onClick={redRoom}>Edit</button>
+          </td>
+        </tr>
+      ))}
+        <div>
+          {/* <form onSubmit={submitRoom}> */}
+          <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} />
+          <input type="text" name="description" value={description} onChange={e => setDescription(e.target.value)} />
+          <input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} />
+          <input type="number" name="length" value={length} onChange={e => setLength(e.target.value)} />
+          <button onClick={submitRoom}>create</button>
+          {/*</form>*/}
+        </div>
+      </table>
+    </div>
+  );
+};
 
-export function roomData(id) {
-  return(dungeonData[id-1])
-}
-
-export function deleteRoom(roomId) {
-  alert("delete "+roomId)
-  dungeonData.pop();
-}
-
-export function addRoom(newRoom) {
-  console.log(newRoom)
-  //newRoom.id = dungeonData.length++
-  //e.prevent.default
-  console.log(dungeonData.length++)
-  //console.log(newRoom[tempRoom])
-  //dungeonData = useCallback((dd) => ([...dd, newRoom]))
-  dungeonData.push(newRoom)
-  //dungeonData[dungeonData.length++] = newRoom
-  console.log(JSON.stringify(dungeonData))
-  alert("red")
-  //return(dungeonData)
-}
-
-const redRoom = (state, action) => {
-  console.log("red room")
-}
+export default All;
