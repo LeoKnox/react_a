@@ -1,8 +1,9 @@
 import {useState, useCallback, createContext} from 'react';
-import {allRooms, addRoom, deleteRoom, redRoom} from './dungeonData.js';
+import {redContext, allRooms, addRoom, deleteRoom, redRoom} from './dungeonData.js';
 
 const All = ({setRoom}) => {
   let rooms = allRooms();
+  console.log("context "+redContext)
   const [currValue, setCurrValue] = useState()
   const [name, setName] = useState("")
   const [description, setDescription] = useState("")
