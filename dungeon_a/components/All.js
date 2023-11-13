@@ -1,5 +1,5 @@
-import {useState, useCallback} from 'react';
-import {allRooms, addRoom, deleteRoom} from './dungeonData.js';
+import {useState, useCallback, createContext} from 'react';
+import {allRooms, addRoom, deleteRoom, redRoom} from './dungeonData.js';
 
 const All = ({setRoom}) => {
   let rooms = allRooms();
@@ -9,6 +9,7 @@ const All = ({setRoom}) => {
   const [width, setWidth] = useState(0)
   const [length, setLength] = useState(0)
   const [newRoom, setNewRoom] = useState()
+  const thisRoom = createContext
   const newName = useCallback()
   function changeValue(e) {
     let value = e.target.value;
@@ -52,19 +53,18 @@ const All = ({setRoom}) => {
           <td>
             <button value={room.id} onClick={changeValue}>Room</button>
             <button onClick={() => deleteRoom(room.id)}>Delete</button>
-            <button>Edit</button>
+            <button onClick={redRoom}>Edit</button>
           </td>
         </tr>
       ))}
         <div>
           {/* <form onSubmit={submitRoom}> */}
-          <form>
           <input type="text" name="name" value={name} onChange={e => setName(e.target.value)} />
           <input type="text" name="description" value={description} onChange={e => setDescription(e.target.value)} />
           <input type="number" name="width" value={width} onChange={e => setWidth(e.target.value)} />
           <input type="number" name="length" value={length} onChange={e => setLength(e.target.value)} />
           <button onClick={submitRoom}>create</button>
-          </form>
+          {/*</form>*/}
         </div>
       </table>
     </div>
