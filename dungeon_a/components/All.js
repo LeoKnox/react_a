@@ -3,7 +3,7 @@ import {redContext, allRooms, addRoom, deleteRoom, redRoom} from './dungeonData.
 
 const All = ({setRoom}) => {
   let rooms = allRooms();
-  console.log("context "+JSON.stringify({redContext}))
+  console.log({redContext.currentValue})
   const [currValue, setCurrValue] = useState()
   const [name, setName] = useState("")
   const [description, setDescription] = useState("")
