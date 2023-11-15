@@ -11,3 +11,7 @@ export const redContext = createContext({id: 3, name:"guard", description:"Guard
 export function allRooms() {
   return (dungeonData)
 }
+
+export function deleteRoom(id=1) {
+  return (redContext = createContext({id: 3, name:"guardzzz", description:"Guard Room", width:9, length:8}))
+}
