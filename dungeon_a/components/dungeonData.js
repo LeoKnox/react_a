@@ -6,7 +6,7 @@ let dungeonData = [
   {id: 3, name:"guard", description:"Guard Room", width:9, length:8}
 ]
 
-export const redContext = createContext("update red")
+export const redContext = createContext({id: 3, name:"guard", description:"Guard Room", width:9, length:8})
 
 export function allRooms() {
   return (dungeonData)
