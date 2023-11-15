@@ -37,6 +37,7 @@ const All = ({setRoom}) => {
   return (
     <div>
       <h3>All</h3>
+      <p>{useContext(redContext).name}</p>
       <table>
         <tr>
           <th>Name</th>
