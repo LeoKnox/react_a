@@ -13,6 +13,6 @@ export function allRooms() {
 }
 
 export function deleteRoom(id=1) {
-  return(dungeonData.pop())
+  dungeonData = dungeonData.pop
   //return (redContext = createContext({id: 3, name:"guardzzz", description:"Guard Room", width:9, length:8}))
 }
