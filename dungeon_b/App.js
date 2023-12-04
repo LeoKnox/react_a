@@ -1,5 +1,5 @@
 import "./styles.css";
-import { Home } from "./components/Home";
+import { Home } from "./components/Home.js";
 
 export default function App() {
   return (
