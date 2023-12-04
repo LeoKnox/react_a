@@ -1,21 +1,10 @@
-import react from "react";
-import Rooms from "./components/Rooms";
+import "./styles.css";
+import { Home } from "./components/Home";
 
-function Home() {
+export default function App() {
   return (
-    <>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Height</th>
-            <th>Width</th>
-          </tr>
-        </thead>
-      </table>
-    </>
+    <div className="App">
+      <Home />
+    </div>
   );
 }
-
-export default Home;
