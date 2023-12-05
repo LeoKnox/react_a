@@ -14,7 +14,8 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          Rooms && Rooms.length > 0 ? Rooms.map((room) => {return
+          Rooms && (Rooms.length > 0) ? Rooms.map((room) => {
+          return
           <tr>
             <td>{room.name}</td>
             <td>{room.description}</td>
