@@ -15,14 +15,14 @@ export default function Home() {
         </thead>
         <tbody>
           Rooms && (Rooms.length > 0) ? Rooms.map((room) => {
-          return
+          return(
           <tr>
             <td>{room.name}</td>
             <td>{room.description}</td>
             <td>{room.height}</td>
             <td>{room.width}</td>
           </tr>
-          } ) : "No rooms"
+          )} ) : "No rooms"
         </tbody>
       </table>
     </>
