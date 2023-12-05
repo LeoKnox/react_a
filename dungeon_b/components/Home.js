@@ -1,5 +1,5 @@
 import react from "react";
-import Rooms from "./Rooms";
+import Rooms from "./Rooms.js";
 
 export default function Home() {
   return (
