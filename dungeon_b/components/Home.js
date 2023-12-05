@@ -13,6 +13,16 @@ export default function Home() {
             <th>Width</th>
           </tr>
         </thead>
+        <tbody>
+          Rooms && Rooms.length > 0 ? Rooms.map((room) => ( return (
+          <tr>
+            <td>{room.name}</td>
+            <td>{room.description}</td>
+            <td>{room.height}</td>
+            <td>{room.width}</td>
+          </tr>
+          ) )) : "No rooms"
+        </tbody>
       </table>
     </>
   );
