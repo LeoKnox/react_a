@@ -22,7 +22,7 @@ export default function Home() {
             <td>{room.height}</td>
             <td>{room.width}</td>
           </tr>
-          )}
+          )})
         </tbody>
       </table>
     </>
