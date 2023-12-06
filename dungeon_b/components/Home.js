@@ -14,7 +14,7 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          Rooms.map((room) =>
+          Rooms.map((room)
           {
             <tr>
               <td>{room.name}</td>
