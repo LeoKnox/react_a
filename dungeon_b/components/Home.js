@@ -16,14 +16,15 @@ export default function Home() {
         </thead>
         <tbody>
           {Rooms.map((room) => {
-            return(
-            <tr>
-              <td>{room.name}</td>
-              <td>{room.description}</td>
-              <td>{room.height}</td>
-              <td>{room.width}</td>
-            </tr>;
-          )})}
+            return (
+              <tr>
+                <td>{room.name}</td>
+                <td>{room.description}</td>
+                <td>{room.height}</td>
+                <td>{room.width}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </>
