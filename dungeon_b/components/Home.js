@@ -24,6 +24,8 @@ export default function Home() {
                 <td>{room.height}</td>
                 <td>{room.width}</td>
                 <td>
+                  <button onClick={() => alert(item.id)}>Edit</button>
+                  &nbsp;
                   <button onClick={() => alert(item.id)}>Delete</button>
                 </td>
               </tr>
