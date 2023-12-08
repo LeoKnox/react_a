@@ -3,6 +3,13 @@ import Rooms from "./Rooms.js";
 
 export default function Home() {
   console.log(JSON.stringify(Rooms));
+  const handleDelete = (id) => {
+    console.log("delete");
+    var index = Rooms.map(function (e) {
+      return e.id;
+    }).indexOf(id);
+    console.log(index);
+  };
   return (
     <>
       <table>
@@ -26,7 +33,7 @@ export default function Home() {
                 <td>
                   <button onClick={() => alert(room.id)}>Edit</button>
                   &nbsp;
-                  <button onClick={() => alert(room.id)}>Delete</button>
+                  <button onClick={() => handleDelete(room.id)}>Delete</button>
                 </td>
               </tr>
             );
