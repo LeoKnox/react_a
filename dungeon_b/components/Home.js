@@ -12,6 +12,7 @@ export default function Home() {
             <th>Description</th>
             <th>Height</th>
             <th>Width</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +23,9 @@ export default function Home() {
                 <td>{room.description}</td>
                 <td>{room.height}</td>
                 <td>{room.width}</td>
+                <td>
+                  <button onClick={() => alert(item.id)}>Delete</button>
+                </td>
               </tr>
             );
           })}
