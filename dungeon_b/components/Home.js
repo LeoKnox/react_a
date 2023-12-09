@@ -8,7 +8,8 @@ export default function Home() {
     var index = Rooms.map(function (e) {
       return e.id;
     }).indexOf(id);
-    console.log(index);
+    Rooms.splice(index, 1);
+    console.log(JSON.stringify(Rooms));
   };
   return (
     <>
