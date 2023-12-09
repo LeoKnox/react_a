@@ -1,5 +1,5 @@
 import react from "react";
-import Rooms from "./Rooms.js";
+import Rooms, { deleteRoom } from "./Rooms.js";
 
 export default function Home() {
   console.log(JSON.stringify(Rooms));
@@ -9,6 +9,7 @@ export default function Home() {
       return e.id;
     }).indexOf(id);
     Rooms.splice(index, 1);
+    deleteRoom();
     console.log(JSON.stringify(Rooms));
   };
   return (
