@@ -1,18 +1,21 @@
-import react from "react";
+import useState from "react";
 import Rooms from "./Rooms.js";
 
 export default function Home() {
-  console.log(JSON.stringify(Rooms));
+  const [myRooms, setMyRooms] = useState(Rooms);
+  //console.log(JSON.stringify(Rooms));
   const handleDelete = (id) => {
     console.log("delete");
-    var index = Rooms.map(function (e) {
-      return e.id;
-    }).indexOf(id);
-    Rooms.splice(index, 1);
+    var index = myRooms
+      .map(function (e) {
+        return e.id;
+      })
+      .indexOf(id);
+    myRooms.splice(index, 1);
     {
       deleteRoom();
     }
-    console.log(JSON.stringify(Rooms));
+    //console.log(JSON.stringify(Rooms));
   };
   return (
     <>
@@ -27,7 +30,7 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {Rooms.map((room) => {
+          {myRooms.map((room) => {
             return (
               <tr>
                 <td>{room.name}</td>
