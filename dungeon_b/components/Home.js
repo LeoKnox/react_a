@@ -1,5 +1,5 @@
 import react from "react";
-import Rooms, deleteRoom from "./Rooms.js";
+import Rooms from "./Rooms.js";
 
 export default function Home() {
   console.log(JSON.stringify(Rooms));
