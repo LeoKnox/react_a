@@ -3,6 +3,7 @@ import Rooms from "./Rooms.js";
 
 export default function Home() {
   const [myRooms, setMyRooms] = useState(Rooms);
+  console.log(JSON.stringify(myRooms));
   //console.log(JSON.stringify(Rooms));
   const handleDelete = (id) => {
     console.log("delete");
