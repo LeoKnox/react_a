@@ -12,9 +12,6 @@ export default function Home() {
       })
       .indexOf(id);
     myRooms.splice(index, 1);
-    {
-      deleteRoom();
-    }
     //console.log(JSON.stringify(Rooms));
   };
   return (
