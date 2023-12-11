@@ -2,10 +2,10 @@ import useState from "react";
 import Rooms from "./Rooms.js";
 
 export default function Home() {
+  console.log(rooms.deleteRoom);
   const [myRooms, setMyRooms] = useState(Rooms);
   console.log(JSON.stringify(myRooms));
   //console.log(JSON.stringify(Rooms));
-  /*
   const handleDelete = (id) => {
     console.log("delete");
     var index = myRooms
@@ -15,7 +15,7 @@ export default function Home() {
       .indexOf(id);
     myRooms.splice(index, 1);
     //console.log(JSON.stringify(Rooms));
-  };*/
+  };
   return (
     <>
       <table>
