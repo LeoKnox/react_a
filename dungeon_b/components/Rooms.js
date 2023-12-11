@@ -10,8 +10,8 @@ const Rooms = [
   },
 ];
 
-function deleteRoom(id = 0) {
+const deleteRoom = (id = 0) => {
   console.log("red");
-}
+};
 
 export default Rooms;
