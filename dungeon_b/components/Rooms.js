@@ -14,4 +14,4 @@ function deleteRoom(id = 0) {
   console.log("red");
 }
 
-export default { Rooms, deleteRoom };
+export default Rooms;
