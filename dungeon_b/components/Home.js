@@ -1,8 +1,8 @@
 import useState from "react";
-import Rooms from "./Rooms.js";
+import { Rooms } from "./Rooms.js";
 
 export default function Home() {
-  console.log({Rooms.deleteRoom});
+  console.log(Rooms.deleteRoom());
   //const [myRooms, setMyRooms] = useState(Rooms);
   console.log(JSON.stringify(myRooms));
   //console.log(JSON.stringify(Rooms));
