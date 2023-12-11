@@ -1,17 +1,49 @@
-const Rooms = [
-  { id: 1, name: "entry", description: "entrance", length: 5, width: 5 },
-  { id: 2, name: "guard", description: "guard room", length: 7, width: 8 },
-  {
-    id: 3,
-    name: "treasure",
-    description: "treasure room",
-    length: 8,
-    width: 6,
-  },
-];
+import useState from "react";
+import Rooms from "./Rooms.js";
 
-const deleteRoom = (id = 0) => {
-  return "red";
-};
-
-export default Rooms;
+export default function Home() {
+  console.log(Rooms.deleteRoom());
+  //const [myRooms, setMyRooms] = useState(Rooms);
+  console.log(JSON.stringify(myRooms));
+  //console.log(JSON.stringify(Rooms));
+  const handleDelete = (id) => {
+    console.log("delete");
+    var index = Rooms.map(function (e) {
+      return e.id;
+    }).indexOf(id);
+    Rooms.splice(index, 1);
+    //console.log(JSON.stringify(Rooms));
+  };
+  return (
+    <>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Height</th>
+            <th>Width</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Rooms.map((room) => {
+            return (
+              <tr>
+                <td>{room.name}</td>
+                <td>{room.description}</td>
+                <td>{room.height}</td>
+                <td>{room.width}</td>
+                <td>
+                  <button onClick={() => alert(room.id)}>Edit</button>
+                  &nbsp;
+                  <button onClick={() => handleDelete(room.id)}>Delete</button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </>
+  );
+}
