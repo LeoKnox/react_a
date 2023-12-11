@@ -2,18 +2,16 @@ import useState from "react";
 import Rooms from "./Rooms.js";
 
 export default function Home() {
-  console.log(rooms.deleteRoom);
-  const [myRooms, setMyRooms] = useState(Rooms);
+  console.log(rooms.deleteRoom());
+  //const [myRooms, setMyRooms] = useState(Rooms);
   console.log(JSON.stringify(myRooms));
   //console.log(JSON.stringify(Rooms));
   const handleDelete = (id) => {
     console.log("delete");
-    var index = myRooms
-      .map(function (e) {
-        return e.id;
-      })
-      .indexOf(id);
-    myRooms.splice(index, 1);
+    var index = Rooms.map(function (e) {
+      return e.id;
+    }).indexOf(id);
+    Rooms.splice(index, 1);
     //console.log(JSON.stringify(Rooms));
   };
   return (
@@ -29,7 +27,7 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {myRooms.map((room) => {
+          {Rooms.map((room) => {
             return (
               <tr>
                 <td>{room.name}</td>
