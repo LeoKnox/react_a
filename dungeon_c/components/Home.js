@@ -3,8 +3,8 @@ import roomslist from "./roomslist";
 function Home() {
   function deleteRoom(id) {
     let index = roomslist
-      .map(function (e) {
-        return e.id;
+      .map(function (r) {
+        return r.id;
       })
       .indexOf(id);
     roomslist.splice(index, 1);
