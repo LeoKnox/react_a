@@ -1,13 +1,15 @@
 import roomslist from "./roomslist";
+import { useState } from "react";
 
 function Home() {
+  const [myRooms, setMyRooms] = useState(roomslist);
   function deleteRoom(id) {
-    let index = roomslist
+    let index = myRooms
       .map(function (r) {
         return r.id;
       })
       .indexOf(id);
-    roomslist.splice(index, 1);
+    setMyRooms(myRooms.splice(index, 1));
     console.log(roomslist);
   }
   return (
