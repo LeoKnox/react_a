@@ -2,7 +2,13 @@ import roomslist from "./roomslist";
 
 function Home() {
   function deleteRoom(id) {
-    alert(id);
+    let index = roomslist
+      .map(function (e) {
+        return e.id;
+      })
+      .indexOf(id);
+    roomslist.splice(index, 1);
+    console.log(roomslist);
   }
   return (
     <div className="home">
