@@ -5,9 +5,11 @@ function Home() {
     <div className="home">
       <h1>Home</h1>
       {roomslist.map((rooms) => {
-        {
-          <p>tttt</p>;
-        }
+        return (
+          <p>
+            {rooms.name}:{rooms.description}:{rooms.length}x{rooms.width}
+          </p>
+        );
       })}
     </div>
   );
