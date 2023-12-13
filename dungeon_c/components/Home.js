@@ -20,8 +20,8 @@ function Home() {
       {roomslist.map((rooms) => {
         return (
           <p>
-            {rooms.name}:{rooms.description}:{rooms.length}x{rooms.width}
-            <button onClick={(e) => deleteRoom(rooms.id)}>delete</button>
+            {rooms.id}-{rooms.name}:{rooms.description}:{rooms.length}x{rooms.width}
+            <button onClick={(e) => deleteRoom(rooms.id)}>delete {rooms.id}</button>
           </p>
         );
       })}
