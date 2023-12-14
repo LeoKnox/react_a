@@ -4,14 +4,15 @@ import { useState } from "react";
 function Home() {
   const [myRooms, setMyRooms] = useState(roomslist);
   function deleteRoom(id) {
-    let newList = myRooms
-      .find((i) => {
-        if (myRooms.id === id) {
-          myRooms.splice(i, 1)
-        }
-      })
+    let newList = myRooms.find((i) => {
+      if (myRooms.id === id) {
+        myRooms.splice(i, 1);
+      }
+    });
     //setMyRooms(myRooms.splice(index, 1));
-    setMyRooms(newList)
+    console.log("1")
+    console.log(JSON.stringify(newList))
+    setMyRooms(newList);
     console.log(roomslist);
   }
   return (
@@ -20,8 +21,11 @@ function Home() {
       {roomslist.map((rooms) => {
         return (
           <p>
-            {rooms.id}-{rooms.name}:{rooms.description}:{rooms.length}x{rooms.width}
-            <button onClick={(e) => deleteRoom(rooms.id)}>delete {rooms.id}</button>
+            {rooms.id}-{rooms.name}:{rooms.description}:{rooms.length}x
+            {rooms.width}
+            <button onClick={(e) => deleteRoom(rooms.id)}>
+              delete {rooms.id}
+            </button>
           </p>
         );
       })}
