@@ -5,6 +5,7 @@ function Home() {
   const [myRooms, setMyRooms] = useState(roomslist);
   function deleteRoom(id) {
     console.log("0")
+    /*
     let newList = myRooms.find((i) => {
       if (myRooms.id === id) {
         myRooms.splice(i, 1);
@@ -15,6 +16,7 @@ function Home() {
     console.log(JSON.stringify(newList))
     setMyRooms(newList);
     console.log(roomslist);
+    */
   }
   return (
     <div className="home">
