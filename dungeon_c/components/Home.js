@@ -4,6 +4,7 @@ import { useState } from "react";
 function Home() {
   const [myRooms, setMyRooms] = useState(roomslist);
   function deleteRoom(id) {
+    console.log("0")
     let newList = myRooms.find((i) => {
       if (myRooms.id === id) {
         myRooms.splice(i, 1);
