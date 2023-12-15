@@ -7,6 +7,7 @@ function Home() {
     console.log("0");
     let newList = myRooms.find((i) => {
       if (myRooms.id === id) {
+        console.log("find loop");
         myRooms.splice(i, 1);
       }
     });
