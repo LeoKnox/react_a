@@ -9,7 +9,7 @@ function Home() {
       console.log(i.id + ":" + id);
       if (i.id === id) {
         console.log("find loop");
-        myRooms.splice(i, 1);
+        newList.splice(i, 1);
       }
     });
     //setMyRooms(myRooms.splice(index, 1));
