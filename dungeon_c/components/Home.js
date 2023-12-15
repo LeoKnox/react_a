@@ -6,7 +6,7 @@ function Home() {
   function deleteRoom(id) {
     console.log("0");
     let newList = myRooms.find((i) => {
-      console.log(myRooms.id + ":" + id);
+      console.log(i.id + ":" + id);
       if (i.id === id) {
         console.log("find loop");
         myRooms.splice(i, 1);
