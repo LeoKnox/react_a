@@ -11,7 +11,7 @@ function Home() {
         myRooms.splice(i, 1);
       }
     });
-    //setMyRooms(myRooms.splice(index, 1));
+    setMyRooms(myRooms.splice(index, 1));
     console.log("1");
     console.log(JSON.stringify(newList));
     setMyRooms(newList);
