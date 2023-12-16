@@ -9,10 +9,19 @@ const AddRoomForm = (props) => {
     length: 0,
   };
   const [room, setRoom] = useState(buildRoom);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setRoom({ ...room, [name]: value });
+  };
   return (
     <form>
       <label>Name</label>
-      <input type="text" name="name" value={buildRoom.name} />
+      <input
+        type="text"
+        name="name"
+        onClick={handleChange}
+        value={buildRoom.name}
+      />
       <label>Description</label>
       <input type="text" name="description" value={buildRoom.description} />
       <br />
