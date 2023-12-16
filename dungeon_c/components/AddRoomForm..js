@@ -12,10 +12,10 @@ const AddRoomForm = (props) => {
   return (
     <form>
       <label>Name</label>
-      <input type="text" name="name" value="room.name" />
-      <input type="text" name="description" value="room.description" />
-      <input type="number" name="width" value="room.value" />
-      <input type="number" name="length" value="room.length" />
+      <input type="text" name="name" value={buildRoom.name} />
+      <input type="text" name="description" value={buildRoom.description} />
+      <input type="number" name="width" value={buildRoom.width} />
+      <input type="number" name="length" value={buildRoom.length} />
       <button type="submit">Create</button>
     </form>
   );
