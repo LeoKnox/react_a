@@ -14,13 +14,13 @@ const Rooms = (props) => {
       <tbody>
         {props.rooms.length > 0 ? (
           props.rooms.map((room) => {
-            const { id, name, description, width, height } = room;
+            const { id, name, description, width, length } = room;
             return (
               <tr>
                 <td>{name}</td>
                 <td>{description}</td>
                 <td>{width}</td>
-                <td>{height}</td>
+                <td>{length}</td>
                 <td>
                   <button>Delete</button>
                   <button>Edit</button>
