@@ -13,7 +13,7 @@ const Rooms = props => {
             </thead>
             <tbody>
                 { props.rooms.length > 0 ? (
-                {props.rooms.map(room => {
+                props.rooms.map(room => {
                     const {id, name, description, width, height}
                     return (
                         <tr>
@@ -27,7 +27,7 @@ const Rooms = props => {
                             </td>
                         </tr>
                     )
-                })}) : (<h3>No Rooms</h3>)}
+                })) : (<h3>No Rooms</h3>)}
             </tbody>
         </table>
 )
