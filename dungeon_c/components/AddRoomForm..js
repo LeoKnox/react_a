@@ -5,7 +5,7 @@ const AddRoomForm = (props) => {
     id: null,
     name: "",
     description: "",
-    height: 0,
+    width: 0,
     length: 0,
   };
   const [room, setRoom] = useState(buildRoom);
