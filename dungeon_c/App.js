@@ -8,6 +8,7 @@ export default function App() {
   const [currRooms, setCurrRooms] = useState(roomsList);
   return (
     <div className="App">
+      <h1>Dungeon Room</h1>
       <Rooms rooms={currRooms} />
     </div>
   );
