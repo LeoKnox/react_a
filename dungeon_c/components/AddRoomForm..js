@@ -17,7 +17,12 @@ const AddRoomForm = (props) => {
   return (
     <form>
       <label>Name</label>
-      <input type="text" name="name" onClick={handleChange} value={room.name} />
+      <input
+        type="text"
+        name="name"
+        onClick={handleChange}
+        value={props.name}
+      />
       <label>Description</label>
       <input type="text" name="description" value={room.description} />
       <br />
