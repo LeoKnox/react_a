@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const AddRoomForm = (props) => {
   const buildRoom = {
     id: null,
-    name: "",
+    name: "zzz",
     description: "",
     width: 0,
     length: 0,
