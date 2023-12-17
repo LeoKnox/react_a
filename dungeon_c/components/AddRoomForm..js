@@ -21,7 +21,7 @@ const AddRoomForm = (props) => {
         type="text"
         name="name"
         onClick={handleChange}
-        value={props.name}
+        value={buildRoom.name}
       />
       <label>Description</label>
       <input type="text" name="description" value={room.description} />
