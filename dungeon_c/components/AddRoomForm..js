@@ -12,6 +12,7 @@ const AddRoomForm = (props) => {
   const increaseSize = (e) => {
     const { name, value } = e.target;
     console.log(name + ":" + value);
+    setRoom((room.name = value + 1));
   };
   const handleChange = (e) => {
     const { name, evalue } = e.target;
