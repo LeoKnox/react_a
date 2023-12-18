@@ -11,8 +11,8 @@ const AddRoomForm = (props) => {
   const [room, setRoom] = useState(buildRoom);
   const increaseSize = (e) => {
     const { name, value } = e.target;
-    console.log(name + ":" + value);
-    let newValue = 1 + value;
+    let newValue = parseInt(value) + 1;
+    console.log(name + ":" + newValue);
     setRoom({ ...room, [name]: newValue });
   };
   const handleChange = (e) => {
