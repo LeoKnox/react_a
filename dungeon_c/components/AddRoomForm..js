@@ -12,7 +12,7 @@ const AddRoomForm = (props) => {
   const increaseSize = (e) => {
     const { name, value } = e.target;
     console.log(name + ":" + value);
-    setRoom(room[name]++);
+    setRoom(String(room[name]++));
   };
   const handleChange = (e) => {
     const { name, evalue } = e.target;
@@ -32,14 +32,14 @@ const AddRoomForm = (props) => {
       />
       <br />
       <label>Width</label>
-      <input type="number" name="width" value={buildRoom.width} />
-      <label>Length</label>
       <input
         type="number"
-        name="length"
+        name="width"
         onClick={increaseSize}
-        value={buildRoom.length}
+        value={buildRoom.width}
       />
+      <label>Length</label>
+      <input type="number" name="length" value={buildRoom.length} />
       <br />
       <button type="submit">Create</button>
     </form>
