@@ -27,12 +27,7 @@ const AddRoomForm = (props) => {
       />
       <br />
       <label>Width</label>
-      <input
-        type="number"
-        name="width"
-        onClick={handleChange}
-        value={buildRoom.width}
-      />
+      <input type="number" name="width" value={buildRoom.width} />
       <label>Length</label>
       <input
         type="number"
