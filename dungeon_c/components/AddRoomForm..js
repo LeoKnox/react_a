@@ -11,11 +11,6 @@ const AddRoomForm = (props) => {
   const [room, setRoom] = useState(buildRoom);
   const submitRoom = (e) => {
     cosnole.log("submitted");
-    console.log(e.target.elements.width.value);
-    let newRoom = {
-      name: e.target.width.value,
-    };
-    console.log(newRoom);
   };
   const increaseSize = (e) => {
     const { name, value } = e.target;
@@ -29,7 +24,7 @@ const AddRoomForm = (props) => {
     setRoom({ ...room, [name]: evalue });
   };
   return (
-    <form>
+    <form onSubmit={submitRoom}>
       <label>Name</label>
       <input type="text" name="name" onClick={handleChange} value={room.name} />
       <label>Description</label>
@@ -50,9 +45,7 @@ const AddRoomForm = (props) => {
       <label>Length</label>
       <input type="number" name="length" value={room.length} />
       <br />
-      <button onClick={() => submitRoom()} type="submit">
-        Create
-      </button>
+      <button type="submit">Create</button>
     </form>
   );
 };
