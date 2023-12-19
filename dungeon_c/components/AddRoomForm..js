@@ -11,10 +11,10 @@ const AddRoomForm = (props) => {
   const [room, setRoom] = useState(buildRoom);
   const submitRoom = (e) => {
     let newRoom = {
-      name: {e.target.elements.name.value}
-    }
-    console.log(newRoom)
-  }
+      name: e.target.elements.name.value,
+    };
+    console.log(newRoom);
+  };
   const increaseSize = (e) => {
     const { name, value } = e.target;
     let newValue = parseInt(value) + 1;
@@ -48,7 +48,9 @@ const AddRoomForm = (props) => {
       <label>Length</label>
       <input type="number" name="length" value={room.length} />
       <br />
-      <button onClick="submitRoom" type="submit">Create</button>
+      <button onClick="submitRoom" type="submit">
+        Create
+      </button>
     </form>
   );
 };
