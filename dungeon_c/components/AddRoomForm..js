@@ -10,9 +10,9 @@ const AddRoomForm = (props) => {
   };
   const [room, setRoom] = useState(buildRoom);
   const submitRoom = (e) => {
-    console.log(e.target.elements.name.value);
+    console.log(e.target.elements.width.value);
     let newRoom = {
-      name: e.target.name.value,
+      name: e.target.width.value,
     };
     console.log(newRoom);
   };
