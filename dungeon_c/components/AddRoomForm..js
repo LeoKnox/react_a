@@ -24,7 +24,7 @@ const AddRoomForm = (props) => {
     setRoom({ ...room, [name]: evalue });
   };
   return (
-    <form>
+    <form onSubmit={submitRoom}>
       <label>Name</label>
       <input type="text" name="name" onClick={handleChange} value={room.name} />
       <label>Description</label>
@@ -45,9 +45,7 @@ const AddRoomForm = (props) => {
       <label>Length</label>
       <input type="number" name="length" value={room.length} />
       <br />
-      <button onClick={submitRoom} type="submit">
-        Create
-      </button>
+      <input type="submit" value="Create" />
     </form>
   );
 };
