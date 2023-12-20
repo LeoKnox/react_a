@@ -46,11 +46,16 @@ const AddRoomForm = (props) => {
       <input
         type="number"
         name="width"
-        onClick={increaseSize}
+        onChange={increaseSize}
         value={room.width}
       />
       <label>Length</label>
-      <input type="number" name="length" value={room.length} />
+      <input
+        type="number"
+        name="length"
+        onChange={increaseSize}
+        value={room.length}
+      />
       <br />
       <input type="submit" value="Create" />
     </form>
