@@ -18,6 +18,7 @@ const AddRoomForm = (props) => {
       length: e.target.length.value,
     };
     setRoom(room.push(newRoom));
+    return room;
     console.log(JSON.stringify(room));
   };
   const increaseSize = (e) => {
