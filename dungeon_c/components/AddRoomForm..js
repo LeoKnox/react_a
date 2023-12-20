@@ -13,6 +13,9 @@ const AddRoomForm = (props) => {
     console.log("submitted");
     let newRoom = {
       name: e.target.name.value,
+      description: e.target.description.value,
+      width: e.target.width.value,
+      length: e.target.length.value,
     };
     console.log(newRoom);
   };
