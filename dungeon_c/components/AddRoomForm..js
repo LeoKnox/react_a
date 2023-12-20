@@ -10,7 +10,7 @@ const AddRoomForm = (props) => {
   };
   const [room, setRoom] = useState(buildRoom);
   const submitRoom = (e) => {
-    cosnole.log("submitted");
+    console.log("submitted");
   };
   const increaseSize = (e) => {
     const { name, value } = e.target;
