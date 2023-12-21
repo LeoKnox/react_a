@@ -8,7 +8,7 @@ const AddRoomForm = (addRoom) => {
     width: 0,
     length: 0,
   };
-  console.log("props" + JSON.stringify(addRoom));
+  //console.log("props" + JSON.stringify(addRoom));
   const [room, setRoom] = useState(buildRoom);
   const submitRoom = (e) => {
     e.preventdefault();
@@ -18,8 +18,8 @@ const AddRoomForm = (addRoom) => {
       width: e.target.width.value,
       length: e.target.length.value,
     };
-    setRoom(room.push(newRoom));
-    return room;
+    //setRoom(room.push(newRoom));
+    addRoom(newRoom);
     console.log(JSON.stringify(room));
   };
   const increaseSize = (e) => {
