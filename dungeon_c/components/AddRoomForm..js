@@ -8,7 +8,7 @@ const AddRoomForm = (props) => {
     width: 0,
     length: 0,
   };
-  console.log("props" + JSON.stringify(props));
+  console.log("props" + JSON.stringify(props.addRoom));
   const [room, setRoom] = useState(buildRoom);
   const submitRoom = (e) => {
     e.preventdefault();
