@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddRoomForm = (props) => {
+const AddRoomForm = (addRoom) => {
   const buildRoom = {
     id: null,
     name: "",
@@ -8,7 +8,7 @@ const AddRoomForm = (props) => {
     width: 0,
     length: 0,
   };
-  console.log("props" + JSON.stringify(props.addRoom));
+  console.log("props" + JSON.stringify(addRoom));
   const [room, setRoom] = useState(buildRoom);
   const submitRoom = (e) => {
     e.preventdefault();
