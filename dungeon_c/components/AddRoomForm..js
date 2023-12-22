@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddRoomForm = ({ addRoom }) => {
+const AddRoomForm = (addRoom) => {
   const buildRoom = {
     id: null,
     name: "",
