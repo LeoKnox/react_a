@@ -38,7 +38,7 @@ const AddRoomForm = (addRoom) => {
     setRoom({ ...room, [name]: evalue });
   };
   return (
-    <form onSubmit={addRoom}>
+    <form onSubmit={submitRoomm}>
       <label>Name</label>
       <input type="text" name="name" onClick={handleChange} value={room.name} />
       <label>Description</label>
