@@ -10,8 +10,12 @@ const AddRoomForm = (addRoom) => {
   };
   //console.log("props" + JSON.stringify(addRoom));
   const [room, setRoom] = useState(buildRoom);
+  function submitRoomm() {
+    alert("red");
+    console.log("red");
+  }
   const submitRoom = (e) => {
-    e.preventdefault();
+    //e.preventdefault();
     let newRoom = {
       name: e.target.name.value,
       description: e.target.description.value,
@@ -34,7 +38,7 @@ const AddRoomForm = (addRoom) => {
     setRoom({ ...room, [name]: evalue });
   };
   return (
-    <form onSubmit={submitRoom}>
+    <form onSubmit={addRoom}>
       <label>Name</label>
       <input type="text" name="name" onClick={handleChange} value={room.name} />
       <label>Description</label>
