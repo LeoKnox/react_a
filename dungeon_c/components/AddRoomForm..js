@@ -18,10 +18,17 @@ const AddRoomForm = (addRoom) => {
     alert("aoi");
     //e.preventdefault();
     let newRoom = {
+      /*
       name: e.target.name.value,
       description: e.target.description.value,
       width: e.target.width.value,
       length: e.target.length.value,
+      */
+      id: 9,
+      name: "aaa",
+      description: "bbbb",
+      width: 9,
+      length: 8,
     };
     //setRoom(room.push(newRoom));
     addRoom(newRoom);
