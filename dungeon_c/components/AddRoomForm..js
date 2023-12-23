@@ -15,6 +15,7 @@ const AddRoomForm = (addRoom) => {
     console.log("red");
   }
   const submitRoom = (e) => {
+    alert("aoi");
     //e.preventdefault();
     let newRoom = {
       name: e.target.name.value,
@@ -38,7 +39,7 @@ const AddRoomForm = (addRoom) => {
     setRoom({ ...room, [name]: evalue });
   };
   return (
-    <form onSubmit={submitRoomm}>
+    <form onSubmit={submitRoom}>
       <label>Name</label>
       <input type="text" name="name" onClick={handleChange} value={room.name} />
       <label>Description</label>
