@@ -7,11 +7,11 @@ import AddRoomForm from "./components/AddRoomForm.js";
 
 export default function App() {
   const [currRooms, setCurrRooms] = useState(roomsList);
-  const addRoom = (room) => {
+  function addRoom(room) {
     console.log("!!!!!!! red");
     room.id = currRooms.length + 1;
     setCurrRooms([...currRooms, room]);
-  };
+  }
   return (
     <div className="App">
       <h1>Dungeon Room</h1>
