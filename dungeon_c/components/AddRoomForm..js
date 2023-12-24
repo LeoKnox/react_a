@@ -31,7 +31,7 @@ const AddRoomForm = (addRoom) => {
       length: 8,
     };
     //setRoom(room.push(newRoom));
-    addRoom(newRoom);
+    addRoom.setRoom(newRoom);
     console.log(JSON.stringify(room));
   };
   const increaseSize = (e) => {
