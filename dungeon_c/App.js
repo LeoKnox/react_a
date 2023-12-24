@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Dungeon Room</h1>
-      <AddRoomForm addRoom={() => addRoom(currRooms)} />
+      <AddRoomForm addRoom={this.addRoom} />
       <Rooms rooms={currRooms} />
     </div>
   );
