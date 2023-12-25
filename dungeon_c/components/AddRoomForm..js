@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddRoomForm = (addRoom) => {
+const AddRoomForm = (addRoom, setCurrRooms, rooms) => {
   const buildRoom = {
     id: null,
     name: "",
@@ -46,7 +46,7 @@ const AddRoomForm = (addRoom) => {
     setRoom({ ...room, [name]: evalue });
   };
   return (
-    <form onSubmit={submitRoom}>
+    <form onSubmit={() => setCurrRooms(rooms)}>
       <label>Name</label>
       <input type="text" name="name" onClick={handleChange} value={room.name} />
       <label>Description</label>
