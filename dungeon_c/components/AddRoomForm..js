@@ -15,7 +15,7 @@ const AddRoomForm = (addRoom, setCurrRooms, rooms) => {
     console.log("red");
   }
   const submitRoom = (e) => {
-    alert("aoi");
+    alert(rooms);
     //e.preventdefault();
     let newRoom = {
       /*
