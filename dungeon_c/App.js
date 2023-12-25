@@ -15,7 +15,11 @@ export default function App() {
   return (
     <div className="App">
       <h1>Dungeon Room</h1>
-      <AddRoomForm addRoom={this.addRoom} />
+      <AddRoomForm
+        addRoom={addRoom}
+        serCurrRooms={setCurrRooms}
+        rooms={currRooms}
+      />
       <Rooms rooms={currRooms} />
     </div>
   );
