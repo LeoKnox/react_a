@@ -31,7 +31,7 @@ const AddRoomForm = (addRoom, setCurrRooms, rooms) => {
       length: 8,
     };
     //setRoom(room.push(newRoom));
-    setCurrRooms(newRoom);
+    setCurrRooms([...rooms, newRoom]);
     addRoom.addroom(newRoom);
     console.log(JSON.stringify(room));
   };
