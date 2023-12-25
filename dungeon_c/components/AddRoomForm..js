@@ -31,6 +31,7 @@ const AddRoomForm = (addRoom, setCurrRooms, rooms) => {
       length: 8,
     };
     //setRoom(room.push(newRoom));
+    setCurrRooms(newRoom);
     addRoom.addroom(newRoom);
     console.log(JSON.stringify(room));
   };
@@ -46,7 +47,7 @@ const AddRoomForm = (addRoom, setCurrRooms, rooms) => {
     setRoom({ ...room, [name]: evalue });
   };
   return (
-    <form onSubmit={() => setCurrRooms(rooms)}>
+    <form onSubmit={submitRoom}>
       <label>Name</label>
       <input type="text" name="name" onClick={handleChange} value={room.name} />
       <label>Description</label>
