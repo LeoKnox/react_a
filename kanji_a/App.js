@@ -17,9 +17,11 @@ export default function App() {
         </thead>
         <tbody>
           {myKanji.map((kanjis, index) => {
-            <tr>
-              <td>ddd{kanjis.word}</td>
-            </tr>;
+            return (
+              <tr>
+                <td>{kanjis.word}</td>
+              </tr>
+            );
           })}
         </tbody>
       </table>
