@@ -1,4 +1,4 @@
-export const kanjiList = [
+export const KanjiList = [
   {
     id: 1,
     word: "akai",
