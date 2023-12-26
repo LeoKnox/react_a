@@ -20,6 +20,7 @@ export default function App() {
             return (
               <tr>
                 <td>{kanjis.word}</td>
+                <td>{kanjis.translation}</td>
               </tr>
             );
           })}
