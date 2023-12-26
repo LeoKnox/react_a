@@ -10,6 +10,19 @@ export default function App() {
   return (
     <div className="App">
       <h1>Kanjis</h1>
+      <table>
+        <thead>
+          <th>Word</th>
+          <th>Translation</th>
+        </thead>
+        <tbody>
+          {myKanji.map((kanjis, index) => {
+            <tr>
+              <td>ddd{kanjis.word}</td>
+            </tr>;
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
