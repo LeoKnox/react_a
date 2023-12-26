@@ -1,8 +1,12 @@
 import "./styles.css";
+import { useEffect, useState } from "react";
 import { KanjiList } from "./components/KanjiList.js";
 
 export default function App() {
-  console.log(KanjiList[1]);
+  const [myKanji, setMyKanji] = useState([]);
+  useEffect(() => {
+    setMyKanji(KanjiList);
+  }, []);
   return (
     <div className="App">
       <h1>Kanjis</h1>
