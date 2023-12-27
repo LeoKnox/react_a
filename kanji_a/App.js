@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { KanjiList } from "./components/KanjiList.js";
 
 export default function App() {
+  const handleEdit = (id) => {
+    alert("Edit " + id);
+  };
+  const handleDelete = (id) => {
+    alert("delete " + id);
+  };
   const [myKanji, setMyKanji] = useState([]);
   useEffect(() => {
     setMyKanji(KanjiList);
@@ -23,7 +29,7 @@ export default function App() {
                 <td>{kanjis.word}</td>
                 <td>{kanjis.translation}</td>
                 <td>
-                  <button>edit</button>
+                  <button onClick={() => handleEdit(kanjis.id)}>edit</button>
                   <button>delete</button>
                 </td>
               </tr>
