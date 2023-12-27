@@ -9,7 +9,8 @@ export default function App() {
   const handleDelete = (id) => {
     alert("delete " + id);
     if (id > 0) {
-      const kd = kajiList.filter((item) => item !== id);
+      const kd = KanjiList.filter((item) => item !== id);
+      setmyKanji(kd);
     }
   };
   const [myKanji, setMyKanji] = useState([]);
