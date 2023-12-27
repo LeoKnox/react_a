@@ -14,6 +14,7 @@ export default function App() {
         <thead>
           <th>Word</th>
           <th>Translation</th>
+          <th>Actions</th>
         </thead>
         <tbody>
           {myKanji.map((kanjis, index) => {
@@ -21,6 +22,10 @@ export default function App() {
               <tr key={index}>
                 <td>{kanjis.word}</td>
                 <td>{kanjis.translation}</td>
+                <td>
+                  <button>edit</button>
+                  <button>delete</button>
+                </td>
               </tr>
             );
           })}
