@@ -30,7 +30,9 @@ export default function App() {
                 <td>{kanjis.translation}</td>
                 <td>
                   <button onClick={() => handleEdit(kanjis.id)}>edit</button>
-                  <button>delete</button>
+                  <button onClick={() => handleDelete(kanjis.id)}>
+                    delete
+                  </button>
                 </td>
               </tr>
             );
