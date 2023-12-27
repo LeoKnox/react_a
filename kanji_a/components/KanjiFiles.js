@@ -10,7 +10,7 @@ export const KanjiList = [
     translation: "blue",
   },
   {
-    id: 1,
+    id: 3,
     word: "midori",
     translation: "green",
   },
