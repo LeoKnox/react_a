@@ -12,8 +12,7 @@ export default function App() {
   };
   const handleDelete = (id) => {
     if (id > 0) {
-      alert("midori");
-      const kd = KanjiList.filter((item) => item !== id);
+      const kd = KanjiList.filter((item) => item.id !== id);
       setMyKanji(kd);
     }
   };
