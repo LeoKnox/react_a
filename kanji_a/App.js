@@ -19,7 +19,6 @@ export default function App() {
   const handleEdit = (id) => {
     const kd = myKanji.filter((item) => item.id === id);
     if (kd !== undefined) {
-      alert(kd[0].word);
       setId(kd[0].id);
       setWord(kd[0].word);
       setTranslation(kd[0].translation);
@@ -44,13 +43,13 @@ export default function App() {
         <input
           type="text"
           placeholder="enter word"
-          value="word"
+          value={word}
           onClick={(e) => setWord(e.target.value)}
         />
         <label>Translation:</label>
         <input
           type="text"
-          value="translation"
+          value={translation}
           placeholder="enter translation"
           onClick={(e) => setTranslation(e.target.value)}
         />
