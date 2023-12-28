@@ -33,9 +33,13 @@ export default function App() {
       <h1>Kanjis</h1>
       <div>
         <label>Word:</label>
-        <input type="text" name="word" placeholder="enter word" />
+        <input
+          type="text"
+          placeholder="enter word"
+          onClick={(e) => setWord(e.target.value)}
+        />
         <label>Translation:</label>
-        <input type="text" name="translation" placeholder="enter translation" />
+        <input type="text" placeholder="enter translation" />
         <button onClick={handleSave}>Save</button>
         <button onClick={handleClear}>Clear</button>
       </div>
