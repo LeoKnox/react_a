@@ -10,6 +10,9 @@ export default function App() {
   const handleSave = () => {
     alert("save");
   };
+  const handleClear = () => {
+    alert("clear");
+  };
   const handleEdit = (id) => {
     alert("Edit " + id);
   };
@@ -31,6 +34,7 @@ export default function App() {
         <label>Translation:</label>
         <input type="text" name="translation" placeholder="enter translation" />
         <button onClick={handleSave}>Save</button>
+        <button onClick={handleClear}>Clear</button>
       </div>
       <table>
         <thead>
