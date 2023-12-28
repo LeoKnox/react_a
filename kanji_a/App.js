@@ -7,6 +7,9 @@ export default function App() {
   useEffect(() => {
     setMyKanji(KanjiList);
   }, []);
+  const handleSave = () => {
+    alert("save");
+  };
   const handleEdit = (id) => {
     alert("Edit " + id);
   };
@@ -27,6 +30,7 @@ export default function App() {
         <input type="text" name="word" placeholder="enter word" />
         <label>Translation:</label>
         <input type="text" name="translation" placeholder="enter translation" />
+        <button onClick={handleSave}>Save</button>
       </div>
       <table>
         <thead>
