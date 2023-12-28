@@ -17,7 +17,12 @@ export default function App() {
     alert("clear");
   };
   const handleEdit = (id) => {
-    alert("Edit " + id);
+    const kd = myKanji.filter((item) => item.id === id);
+    if (kd !== undefined) {
+      setId(kd[0].id);
+      setWord(kd[0].word);
+      setTranslation(kd[0].translation);
+    }
   };
   const handleDelete = (id) => {
     if (id > 0) {
