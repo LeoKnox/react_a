@@ -22,6 +22,12 @@ export default function App() {
   return (
     <div className="App">
       <h1>Kanjis</h1>
+      <div>
+        <label>Word:</label>
+        <input type="text" name="word" placeholder="enter word" />
+        <label>Translation:</label>
+        <input type="text" name="translation" placeholder="enter translation" />
+      </div>
       <table>
         <thead>
           <th>Word</th>
