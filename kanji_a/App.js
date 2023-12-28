@@ -21,7 +21,7 @@ export default function App() {
   };
   const handleDelete = (id) => {
     if (id > 0) {
-      if (window.confirm("Are you sure")) {
+      if (window.confirm("Are you sure?")) {
         const kd = myKanji.filter((item) => item.id !== id);
         setMyKanji(kd);
       }
@@ -47,6 +47,7 @@ export default function App() {
         <button onClick={handleSave}>Save</button>
         <button onClick={handleClear}>Clear</button>
       </div>
+      <br />
       <table>
         <thead>
           <th>Word</th>
