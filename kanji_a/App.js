@@ -3,20 +3,21 @@ import { useEffect, useState } from "react";
 import { KanjiList } from "./components/KanjiList.js";
 
 export default function App() {
-  const handleEdit = (id) => {
-    alert("Edit " + id);
-  };
-  const handleDelete = (id) => {
-    alert("delete " + id);
-    if (id > 0) {
-      const kd = KanjiList.filter((item) => item !== id);
-      setMyKanji(kd);
-    }
-  };
   const [myKanji, setMyKanji] = useState([]);
   useEffect(() => {
     setMyKanji(KanjiList);
   }, []);
+  const handleEdit = (id) => {
+    alert("Edit " + id);
+  };
+  const handleDelete = (id) => {
+    if (id > 0) {
+      alert("midori");
+      const kd = KanjiList.filter((item) => item !== id);
+      setMyKanji(kd);
+    }
+  };
+
   return (
     <div className="App">
       <h1>Kanjis</h1>
