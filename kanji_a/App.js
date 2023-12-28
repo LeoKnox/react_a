@@ -39,7 +39,11 @@ export default function App() {
           onClick={(e) => setWord(e.target.value)}
         />
         <label>Translation:</label>
-        <input type="text" placeholder="enter translation" />
+        <input
+          type="text"
+          placeholder="enter translation"
+          onClick={(e) => setTranslation(e.target.value)}
+        />
         <button onClick={handleSave}>Save</button>
         <button onClick={handleClear}>Clear</button>
       </div>
