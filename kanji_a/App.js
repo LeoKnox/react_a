@@ -14,7 +14,9 @@ export default function App() {
     alert("save");
   };
   const handleClear = () => {
-    alert("clear");
+    setId(0);
+    setWord("");
+    setTranslation("");
   };
   const handleEdit = (id) => {
     const kd = myKanji.filter((item) => item.id === id);
