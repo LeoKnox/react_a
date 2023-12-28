@@ -41,11 +41,13 @@ export default function App() {
         <input
           type="text"
           placeholder="enter word"
+          value="word"
           onClick={(e) => setWord(e.target.value)}
         />
         <label>Translation:</label>
         <input
           type="text"
+          value="translation"
           placeholder="enter translation"
           onClick={(e) => setTranslation(e.target.value)}
         />
