@@ -18,6 +18,9 @@ export default function App() {
     setWord("");
     setTranslation("");
   };
+  const handleUpdate = () => {
+    alert("update");
+  };
   const handleEdit = (id) => {
     const kd = myKanji.filter((item) => item.id === id);
     if (kd !== undefined) {
@@ -56,6 +59,7 @@ export default function App() {
           onClick={(e) => setTranslation(e.target.value)}
         />
         <button onClick={handleSave}>Save</button>
+        <button onClick={handleUpdate}>Update</button>
         <button onClick={handleClear}>Clear</button>
       </div>
       <br />
