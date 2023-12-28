@@ -19,9 +19,12 @@ export default function App() {
   const handleEdit = (id) => {
     const kd = myKanji.filter((item) => item.id === id);
     if (kd !== undefined) {
+      alert(kd[0].word);
       setId(kd[0].id);
       setWord(kd[0].word);
       setTranslation(kd[0].translation);
+    } else {
+      alert("ni");
     }
   };
   const handleDelete = (id) => {
