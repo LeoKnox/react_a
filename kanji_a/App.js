@@ -4,6 +4,9 @@ import { KanjiList } from "./components/KanjiList.js";
 
 export default function App() {
   const [myKanji, setMyKanji] = useState([]);
+  const [word, setWord] = useState("");
+  const [translation, setTranslation] = useState("");
+  const [id, setId] = useState(0);
   useEffect(() => {
     setMyKanji(KanjiList);
   }, []);
