@@ -12,7 +12,7 @@ export default function App() {
   };
   const handleDelete = (id) => {
     if (id > 0) {
-      const kd = KanjiList.filter((item) => item.id !== id);
+      const kd = myKanji.filter((item) => item.id !== id);
       setMyKanji(kd);
     }
   };
