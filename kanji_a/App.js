@@ -22,6 +22,7 @@ export default function App() {
   const handleEdit = (id) => {
     const kd = myKanji.filter((item) => item.id === id);
     if (kd !== undefined) {
+      console.log(kd[0]);
       setIsUpdate(true);
       setId(kd[0].id);
       setWord(kd[0].word);
