@@ -49,14 +49,14 @@ export default function App() {
           type="text"
           placeholder="enter word"
           value={word}
-          onClick={(e) => setWord(e.target.value)}
+          onChange={(e) => setWord(e.target.value)}
         />
         <label>Translation:</label>
         <input
           type="text"
           value={translation}
           placeholder="enter translation"
-          onClick={(e) => setTranslation(e.target.value)}
+          onChange={(e) => setTranslation(e.target.value)}
         />
         {!isUpdate ? (
           <button onClick={handleSave}>Save</button>
