@@ -7,6 +7,7 @@ export default function App() {
   const [word, setWord] = useState("");
   const [translation, setTranslation] = useState("");
   const [id, setId] = useState(0);
+  const [isUpdate, setIsUpdate] = useState(false);
   useEffect(() => {
     setMyKanji(KanjiList);
   }, []);
@@ -18,12 +19,10 @@ export default function App() {
     setWord("");
     setTranslation("");
   };
-  const handleUpdate = () => {
-    alert("update");
-  };
   const handleEdit = (id) => {
     const kd = myKanji.filter((item) => item.id === id);
     if (kd !== undefined) {
+      setIsUpdate(true);
       setId(kd[0].id);
       setWord(kd[0].word);
       setTranslation(kd[0].translation);
@@ -58,8 +57,11 @@ export default function App() {
           placeholder="enter translation"
           onClick={(e) => setTranslation(e.target.value)}
         />
-        <button onClick={handleSave}>Save</button>
-        <button onClick={handleUpdate}>Update</button>
+        {!isUpdate ? (
+          <button onClick={handleSave}>Save</button>
+        ) : (
+          <button onClick={handleEdit}>Edit</button>
+        )}
         <button onClick={handleClear}>Clear</button>
       </div>
       <br />
