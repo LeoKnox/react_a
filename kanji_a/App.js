@@ -15,6 +15,7 @@ export default function App() {
     alert("save");
   };
   const handleClear = () => {
+    setIsUpdate(false);
     setId(0);
     setWord("");
     setTranslation("");
