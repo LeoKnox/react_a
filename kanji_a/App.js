@@ -19,14 +19,18 @@ export default function App() {
     if (translation === "") {
       error += "translation needed";
     }
-    e.preventDefault();
-    newKanji = {
-      id: myKanji.length + 1,
-      word: word,
-      translation: translation,
-    };
-    const kt = [...myKanji, newKanji];
-    setMyKanji(kt);
+    if (error !== "") {
+      e.preventDefault();
+      newKanji = {
+        id: myKanji.length + 1,
+        word: word,
+        translation: translation,
+      };
+      const kt = [...myKanji, newKanji];
+      setMyKanji(kt);
+    } else {
+      alert(error);
+    }
   };
   const handleUpdate = () => {
     const index = myKanji
