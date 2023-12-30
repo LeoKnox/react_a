@@ -19,7 +19,8 @@ export default function App() {
     if (translation === "") {
       error += "translation needed";
     }
-    if (error !== "") {
+    if (error === "") {
+      //alert(error);
       e.preventDefault();
       newKanji = {
         id: myKanji.length + 1,
