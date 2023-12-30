@@ -11,8 +11,16 @@ export default function App() {
   useEffect(() => {
     setMyKanji(KanjiList);
   }, []);
-  const handleSave = () => {
+  const handleSave = (e) => {
     alert("save");
+    e.preventDefault();
+    newKanji = {
+      id: myKanji.length + 1,
+      word: word,
+      translation: translation,
+    };
+    const kt = [...myKanji, newKanji];
+    setMyKanji(kt);
   };
   const handleUpdate = () => {
     const index = myKanji
@@ -71,7 +79,7 @@ export default function App() {
           onChange={(e) => setTranslation(e.target.value)}
         />
         {!isUpdate ? (
-          <button onClick={handleSave}>Save</button>
+          <button onClick={(e) => handleSave(e)}>Save</button>
         ) : (
           <button onClick={handleUpdate}>Update</button>
         )}
