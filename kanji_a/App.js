@@ -20,6 +20,7 @@ export default function App() {
       translation: translation,
     };
     const kt = [...myKanji, newKanji];
+    console.log(kt);
     setMyKanji(kt);
   };
   const handleUpdate = () => {
