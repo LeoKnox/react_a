@@ -12,7 +12,6 @@ export default function App() {
     setMyKanji(KanjiList);
   }, []);
   const handleSave = (e) => {
-    alert("save");
     e.preventDefault();
     newKanji = {
       id: myKanji.length + 1,
@@ -20,7 +19,6 @@ export default function App() {
       translation: translation,
     };
     const kt = [...myKanji, newKanji];
-    console.log(kt);
     setMyKanji(kt);
   };
   const handleUpdate = () => {
