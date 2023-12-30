@@ -24,7 +24,7 @@ export default function App() {
     kt[index].word = word;
     kt[index].translation = translation;
     setMyKanji(kt);
-    clear();
+    handleClear();
   };
   const handleClear = () => {
     setIsUpdate(false);
