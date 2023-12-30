@@ -55,6 +55,7 @@ export default function App() {
       if (window.confirm("Are you sure?")) {
         const kd = myKanji.filter((item) => item.id !== id);
         setMyKanji(kd);
+        handleClear();
       }
     }
   };
