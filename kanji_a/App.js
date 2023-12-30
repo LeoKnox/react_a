@@ -20,6 +20,10 @@ export default function App() {
         return kanji.id;
       })
       .indexOf(id);
+    const kt = [...myKanji];
+    kt[index].word = word;
+    kt[index].translation = translation;
+    setMyKanji(kt);
   };
   const handleClear = () => {
     setIsUpdate(false);
