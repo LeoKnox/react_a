@@ -12,6 +12,13 @@ export default function App() {
     setMyKanji(KanjiList);
   }, []);
   const handleSave = (e) => {
+    let error = "";
+    if (word === "") {
+      error += "word needed";
+    }
+    if (translation === "") {
+      error += "translation needed";
+    }
     e.preventDefault();
     newKanji = {
       id: myKanji.length + 1,
