@@ -24,6 +24,7 @@ export default function App() {
     kt[index].word = word;
     kt[index].translation = translation;
     setMyKanji(kt);
+    clear();
   };
   const handleClear = () => {
     setIsUpdate(false);
@@ -72,7 +73,7 @@ export default function App() {
         {!isUpdate ? (
           <button onClick={handleSave}>Save</button>
         ) : (
-          <button onClick={handleEdit}>Edit</button>
+          <button onClick={handleUpdate}>Update</button>
         )}
         <button onClick={handleClear}>Clear</button>
       </div>
