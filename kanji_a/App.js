@@ -108,7 +108,7 @@ export default function App() {
         <tbody>
           {myKanji.map((kanjis, index) => {
             return (
-              <tr key={index}>
+              <tr key={index} className="kanjisdata">
                 <td>{kanjis.word}</td>
                 <td>{kanjis.translation}</td>
                 <td>
