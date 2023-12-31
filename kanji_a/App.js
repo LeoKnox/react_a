@@ -98,10 +98,12 @@ export default function App() {
       </div>
       <br />
       <table className="kanjis">
-        <thead>
-          <th>Word</th>
-          <th>Translation</th>
-          <th>Actions</th>
+        <thead className="kanjisheader">
+          <tr>
+            <th>Word</th>
+            <th>Translation</th>
+            <th>Actions</th>
+          </tr>
         </thead>
         <tbody>
           {myKanji.map((kanjis, index) => {
