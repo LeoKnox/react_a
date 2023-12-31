@@ -20,7 +20,6 @@ export default function App() {
       error += "translation needed";
     }
     if (error === "") {
-      //alert(error);
       e.preventDefault();
       newKanji = {
         id: myKanji.length + 1,
@@ -98,7 +97,7 @@ export default function App() {
         <button onClick={handleClear}>Clear</button>
       </div>
       <br />
-      <table>
+      <table className="kanjis">
         <thead>
           <th>Word</th>
           <th>Translation</th>
