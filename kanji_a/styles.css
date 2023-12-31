@@ -10,9 +10,10 @@
   border: 3px solid darkblue;
   padding: 0.4em;
   width: 70%;
+  border-collapse: collapse;
 }
 
 .kanjisheader {
-  border: 3px solid green;
+  border: 3px solid darkgoldenrod;
   background-color: yellow;
 }
