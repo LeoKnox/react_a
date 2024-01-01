@@ -82,6 +82,7 @@ export default function App() {
           value={word}
           onChange={(e) => setWord(e.target.value)}
         />
+        <br />
         <label>Translation:</label>
         <input
           type="text"
@@ -89,6 +90,7 @@ export default function App() {
           placeholder="enter translation"
           onChange={(e) => setTranslation(e.target.value)}
         />
+        <br />
         {!isUpdate ? (
           <button onClick={(e) => handleSave(e)}>Save</button>
         ) : (
