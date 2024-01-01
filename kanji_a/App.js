@@ -74,7 +74,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Kanjis</h1>
-      <div>
+      <div className="addKanji">
         <label>Word:</label>
         <input
           type="text"
