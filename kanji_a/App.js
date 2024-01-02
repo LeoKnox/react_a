@@ -74,30 +74,34 @@ export default function App() {
   return (
     <div className="App">
       <h1>Kanjis</h1>
-      <div className="addKanji">
-        <label>Word:</label>
-        <input
-          type="text"
-          placeholder="enter word"
-          value={word}
-          onChange={(e) => setWord(e.target.value)}
-        />
-        <br />
-        <label>Translation:</label>
-        <input
-          type="text"
-          value={translation}
-          placeholder="enter translation"
-          onChange={(e) => setTranslation(e.target.value)}
-        />
-        <br />
-        {!isUpdate ? (
-          <button onClick={(e) => handleSave(e)}>Save</button>
-        ) : (
-          <button onClick={handleUpdate}>Update</button>
-        )}
-        <button onClick={handleClear}>Clear</button>
-      </div>
+      <ul className="addKanji">
+        <li>
+          <label>Word:</label>
+          <input
+            type="text"
+            placeholder="enter word"
+            value={word}
+            onChange={(e) => setWord(e.target.value)}
+          />
+        </li>
+        <li>
+          <label>Translation:</label>
+          <input
+            type="text"
+            value={translation}
+            placeholder="enter translation"
+            onChange={(e) => setTranslation(e.target.value)}
+          />
+        </li>
+        <li>
+          {!isUpdate ? (
+            <button onClick={(e) => handleSave(e)}>Save</button>
+          ) : (
+            <button onClick={handleUpdate}>Update</button>
+          )}
+          <button onClick={handleClear}>Clear</button>
+        </li>
+      </ul>
       <br />
       <table className="kanjis">
         <thead className="kanjisheader">
