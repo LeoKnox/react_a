@@ -26,6 +26,9 @@
   background-color: palegoldenrod;
   padding: 1.5em;
   list-style: none;
+  width: 50%;
+  display: inline-block;
+  text-align: left;
 }
 
 li {
