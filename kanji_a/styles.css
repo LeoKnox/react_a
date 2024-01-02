@@ -1,6 +1,7 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  background-color: lightblue;
 }
 
 .kanjis {
@@ -31,6 +32,18 @@
   text-align: left;
 }
 
-li {
+.addKanji li {
   color: blue;
+  font-size: 1.2em;
+  margin: 0.4em;
+}
+
+.addKanji button {
+  color: darkblue;
+  background-color: yellow;
+  padding: 0.3em;
+  font-size: 1.1em;
+  border: 0px;
+  margin-right: 1em;
+  margin-top: 0.4em;
 }
