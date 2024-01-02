@@ -24,5 +24,10 @@
 
 .addKanji {
   background-color: palegoldenrod;
-  padding: 0.3em;
+  padding: 1.5em;
+  list-style: none;
+}
+
+li {
+  color: blue;
 }
