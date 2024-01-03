@@ -73,7 +73,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Kanjis</h1>
+      <h1 className="mainHeading">Kanjis</h1>
       <ul className="addKanji">
         <li>
           <label>Word:</label>
