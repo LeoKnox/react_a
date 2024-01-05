@@ -6,6 +6,7 @@ export const Quiz = ({ myKanjis }) => {
   return (
     <div>
       <h1>Quizes</h1>
+      <p>{quizKanji[0]}ff</p>
       {quizKanji.map((kanji) => {
         return (
           <div>
