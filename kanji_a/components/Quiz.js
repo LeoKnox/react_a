@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const Quiz = ({ myKanjis }) => {
-  console.log(myKanjis);
+  //console.log(myKanjis);
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
     setQuizKanji(myKanjis);
@@ -10,7 +10,6 @@ export const Quiz = ({ myKanjis }) => {
   return (
     <div>
       <h1>Quizes</h1>
-      <p>{quizKanji}ff</p>
       {myKanjis.map((kanji) => {
         return (
           <div>
