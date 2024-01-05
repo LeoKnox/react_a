@@ -75,6 +75,7 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="mainHeading">Kanjis</h1>
+      <Quiz myKanjis={myKanji} />
       <ul className="addKanji">
         <li>
           <label>Word:</label>
@@ -131,7 +132,6 @@ export default function App() {
           })}
         </tbody>
       </table>
-      <Quiz myKanjis={myKanji} />
     </div>
   );
 }
