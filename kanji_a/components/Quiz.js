@@ -6,11 +6,12 @@ export const Quiz = ({ myKanjis }) => {
   useEffect(() => {
     setQuizKanji(myKanjis);
   });
+  console.log("xx");
   console.log(quizKanji);
   return (
     <div>
       <h1>Quizes</h1>
-      {myKanjis.map((kanji) => {
+      {quizKanji.map((kanji) => {
         return (
           <div>
             <p>tt</p>
