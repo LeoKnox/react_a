@@ -7,7 +7,7 @@ export const Quiz = ({ myKanjis }) => {
     <div>
       <h1>Quizes</h1>
       {quizKanji.map((kanji) => {
-        <div>{kanji.kanji}</div>;
+        return <div>{kanji.kanji}</div>;
       })}
     </div>
   );
