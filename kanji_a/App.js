@@ -1,6 +1,7 @@
 import "./styles.css";
 import { useEffect, useState } from "react";
 import { KanjiList } from "./components/KanjiList.js";
+import { Quiz } from "./components/Quiz.js";
 
 export default function App() {
   const [myKanji, setMyKanji] = useState([]);
@@ -130,6 +131,7 @@ export default function App() {
           })}
         </tbody>
       </table>
+      <Quiz />
     </div>
   );
 }
