@@ -6,13 +6,10 @@ export const Quiz = ({ myKanji }) => {
       alert(true);
     }
   };
-  console.log(myKanji);
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
     setQuizKanji(myKanji);
   });
-  console.log("xx");
-  console.log(quizKanji);
   return (
     <div>
       <h1>Quizes</h1>
