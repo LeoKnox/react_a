@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 
 export const Quiz = ({ myKanji }) => {
   const kanjiClick = (id) => {
-    alert(id);
+    if (id === myKanji[1].id) {
+      alert(true);
+    }
   };
   console.log(myKanji);
   const [quizKanji, setQuizKanji] = useState();
