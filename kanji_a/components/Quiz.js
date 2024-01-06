@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 
 export const Quiz = ({ myKanji }) => {
+  const kanjiClick = (id) => {
+    alert(id);
+  };
   console.log(myKanji);
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
@@ -14,7 +17,7 @@ export const Quiz = ({ myKanji }) => {
       {myKanji.map((kanji) => {
         return (
           <div>
-            <p>{kanji.kanji}</p>
+            <p onClick={() => kanjiClick(kanji.id)}>{kanji.kanji}</p>
           </div>
         );
       })}
