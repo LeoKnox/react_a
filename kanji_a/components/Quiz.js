@@ -15,13 +15,13 @@ export const Quiz = ({ myKanji }) => {
         newKanji.push(x);
       }
     }
+    return newKanji;
     console.log(newKanji);
     console.log("find kanji");
   };
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
-    findKanji();
-    setQuizKanji(myKanji);
+    setQuizKanji(findKanji());
   });
   return (
     <div>
