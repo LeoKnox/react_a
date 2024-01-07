@@ -8,7 +8,7 @@ export const Quiz = ({ myKanji }) => {
   };
   const findKanji = () => {
     for (i = 0; i < 2; i++) {
-      console.log(Math.floor(Math.random() * 2));
+      console.log(Math.floor(Math.random() * 3) + 1);
     }
     console.log("find kanji");
   };
