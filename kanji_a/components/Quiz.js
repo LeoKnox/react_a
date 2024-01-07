@@ -10,6 +10,7 @@ export const Quiz = ({ myKanji }) => {
     let newKanji = [];
     for (i = 0; i < 2; i++) {
       let x = Math.floor(Math.random() * 3) + 1;
+      console.log("x + " + x);
       if (newKanji.indexOf(x) === -1) {
         newKanji.push(x);
       }
