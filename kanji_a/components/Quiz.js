@@ -6,8 +6,12 @@ export const Quiz = ({ myKanji }) => {
       alert(true);
     }
   };
+  const findKanji = () => {
+    console.log("find kanji");
+  };
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
+    findKanji();
     setQuizKanji(myKanji);
   });
   return (
