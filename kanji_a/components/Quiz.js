@@ -7,9 +7,14 @@ export const Quiz = ({ myKanji }) => {
     }
   };
   const findKanji = () => {
+    let newKanji = [];
     for (i = 0; i < 2; i++) {
-      console.log(Math.floor(Math.random() * 3) + 1);
+      let x = Math.floor(Math.random() * 3) + 1;
+      if (newKanji.indexOf(x) === -1) {
+        newKanji.push(x);
+      }
     }
+    console.log(newKanji);
     console.log("find kanji");
   };
   const [quizKanji, setQuizKanji] = useState();
