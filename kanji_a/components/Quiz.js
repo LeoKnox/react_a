@@ -7,6 +7,9 @@ export const Quiz = ({ myKanji }) => {
     }
   };
   const findKanji = () => {
+    for (i = 0; i < 2; i++) {
+      console.log(Math.floor(Math.random() * 2));
+    }
     console.log("find kanji");
   };
   const [quizKanji, setQuizKanji] = useState();
