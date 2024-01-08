@@ -22,7 +22,7 @@ export const Quiz = ({ myKanji }) => {
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
     setQuizKanji(findKanji());
-  }, []);
+  }, [quizKanji]);
   return (
     <div>
       <h1>Quizes</h1>
