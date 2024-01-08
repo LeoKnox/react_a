@@ -30,13 +30,13 @@
   width: 50%;
   display: inline-block;
   text-align: left;
-  text-shadow: 0.5em orange;
 }
 
 .addKanji li {
   color: blue;
   font-size: 1.2em;
   margin: 0.4em;
+  text-shadow: 0.5em orange;
 }
 
 .addKanji button {
