@@ -41,6 +41,8 @@
 .addKanji button {
   color: darkblue;
   background-color: yellow;
+  text-shadow: 5px green;
+  outline-offset: 8px;
   padding: 0.3em;
   font-size: 1.1em;
   font-weight: bold;
@@ -61,5 +63,4 @@
 .kanjiStyle {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-  font-weight: bold;
 }
