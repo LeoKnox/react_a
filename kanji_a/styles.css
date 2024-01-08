@@ -42,7 +42,7 @@
 .addKanji button {
   color: darkblue;
   background-color: yellow;
-
+  border: 3px solid darkblue;
   outline-offset: 8px;
   padding: 0.3em;
   font-size: 1.1em;
