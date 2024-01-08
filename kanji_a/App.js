@@ -131,7 +131,6 @@ export default function App() {
           })}
         </tbody>
       </table>
-      <Quiz myKanji={myKanji} />
     </div>
   );
 }
