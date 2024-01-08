@@ -21,9 +21,8 @@ export const Quiz = ({ myKanji }) => {
   };
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
-    let y = findKanji()
-    setQuizKanji(y);
-  });
+    setQuizKanji(findKanji());
+  }, []);
   return (
     <div>
       <h1>Quizes</h1>
