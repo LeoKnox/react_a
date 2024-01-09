@@ -10,7 +10,6 @@ export const Quiz = ({ myKanji }) => {
     let newKanji = [];
     while (newKanji.length < 2) {
       let x = Math.floor(Math.random() * 3) + 1;
-      console.log("x + " + x);
       if (newKanji.indexOf(x) === -1) {
         newKanji.push(x);
       }
@@ -21,7 +20,7 @@ export const Quiz = ({ myKanji }) => {
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
     console.log("aaa");
-    console.log(findKanji());
+    console.log("bbb" + findKanji());
     setQuizKanji(findKanji());
     console.log(quizKanji);
   }, []);
