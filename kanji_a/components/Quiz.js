@@ -15,19 +15,20 @@ export const Quiz = ({ myKanji }) => {
         newKanji.push(x);
       }
     }
+    //console.log(newKanji);
     return newKanji;
-    console.log(newKanji);
-    console.log("find kanji");
   };
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
+    console.log("aaa");
+    console.log(findKanji());
     setQuizKanji(findKanji());
-    alert(quizKanji);
+    console.log(quizKanji);
   }, []);
   return (
     <div>
       <h1>Quizes</h1>
-      {quizKanji.map((kanji) => {
+      {myKanji.map((kanji) => {
         return (
           <div>
             <p onClick={() => kanjiClick(kanji.id)}>{kanji.kanji}</p>
