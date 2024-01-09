@@ -22,11 +22,12 @@ export const Quiz = ({ myKanji }) => {
   const [quizKanji, setQuizKanji] = useState();
   useEffect(() => {
     setQuizKanji(findKanji());
+    alert(quizKanji);
   }, []);
   return (
     <div>
       <h1>Quizes</h1>
-      {myKanji.map((kanji) => {
+      {quizKanji.map((kanji) => {
         return (
           <div>
             <p onClick={() => kanjiClick(kanji.id)}>{kanji.kanji}</p>
