@@ -30,6 +30,7 @@
   width: 50%;
   display: inline-block;
   text-align: left;
+  border: 8px solid black;
 }
 
 .addKanji li {
@@ -42,7 +43,7 @@
 .addKanji button {
   color: darkblue;
   background-color: yellow;
-  border: 3px solid darkblue;
+  border: 8px solid black;
   outline-offset: 8px;
   padding: 0.3em;
   font-size: 1.1em;
