@@ -23,6 +23,12 @@
   border: 1px solid darkblue;
 }
 
+.kanjisdata button {
+  background-color: blue;
+  border: 8px solid white;
+  color: white;
+}
+
 .addKanji {
   background-color: palegoldenrod;
   padding: 1.5em;
