@@ -22,8 +22,8 @@ export const Quiz = ({ myKanji }) => {
     console.log("aaa");
     console.log("bbb" + findKanji());
     let y = findKanji;
-    setQuizKanji([findKanji()]);
-    console.log(quizKanji);
+    setQuizKanji([y]);
+    console.log("+++" + y);
   }, []);
   return (
     <div>
