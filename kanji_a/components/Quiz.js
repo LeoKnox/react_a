@@ -21,9 +21,9 @@ export const Quiz = ({ myKanji }) => {
   useEffect(() => {
     console.log("aaa");
     console.log("bbb" + findKanji());
-    let y = findKanji;
+    let y = findKanji();
     setQuizKanji([y]);
-    console.log("+++" + y);
+    console.log("+++" + quizKanji);
   }, []);
   return (
     <div>
