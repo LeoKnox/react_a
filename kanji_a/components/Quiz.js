@@ -15,7 +15,7 @@ export const Quiz = ({ myKanji }) => {
         newKanji.push(x);
       }
     }
-    //console.log(newKanji);
+    console.log("--" + newKanji);
     setQuizKanji(newKanji);
   };
   useEffect(() => {
