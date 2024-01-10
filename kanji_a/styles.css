@@ -23,12 +23,6 @@
   border: 1px solid darkblue;
 }
 
-.kanjisdata button {
-  background-color: blue;
-  border: 8px solid white;
-  color: white;
-}
-
 .addKanji {
   background-color: palegoldenrod;
   padding: 1.5em;
@@ -36,7 +30,6 @@
   width: 50%;
   display: inline-block;
   text-align: left;
-  border: 8px solid black;
 }
 
 .addKanji li {
@@ -72,4 +65,9 @@
 .kanjiStyle {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+.thisButton {
+  border: 3px solid green;
+  color: white;
 }
