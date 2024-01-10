@@ -100,7 +100,9 @@ export default function App() {
           ) : (
             <button onClick={handleUpdate}>Update</button>
           )}
-          <button onClick={handleClear}>Clear</button>
+          <button onClick={handleClear} className="thisButton">
+            Clear
+          </button>
         </li>
       </ul>
       <br />
@@ -131,6 +133,7 @@ export default function App() {
           })}
         </tbody>
       </table>
+      <Quiz myKanji={myKanji} />
     </div>
   );
 }
