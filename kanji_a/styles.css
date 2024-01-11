@@ -39,9 +39,9 @@
   text-shadow: 0.5em orange;
 }
 
-.addKanji button {
+.addKanji li button {
   color: darkblue;
-  background-color: yellow;
+  background-color: red;
   border: 8px solid black;
   border-radius: 10px;
   outline-offset: 8px;
