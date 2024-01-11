@@ -96,7 +96,7 @@ export default function App() {
         </li>
         <li>
           {!isUpdate ? (
-            <button onClick={(e) => handleSave(e)}>Save</button>
+            <button className="saveButton" onClick={(e) => handleSave(e)}>Save</button>
           ) : (
             <button onClick={handleUpdate}>Update</button>
           )}
