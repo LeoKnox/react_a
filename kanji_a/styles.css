@@ -39,7 +39,7 @@
   text-shadow: 0.5em orange;
 }
 
-.addKanji li button {
+.addKanji button {
   color: darkblue;
   background-color: red;
   filter: drop-shadow(30px orange)
@@ -68,8 +68,6 @@
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 
-.thisButton button {
-  background-color: red;
-  border: 3px solid green;
-  color: white;
+.saveButton {
+  border:3px solid violet;
 }
