@@ -124,7 +124,10 @@ export default function App() {
                 <td>{kanjis.translation}</td>
                 <td>
                   <button onClick={() => handleEdit(kanjis.id)}>edit</button>
-                  <button onClick={() => handleDelete(kanjis.id)}>
+                  <button
+                    className="addKanji"
+                    onClick={() => handleDelete(kanjis.id)}
+                  >
                     delete
                   </button>
                 </td>
