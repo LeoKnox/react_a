@@ -67,7 +67,8 @@
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 
-.thisButton {
+.thisButton button {
+  background-color: red;
   border: 3px solid green;
   color: white;
 }
