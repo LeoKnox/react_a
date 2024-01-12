@@ -102,7 +102,11 @@ export default function App() {
           ) : (
             <button onClick={handleUpdate}>Update</button>
           )}
-          <button onClick={handleClear} className="saveButton">
+          <button
+            onClick={handleClear}
+            style="border:green solid 10px"
+            className="saveButton"
+          >
             Clear
           </button>
         </li>
