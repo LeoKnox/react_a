@@ -96,11 +96,13 @@ export default function App() {
         </li>
         <li>
           {!isUpdate ? (
-            <button className="saveButton" onClick={(e) => handleSave(e)}>Save</button>
+            <button className="saveButton" onClick={(e) => handleSave(e)}>
+              Save
+            </button>
           ) : (
             <button onClick={handleUpdate}>Update</button>
           )}
-          <button onClick={handleClear} className="thisButton">
+          <button onClick={handleClear} className="saveButton">
             Clear
           </button>
         </li>
