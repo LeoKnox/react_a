@@ -102,7 +102,11 @@ export default function App() {
         </li>
         <li>
           {!isUpdate ? (
-            <button className="saveButton" onClick={(e) => handleSave(e)}>
+            <button
+              className="saveButton"
+              style={buttonStyle}
+              onClick={(e) => handleSave(e)}
+            >
               Save
             </button>
           ) : (
@@ -137,6 +141,7 @@ export default function App() {
                 <td>
                   <button onClick={() => handleEdit(kanjis.id)}>edit</button>
                   <button
+                    style={buttonStyle}
                     className="addKanji"
                     onClick={() => handleDelete(kanjis.id)}
                   >
