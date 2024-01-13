@@ -31,8 +31,8 @@ export const Quiz = ({ myKanji }) => {
       {quizKanji.map((kanji) => {
         return (
           <div>
-            <p onClick={() => kanjiClick(kanji.id)}>
-              {myKanji[kanji - 1]["kanji"]} +
+            <p onClick={() => kanjiClick(myKanji[kanji - 1]["id"])}>
+              {myKanji[kanji - 1]["kanji"]}
             </p>
           </div>
         );
