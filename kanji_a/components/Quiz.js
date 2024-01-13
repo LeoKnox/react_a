@@ -32,7 +32,7 @@ export const Quiz = ({ myKanji }) => {
         return (
           <div>
             <p onClick={() => kanjiClick(kanji.id)}>
-              {kanji} + {kanji.kanji}
+              {myKanji[kanji].definition}
             </p>
           </div>
         );
