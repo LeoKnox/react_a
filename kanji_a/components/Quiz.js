@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const Quiz = ({ myKanji }) => {
-  const [quizKanji, setQuizKanji] = useState();
+  const [quizKanji, setQuizKanji] = useState([]);
   const kanjiClick = (id) => {
     if (id === myKanji[1].id) {
       alert(true);
@@ -16,19 +16,19 @@ export const Quiz = ({ myKanji }) => {
       }
     }
     console.log("--" + newKanji);
-    setQuizKanji(newKanji);
+    return newKanji;
   };
   useEffect(() => {
     console.log("aaa");
-    console.log("bbb" + findKanji());
     let y = findKanji();
-    //setQuizKanji([y]);
+    console.log("bbb" + y);
+    setQuizKanji(y);
     console.log("+++" + quizKanji);
   }, []);
   return (
     <div>
       <h1>Quizes</h1>
-      {myKanji.map((kanji) => {
+      {quizKanji.map((kanji) => {
         return (
           <div>
             <p onClick={() => kanjiClick(kanji.id)}>{kanji.kanji}</p>
