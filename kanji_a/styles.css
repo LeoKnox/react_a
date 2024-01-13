@@ -42,14 +42,10 @@
 .addKanji button {
   color: darkblue;
   background-color: red;
-  filter: drop-shadow(30px orange)
-  border: 8px solid black;
   border-radius: 10px;
-  outline-offset: 8px;
   padding: 0.3em;
   font-size: 1.1em;
   font-weight: bold;
-  border: 0px;
   margin-right: 1em;
   margin-top: 0.4em;
 }
@@ -66,9 +62,4 @@
 .kanjiStyle {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-}
-
-.kanjiStyle.saveButton button {
-  border:3px solid violet;
-  color: white;
 }
