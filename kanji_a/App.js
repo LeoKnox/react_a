@@ -8,7 +8,7 @@ export default function App() {
   const buttonStyle = {
     //border: "blue solid .3em",
     color: "white",
-    boxShadow: "0px 0px 20px blue",
+    boxShadow: "0px 0px 5px 8px blue",
   };
   const [myKanji, setMyKanji] = useState([]);
   const [word, setWord] = useState("");
