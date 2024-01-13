@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export const Quiz = ({ myKanji }) => {
   const [quizKanji, setQuizKanji] = useState([]);
+  const [answer, setAnswer] = useState("*");
   const kanjiClick = (id) => {
     if (id === myKanji[1].id) {
       alert(true);
@@ -28,6 +29,7 @@ export const Quiz = ({ myKanji }) => {
   return (
     <div>
       <h1>Quizes</h1>
+      <h3>{answer}</h3>
       {quizKanji.map((kanji) => {
         return (
           <div>
