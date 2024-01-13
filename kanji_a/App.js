@@ -5,7 +5,11 @@ import { Quiz } from "./components/Quiz.js";
 
 export default function App() {
   //const buttonStyle = { border: "blue solid .3em" };
-  const buttonStyle = { border: "blue solid .3em", color: "white" };
+  const buttonStyle = {
+    border: "blue solid .3em",
+    color: "white",
+    boxShadow: "10px 10px 30px green",
+  };
   const [myKanji, setMyKanji] = useState([]);
   const [word, setWord] = useState("");
   const [translation, setTranslation] = useState("");
