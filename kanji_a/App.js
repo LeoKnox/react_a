@@ -4,7 +4,8 @@ import { KanjiList } from "./components/KanjiList.js";
 import { Quiz } from "./components/Quiz.js";
 
 export default function App() {
-  const buttonStyle = { border: "blue solid .3em", text-shadow: "0 0 2px black" };
+  const buttonStyle = { boxShadow: "2px white" };
+  //const buttonStyle = { border: "blue solid .3em", text: "0 0 2px black" };
   const [myKanji, setMyKanji] = useState([]);
   const [word, setWord] = useState("");
   const [translation, setTranslation] = useState("");
