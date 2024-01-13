@@ -4,6 +4,7 @@ import { KanjiList } from "./components/KanjiList.js";
 import { Quiz } from "./components/Quiz.js";
 
 export default function App() {
+  let buttonStyle = 'border: "blue solid .3em"';
   const [myKanji, setMyKanji] = useState([]);
   const [word, setWord] = useState("");
   const [translation, setTranslation] = useState("");
@@ -104,7 +105,7 @@ export default function App() {
           )}
           <button
             onClick={handleClear}
-            style={{ border: "blue solid .3em" }}
+            style={buttonStyle}
             className="saveButton"
           >
             Clear
