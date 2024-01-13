@@ -9,6 +9,13 @@ export default function App() {
     //border: "blue solid .3em",
     color: "white",
     boxShadow: "0px 8px 10px darkred",
+    backgroundColor: "red",
+    borderRadius: "10px",
+    padding: "0.3em",
+    fontSize: "1.1em",
+    fontWeight: "bold",
+    marginRight: "1em",
+    marginTop: "0.4em",
   };
   const [myKanji, setMyKanji] = useState([]);
   const [word, setWord] = useState("");
