@@ -104,7 +104,7 @@ export default function App() {
           )}
           <button
             onClick={handleClear}
-            style={{ border: "green solid 10px" }}
+            style={{ border: "blue solid .3em" }}
             className="saveButton"
           >
             Clear
