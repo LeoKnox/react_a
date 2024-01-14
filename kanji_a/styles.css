@@ -63,3 +63,8 @@
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
     Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
+
+.buttonKanji {
+  background-color: palegoldenrod;
+  box-shadow: 20px 20px 20px blue;
+}
