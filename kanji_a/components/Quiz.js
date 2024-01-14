@@ -22,10 +22,8 @@ export const Quiz = ({ myKanji }) => {
   useEffect(() => {
     console.log("aaa");
     let y = findKanji();
-    console.log(y);
-    console.log(
-      "answer " + myKanji[Math.floor(Math.random() * y.length)]["translation"]
-    );
+    console.log("MK" + { myKanji });
+    console.log("answer " + Math.floor(Math.random() * y.length));
     setAnswer(myKanji[y[Math.floor(Math.random() * y.length)]]);
     console.log("bbb" + answer);
     setQuizKanji(y);
