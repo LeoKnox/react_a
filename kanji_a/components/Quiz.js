@@ -24,7 +24,7 @@ export const Quiz = ({ myKanji }) => {
     let y = findKanji();
     console.log(y);
     console.log("answer " + y[Math.floor(Math.random() * y.length)]);
-    setAnswer(myKanji[y[Math.floor(Math.random() * y.length)]["translation"]]);
+    setAnswer(myKanji[y[Math.floor(Math.random() * y.length)]]);
     console.log("bbb" + answer);
     setQuizKanji(y);
     console.log("+++" + quizKanji);
