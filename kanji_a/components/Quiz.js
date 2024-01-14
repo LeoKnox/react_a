@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const Quiz = ({ myKanji }) => {
+  const [myData, setMyData] = useState(myKanji);
   const [quizKanji, setQuizKanji] = useState([]);
   const [answer, setAnswer] = useState("*");
   const kanjiClick = (id) => {
@@ -22,7 +23,7 @@ export const Quiz = ({ myKanji }) => {
   useEffect(() => {
     console.log("aaa");
     let y = findKanji();
-    console.log("MK" + { myKanji });
+    console.log("MK" + myData);
     console.log("answer " + Math.floor(Math.random() * y.length));
     setAnswer(myKanji[y[Math.floor(Math.random() * y.length)]]);
     console.log("bbb" + answer);
