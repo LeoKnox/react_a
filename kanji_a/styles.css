@@ -65,7 +65,9 @@
 }
 
 .buttonKanji {
+  color: blue;
   background-color: palegoldenrod;
-  font-size: 1em;
+  font-size: 0.9em;
   margin: 0 0.2em;
+  border: none;
 }
