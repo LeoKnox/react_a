@@ -89,8 +89,8 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="mainHeading">Kanjis</h1>
-      <button>List</button>
-      <button>Quiz</button>
+      <button onClick={() => setIsQuiz(false)}>List</button>
+      <button onClick={() => setIsQuiz(true)}>Quiz</button>
       <br />
       {isQuiz ? (
         <Quiz myKanji={myKanji} />
