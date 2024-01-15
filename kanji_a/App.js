@@ -88,6 +88,9 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="mainHeading">Kanjis</h1>
+      <button>List</button>
+      <button>Quiz</button>
+      <br />
       <ul className="addKanji">
         <li>
           <label>Word:</label>
