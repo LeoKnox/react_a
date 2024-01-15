@@ -17,6 +17,7 @@ export default function App() {
     marginRight: "1em",
     marginTop: "0.4em",
   };
+  const [isQuiz, setIsQuiz] = useState(false);
   const [myKanji, setMyKanji] = useState([]);
   const [word, setWord] = useState("");
   const [translation, setTranslation] = useState("");
@@ -91,83 +92,88 @@ export default function App() {
       <button>List</button>
       <button>Quiz</button>
       <br />
-      <ul className="addKanji">
-        <li>
-          <label>Word:</label>
-          <input
-            type="text"
-            placeholder="enter word"
-            value={word}
-            onChange={(e) => setWord(e.target.value)}
-          />
-        </li>
-        <li>
-          <label>Translation:</label>
-          <input
-            type="text"
-            value={translation}
-            placeholder="enter translation"
-            onChange={(e) => setTranslation(e.target.value)}
-          />
-        </li>
-        <li>
-          {!isUpdate ? (
-            <button
-              className="saveButton"
-              style={buttonStyle}
-              onClick={(e) => handleSave(e)}
-            >
-              Save
-            </button>
-          ) : (
-            <button onClick={handleUpdate}>Update</button>
-          )}
-          <button
-            onClick={handleClear}
-            style={buttonStyle}
-            className="saveButton"
-          >
-            Clear
-          </button>
-        </li>
-      </ul>
-      <br />
-      <table className="kanjis">
-        <thead className="kanjisheader">
-          <tr>
-            <th>Kanji</th>
-            <th>Word</th>
-            <th>Translation</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {myKanji.map((kanjis, index) => {
-            return (
-              <tr key={index} className="kanjisdata">
-                <td claasName="kanjiStyle">{kanjis.kanji}</td>
-                <td>{kanjis.word}</td>
-                <td>{kanjis.translation}</td>
-                <td>
-                  <button
-                    className="buttonKanji"
-                    onClick={() => handleEdit(kanjis.id)}
-                  >
-                    edit
-                  </button>
-                  <button
-                    className="buttonKanji"
-                    onClick={() => handleDelete(kanjis.id)}
-                  >
-                    delete
-                  </button>
-                </td>
+      {isQuiz ? (
+        <Quiz myKanji={myKanji} />
+      ) : (
+        <>
+          <ul className="addKanji">
+            <li>
+              <label>Word:</label>
+              <input
+                type="text"
+                placeholder="enter word"
+                value={word}
+                onChange={(e) => setWord(e.target.value)}
+              />
+            </li>
+            <li>
+              <label>Translation:</label>
+              <input
+                type="text"
+                value={translation}
+                placeholder="enter translation"
+                onChange={(e) => setTranslation(e.target.value)}
+              />
+            </li>
+            <li>
+              {!isUpdate ? (
+                <button
+                  className="saveButton"
+                  style={buttonStyle}
+                  onClick={(e) => handleSave(e)}
+                >
+                  Save
+                </button>
+              ) : (
+                <button onClick={handleUpdate}>Update</button>
+              )}
+              <button
+                onClick={handleClear}
+                style={buttonStyle}
+                className="saveButton"
+              >
+                Clear
+              </button>
+            </li>
+          </ul>
+          <br />
+          <table className="kanjis">
+            <thead className="kanjisheader">
+              <tr>
+                <th>Kanji</th>
+                <th>Word</th>
+                <th>Translation</th>
+                <th>Actions</th>
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <Quiz myKanji={myKanji} />
+            </thead>
+            <tbody>
+              {myKanji.map((kanjis, index) => {
+                return (
+                  <tr key={index} className="kanjisdata">
+                    <td claasName="kanjiStyle">{kanjis.kanji}</td>
+                    <td>{kanjis.word}</td>
+                    <td>{kanjis.translation}</td>
+                    <td>
+                      <button
+                        className="buttonKanji"
+                        onClick={() => handleEdit(kanjis.id)}
+                      >
+                        edit
+                      </button>
+                      <button
+                        className="buttonKanji"
+                        onClick={() => handleDelete(kanjis.id)}
+                      >
+                        delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </>
+      )}
     </div>
   );
 }
