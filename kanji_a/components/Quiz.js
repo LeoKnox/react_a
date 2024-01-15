@@ -17,18 +17,18 @@ export const Quiz = ({ myKanji }) => {
         newKanji.push(x);
       }
     }
-    console.log("--" + newKanji);
+    //console.log("--" + newKanji);
     return newKanji;
   };
   useEffect(() => {
-    console.log("aaa");
+    //console.log("aaa");
     let y = findKanji();
     console.log("MK" + myData);
     console.log("answer " + Math.floor(Math.random() * y.length));
-    setAnswer(myKanji[y[Math.floor(Math.random() * y.length)]]);
-    console.log("bbb" + answer);
+    setAnswer(myKanji[Math.floor(Math.random() * y.length)]);
+    //console.log("bbb" + answer);
     setQuizKanji(y);
-    console.log("+++" + quizKanji);
+    //console.log("+++" + quizKanji);
   }, []);
   return (
     <div>
