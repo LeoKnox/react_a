@@ -5,7 +5,8 @@ export const Quiz = ({ myKanji }) => {
   const [quizKanji, setQuizKanji] = useState([]);
   const [answer, setAnswer] = useState("*");
   const kanjiClick = (id) => {
-    if (id === answer) {
+    console.log("KC" + answer["id"]);
+    if (id === answer["id"]) {
       alert(true);
     }
   };
