@@ -26,14 +26,16 @@ export const Quiz = ({ myKanji }) => {
     console.log("MK" + myData);
     console.log("answer " + Math.floor(Math.random() * y.length));
     setAnswer(myKanji[Math.floor(Math.random() * (y.length + 1))]);
-    //console.log("bbb" + answer);
+    console.log("bbb" + answer["id"]);
     setQuizKanji(y);
     //console.log("+++" + quizKanji);
   }, []);
   return (
     <div>
       <h1>Quizes</h1>
-      <h3>{answer["translation"] ? answer["translation"] : "*"}--</h3>
+      <h3>
+        {answer["translation"]}--{answer["id"]}
+      </h3>
       {quizKanji.map((kanji) => {
         return (
           <div>
