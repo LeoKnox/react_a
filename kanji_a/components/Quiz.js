@@ -24,10 +24,7 @@ export const Quiz = ({ myKanji }) => {
   useEffect(() => {
     //console.log("aaa");
     let y = findKanji();
-    let ansLoc = 0;
-    //let y = findKanji();
-    y.then((ansLoc = Math.floor(Math.random() * y.length)));
-    setAnswer(y[0]);
+    setAnswer(Math.floor(Math.random() * y.length));
     console.log(`loc ${ansLoc} ans ${answer}`);
     /*
     console.log("MK" + myData);
@@ -44,9 +41,7 @@ export const Quiz = ({ myKanji }) => {
   return (
     <div>
       <h1>Quizes</h1>
-      <h3>
-        {answer["translation"]}--{answer["id"]}
-      </h3>
+      <h3>{quizKanji[answer]["translation"]--}</h3>
       {quizKanji.map((kanji) => {
         return (
           <div>
