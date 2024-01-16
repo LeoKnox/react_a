@@ -26,9 +26,7 @@ export const Quiz = ({ myKanji }) => {
     let y = findKanji();
     let ansLoc = 0;
     //let y = findKanji();
-    y.then(
-      ansLoc = Math.floor(Math.random() * y.length);
-    )
+    y.then((ansLoc = Math.floor(Math.random() * y.length)));
     setAnswer(y[0]);
     console.log(`loc ${ansLoc} ans ${answer}`);
     /*
