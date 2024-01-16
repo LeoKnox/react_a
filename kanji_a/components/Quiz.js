@@ -24,7 +24,11 @@ export const Quiz = ({ myKanji }) => {
   useEffect(() => {
     //console.log("aaa");
     let y = findKanji();
-    let ansLoc = Math.floor(Math.random() * y.length);
+    let ansLoc = 0;
+    //let y = findKanji();
+    y.then(
+      ansLoc = Math.floor(Math.random() * y.length);
+    )
     setAnswer(y[0]);
     console.log(`loc ${ansLoc} ans ${answer}`);
     /*
