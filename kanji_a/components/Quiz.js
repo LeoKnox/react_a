@@ -36,7 +36,7 @@ export const Quiz = ({ myKanji }) => {
     console.log("bbb" + JSON.stringify(answer));
     */
     setQuizKanji(y);
-    console.log("+++" + quizKanji);
+    console.log("+++" + y);
   }, []);
   return (
     <div>
