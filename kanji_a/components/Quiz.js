@@ -24,13 +24,18 @@ export const Quiz = ({ myKanji }) => {
   useEffect(() => {
     //console.log("aaa");
     let y = findKanji();
+    let ansLoc = Math.floor(Math.random() * y.length);
+    setAnswer(y[ansLoc]);
+    console.log(`loc ${ansLoc} ans ${answer}`);
+    /*
     console.log("MK" + myData);
     console.log("y" + y);
     let z = Math.floor(Math.random() * y.length);
-    console.log("answer " + Math.floor(Math.random() * y.length));
+    console.log("answer " + z);
     setAnswer(y[z]);
     //setAnswer(kanjiList[Math.floor(Math.random() * (y.length + 1))]);
-    console.log("bbb" + answer["translation"]);
+    console.log("bbb" + JSON.stringify(answer));
+    */
     setQuizKanji(y);
     //console.log("+++" + quizKanji);
   }, []);
