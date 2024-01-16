@@ -42,7 +42,7 @@ export const Quiz = ({ myKanji }) => {
     <div>
       <h1>Quizes</h1>
       <h3>
-        {myKanji[0]["translation"]}--{answer}
+        {myKanji[quizKanji[answer]]["translation"]}--{answer}
       </h3>
       {quizKanji.map((kanji) => {
         return (
