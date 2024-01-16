@@ -25,7 +25,7 @@ export const Quiz = ({ myKanji }) => {
     //console.log("aaa");
     let y = findKanji();
     setAnswer(Math.floor(Math.random() * y.length));
-    console.log(`loc ${ansLoc} ans ${answer}`);
+    //console.log(`loc ${ansLoc} ans ${answer}`);
     /*
     console.log("MK" + myData);
     console.log("y" + y);
@@ -36,12 +36,12 @@ export const Quiz = ({ myKanji }) => {
     console.log("bbb" + JSON.stringify(answer));
     */
     setQuizKanji(y);
-    //console.log("+++" + quizKanji);
+    console.log("+++" + quizKanji);
   }, []);
   return (
     <div>
       <h1>Quizes</h1>
-      <h3>{quizKanji[answer]["translation"]--}</h3>
+      <h3>{quizKanji[answer]--}</h3>
       {quizKanji.map((kanji) => {
         return (
           <div>
