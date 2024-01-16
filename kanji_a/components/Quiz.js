@@ -25,7 +25,7 @@ export const Quiz = ({ myKanji }) => {
     //console.log("aaa");
     let y = findKanji();
     let ansLoc = Math.floor(Math.random() * y.length);
-    setAnswer(y[ansLoc]);
+    setAnswer(y[0]);
     console.log(`loc ${ansLoc} ans ${answer}`);
     /*
     console.log("MK" + myData);
