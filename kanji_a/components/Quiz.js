@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 export const Quiz = ({ myKanji }) => {
   const [myData, setMyData] = useState(myKanji);
   const [quizKanji, setQuizKanji] = useState([]);
-  const [answer, setAnswer] = useState("*");
+  const [answer, setAnswer] = useState(0);
   const kanjiClick = (id) => {
     console.log("KC" + answer["id"]);
-    if (id === answer["id"]) {
+    if (id === answer) {
       alert(true);
     }
   };
@@ -42,7 +42,7 @@ export const Quiz = ({ myKanji }) => {
     <div>
       <h1>Quizes</h1>
       <h3>
-        {myKanji[quizKanji[answer]]["translation"]}--{answer}
+        {myKanji[answer]["translation"]}--{answer}
       </h3>
       {quizKanji.map((kanji) => {
         return (
