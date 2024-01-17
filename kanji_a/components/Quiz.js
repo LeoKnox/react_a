@@ -38,14 +38,14 @@ export const Quiz = ({ myKanji }) => {
         translation: "blue",
       },
     ];
-    setAnswer(y[Math.floor(Math.random() * y.length)]);
+    setAnswer(y[Math.floor(Math.random() * y.length)]["translation"]);
     setQuizKanji(y);
     console.log(`quiz kanji ${y} answer ${myKanji[answer]["id"]}`);
   }, []);
   return (
     <div>
       <h1>Quizes</h1>
-      <h3>--{answer["translation"]}</h3>
+      <h3>--{answer}</h3>
       {quizKanji.map((kanji) => {
         return (
           <div>
