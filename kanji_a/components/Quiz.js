@@ -13,7 +13,7 @@ export const Quiz = ({ myKanji }) => {
   const findKanji = () => {
     let newKanji = [];
     while (newKanji.length < 2) {
-      let x = Math.floor(Math.random() * myKanji.length) + 1;
+      let x = Math.floor(Math.random() * myKanji.length);
       if (newKanji.indexOf(x) === -1) {
         newKanji.push(myKanji[x]);
       }
