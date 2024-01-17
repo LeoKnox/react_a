@@ -6,7 +6,7 @@ export const Quiz = ({ myKanji }) => {
   const [answer, setAnswer] = useState(0);
   const kanjiClick = (id) => {
     console.log(` myKanji.id ${myKanji[answer]["id"]} id ${id}`);
-    if (id === myKanji[answer]["id"]-1) {
+    if (id === myKanji[answer]["id"]) {
       alert(true);
     }
   };
@@ -26,7 +26,7 @@ export const Quiz = ({ myKanji }) => {
     let y = findKanji();
     setAnswer(y[Math.floor(Math.random() * y.length)]);
     setQuizKanji(y);
-    console.log(`quiz kanji ${y} answer ${answer}`);
+    console.log(`quiz kanji ${y} answer ${myKanji[answer]["id"]}`);
   }, []);
   return (
     <div>
