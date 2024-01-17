@@ -13,9 +13,9 @@ export const Quiz = ({ myKanji }) => {
   const findKanji = () => {
     let newKanji = [];
     while (newKanji.length < 2) {
-      let x = Math.floor(Math.random() * 3) + 1;
+      let x = Math.floor(Math.random() * myKanji.length) + 1;
       if (newKanji.indexOf(x) === -1) {
-        newKanji.push(x);
+        newKanji.push(myKanji[x]);
       }
     }
     //console.log("--" + newKanji);
@@ -38,6 +38,8 @@ export const Quiz = ({ myKanji }) => {
         translation: "blue",
       },
     ];
+    let tempKanji = findKanji();
+    console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
     setAnswer(y[Math.floor(Math.random() * y.length)]["translation"]);
     setQuizKanji(y);
     console.log(`quiz kanji ${y} answer ${myKanji[answer]["id"]}`);
