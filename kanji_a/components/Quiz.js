@@ -15,7 +15,9 @@ export const Quiz = ({ myKanji }) => {
     while (newKanji.length < 2) {
       let x = Math.floor(Math.random() * myKanji.length);
       if (newKanji.indexOf(x) === -1) {
-        newKanji.push(myKanji[x]);
+        if (newKanji.includes(myKanji[x] === -1)) {
+          newKanji.push(myKanji[x]);
+        }
       }
     }
     //console.log("--" + newKanji);
