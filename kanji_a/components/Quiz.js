@@ -1,58 +1,179 @@
-import { useEffect, useState } from "react";
+import "./styles.css";
+import { useEffect, useState, useRef } from "react";
+import { KanjiList } from "./components/KanjiList.js";
+import { Quiz } from "./components/Quiz.js";
 
-export const Quiz = ({ myKanji }) => {
-  const [myData, setMyData] = useState(myKanji);
-  const [quizKanji, setQuizKanji] = useState([]);
-  const [answer, setAnswer] = useState(0);
-  const kanjiClick = (id) => {
-    console.log("KC" + myKanji[answer]["id"]);
-    if (id === myKanji[answer]["id"]) {
-      alert(true);
+export default function App() {
+  //const buttonStyle = { border: "blue solid .3em" };
+  const buttonStyle = {
+    //border: "blue solid .3em",
+    color: "white",
+    boxShadow: "0px 8px 10px darkred",
+    backgroundColor: "red",
+    borderRadius: "10px",
+    padding: "0.3em",
+    fontSize: "1.1em",
+    fontWeight: "bold",
+    marginRight: "1em",
+    marginTop: "0.4em",
+  };
+  const [myKanji, setMyKanji] = useState([]);
+  const [word, setWord] = useState("");
+  const [translation, setTranslation] = useState("");
+  const [id, setId] = useState(0);
+  const [isUpdate, setIsUpdate] = useState(false);
+  const [isQuiz, setIsQuiz] = useState(false);
+  useEffect(() => {
+    setMyKanji(KanjiList);
+  }, []);
+  const handleSave = (e) => {
+    let error = "";
+    if (word === "") {
+      error += "word needed";
+    }
+    if (translation === "") {
+      error += "translation needed";
+    }
+    if (error === "") {
+      e.preventDefault();
+      newKanji = {
+        id: myKanji.length + 1,
+        word: word,
+        translation: translation,
+      };
+      const kt = [...myKanji, newKanji];
+      setMyKanji(kt);
+    } else {
+      alert(error);
     }
   };
-  const findKanji = () => {
-    let newKanji = [];
-    while (newKanji.length < 2) {
-      let x = Math.floor(Math.random() * 3) + 1;
-      if (newKanji.indexOf(x) === -1) {
-        newKanji.push(x);
+  const handleUpdate = () => {
+    const index = myKanji
+      .map((kanji) => {
+        return kanji.id;
+      })
+      .indexOf(id);
+    const kt = [...myKanji];
+    kt[index].word = word;
+    kt[index].translation = translation;
+    setMyKanji(kt);
+    handleClear();
+  };
+  const handleClear = () => {
+    setIsUpdate(false);
+    setId(0);
+    setWord("");
+    setTranslation("");
+  };
+  const handleEdit = (id) => {
+    const kd = myKanji.filter((item) => item.id === id);
+    if (kd !== undefined) {
+      setIsUpdate(true);
+      setId(kd[0].id);
+      setWord(kd[0].word);
+      setTranslation(kd[0].translation);
+    } else {
+      alert("ni");
+    }
+  };
+  const handleDelete = (id) => {
+    if (id > 0) {
+      if (window.confirm("Are you sure?")) {
+        const kd = myKanji.filter((item) => item.id !== id);
+        setMyKanji(kd);
+        handleClear();
       }
     }
-    //console.log("--" + newKanji);
-    return newKanji;
   };
-  useEffect(() => {
-    //console.log("aaa");
-    let y = findKanji();
-    setAnswer(Math.floor(Math.random() * y.length));
-    //console.log(`loc ${ansLoc} ans ${answer}`);
-    /*
-    console.log("MK" + myData);
-    console.log("y" + y);
-    let z = Math.floor(Math.random() * y.length);
-    console.log("answer " + z);
-    setAnswer(y[z]);
-    //setAnswer(kanjiList[Math.floor(Math.random() * (y.length + 1))]);
-    console.log("bbb" + JSON.stringify(answer));
-    */
-    setQuizKanji(y);
-    console.log("+++" + y);
-  }, []);
+
   return (
-    <div>
-      <h1>Quizes</h1>
-      <h3>
-        {myKanji[answer]["translation"]}--{answer}
-      </h3>
-      {quizKanji.map((kanji) => {
-        return (
-          <div>
-            <p onClick={() => kanjiClick(myKanji[kanji - 1]["id"])}>
-              {myKanji[kanji - 1]["kanji"]}
-            </p>
-          </div>
-        );
-      })}
+    <div className="App">
+      <h1 className="mainHeading">Kanjis</h1>
+      <button onClick={() => setIsQuiz(false)}>List</button>
+      <button onClick={() => setIsQuiz(true)}>Quiz</button>
+      <br />
+      {isQuiz ? (
+        <Quiz myKanji={myKanji} />
+      ) : (
+        <>
+          <ul className="addKanji">
+            <li>
+              <label>Word:</label>
+              <input
+                type="text"
+                placeholder="enter word"
+                value={word}
+                onChange={(e) => setWord(e.target.value)}
+              />
+            </li>
+            <li>
+              <label>Translation:</label>
+              <input
+                type="text"
+                value={translation}
+                placeholder="enter translation"
+                onChange={(e) => setTranslation(e.target.value)}
+              />
+            </li>
+            <li>
+              {!isUpdate ? (
+                <button
+                  className="saveButton"
+                  style={buttonStyle}
+                  onClick={(e) => handleSave(e)}
+                >
+                  Save
+                </button>
+              ) : (
+                <button onClick={handleUpdate}>Update</button>
+              )}
+              <button
+                onClick={handleClear}
+                style={buttonStyle}
+                className="saveButton"
+              >
+                Clear
+              </button>
+            </li>
+          </ul>
+          <br />
+          <table className="kanjis">
+            <thead className="kanjisheader">
+              <tr>
+                <th>Kanji</th>
+                <th>Word</th>
+                <th>Translation</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {myKanji.map((kanjis, index) => {
+                return (
+                  <tr key={index} className="kanjisdata">
+                    <td claasName="kanjiStyle">{kanjis.kanji}</td>
+                    <td>{kanjis.word}</td>
+                    <td>{kanjis.translation}</td>
+                    <td>
+                      <button
+                        className="buttonKanji"
+                        onClick={() => handleEdit(kanjis.id)}
+                      >
+                        edit
+                      </button>
+                      <button
+                        className="buttonKanji"
+                        onClick={() => handleDelete(kanjis.id)}
+                      >
+                        delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </>
+      )}
     </div>
   );
-};
+}
