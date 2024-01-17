@@ -23,7 +23,21 @@ export const Quiz = ({ myKanji }) => {
   };
   useEffect(() => {
     //console.log("aaa");
-    let y = findKanji();
+    //let y = findKanji();
+    let y = [
+      {
+        id: 1,
+        kanji: "赤",
+        word: "akai",
+        translation: "red",
+      },
+      {
+        id: 2,
+        kanji: "青",
+        word: "aoi",
+        translation: "blue",
+      },
+    ];
     setAnswer(y[Math.floor(Math.random() * y.length)]);
     setQuizKanji(y);
     console.log(`quiz kanji ${y} answer ${myKanji[answer]["id"]}`);
@@ -31,14 +45,12 @@ export const Quiz = ({ myKanji }) => {
   return (
     <div>
       <h1>Quizes</h1>
-      <h3>
-        {myKanji[answer]["translation"]}--{answer}
-      </h3>
+      <h3>--{answer["translation"]}</h3>
       {quizKanji.map((kanji) => {
         return (
           <div>
-            <p onClick={() => kanjiClick(myKanji[kanji - 1]["id"])}>
-              {myKanji[kanji - 1]["kanji"]}--{kanji}
+            <p onClick={() => kanjiClick(kanji["id"])}>
+              {kanji["kanji"]}--{kanji["id"]}
             </p>
           </div>
         );
