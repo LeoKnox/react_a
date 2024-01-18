@@ -15,12 +15,12 @@ export const Quiz = ({ myKanji }) => {
     let tempArr = myKanji;
     let newKanji = [];
     console.log(`temp arr ${JSON.stringify(tempArr)}`);
-    while (tempArr.length > 1) {
+    while (tempArr.length > 0) {
       console.log("did i run?");
       let x = Math.floor(Math.random() * myKanji.length);
       newKanji.push(tempArr.splice(x, 1));
     }
-    console.log("--" + tempArr);
+    console.log("--" + JSON.stringify(tempArr));
     return newKanji;
   };
   useEffect(() => {
