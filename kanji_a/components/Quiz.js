@@ -42,7 +42,7 @@ export const Quiz = ({ myKanji }) => {
     ];
     let tempKanji = findKanji();
     console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
-    setAnswer(y[Math.floor(Math.random() * y.length)]["translation"]);
+    setAnswer(tempKanji[Math.floor(Math.random() * y.length)]["translation"]);
     setQuizKanji(tempKanji);
     console.log(`quiz kanji ${JSON.stringify(quizKanji)} answer ${answer}`);
   }, []);
