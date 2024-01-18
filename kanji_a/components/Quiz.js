@@ -11,6 +11,7 @@ export const Quiz = ({ myKanji }) => {
     }
   };
   const findKanji = () => {
+    console.log(`my kanji ${myKanji}`);
     let tempArr = myKanji;
     let newKanji = [];
     console.log(`temp arr ${JSON.stringify(tempArr)}`);
