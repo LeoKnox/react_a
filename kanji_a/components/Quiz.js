@@ -13,7 +13,9 @@ export const Quiz = ({ myKanji }) => {
   const findKanji = () => {
     let tempArr = myKanji;
     let newKanji = [];
+    console.log(`temp arr ${JSON.stringify(tempArr)}`);
     while (tempArr.length > 0) {
+      console.log("did i run?");
       let x = Math.floor(Math.random() * myKanji.length);
       newKanji.push(tempArr.splice(x, 1));
     }
