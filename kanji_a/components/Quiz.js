@@ -15,7 +15,7 @@ export const Quiz = ({ myKanji }) => {
     let tempArr = myKanji;
     let newKanji = [];
     console.log(`temp arr ${JSON.stringify(tempArr)}`);
-    while (tempArr.length > 0) {
+    while (tempArr.length > 1) {
       console.log("did i run?");
       let x = Math.floor(Math.random() * myKanji.length);
       newKanji.push(tempArr.splice(x, 1));
@@ -44,7 +44,7 @@ export const Quiz = ({ myKanji }) => {
     console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
     setAnswer(y[Math.floor(Math.random() * y.length)]["translation"]);
     setQuizKanji(tempKanji);
-    console.log(`quiz kanji ${tempKanji} answer ${answer}`);
+    console.log(`quiz kanji ${JSON.stringify(quizKanji)} answer ${answer}`);
   }, []);
   return (
     <div>
