@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export const Quiz = ({ myKanji }) => {
   const [myData, setMyData] = useState(myKanji);
   const [quizKanji, setQuizKanji] = useState([]);
-  const [answer, setAnswer] = useState(0);
+  const [answer, setAnswer] = useState("");
   const kanjiClick = (id) => {
     console.log(` myKanji.id ${myKanji[answer]["id"]} id ${id}`);
     if (id === myKanji[answer]["id"]) {
@@ -42,7 +42,10 @@ export const Quiz = ({ myKanji }) => {
     ];
     let tempKanji = findKanji();
     console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
-    setAnswer(tempKanji[Math.floor(Math.random() * y.length)]["translation"]);
+    setAnswer(
+      tempKanji[Math.floor(Math.random() * tempKanji.length)]["translation"]
+    );
+    console.log(answer);
     setQuizKanji(tempKanji);
     console.log(`quiz kanji ${JSON.stringify(quizKanji)} answer ${answer}`);
   }, []);
