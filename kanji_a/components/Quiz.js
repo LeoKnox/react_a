@@ -40,7 +40,7 @@ export const Quiz = ({ myKanji }) => {
         translation: "blue",
       },
     ];
-    let tempKanji = await findKanji();
+    await let tempKanji = findKanji();
     console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
     setAnswer(
       tempKanji[Math.floor(Math.random() * tempKanji.length)]["translation"]
