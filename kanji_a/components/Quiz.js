@@ -21,7 +21,7 @@ export const Quiz = ({ myKanji }) => {
       newKanji.push(tempArr.splice(x, 1));
     }
     console.log("--" + JSON.stringify(tempArr));
-    return newKanji;
+    return new promise(newKanji);
   };
   useEffect(() => {
     //console.log("aaa");
