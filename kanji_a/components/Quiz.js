@@ -45,9 +45,9 @@ export const Quiz = ({ myKanji }) => {
       tempKanji[Math.floor(Math.random() * tempKanji.length)]["translation"]
     );
     console.log(
-      `answer ${
-        tempKanji[Math.floor(Math.random() * tempKanji.length)]["translation"]
-      }`
+      `answer ${JSON.stringify(
+        tempKanji[Math.floor(Math.random() * tempKanji.length)]
+      )}`
     );
     console.log(answer);
     setQuizKanji(tempKanji);
