@@ -40,11 +40,16 @@ export const Quiz = ({ myKanji }) => {
         translation: "blue",
       },
     ];
-    await let tempKanji = findKanji();
+    let z = [];
+    let tempKanji = findKanji().then(
+      setAnswer((z = Math.floor(Math.random() * result.length)))
+    );
     console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
+    /*
     setAnswer(
       tempKanji[Math.floor(Math.random() * tempKanji.length)]["translation"]
     );
+    */
     console.log(answer);
     setQuizKanji(tempKanji);
     console.log(`quiz kanji ${JSON.stringify(quizKanji)} answer ${answer}`);
