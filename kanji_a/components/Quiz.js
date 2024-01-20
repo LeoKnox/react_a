@@ -21,8 +21,7 @@ export const Quiz = ({ myKanji }) => {
       newKanji.push(tempArr.splice(x, 1));
     }
     console.log("--" + JSON.stringify(tempArr));
-    setQuizKanji(newKanji);
-    //return newKanji;
+    return newKanji;
   };
   useEffect(() => {
     //console.log("aaa");
@@ -41,9 +40,7 @@ export const Quiz = ({ myKanji }) => {
         translation: "blue",
       },
     ];
-    findKanji();
-    let tempKanji = quizKanji;
-    //let tempKanji = findKanji();
+    let tempKanji = await findKanji();
     console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
     setAnswer(
       tempKanji[Math.floor(Math.random() * tempKanji.length)]["translation"]
