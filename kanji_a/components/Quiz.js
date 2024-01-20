@@ -21,6 +21,7 @@ export const Quiz = ({ myKanji }) => {
       newKanji.push(tempArr.splice(x, 1));
     }
     console.log("--" + JSON.stringify(tempArr));
+    setQuizKanji(newKanji);
     return newKanji;
   };
   useEffect(() => {
@@ -41,13 +42,13 @@ export const Quiz = ({ myKanji }) => {
     let z = [];
     let tempKanji = findKanji();
     console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
-    async setAnswer(
+    setAnswer(
       tempKanji[Math.floor(Math.random() * tempKanji.length)]["translation"]
     );
     let newAnswer = tempKanji[Math.floor(Math.random() * tempKanji.length)];
     setAnswer(newAnswer["translation"]);
     console.log(answer);
-    setQuizKanji(tempKanji);
+    //setQuizKanji(tempKanji);
     console.log(`quiz kanji ${JSON.stringify(quizKanji)} answer ${answer}`);
   }, []);
   return (
