@@ -40,17 +40,17 @@ export const Quiz = ({ myKanji }) => {
       },
     ];
     let z = [];
-    let tempKanji = findKanji();
+    const tempKanji = findKanji();
     console.log(`temp kanji ${JSON.stringify(tempKanji)}`);
     setAnswer(
       tempKanji[Math.floor(Math.random() * tempKanji.length)]["translation"]
     );
-    let newAnswer = tempKanji[Math.floor(Math.random() * tempKanji.length)];
+    const newAnswer = tempKanji[Math.floor(Math.random() * tempKanji.length)];
     setAnswer(newAnswer["translation"]);
     console.log(answer);
     //setQuizKanji(tempKanji);
     console.log(`quiz kanji ${JSON.stringify(quizKanji)} answer ${answer}`);
-  }, [quizKanji]);
+  }, []);
   return (
     <div>
       <h1>Quizes</h1>
