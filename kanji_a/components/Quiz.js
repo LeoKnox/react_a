@@ -50,7 +50,7 @@ export const Quiz = ({ myKanji }) => {
     console.log(answer);
     //setQuizKanji(tempKanji);
     console.log(`quiz kanji ${JSON.stringify(quizKanji)} answer ${answer}`);
-  }, []);
+  }, [quizKanji]);
   return (
     <div>
       <h1>Quizes</h1>
