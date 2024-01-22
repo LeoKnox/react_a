@@ -9,7 +9,7 @@ export default function App() {
     { id: 2, name: "guard", width: 6, length: 7 },
   ]);
   const addRoom = () => {
-    const newId = myRooms.length;
+    const newId = myRooms[myRooms.length - 1]["id"];
     console.log(newId);
     setMyRooms((room) => [
       ...room,
