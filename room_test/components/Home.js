@@ -1,8 +1,9 @@
 import { memo, useState } from "react";
 
 export default Home = ({ myRooms, addRoom, deleteRoom }) => {
-  const [roomName, setRoomName] = useState("d");
+  const [roomName, setRoomName] = useState("");
   console.log(JSON.stringify(myRooms));
+  const setRoom = () => {};
   return (
     <>
       <h1>Rooms</h1>
@@ -19,10 +20,10 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
       <input
         type="text"
         name="name"
-        value={roomName}
+        value={roomName["name"]}
         onChange={(e) => setRoomName(e.target.value)}
       />
-      <button onClick={addRoom}>click</button>
+      <button onClick={(roomName) => addRoom(roomName)}>click</button>
     </>
   );
 };
