@@ -1,10 +1,9 @@
-import "./styles.css";
-import "./components/Home.js";
+import { memo } from "react";
 
-export default function App() {
+export default Home = ({ myRooms, addRoom }) => {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <>
+      <h1>Rooms</h1>
+    </>
   );
-}
+};
