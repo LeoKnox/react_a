@@ -8,12 +8,12 @@ export default function App() {
     { id: 1, name: "store", width: 8, length: 6 },
     { id: 2, name: "guard", width: 6, length: 7 },
   ]);
-  const addRoom = () => {
+  const addRoom = (roomName) => {
     const newId = myRooms[myRooms.length - 1]["id"] + 1;
     console.log(newId);
     setMyRooms((room) => [
       ...room,
-      { id: newId, name: "new room", width: 1, length: 1 },
+      { id: newId, name: roomName, width: 1, length: 1 },
     ]);
   };
   const deleteRoom = (id) => {
