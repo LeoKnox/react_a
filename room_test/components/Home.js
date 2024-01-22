@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-export default Home = ({ myRooms, addRoom }) => {
+const Home = ({ myRooms, addRoom }) => {
   console.log(JSON.stringify(myRooms));
   return (
     <>
@@ -8,3 +8,5 @@ export default Home = ({ myRooms, addRoom }) => {
     </>
   );
 };
+
+export default memo(Home);
