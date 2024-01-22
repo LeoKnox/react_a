@@ -9,7 +9,7 @@ export default function App() {
     { name: "guard", width: 6, length: 7 },
   ]);
   const addRoom = () => {
-    setMyRooms = (room) => [...room, { name: "new room", width: 1, length: 1 }];
+    setMyRooms((room) => [...room, { name: "new room", width: 1, length: 1 }]);
   };
   return (
     <div className="App">
