@@ -16,7 +16,12 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
           </>
         );
       })}
-      <input type="text" name="name" value={roomName} />
+      <input
+        type="text"
+        name="name"
+        value={roomName}
+        onChange={(e) => setRoomName(e.target.value)}
+      />
       <button onClick={addRoom}>click</button>
     </>
   );
