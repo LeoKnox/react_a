@@ -1,12 +1,14 @@
 import { memo } from "react";
 
-const Home = ({ myRooms, addRoom }) => {
+export default Home = ({ myRooms, addRoom }) => {
   console.log(JSON.stringify(myRooms));
   return (
     <>
       <h1>Rooms</h1>
+      {myRooms.map((room) => {
+        <p>{room["name"]}</p>;
+      })}
+      <button onClick={addRoom}>click</button>
     </>
   );
 };
-
-export default memo(Home);
