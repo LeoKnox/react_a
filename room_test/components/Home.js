@@ -6,7 +6,14 @@ export default Home = ({ myRooms, addRoom }) => {
     <>
       <h1>Rooms</h1>
       {myRooms.map((room) => {
-        return <p>{room["name"]}-</p>;
+        return (
+          <>
+            <p>
+              {room["name"]}
+              <button>delete</button>
+            </p>
+          </>
+        );
       })}
       <button onClick={addRoom}>click</button>
     </>
