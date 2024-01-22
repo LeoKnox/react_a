@@ -6,7 +6,7 @@ export default Home = ({ myRooms, addRoom }) => {
     <>
       <h1>Rooms</h1>
       {myRooms.map((room) => {
-        <p>{room["name"]}</p>;
+        return <p>{room["name"]}-</p>;
       })}
       <button onClick={addRoom}>click</button>
     </>
