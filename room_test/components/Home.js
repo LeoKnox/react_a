@@ -5,12 +5,12 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   return (
     <>
       <h1>Rooms</h1>
-      {myRooms.map((room, index) => {
+      {myRooms.map((room) => {
         return (
           <>
             <p>
               {room["name"]}
-              <button onClick={() => deleteRoom(index)}>delete</button>
+              <button onClick={() => deleteRoom(room["id"])}>delete</button>
             </p>
           </>
         );
