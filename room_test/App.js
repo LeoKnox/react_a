@@ -9,7 +9,12 @@ export default function App() {
     { id: 2, name: "guard", width: 6, length: 7 },
   ]);
   const addRoom = () => {
-    setMyRooms((room) => [...room, { name: "new room", width: 1, length: 1 }]);
+    const newId = myRooms.length;
+    console.log(newId);
+    setMyRooms((room) => [
+      ...room,
+      { id: newId, name: "new room", width: 1, length: 1 },
+    ]);
   };
   const deleteRoom = (id) => {
     setMyRooms(myRooms.filter((room) => room["id"] !== id));
