@@ -28,7 +28,9 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         onChange={(e) => setRoomName(e.target.value)}
       />
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
-      <button onClick={(e) => setRoomObj("name":e.target.value)}>set room</button>
+      <button onClick={(r) => setRoomObj({ ...r, name: "test" })}>
+        set room
+      </button>
     </>
   );
 };
