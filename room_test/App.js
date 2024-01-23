@@ -9,7 +9,7 @@ export default function App() {
     { id: 2, name: "guard", width: 6, length: 7 },
   ]);
   const addRoom = (roomName) => {
-    console.log(`room name ${roomName}`);
+    console.log(`room name ${JSON.stringify(roomName)}`);
     const newId = myRooms[myRooms.length - 1]["id"] + 1;
     console.log(newId);
     setMyRooms((room) => [
