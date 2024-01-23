@@ -5,7 +5,8 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const [roomObj, setRoomObj] = useState({});
   //console.log(JSON.stringify(myRooms));
   const setRoom = (e) => {
-    console.log("room".target.value);
+    const room = "room";
+    console.log(e.nativeEvent.target.value);
   };
   return (
     <>
@@ -27,7 +28,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         onChange={(e) => setRoomName(e.target.value)}
       />
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
-      <button onClick={setRoom}>set room</button>
+      <button onClick={(e) => setRoomObj("name":e.target.value)}>set room</button>
     </>
   );
 };
