@@ -11,6 +11,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   return (
     <>
       <h1>Rooms</h1>
+      <p>{roomObj["name"]}-</p>
       {myRooms.map((room) => {
         return (
           <>
