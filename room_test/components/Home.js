@@ -2,7 +2,7 @@ import { memo, useState } from "react";
 
 export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const [roomName, setRoomName] = useState("");
-  const [roomObj, setRoomObj] = useState({});
+  const [roomObj, setRoomObj] = useState({ name: "" });
   //console.log(JSON.stringify(myRooms));
   const setRoom = (e) => {
     const room = "room";
@@ -28,7 +28,9 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         onChange={(e) => setRoomName(e.target.value)}
       />
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
-      <button onClick={(e) => setRoom(e)}>set room</button>
+      <button onClick={(e) => (setRoomObj["room"] = e.target.value)}>
+        set room
+      </button>
     </>
   );
 };
