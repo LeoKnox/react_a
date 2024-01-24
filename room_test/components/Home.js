@@ -6,7 +6,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   //console.log(JSON.stringify(myRooms));
   const setRoom = (e) => {
     const room = "room";
-    console.log(e.target.name);
+    console.log(e.target.value);
   };
   return (
     <>
@@ -29,9 +29,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         onChange={(e) => setRoomName(e.target.value)}
       />
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
-      <button onClick={(e) => setRoomObj((roomObj["room"] = roomName))}>
-        set room
-      </button>
+      <button onClick={(e) => setRoom(e)}>set room</button>
     </>
   );
 };
