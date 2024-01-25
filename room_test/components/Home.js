@@ -7,6 +7,13 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const setRoom = (e) => {
     const { name, value } = e.target;
     console.log(`name ${name} value ${value}`);
+    setRoomObj((item) => ({
+      ...item,
+      roomObj: {
+        ...item.roomObj,
+        [name]: value,
+      },
+    }));
   };
   return (
     <>
