@@ -2,7 +2,7 @@ import { memo, useState } from "react";
 
 export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const [roomName, setRoomName] = useState("");
-  const [roomObj, setRoomObj] = useState({ name: "" });
+  const [roomObj, setRoomObj] = useState({ name: "", length: 0 });
   const updateRoom = (e) => {
     const { name, value } = e.target;
     setRoomObj((item) => ({
@@ -37,6 +37,15 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
           value={roomName["name"]}
           /*onChange={(e) => setRoomName(e.target.value)}*/
           onChange={updateRoom}
+        />
+      </p>
+      <p>
+        Length:
+        <input
+          type="number"
+          name="length"
+          value={roomName["length"]}
+          onchange={updateRoom}
         />
       </p>
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
