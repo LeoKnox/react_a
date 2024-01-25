@@ -15,7 +15,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
       },
     }));
     console.log(`roomObj ${roomObj}`);
-    return addRoom(roomObj);
+    addRoom(roomObj);
   };
   return (
     <>
