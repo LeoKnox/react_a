@@ -14,6 +14,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         [name]: value,
       },
     }));
+    addRoom(roomObj);
   };
   return (
     <>
