@@ -1,36 +1,33 @@
-import { memo, useState } from "react";
+import "./styles.css";
+import "./components/Home.js";
+import { useState } from "react";
 
-export default Home = ({ myRooms, addRoom, deleteRoom }) => {
-  const [roomName, setRoomName] = useState("");
-  const [roomObj, setRoomObj] = useState({});
-  //console.log(JSON.stringify(myRooms));
-  const setRoom = (e) => {
-    const room = "room";
-    console.log(e.nativeEvent.target.value);
+export default function App() {
+  const [myRooms, setMyRooms] = useState([
+    { id: 0, name: "entry", width: 5, length: 5 },
+    { id: 1, name: "store", width: 8, length: 6 },
+    { id: 2, name: "guard", width: 6, length: 7 },
+  ]);
+  const addRoom = (roomName) => {
+    //console.log(`room name ${JSON.stringify(roomName)}`);
+    const newId = myRooms[myRooms.length - 1]["id"] + 1;
+    console.log(roomName);
+    setMyRooms((room) => [
+      ...room,
+      { id: newId, name: roomName, width: 1, length: 1 },
+    ]);
+  };
+  const deleteRoom = (id) => {
+    setMyRooms(myRooms.filter((room) => room["id"] !== id));
+    console.log(id);
   };
   return (
-    <>
-      <h1>Rooms</h1>
-      {myRooms.map((room) => {
-        return (
-          <>
-            <p>
-              {room["name"]}
-              <button onClick={() => deleteRoom(room["id"])}>delete</button>
-            </p>
-          </>
-        );
-      })}
-      <input
-        type="text"
-        name="name"
-        value={roomName["name"]}
-        onChange={(e) => setRoomName(e.target.value)}
+    <div className="App">
+      <Home
+        myRooms={myRooms}
+        addRoom={addRoom}
+        deleteRoom={(id) => deleteRoom(id)}
       />
-      <button onClick={(roomName) => addRoom(roomName)}>click</button>
-      <button onClick={(r) => setRoomObj({ ...r, name: "test" })}>
-        set room
-      </button>
-    </>
+    </div>
   );
-};
+}
