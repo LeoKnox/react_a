@@ -1,34 +1,45 @@
-import "./styles.css";
-import "./components/Home.js";
-import { useState } from "react";
+import { memo, useState } from "react";
 
-export default function App() {
-  const [myRooms, setMyRooms] = useState([
-    { id: 0, name: "entry", width: 5, length: 5 },
-    { id: 1, name: "store", width: 8, length: 6 },
-    { id: 2, name: "guard", width: 6, length: 7 },
-  ]);
-  const addRoom = (roomName) => {
-    console.log(`room name ${JSON.stringify(roomName)}`);
-    const newId = myRooms[myRooms.length - 1]["id"] + 1;
-    console.log(roomName);
-    setMyRooms((room) => [
-      ...room,
-      roomName,
-      /*{ id: newId, name: roomName, width: 1, length: 1 },*/
-    ]);
-  };
-  const deleteRoom = (id) => {
-    setMyRooms(myRooms.filter((room) => room["id"] !== id));
-    console.log(id);
+export default Home = ({ myRooms, addRoom, deleteRoom }) => {
+  const [roomName, setRoomName] = useState("");
+  const [roomObj, setRoomObj] = useState({ name: "" });
+  //console.log(JSON.stringify(myRooms));
+  const setRoom = (e) => {
+    const { name, value } = e.target;
+    //console.log(`name ${name} value ${value}`);
+    setRoomObj((item) => ({
+      ...item,
+      roomObj: {
+        ...item.roomObj,
+        [name]: value,
+      },
+    }));
+    console.log(`roomObj ${roomObj}`);
+    return addRoom(roomObj);
   };
   return (
-    <div className="App">
-      <Home
-        myRooms={myRooms}
-        addRoom={addRoom}
-        deleteRoom={(id) => deleteRoom(id)}
+    <>
+      <h1>Rooms</h1>
+      <p>{roomObj["name"]}-</p>
+      {myRooms.map((room) => {
+        return (
+          <>
+            <p>
+              {room["name"]}
+              <button onClick={() => deleteRoom(room["id"])}>delete</button>
+            </p>
+          </>
+        );
+      })}
+      <input
+        type="text"
+        name="name"
+        value={roomName["name"]}
+        /*onChange={(e) => setRoomName(e.target.value)}*/
+        onChange={setRoom}
       />
-    </div>
+      <button onClick={(roomName) => addRoom(roomName)}>click</button>
+      <button onClick={setRoom}>set room</button>
+    </>
   );
-}
+};
