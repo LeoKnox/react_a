@@ -3,10 +3,8 @@ import { memo, useState } from "react";
 export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const [roomName, setRoomName] = useState("");
   const [roomObj, setRoomObj] = useState({ name: "" });
-  //console.log(JSON.stringify(myRooms));
   const updateRoom = (e) => {
     const { name, value } = e.target;
-    //console.log(`name ${name} value ${value}`);
     setRoomObj((item) => ({
       ...item,
       roomObj: {
@@ -14,10 +12,9 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         [name]: value,
       },
     }));
-    console.log(`roomObj ${roomObj}`);
   };
   const setRoom = () => {
-    alert("room set");
+    console.log(`roomObj ${roomObj}`);
     addRoom(roomObj);
   };
   return (
