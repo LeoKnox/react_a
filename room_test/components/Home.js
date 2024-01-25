@@ -4,7 +4,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const [roomName, setRoomName] = useState("");
   const [roomObj, setRoomObj] = useState({ name: "" });
   //console.log(JSON.stringify(myRooms));
-  const setRoom = (e) => {
+  const updateRoom = (e) => {
     const { name, value } = e.target;
     //console.log(`name ${name} value ${value}`);
     setRoomObj((item) => ({
@@ -14,7 +14,11 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         [name]: value,
       },
     }));
-    return addRoom(roomObj);
+    console.log(`roomObj ${roomObj}`);
+  };
+  const setRoom = () => {
+    alert("room set");
+    addRoom(roomObj);
   };
   return (
     <>
@@ -35,7 +39,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         name="name"
         value={roomName["name"]}
         /*onChange={(e) => setRoomName(e.target.value)}*/
-        onChange={setRoom}
+        onChange={updateRoom}
       />
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
       <button onClick={setRoom}>set room</button>
