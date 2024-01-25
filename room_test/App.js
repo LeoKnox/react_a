@@ -14,7 +14,8 @@ export default function App() {
     console.log(roomName);
     setMyRooms((room) => [
       ...room,
-      { id: newId, name: roomName, width: 1, length: 1 },
+      roomName,
+      /*{ id: newId, name: roomName, width: 1, length: 1 },*/
     ]);
   };
   const deleteRoom = (id) => {
