@@ -5,6 +5,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const [roomObj, setRoomObj] = useState({ name: "", length: 5 });
   const updateRoom = (e) => {
     const { name, value } = e.target;
+    console.log(`name ${name}`);
     setRoomObj((item) => ({
       ...item,
       ...item.roomObj,
