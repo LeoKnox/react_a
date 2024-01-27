@@ -45,8 +45,8 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         <input
           type="number"
           name="length"
-          value={roomObj["length"]}
-          onchange={...updateRoom()}
+          value={parseInt(roomObj["length"])}
+          onchange={updateRoom}
         />
       </p>
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
