@@ -17,7 +17,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
     //console.log(`roomObj ${JSON.stringify(roomObj)}`);
     addRoom(roomObj);
     const empty = { ...roomObj };
-    delete empty["name"];
+    empty["name"] = undefined;
     setRoomObj(empty);
     console.log("empty room " + roomObj["name"]);
   };
