@@ -9,7 +9,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
     setRoomObj((item) => ({
       ...item,
       ...item.roomObj,
-      [name]: parseInt(value),
+      [name]: value,
     }));
   };
   const setRoom = () => {
@@ -46,7 +46,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
           type="number"
           name="length"
           value={roomObj["length"]}
-          onchange={updateRoom}
+          onchange={...updateRoom()}
         />
       </p>
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
