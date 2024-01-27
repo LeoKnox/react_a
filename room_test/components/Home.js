@@ -16,7 +16,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const setRoom = () => {
     console.log(`roomObj ${JSON.stringify(roomObj)}`);
     addRoom(roomObj);
-    /*setRoomObj(() => roomObj["name"]: "");*/
+    setRoomObj((clear) => ({ ...clear, ...clear.roomObj, [name]: "" }));
   };
   return (
     <>
