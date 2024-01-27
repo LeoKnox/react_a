@@ -21,7 +21,6 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   return (
     <>
       <h1>Rooms</h1>
-      {view ? <h3>New View</h3> :
       <p>{roomObj["name"]}-</p>
       {myRooms.map((room) => {
         return (
@@ -62,7 +61,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         />
       </p>
       <button onClick={(roomName) => addRoom(roomName)}>click</button>
-      <button onClick={setRoom}>set room</button>}
+      <button onClick={setRoom}>set room</button>
     </>
   );
 };
