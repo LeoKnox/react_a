@@ -18,6 +18,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
     addRoom(roomObj);
     const empty = new Map(Object.roomObj);
     empty.delete("name");
+    setRoomObj(empty);
     console.log("empty room " + roomObj["name"]);
   };
   return (
