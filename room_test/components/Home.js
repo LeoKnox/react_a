@@ -2,7 +2,8 @@ import { memo, useState } from "react";
 
 export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   const [roomName, setRoomName] = useState("");
-  const [roomObj, setRoomObj] = useState({ name: "" });
+  const [roomObj, setRoomObj] = useState({});
+  //const [roomObj, setRoomObj] = useState({ name: "" });
   const [view, setView] = useState(false);
   const updateRoom = (e) => {
     const { name, value } = e.target;
