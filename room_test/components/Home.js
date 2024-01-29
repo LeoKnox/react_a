@@ -44,7 +44,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
         <input
           type="text"
           name="name"
-          value={roomName["name"]}
+          value={roomObj["name"]}
           /*onChange={(e) => setRoomName(e.target.value)}*/
           onChange={updateRoom}
         />
