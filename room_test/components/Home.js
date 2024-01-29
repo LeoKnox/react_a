@@ -22,7 +22,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
     //empty.delete("name");
     //empty["name"] = "";
     console.log(empty["name"]);
-    setRoomObj({ ["name"]: "", length: 0, width: 0 });
+    setRoomObj({ name: "!", length: 0, width: 0 });
     console.log("empty room " + roomObj["name"]);
   };
   return (
