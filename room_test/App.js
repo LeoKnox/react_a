@@ -32,7 +32,7 @@ export default function App() {
         addRoom={addRoom}
         deleteRoom={(id) => deleteRoom(id)}
       />
-      <Single />
+      <Single roomId={roomId} />
     </div>
   );
 }
