@@ -1,7 +1,7 @@
-export default Single = () => {
+export default Single = ({roomId}) => {
   return (
     <>
-      <h3>Single Room</h3>
+      <h3>Single Room {roomId} </h3>
     </>
   );
 };
