@@ -30,9 +30,10 @@ export default function App() {
       <Home
         myRooms={myRooms}
         addRoom={addRoom}
+        setRoomId={setRoomId}
         deleteRoom={(id) => deleteRoom(id)}
       />
-      <Single roomId={roomId} />
+      <Single roomId={roomId} room={myRooms[roomId]} />
     </div>
   );
 }
