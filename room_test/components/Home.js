@@ -1,6 +1,6 @@
 import { memo, useState } from "react";
 
-export default Home = ({ myRooms, addRoom, deleteRoom }) => {
+export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
   const [roomName, setRoomName] = useState("");
   const [roomObj, setRoomObj] = useState({});
   //const [roomObj, setRoomObj] = useState({ name: "" });
@@ -21,7 +21,9 @@ export default Home = ({ myRooms, addRoom, deleteRoom }) => {
   return (
     <>
       <h1>Rooms</h1>
-      <p>{roomObj["name"]}-</p>
+      <p>
+        {roomObj["name"]}-<button onClick={() => setRoomId(1)}>click</button>
+      </p>
       {myRooms.map((room) => {
         return (
           <>
