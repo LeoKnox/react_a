@@ -28,7 +28,9 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
         return (
           <>
             <p>
-              {room["name"]}
+              <button onClick={() => setRoomId(room["id"])}>
+                {room["name"]}
+              </button>
               <button onClick={() => deleteRoom(room["id"])}>delete</button>
             </p>
           </>
