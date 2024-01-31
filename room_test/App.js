@@ -4,7 +4,7 @@ import "./components/Single.js";
 import { useState } from "react";
 
 export default function App() {
-  const [roomId, setRoomId] = useState(2);
+  const [roomId, setRoomId] = useState(-1);
   const [myRooms, setMyRooms] = useState([
     { id: 0, name: "entry", width: 5, length: 5 },
     { id: 1, name: "store", width: 8, length: 6 },
@@ -27,13 +27,16 @@ export default function App() {
   };
   return (
     <div className="App">
-      <Home
-        myRooms={myRooms}
-        addRoom={addRoom}
-        setRoomId={setRoomId}
-        deleteRoom={(id) => deleteRoom(id)}
-      />
-      <Single roomId={roomId} room={myRooms[roomId]} />
+      {roomId < 0 ? (
+        <Home
+          myRooms={myRooms}
+          addRoom={addRoom}
+          setRoomId={setRoomId}
+          deleteRoom={(id) => deleteRoom(id)}
+        />
+      ) : (
+        <Single roomId={roomId} room={myRooms[roomId]} />
+      )}
     </div>
   );
 }
