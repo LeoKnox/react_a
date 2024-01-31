@@ -35,7 +35,7 @@ export default function App() {
           deleteRoom={(id) => deleteRoom(id)}
         />
       ) : (
-        <Single roomId={roomId} room={myRooms[roomId]} />
+        <Single roomId={roomId} room={myRooms[roomId]} setRoomId={setRoomId} />
       )}
     </div>
   );
