@@ -1,22 +1,23 @@
 import { useState } from "react";
 
-export default Single = ({ roomId, room, setRoomId }) => {
+export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
   const [newRoom, setNewRoom] = useState(room);
   const [isEdit, setIsEdit] = useState(false);
-  console.log(`New room ${JSON.stringify(newRoom)}`);
   const changeValue = (e) => {
     const { name, value } = e.target;
-    console.log(`name ${name}`);
     setNewRoom((item) => ({
       ...item,
       ...item.newRoom,
       [name]: value,
     }));
   };
+  const changeRoom = () => {
+    updateRoom(newRoom);
+    setIsEdit(false);
+  };
   return (
     <>
       <h3>Single Room {roomId} </h3>
-      <button onClick={() => setIsEdit(true)}>Edit</button>
       <button onClick={() => setRoomId(-1)}>Home</button>
       {isEdit ? (
         <p>
@@ -31,8 +32,35 @@ export default Single = ({ roomId, room, setRoomId }) => {
         <p>{room["name"]}</p>
       )}
       <p>
-        Width:{room["width"]} Length:{room["length"]}
+        {isEdit ? (
+          <>
+            Width:{" "}
+            <input
+              type="number"
+              name="width"
+              value={newRoom["width"]}
+              onChange={changeValue}
+            />
+          </>
+        ) : (
+          <>Width: {room["width"]}</>
+        )}{" "}
+        {isEdit ? (
+          <>
+            Length:{" "}
+            <input
+              type="number"
+              name="length"
+              value={newRoom["length"]}
+              onChange={changeValue}
+            />
+          </>
+        ) : (
+          <>Length: {room["length"]}</>
+        )}
       </p>
+      <button onClick={() => setIsEdit(true)}>Edit</button>
+      <button onClick={changeRoom}>Update</button>
     </>
   );
 };
