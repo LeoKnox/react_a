@@ -29,7 +29,9 @@ export default function App() {
     console.log(`updated room ${JSON.stringify(updatedRoom)}`);
     const tempRoom = myRooms.map((room) => {
       if (roomId === room["id"]) {
-        room = updatedRoom;
+        return updatedRoom;
+      } else {
+        return room;
       }
     });
     console.log(JSON.stringify(tempRoom));
