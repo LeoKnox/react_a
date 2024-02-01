@@ -7,25 +7,20 @@ export default function App() {
   const [roomId, setRoomId] = useState(-1);
   const [myRooms, setMyRooms] = useState([]);
   const addRoom = (roomName) => {
-    console.log(`room name ${JSON.stringify(roomName)}`);
     let newId = 0;
     myRooms.length
       ? (newId = myRooms[myRooms.length - 1]["id"] + 1)
       : (newId = 0);
-    console.log(roomName);
     roomName["id"] = newId;
     setMyRooms((room) => [
       ...room,
       roomName,
-      /*{ id: newId, name: roomName, width: 1, length: 1 },*/
     ]);
   };
   const deleteRoom = (id) => {
     setMyRooms(myRooms.filter((room) => room["id"] !== id));
-    console.log(id);
   };
   const updateRoom = (updatedRoom) => {
-    console.log(`updated room ${JSON.stringify(updatedRoom)}`);
     const tempRoom = myRooms.map((room) => {
       if (roomId === room["id"]) {
         return updatedRoom;
@@ -34,7 +29,6 @@ export default function App() {
       }
     });
     setMyRooms(tempRoom);
-    console.log(`temp room ${JSON.stringify(tempRoom)}`);
   };
   return (
     <div className="App">
