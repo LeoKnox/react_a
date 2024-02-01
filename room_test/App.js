@@ -31,15 +31,10 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
       )}
       <p>
         {isEdit ? (
-          <input
-            type="number"
-            name="width"
-            value={newRoom["width"]}
-            onChange={changeValue}
-          />
+          <input type="number" name="width" value={newRoom["width"]} />
         ) : (
-          (Width: {room["width"]})
-        )}{" "}
+          <>Width {room["width"]}</>
+        )}
         Length:{room["length"]}
       </p>
       <button onClick={() => setIsEdit(true)}>Edit</button>
