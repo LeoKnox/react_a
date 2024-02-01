@@ -13,6 +13,10 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
       [name]: value,
     }));
   };
+  const changeRoom = () => {
+    updateRoom(newRoom);
+    setIsEdit(false);
+  };
   return (
     <>
       <h3>Single Room {roomId} </h3>
@@ -58,7 +62,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
         )}
       </p>
       <button onClick={() => setIsEdit(true)}>Edit</button>
-      <button onClick={() => updateRoom(newRoom)}>Update</button>
+      <button onClick={changeRoom}>Update</button>
     </>
   );
 };
