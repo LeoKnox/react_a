@@ -1,13 +1,10 @@
 import { memo, useState } from "react";
 
 export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
-  const [roomName, setRoomName] = useState("");
   const [roomObj, setRoomObj] = useState({});
-  //const [roomObj, setRoomObj] = useState({ name: "" });
   const [view, setView] = useState(false);
   const updateRoom = (e) => {
     const { name, value } = e.target;
-    console.log(`name ${name}`);
     setRoomObj((item) => ({
       ...item,
       ...item.roomObj,
@@ -21,9 +18,6 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
   return (
     <>
       <h1>Rooms</h1>
-      <p>
-        {roomObj["name"]}-<button onClick={() => setRoomId(1)}>click</button>
-      </p>
       {myRooms.map((room) => {
         return (
           <>
@@ -42,7 +36,6 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
           type="text"
           name="name"
           value={roomObj["name"]}
-          /*onChange={(e) => setRoomName(e.target.value)}*/
           onChange={updateRoom}
         />
       </p>
@@ -64,7 +57,6 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
           onChange={updateRoom}
         />
       </p>
-      <button onClick={(roomName) => addRoom(roomName)}>click</button>
       <button onClick={setRoom}>set room</button>
     </>
   );
