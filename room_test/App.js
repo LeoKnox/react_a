@@ -31,14 +31,17 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
       )}
       <p>
         {isEdit ? (
-          <input
-            type="number"
-            name="width"
-            value={newRoom["width"]}
-            onChange={changeValue}
-          />
+          <>
+            Width:{" "}
+            <input
+              type="number"
+              name="width"
+              value={newRoom["width"]}
+              onChange={changeValue}
+            />
+          </>
         ) : (
-          <>Width {room["width"]}</>
+          <>Width: {room["width"]}</>
         )}
         Length:{room["length"]}
       </p>
