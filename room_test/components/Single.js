@@ -11,7 +11,7 @@ export default Single = ({ roomId, room, setRoomId }) => {
       <button onClick={() => setRoomId(-1)}>Home</button>
       {isEdit ? (
         <p>
-          <input type="text" value="newName" />
+          <input type="text" value={newRoom["name"]} onChange{(e) => setNewRoom(name: e.target.value)} />
         </p>
       ) : (
         <p>{room["name"]}</p>
