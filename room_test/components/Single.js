@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 export default Single = ({ roomId, room, setRoomId }) => {
+  const [newRoom, setNewRoom] = useState(room);
   const [isEdit, setIsEdit] = useState(false);
+  console.log(`New room ${JSON.stringify(newRoom)}`);
   return (
     <>
       <h3>Single Room {roomId} </h3>
