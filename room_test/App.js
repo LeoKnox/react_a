@@ -34,7 +34,8 @@ export default function App() {
         return room;
       }
     });
-    console.log(JSON.stringify(tempRoom));
+    setMyRooms(tempRoom);
+    console.log(`temp room ${JSON.stringify(tempRoom)}`);
   };
   return (
     <div className="App">
