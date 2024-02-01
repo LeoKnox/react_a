@@ -5,7 +5,13 @@ export default Single = ({ roomId, room, setRoomId }) => {
   const [isEdit, setIsEdit] = useState(false);
   console.log(`New room ${JSON.stringify(newRoom)}`);
   const changeValue = (e) => {
-    console.log(e.target.value);
+    const { name, value } = e.target;
+    console.log(`name ${name}`);
+    setNewRoom((item) => ({
+      ...item,
+      ...item.newRoom,
+      [name]: value,
+    }));
   };
   return (
     <>
