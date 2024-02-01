@@ -20,7 +20,12 @@ export default Single = ({ roomId, room, setRoomId }) => {
       <button onClick={() => setRoomId(-1)}>Home</button>
       {isEdit ? (
         <p>
-          <input type="text" value={newRoom["name"]} onChange={changeValue} />
+          <input
+            type="text"
+            name="name"
+            value={newRoom["name"]}
+            onChange={changeValue}
+          />
         </p>
       ) : (
         <p>{room["name"]}</p>
