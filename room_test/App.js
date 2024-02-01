@@ -1,52 +1,72 @@
-import "./styles.css";
-import "./components/Home.js";
-import "./components/Single.js";
-import { useState } from "react";
+import { memo, useState } from "react";
 
-export default function App() {
-  const [roomId, setRoomId] = useState(-1);
-  const [myRooms, setMyRooms] = useState([]);
-  const addRoom = (roomName) => {
-    let newId = 0;
-    myRooms.length
-      ? (newId = myRooms[myRooms.length - 1]["id"] + 1)
-      : (newId = 0);
-    roomName["id"] = newId;
-    setMyRooms((room) => [
-      ...room,
-      roomName,
-    ]);
+export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
+  const [roomObj, setRoomObj] = useState({});
+  const updateRoom = (e) => {
+    const { name, value } = e.target;
+    setRoomObj((item) => ({
+      ...item,
+      ...item.roomObj,
+      [name]: value,
+    }));
   };
-  const deleteRoom = (id) => {
-    setMyRooms(myRooms.filter((room) => room["id"] !== id));
-  };
-  const updateRoom = (updatedRoom) => {
-    const tempRoom = myRooms.map((room) => {
-      if (roomId === room["id"]) {
-        return updatedRoom;
-      } else {
-        return room;
-      }
-    });
-    setMyRooms(tempRoom);
+  const setRoom = () => {
+    addRoom(roomObj);
+    setRoomObj({ name: "", length: 0, width: 0 });
   };
   return (
-    <div className="App">
-      {roomId < 0 ? (
-        <Home
-          myRooms={myRooms}
-          addRoom={addRoom}
-          setRoomId={setRoomId}
-          deleteRoom={(id) => deleteRoom(id)}
+    <>
+      <h1>Rooms</h1>
+      {myRooms.map((room) => {
+        return (
+          <>
+            <p>
+              <button onClick={() => setRoomId(room["id"])}>
+                {room["name"]}
+              </button>
+              <button onClick={() => deleteRoom(room["id"])}>delete</button>
+            </p>
+            <p>{room["description"]}</p>
+          </>
+        );
+      })}
+      <p>
+        Name:
+        <input
+          type="text"
+          name="name"
+          value={roomObj["name"]}
+          onChange={updateRoom}
         />
-      ) : (
-        <Single
-          roomId={roomId}
-          room={myRooms[roomId]}
-          setRoomId={setRoomId}
-          updateRoom={updateRoom}
+      </p>
+      <p>
+        description:
+        <input
+          type="text"
+          name="description"
+          value={roomObj["description"]}
+          onChange={updateRoom}
         />
-      )}
-    </div>
+      </p>
+      <p>
+        Length:
+        <input
+          type="number"
+          name="length"
+          value={roomObj["length"]}
+          onChange={updateRoom}
+        />
+      </p>
+      <p>
+        Width:
+        <input
+          type="number"
+          name="width"
+          value={roomObj["width"]}
+          onChange={updateRoom}
+        />
+      </p>
+      <button onClick={setRoom}>set room</button>
+    </>
   );
-}
+};
