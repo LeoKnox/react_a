@@ -25,6 +25,9 @@ export default function App() {
     setMyRooms(myRooms.filter((room) => room["id"] !== id));
     console.log(id);
   };
+  const updateRoom = (updatedRoom) => {
+    console.log("updating room");
+  };
   return (
     <div className="App">
       {roomId < 0 ? (
@@ -35,7 +38,12 @@ export default function App() {
           deleteRoom={(id) => deleteRoom(id)}
         />
       ) : (
-        <Single roomId={roomId} room={myRooms[roomId]} setRoomId={setRoomId} />
+        <Single
+          roomId={roomId}
+          room={myRooms[roomId]}
+          setRoomId={setRoomId}
+          updateRoom={updateRoom}
+        />
       )}
     </div>
   );
