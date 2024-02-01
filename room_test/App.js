@@ -12,7 +12,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
   };
   const setRoom = () => {
     addRoom(roomObj);
-    setRoomObj({ name: "", length: 0, width: 0 });
+    setRoomObj({ name: "", description: "", length: 0, width: 0 });
   };
   return (
     <>
