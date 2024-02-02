@@ -34,6 +34,21 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
       <p>
         {isEdit ? (
           <>
+            Description:{" "}
+            <input
+              type="text"
+              name="description"
+              value={newRoom["description"]}
+              onChange={changeValue}
+            />
+          </>
+        ) : (
+          <>Description: {room["description"]}</>
+        )}
+      </p>
+      <p>
+        {isEdit ? (
+          <>
             Width:{" "}
             <input
               type="number"
