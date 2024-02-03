@@ -1,4 +1,5 @@
 export default DrawRoom = ({ width, length }) => {
+  const tableStyle = { color: "red" };
   const renderRoom = () => {
     let newWidth = [];
     let newLength = [];
@@ -17,7 +18,7 @@ export default DrawRoom = ({ width, length }) => {
       <p>
         {width}:{length}
       </p>
-      <table>{renderRoom()}</table>
+      <table style={tableStyle}>{renderRoom()}</table>
     </div>
   );
 };
