@@ -5,7 +5,11 @@ export default DrawRoom = ({ width, length }) => {
     let newLength = [];
     for (let y = 0; y < length + 2; y++) {
       for (let x = 0; x < width + 2; x++) {
-        newWidth.push(<td>*</td>);
+        if (y === 0 || y === length + 1) {
+          newWidth.push(<td>*</td>);
+        } else {
+          newWidth.push(<td>.</td>);
+        }
       }
       newLength.push(<tr>{newWidth}</tr>);
       newWidth = [];
