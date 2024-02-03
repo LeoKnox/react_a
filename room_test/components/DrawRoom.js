@@ -21,6 +21,7 @@ export default DrawRoom = ({ width, length }) => {
       newWidth = [];
     }
     return newLength;
+    newLength = [];
   };
   return (
     <div>
