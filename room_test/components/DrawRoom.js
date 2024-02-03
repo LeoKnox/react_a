@@ -6,7 +6,7 @@ export default DrawRoom = ({ width, length }) => {
       for (let x = 0; x < width + 2; x++) {
         newWidth.push(<td>*</td>);
       }
-      newLength.push(newWidth);
+      newLength.push(<tr>{newWidth}</tr>);
       newWidth = [];
     }
     return newLength;
