@@ -1,6 +1,11 @@
 export default DrawRoom = ({ width, length }) => {
   const renderRoom = () => {
-    return <td>*</td>;
+    let newArray = [];
+    for (let x = 0; x < width; x++) {
+      newArray.push(<td>*</td>);
+      console.log(`new array ${newArray}`);
+    }
+    return newArray;
   };
   return (
     <div>
