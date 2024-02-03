@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./DrawRoom.js";
 
 export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
   const [newRoom, setNewRoom] = useState(room);
@@ -74,8 +75,11 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
           <>Length: {room["length"]}</>
         )}
       </p>
-      <button onClick={() => setIsEdit(true)}>Edit</button>
-      <button onClick={changeRoom}>Update</button>
+      <p>
+        <button onClick={() => setIsEdit(true)}>Edit</button>
+        <button onClick={changeRoom}>Update</button>
+      </p>
+      <DrawRoom />
     </>
   );
 };
