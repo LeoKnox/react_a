@@ -1,5 +1,10 @@
 export default DrawRoom = ({ width, length }) => {
-  const tableStyle = { color: "blue" };
+  const tableStyle = {
+    color: "blue",
+    backgroundColor: "lightgray",
+    marginLeft: "auto",
+    marginRight: "auto",
+  };
   const renderRoom = () => {
     let newWidth = [];
     let newLength = [];
