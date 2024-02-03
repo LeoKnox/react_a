@@ -1,85 +1,16 @@
-import { useState } from "react";
-import "./DrawRoom.js";
-
-export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
-  const [newRoom, setNewRoom] = useState(room);
-  const [isEdit, setIsEdit] = useState(false);
-  const changeValue = (e) => {
-    const { name, value } = e.target;
-    setNewRoom((item) => ({
-      ...item,
-      ...item.newRoom,
-      [name]: value,
-    }));
-  };
-  const changeRoom = () => {
-    updateRoom(newRoom);
-    setIsEdit(false);
-  };
+export default DrawRoom = ({ width, length }) => {
+    const renderRoom = () => {
+        return (<td>*</td>)
+    }
   return (
-    <>
-      <h3>Single Room {roomId} </h3>
-      <button onClick={() => setRoomId(-1)}>Home</button>
-      {isEdit ? (
-        <p>
-          <input
-            type="text"
-            name="name"
-            value={newRoom["name"]}
-            onChange={changeValue}
-          />
-        </p>
-      ) : (
-        <p>{room["name"]}</p>
-      )}
+    <div>
+      <h3>Picture of Room</h3>
       <p>
-        {isEdit ? (
-          <>
-            Description:{" "}
-            <input
-              type="text"
-              name="description"
-              value={newRoom["description"]}
-              onChange={changeValue}
-            />
-          </>
-        ) : (
-          <>Description: {room["description"]}</>
-        )}
+        {width}:{length}
       </p>
-      <p>
-        {isEdit ? (
-          <>
-            Width:{" "}
-            <input
-              type="number"
-              name="width"
-              value={newRoom["width"]}
-              onChange={changeValue}
-            />
-          </>
-        ) : (
-          <>Width: {room["width"]}</>
-        )}{" "}
-        {isEdit ? (
-          <>
-            Length:{" "}
-            <input
-              type="number"
-              name="length"
-              value={newRoom["length"]}
-              onChange={changeValue}
-            />
-          </>
-        ) : (
-          <>Length: {room["length"]}</>
-        )}
-      </p>
-      <p>
-        <button onClick={() => setIsEdit(true)}>Edit</button>
-        <button onClick={changeRoom}>Update</button>
-      </p>
-      <DrawRoom width={room["width"]} length={room["length"]} />
-    </>
+      <table>
+        {renderRoom}
+        </table>
+    </div>
   );
 };
