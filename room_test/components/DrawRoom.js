@@ -7,6 +7,7 @@ export default DrawRoom = ({ width, length }) => {
     marginRight: "auto",
   };
   const renderRoom = () => {
+    console.log(`render room ${length} width ${width}`);
     let newWidth = [];
     let newLength = [];
     for (let y = 0; y < length + 2; y++) {
@@ -20,8 +21,8 @@ export default DrawRoom = ({ width, length }) => {
       newLength.push(<tr>{newWidth}</tr>);
       newWidth = [];
     }
+    console.log(`new room: ${newLength}`);
     return newLength;
-    newLength = [];
   };
   return (
     <div>
