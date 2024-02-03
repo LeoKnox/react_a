@@ -1,11 +1,11 @@
 export default DrawRoom = ({ width, length }) => {
-  const tableStyle = { color: "red" };
+  const tableStyle = { color: "blue" };
   const renderRoom = () => {
     let newWidth = [];
     let newLength = [];
     for (let y = 0; y < length + 2; y++) {
       for (let x = 0; x < width + 2; x++) {
-        if (y === 0 || y === length + 1) {
+        if (y === 0 || y === length + 1 || x === 0 || x === width + 1) {
           newWidth.push(<td>*</td>);
         } else {
           newWidth.push(<td>.</td>);
