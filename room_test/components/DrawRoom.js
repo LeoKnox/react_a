@@ -2,6 +2,7 @@ export default DrawRoom = ({ width, length }) => {
   const tableStyle = {
     color: "blue",
     backgroundColor: "lightgray",
+    width: "30%",
     marginLeft: "auto",
     marginRight: "auto",
   };
