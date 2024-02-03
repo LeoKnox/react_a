@@ -10,6 +10,7 @@ export default DrawRoom = ({ width, length }) => {
     console.log(`render room ${length} width ${width}`);
     let newWidth = [];
     let newLength = [];
+    console.log(`new width ${newWidth} new length ${newLength}`);
     for (let y = 0; y < length + 2; y++) {
       for (let x = 0; x < width + 2; x++) {
         if (y === 0 || y === length + 1 || x === 0 || x === width + 1) {
