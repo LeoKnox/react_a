@@ -20,7 +20,11 @@ export default DrawRoom = ({ width, length }) => {
             </td>
           );
         } else {
-          newWidth.push(<td>&#183;</td>);
+          newWidth.push(
+            <td name={x} id={y}>
+              &#183;
+            </td>
+          );
         }
       }
       newLength.push(<tr>{newWidth}</tr>);
