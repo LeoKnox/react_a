@@ -1,74 +1,85 @@
-import { memo, useState } from "react";
+import { useState } from "react";
+import "./DrawRoom.js";
 
-export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
-  const [roomObj, setRoomObj] = useState({});
-  const updateRoom = (e) => {
+export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
+  const [newRoom, setNewRoom] = useState(room);
+  const [isEdit, setIsEdit] = useState(false);
+  const changeValue = (e) => {
     const { name, value } = e.target;
-    setRoomObj((item) => ({
+    setNewRoom((item) => ({
       ...item,
-      ...item.roomObj,
+      ...item.newRoom,
       [name]: value,
     }));
   };
-  const setRoom = () => {
-    roomObj["length"] = parseInt(roomObj["length"]);
-    roomObj["width"] = parseInt(roomObj["width"]);
-    addRoom(roomObj);
-    setRoomObj({ name: "", description: "", length: 0, width: 0 });
+  const changeRoom = () => {
+    updateRoom(newRoom);
+    setIsEdit(false);
   };
   return (
     <>
-      <h1>Rooms</h1>
-      {myRooms.map((room) => {
-        return (
+      <h3>Single Room {roomId} </h3>
+      <button onClick={() => setRoomId(-1)}>Home</button>
+      {isEdit ? (
+        <p>
+          <input
+            type="text"
+            name="name"
+            value={newRoom["name"]}
+            onChange={changeValue}
+          />
+        </p>
+      ) : (
+        <p>{room["name"]}</p>
+      )}
+      <p>
+        {isEdit ? (
           <>
-            <p>
-              <button onClick={() => setRoomId(room["id"])}>
-                {room["name"]}
-              </button>
-              <button onClick={() => deleteRoom(room["id"])}>delete</button>
-            </p>
-            <p>{room["description"]}</p>
+            Description:{" "}
+            <input
+              type="text"
+              name="description"
+              value={newRoom["description"]}
+              onChange={changeValue}
+            />
           </>
-        );
-      })}
-      <p>
-        Name:
-        <input
-          type="text"
-          name="name"
-          value={roomObj["name"]}
-          onChange={updateRoom}
-        />
+        ) : (
+          <>Description: {room["description"]}</>
+        )}
       </p>
       <p>
-        description:
-        <input
-          type="text"
-          name="description"
-          value={roomObj["description"]}
-          onChange={updateRoom}
-        />
+        {isEdit ? (
+          <>
+            Width:{" "}
+            <input
+              type="number"
+              name="width"
+              value={newRoom["width"]}
+              onChange={changeValue}
+            />
+          </>
+        ) : (
+          <>Width: {room["width"]}</>
+        )}{" "}
+        {isEdit ? (
+          <>
+            Length:{" "}
+            <input
+              type="number"
+              name="length"
+              value={newRoom["length"]}
+              onChange={changeValue}
+            />
+          </>
+        ) : (
+          <>Length: {room["length"]}</>
+        )}
       </p>
       <p>
-        Length:
-        <input
-          type="number"
-          name="length"
-          value={roomObj["length"]}
-          onChange={updateRoom}
-        />
+        <button onClick={() => setIsEdit(true)}>Edit</button>
+        <button onClick={changeRoom}>Update</button>
       </p>
-      <p>
-        Width:
-        <input
-          type="number"
-          name="width"
-          value={roomObj["width"]}
-          onChange={updateRoom}
-        />
-      </p>
-      <button onClick={setRoom}>set room</button>
+      <DrawRoom width={room["width"]} length={room["length"]} />
     </>
   );
 };
