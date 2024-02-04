@@ -11,8 +11,8 @@ export default DrawRoom = ({ width, length }) => {
     let newWidth = [];
     let newLength = [];
     console.log(`new width ${newWidth.length} new length ${newLength.length}`);
-    for (let y = 0; y < length + 2; y++) {
-      for (let x = 0; x < width + 2; x++) {
+    for (let y = 0; y < parseInt(length) + 2; y++) {
+      for (let x = 0; x < parseInt(width) + 2; x++) {
         if (y === 0 || y === length + 1 || x === 0 || x === width + 1) {
           newWidth.push(
             <td name={x} id={y}>
