@@ -11,8 +11,10 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }));
   };
   const setRoom = () => {
+    roomObj["length"] = parseInt(roomObj["length"]);
+    roomObj["width"] = parseInt(roomObj["width"]);
     addRoom(roomObj);
-    setRoomObj({ name: "", length: 0, width: 0 });
+    setRoomObj({ name: "", description: "", length: 0, width: 0 });
   };
   return (
     <>
@@ -26,6 +28,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
               </button>
               <button onClick={() => deleteRoom(room["id"])}>delete</button>
             </p>
+            <p>{room["description"]}</p>
           </>
         );
       })}
@@ -35,6 +38,15 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
           type="text"
           name="name"
           value={roomObj["name"]}
+          onChange={updateRoom}
+        />
+      </p>
+      <p>
+        description:
+        <input
+          type="text"
+          name="description"
+          value={roomObj["description"]}
           onChange={updateRoom}
         />
       </p>
