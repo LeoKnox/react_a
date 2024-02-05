@@ -32,11 +32,12 @@ export default DrawRoom = ({ width, length }) => {
           );
         }
       }
+      console.log(`new width ${newWidth}`);
       newLength.push(<tr>{newWidth}</tr>);
       newWidth = [];
     }
     console.log(`new room: ${newLength}`);
-    newLength[0] = "*";
+    newLength[0][1] = "*";
     return newLength;
   };
   return (
