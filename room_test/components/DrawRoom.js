@@ -20,7 +20,7 @@ export default DrawRoom = ({ width, length }) => {
           x === parseInt(width) + 1
         ) {
           newWidth.push(
-            <td name={x} id={y}>
+            <td name={x} id={y + ":"}>
               &#9632;
             </td>
           );
@@ -36,7 +36,7 @@ export default DrawRoom = ({ width, length }) => {
       newLength.push(<tr>{newWidth}</tr>);
       newWidth = [];
     }
-    console.log(`new room: ${newLength}`);
+    console.log(`new room: ${newLength[1]}`);
     newLength[0][1] = "*";
     return newLength;
   };
