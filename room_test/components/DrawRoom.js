@@ -19,17 +19,9 @@ export default DrawRoom = ({ width, length }) => {
           x === 0 ||
           x === parseInt(width) + 1
         ) {
-          newWidth.push(
-            <td name={x} id={y + ":"}>
-              &#9632;
-            </td>
-          );
+          newWidth.push(<td id={y + ":" + x}>&#9632;</td>);
         } else {
-          newWidth.push(
-            <td name={x} id={y}>
-              &#183;
-            </td>
-          );
+          newWidth.push(<td id={y + ":" + x}>&#183;</td>);
         }
       }
       console.log(`new width ${newWidth}`);
