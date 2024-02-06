@@ -25,6 +25,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
           <input
             type="text"
             name="name"
+            autoFocus
             value={newRoom["name"]}
             onChange={changeValue}
           />
@@ -79,7 +80,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
         <button onClick={() => setIsEdit(true)}>Edit</button>
         <button onClick={changeRoom}>Update</button>
       </p>
-      <DrawRoom />
+      <DrawRoom width={room["width"]} length={room["length"]} />
     </>
   );
 };
