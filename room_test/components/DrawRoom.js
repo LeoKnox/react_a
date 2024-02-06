@@ -28,7 +28,7 @@ export default DrawRoom = ({ width, length }) => {
       newLength.push(<tr>{newWidth}</tr>);
       newWidth = [];
     }
-    console.log(`new room: ${newLength.title}`);
+    console.log(`new room: ${newLength}`);
     newLength[0][1] = "*";
     return newLength;
   };
@@ -38,6 +38,7 @@ export default DrawRoom = ({ width, length }) => {
       <p>
         {width}:{length}
       </p>
+      <p>{renderRoom().title}+</p>
       <table style={tableStyle}>{renderRoom()}</table>
     </div>
   );
