@@ -1,75 +1,44 @@
-import { memo, useState } from "react";
-
-export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
-  const [roomObj, setRoomObj] = useState({});
-  const updateRoom = (e) => {
-    const { name, value } = e.target;
-    setRoomObj((item) => ({
-      ...item,
-      ...item.roomObj,
-      [name]: value,
-    }));
+export default DrawRoom = ({ width, length }) => {
+  const tableStyle = {
+    color: "blue",
+    backgroundColor: "lightgray",
+    width: "30%",
+    marginLeft: "auto",
+    marginRight: "auto",
   };
-  const setRoom = () => {
-    roomObj["length"] = +roomObj["length"];
-    roomObj["width"] = +roomObj["width"];
-    addRoom(roomObj);
-    setRoomObj({ name: "", description: "", length: 0, width: 0 });
+  const renderRoom = () => {
+    console.log(`render room ${length} width ${width}`);
+    let newWidth = [];
+    let newLength = [];
+    console.log(`new width ${newWidth.length} new length ${newLength.length}`);
+    for (let y = 0; y < parseInt(length) + 2; y++) {
+      for (let x = 0; x < parseInt(width) + 2; x++) {
+        if (
+          y === 0 ||
+          y === parseInt(length) + 1 ||
+          x === 0 ||
+          x === parseInt(width) + 1
+        ) {
+          newWidth.push(<td id={y + ":" + x}>&#9632;</td>);
+        } else {
+          newWidth.push(<td id={y + ":" + x}>&#183;</td>);
+        }
+      }
+      console.log(`new width ${newWidth}`);
+      newLength.push(<tr>{newWidth}</tr>);
+      newWidth = [];
+    }
+    console.log(`new room: ${typeof newLength}`);
+    newLength[0][1] = "*";
+    return newLength;
   };
   return (
-    <>
-      <h1>Rooms</h1>
-      {myRooms.map((room) => {
-        return (
-          <>
-            <p>
-              <button onClick={() => setRoomId(room["id"])}>
-                {room["name"]}
-              </button>
-              <button onClick={() => deleteRoom(room["id"])}>delete</button>
-            </p>
-            <p>{room["description"]}</p>
-          </>
-        );
-      })}
+    <div>
+      <h3>Picture of Room</h3>
       <p>
-        Name:
-        <input
-          type="text"
-          name="name"
-          autofocus
-          value={roomObj["name"]}
-          onChange={updateRoom}
-        />
+        {width}:{length}
       </p>
-      <p>
-        description:
-        <input
-          type="text"
-          name="description"
-          value={roomObj["description"]}
-          onChange={updateRoom}
-        />
-      </p>
-      <p>
-        Length:
-        <input
-          type="number"
-          name="length"
-          value={roomObj["length"]}
-          onChange={updateRoom}
-        />
-      </p>
-      <p>
-        Width:
-        <input
-          type="number"
-          name="width"
-          value={roomObj["width"]}
-          onChange={updateRoom}
-        />
-      </p>
-      <button onClick={setRoom}>set room</button>
-    </>
+      <table style={tableStyle}>{renderRoom()}</table>
+    </div>
   );
 };
