@@ -28,7 +28,7 @@ export default DrawRoom = ({ width, length }) => {
       newLength.push(<tr>{newWidth}</tr>);
       newWidth = [];
     }
-    console.log(`new room: ${typeof newLength}`);
+    console.log(`new room: ${newLength.title}`);
     newLength[0][1] = "*";
     return newLength;
   };
