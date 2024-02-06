@@ -38,7 +38,7 @@ export default DrawRoom = ({ width, length }) => {
       <p>
         {width}:{length}
       </p>
-      <p>{renderRoom().title}+</p>
+      <p>{renderRoom()[0][0]}+</p>
       <table style={tableStyle}>{renderRoom()}</table>
     </div>
   );
