@@ -9,10 +9,12 @@ export default DrawRoom = ({ width, length }) => {
   const renderRoom = () => {
     console.log(`render room ${length} width ${width}`);
     let newWidth = [];
-    let newLength = [];
+    let newLength = [[]];
     console.log(`new width ${newWidth.length} new length ${newLength.length}`);
     for (let y = 0; y < parseInt(length) + 2; y++) {
       for (let x = 0; x < parseInt(width) + 2; x++) {
+        newLength[y].push(<td>*</td>);
+        /*
         if (
           y === 0 ||
           y === parseInt(length) + 1 ||
@@ -27,9 +29,11 @@ export default DrawRoom = ({ width, length }) => {
       console.log(`new width ${newWidth}`);
       newLength.push(<tr>{newWidth}</tr>);
       newWidth = [];
+      */
+      }
     }
     console.log(`new room: ${newLength}`);
-    newLength[0][1] = "*";
+    newLength[0][1] = "+";
     return newLength;
   };
   return (
