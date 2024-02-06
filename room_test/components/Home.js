@@ -37,7 +37,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
         <input
           type="text"
           name="name"
-          autofocus
+          autoFocus
           value={roomObj["name"]}
           onChange={updateRoom}
         />
