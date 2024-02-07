@@ -6,6 +6,9 @@ export default DrawRoom = ({ width, length }) => {
     marginLeft: "auto",
     marginRight: "auto",
   };
+  const tile = {
+    width: "15em",
+  };
   const renderRoom = () => {
     console.log(`render room ${length} width ${width}`);
     let newWidth = [];
@@ -34,7 +37,7 @@ export default DrawRoom = ({ width, length }) => {
       <>
         {newLength.map((row) => (
           <tr>
-            <td>{row.map((tile) => tile)}</td>
+            <td style={tile}>{row.map((tile) => tile)}</td>
           </tr>
         ))}
       </>
