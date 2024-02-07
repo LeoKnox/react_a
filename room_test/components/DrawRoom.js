@@ -38,9 +38,9 @@ export default DrawRoom = ({ width, length }) => {
       <>
         {newLength.map((row) => (
           <tr>
-            {row.map((tile) => (td>{tile}</td>))}
+            row.map((tile) => (td>{tile}</td>))
           </tr>
-        ))}
+        )}
       </>
     );
   };
