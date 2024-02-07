@@ -8,7 +8,7 @@ export default DrawRoom = ({ width, length }) => {
   };
   const tileStyle = {
     backgroundColor: "darkgray",
-    Width: "1em",
+    Width: ".5em",
     height: "1em",
   };
   const renderRoom = () => {
