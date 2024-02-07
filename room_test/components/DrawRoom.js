@@ -7,7 +7,8 @@ export default DrawRoom = ({ width, length }) => {
     marginRight: "auto",
   };
   const tile = {
-    maxWidth: "10em",
+    backgroundColor: "red",
+    minWidth: "10em",
   };
   const renderRoom = () => {
     console.log(`render room ${length} width ${width}`);
