@@ -24,7 +24,7 @@ export default DrawRoom = ({ width, length }) => {
           newWidth.push("&#183;");
         }
       }
-      console.log(`new width ${newWidth}`);
+      console.log(`new width ${JSON.stringify(newWidth)}`);
       newLength.push({ newWidth });
       newWidth = [];
     }
