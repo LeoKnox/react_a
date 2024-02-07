@@ -35,11 +35,15 @@ export default DrawRoom = ({ width, length }) => {
     console.log(`new room: ${JSON.stringify(newLength)}`);
     newLength[0][1] = "+";
     return (
-      <tr>
-        {newLength.map(row => (
-            {row.map(tile => td>{tile}</td>)}
+      <>
+        {newLength.map((row) => (
+          <tr>
+            {row.map((tile) => (
+              <td>{tile}</td>
+            ))}
+          </tr>
         ))}
-      </tr>
+      </>
     );
   };
   return (
