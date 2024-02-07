@@ -1,14 +1,14 @@
 export default DrawRoom = ({ width, length }) => {
   const tableStyle = {
     color: "blue",
-    backgroundColor: "lightgray",
+    backgroundColor: "darkgray",
     width: "30%",
     marginLeft: "auto",
     marginRight: "auto",
   };
   const tileStyle = {
-    backgroundColor: "darkgray",
-    Width: ".5em",
+    backgroundColor: "lightgray",
+    width: ".5em",
     height: "1em",
   };
   const renderRoom = () => {
@@ -24,9 +24,9 @@ export default DrawRoom = ({ width, length }) => {
           x === 0 ||
           x === parseInt(width) + 1
         ) {
-          newWidth.push("*");
+          newWidth.push("■");
         } else {
-          newWidth.push(".");
+          newWidth.push("·");
         }
       }
       console.log(`new width ${JSON.stringify(newWidth)}`);
