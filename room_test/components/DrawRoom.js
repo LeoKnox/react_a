@@ -6,9 +6,10 @@ export default DrawRoom = ({ width, length }) => {
     marginLeft: "auto",
     marginRight: "auto",
   };
-  const tile = {
-    backgroundColor: "red",
-    minWidth: "10em",
+  const tileStyle = {
+    backgroundColor: "darkgray",
+    Width: "1em",
+    height: "1em",
   };
   const renderRoom = () => {
     console.log(`render room ${length} width ${width}`);
@@ -39,7 +40,7 @@ export default DrawRoom = ({ width, length }) => {
         {newLength.map((row) => (
           <tr>
             {row.map((tile) => (
-              <td>{tile}</td>
+              <td style={tileStyle}>{tile}</td>
             ))}
           </tr>
         ))}
