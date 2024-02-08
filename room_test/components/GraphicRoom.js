@@ -1,8 +1,9 @@
 export default GraphicRoom = ({ length, width }) => {
   const tileStyle = {
     backgroundColor: "lightgray",
-    width: "20px",
-    height: "20px",
+    fontSize: "1.3em",
+    width: "1.4em",
+    height: "1.4em",
   };
 
   console.log(`length: ${length} width: ${width}`);
