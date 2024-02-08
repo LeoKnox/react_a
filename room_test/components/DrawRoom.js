@@ -3,13 +3,12 @@ export default DrawRoom = ({ width, length }) => {
     color: "blue",
     backgroundColor: "darkgray",
     width: "30%",
+    tableLayout: "fixed",
     marginLeft: "auto",
     marginRight: "auto",
   };
   const tileStyle = {
     backgroundColor: "lightgray",
-    width: ".5em",
-    height: "1em",
   };
   const renderRoom = () => {
     console.log(`render room ${length} width ${width}`);
