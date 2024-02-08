@@ -1,3 +1,5 @@
+import "./GraphicRoom.js";
+
 export default DrawRoom = ({ width, length }) => {
   const tableStyle = {
     color: "blue",
@@ -54,7 +56,9 @@ export default DrawRoom = ({ width, length }) => {
       <p>
         {width}:{length}
       </p>
-      <table style={tableStyle}>{renderRoom()}</table>
+      <table style={tableStyle}>
+        <GraphicRoom />>
+      </table>
     </div>
   );
 };
