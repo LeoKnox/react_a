@@ -7,6 +7,10 @@ export default DrawRoom = ({ width, length }) => {
     marginLeft: "auto",
     marginRight: "auto",
   };
+  const divStyle = {
+    width: "1em",
+    height: "1em",
+  };
   const tileStyle = {
     backgroundColor: "lightgray",
   };
@@ -39,7 +43,9 @@ export default DrawRoom = ({ width, length }) => {
         {newLength.map((row) => (
           <tr>
             {row.map((tile) => (
-              <td style={tileStyle}>{tile}</td>
+              <td style={tileStyle}>
+                <div style={divStyle}>{tile}</div>
+              </td>
             ))}
           </tr>
         ))}
