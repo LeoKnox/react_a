@@ -10,10 +10,7 @@ export default DrawRoom = ({ width, length }) => {
   };
   return (
     <div>
-      <h3>Picture of Room</h3>
-      <p>
-        {width}:{length}
-      </p>
+      <p>Picture of Room</p>
       <table style={tableStyle}>
         <GraphicRoom length={length} width={width} />
       </table>
