@@ -1,4 +1,10 @@
 export default GraphicRoom = ({ length, width }) => {
+  const tileStyle = {
+    backgroundColor: "lightgray",
+    width: "20px",
+    height: "20px",
+  };
+
   console.log(`length: ${length} width: ${width}`);
   let newWidth = [];
   let newLength = [];
@@ -21,7 +27,7 @@ export default GraphicRoom = ({ length, width }) => {
     newWidth = [];
   }
   console.log(`new room: ${JSON.stringify(newLength)}`);
-  //newLength[0][1] = "+";
+  newLength[0][1] = "+";
   return (
     <>
       {newLength.map((row) => (
