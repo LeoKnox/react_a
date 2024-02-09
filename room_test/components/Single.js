@@ -6,6 +6,9 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
     backgroundColor: "lightblue",
     padding: ".5em",
     width: "50%",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "1em",
   };
   const inputStyle = {
     width: "3em",
