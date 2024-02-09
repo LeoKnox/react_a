@@ -4,7 +4,8 @@ import "./DrawRoom.js";
 export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
   const dataStyle = {
     backgroundColor: "lightblue",
-    padding: ".5em",
+    height: "8em",
+    padding: "1em",
     width: "50%",
     marginLeft: "auto",
     marginRight: "auto",
