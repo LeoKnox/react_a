@@ -78,7 +78,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
       </p>
       <p>
         {isEdit ? (
-          <button>Cancel</button>
+          <button onClick={() => setIsEdit(false)}>Cancel</button>
         ) : (
           <button onClick={() => setIsEdit(true)}>Edit</button>
         )}
