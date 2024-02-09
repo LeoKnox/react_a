@@ -87,7 +87,11 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
           <button onClick={() => setIsEdit(true)}>Edit</button>
         )}
         <button onClick={changeRoom}>Update</button>
-        {isEdit ? <button onClick={resetRoom}>Reset</button> : null}
+        {isEdit ? (
+          <p>
+            <button onClick={resetRoom}>Reset</button>
+          </p>
+        ) : null}
       </p>
       <DrawRoom width={room["width"]} length={room["length"]} />
     </>
