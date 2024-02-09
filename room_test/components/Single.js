@@ -16,6 +16,10 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
     updateRoom(newRoom);
     setIsEdit(false);
   };
+  const resetRoom = () => {
+    console.log(`reset room ${room.name}`);
+    setNewRoom(room);
+  };
   return (
     <>
       <h3>Single Room {roomId} </h3>
@@ -83,7 +87,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
           <button onClick={() => setIsEdit(true)}>Edit</button>
         )}
         <button onClick={changeRoom}>Update</button>
-        {isEdit ? <button>Reset</button> : null}
+        {isEdit ? <button onClick={resetRoom}>Reset</button> : null}
       </p>
       <DrawRoom width={room["width"]} length={room["length"]} />
     </>
