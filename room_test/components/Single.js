@@ -35,6 +35,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
       <div style={dataStyle}>
         {isEdit ? (
           <p>
+            Name:&nbsp;
             <input
               type="text"
               name="name"
