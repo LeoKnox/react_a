@@ -4,6 +4,7 @@ import "./DrawRoom.js";
 export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
   const dataStyle = {
     backgroundColor: "lightblue",
+    padding: ".5em",
     width: "50%",
   };
   const [newRoom, setNewRoom] = useState(room);
