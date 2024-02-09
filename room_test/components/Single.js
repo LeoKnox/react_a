@@ -2,6 +2,10 @@ import { useState } from "react";
 import "./DrawRoom.js";
 
 export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
+  const dataStyle = {
+    backgroundColor: "lightblue",
+    width: "50%",
+  };
   const [newRoom, setNewRoom] = useState(room);
   const [isEdit, setIsEdit] = useState(false);
   const changeValue = (e) => {
@@ -24,62 +28,64 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
     <>
       <h3>Single Room {roomId} </h3>
       <button onClick={() => setRoomId(-1)}>Home</button>
-      {isEdit ? (
-        <p>
-          <input
-            type="text"
-            name="name"
-            autoFocus
-            value={newRoom["name"]}
-            onChange={changeValue}
-          />
-        </p>
-      ) : (
-        <p>{room["name"]}</p>
-      )}
-      <p>
+      <div style={dataStyle}>
         {isEdit ? (
-          <>
-            Description:{" "}
+          <p>
             <input
               type="text"
-              name="description"
-              value={newRoom["description"]}
+              name="name"
+              autoFocus
+              value={newRoom["name"]}
               onChange={changeValue}
             />
-          </>
+          </p>
         ) : (
-          <>Description: {room["description"]}</>
+          <p>{room["name"]}</p>
         )}
-      </p>
-      <p>
-        {isEdit ? (
-          <>
-            Width:{" "}
-            <input
-              type="number"
-              name="width"
-              value={newRoom["width"]}
-              onChange={changeValue}
-            />
-          </>
-        ) : (
-          <>Width: {room["width"]}</>
-        )}{" "}
-        {isEdit ? (
-          <>
-            Length:{" "}
-            <input
-              type="number"
-              name="length"
-              value={newRoom["length"]}
-              onChange={changeValue}
-            />
-          </>
-        ) : (
-          <>Length: {room["length"]}</>
-        )}
-      </p>
+        <p>
+          {isEdit ? (
+            <>
+              Description:{" "}
+              <input
+                type="text"
+                name="description"
+                value={newRoom["description"]}
+                onChange={changeValue}
+              />
+            </>
+          ) : (
+            <>Description: {room["description"]}</>
+          )}
+        </p>
+        <p>
+          {isEdit ? (
+            <>
+              Width:{" "}
+              <input
+                type="number"
+                name="width"
+                value={newRoom["width"]}
+                onChange={changeValue}
+              />
+            </>
+          ) : (
+            <>Width: {room["width"]}</>
+          )}{" "}
+          {isEdit ? (
+            <>
+              Length:{" "}
+              <input
+                type="number"
+                name="length"
+                value={newRoom["length"]}
+                onChange={changeValue}
+              />
+            </>
+          ) : (
+            <>Length: {room["length"]}</>
+          )}
+        </p>
+      </div>
       <p>
         {isEdit ? (
           <button onClick={() => setIsEdit(false)}>Cancel</button>
