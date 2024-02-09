@@ -7,6 +7,9 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
     padding: ".5em",
     width: "50%",
   };
+  const inputStyle = {
+    width: "3em",
+  };
   const [newRoom, setNewRoom] = useState(room);
   const [isEdit, setIsEdit] = useState(false);
   const changeValue = (e) => {
@@ -63,6 +66,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
             <>
               Width:{" "}
               <input
+                style={inputStyle}
                 type="number"
                 name="width"
                 value={newRoom["width"]}
@@ -76,6 +80,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
             <>
               Length:{" "}
               <input
+                style={inputStyle}
                 type="number"
                 name="length"
                 value={newRoom["length"]}
