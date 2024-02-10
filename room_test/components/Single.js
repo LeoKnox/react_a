@@ -17,6 +17,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
   const [newRoom, setNewRoom] = useState(room);
   const [isEdit, setIsEdit] = useState(false);
   const [sizeError, setSizeError] = useState(false);
+  const [addMonster, setAddMonster] = useState(false);
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
@@ -122,7 +123,12 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
           Rooms must be length and width must be greater then 1
         </p>
       ) : null}
-      <DrawRoom width={room["width"]} length={room["length"]} />
+      <DrawRoom
+        width={room["width"]}
+        length={room["length"]}
+        addMonser={addMonster}
+        setAddMonster={setAddMonster}
+      />
     </>
   );
 };
