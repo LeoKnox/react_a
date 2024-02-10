@@ -33,6 +33,7 @@ export default GraphicRoom = ({ length, width }) => {
   newLength[0][1] = "+";
   return (
     <>
+      <button onClick={() => setAddMonster(!addMonster)}>Add Monster</button>
       {newLength.map((row) => (
         <tr>
           {row.map((tile) => (
