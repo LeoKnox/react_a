@@ -1,24 +1,42 @@
-import "./GraphicRoom.js";
-
-export default DrawRoom = ({ width, length, addMonster, setAddMonster }) => {
-  const tableStyle = {
-    color: "blue",
-    backgroundColor: "darkgray",
-    tableLayout: "fixed",
-    marginLeft: "auto",
-    marginRight: "auto",
+export default GraphicRoom = ({ length, width, addMonster, setAddMonster }) => {
+  const tileStyle = {
+    backgroundColor: "lightgray",
+    fontSize: "1.3em",
+    fontWeight: "bold",
+    width: "1.1em",
+    height: "1.1em",
   };
+  let newWidth = [];
+  let newLength = [];
+  for (let y = 0; y < parseInt(length) + 2; y++) {
+    for (let x = 0; x < parseInt(width) + 2; x++) {
+      if (
+        y === 0 ||
+        y === parseInt(length) + 1 ||
+        x === 0 ||
+        x === parseInt(width) + 1
+      ) {
+        newWidth.push("■");
+      } else {
+        newWidth.push("·");
+      }
+    }
+    newLength.push(newWidth);
+    newWidth = [];
+  }
+  newLength[0][1] = "+";
   return (
-    <div>
-      <p>Picture of Room</p>
-      <table style={tableStyle}>
-        <GraphicRoom
-          length={length}
-          width={width}
-          addMonster={addMonster}
-          setAddMonster={setAddMonster}
-        />
-      </table>
-    </div>
+    <>
+      {newLength.map((row, y) => (
+        <tr>
+          {row.map((tile, x) => (
+            <td style={tileStyle} id={y + "," + x}>
+              {tile}
+            </td>
+          ))}
+        </tr>
+      ))}
+      <p>{addMonster ? "true" : "false"}</p>
+    </>
   );
 };
