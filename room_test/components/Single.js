@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 
 export default GraphicRoom = ({ length, width }) => {
   const tileStyle = {
@@ -10,8 +10,8 @@ export default GraphicRoom = ({ length, width }) => {
   };
   const [addMonster, setAddMonster] = useState(false);
   const placeMonster = () => {
-    console.log("add monster");  
-  }
+    console.log("add monster");
+  };
   let newWidth = [];
   let newLength = [];
   for (let y = 0; y < parseInt(length) + 2; y++) {
@@ -36,7 +36,12 @@ export default GraphicRoom = ({ length, width }) => {
       {newLength.map((row) => (
         <tr>
           {row.map((tile) => (
-            <td style={tileStyle} onClick={addMonster ? placeMonster() : null)>{tile}</td>
+            <td
+              style={tileStyle}
+              onClick={() => (addMonster ? placeMonster() : null)}
+            >
+              {tile}
+            </td>
           ))}
         </tr>
       ))}
