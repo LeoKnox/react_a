@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default GraphicRoom = ({ length, width }) => {
   const tileStyle = {
     backgroundColor: "lightgray",
@@ -7,10 +5,6 @@ export default GraphicRoom = ({ length, width }) => {
     fontWeight: "bold",
     width: "1.1em",
     height: "1.1em",
-  };
-  const [addMonster, setAddMonster] = useState(false);
-  const placeMonster = () => {
-    console.log("add monster");
   };
   let newWidth = [];
   let newLength = [];
@@ -33,7 +27,6 @@ export default GraphicRoom = ({ length, width }) => {
   newLength[0][1] = "+";
   return (
     <>
-      <button onClick={() => setAddMonster(!addMonster)}>Add Monster</button>
       {newLength.map((row) => (
         <tr>
           {row.map((tile) => (
