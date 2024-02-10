@@ -26,8 +26,13 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
     }));
   };
   const changeRoom = () => {
-    updateRoom(newRoom);
-    setIsEdit(false);
+    if (newRoom["width"] > 1 && newRoom["length"] > 1) {
+      updateRoom(newRoom);
+      setIsEdit(false);
+      setSizeError(false);
+    } else {
+      setSizeError(true);
+    }
   };
   const resetRoom = () => {
     console.log(`reset room ${room.name}`);
@@ -112,7 +117,9 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
         ) : null}
       </p>
       {sizeError ? (
-        <p>Rooms must be length and width must be greater then 1</p>
+        <p className="error">
+          Rooms must be length and width must be greater then 1
+        </p>
       ) : null}
       <DrawRoom width={room["width"]} length={room["length"]} />
     </>
