@@ -124,8 +124,8 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
         </p>
       ) : null}
       <DrawRoom
-        width={room["width"]}
-        length={room["length"]}
+        width={newRoom["width"]}
+        length={newRoom["length"]}
         addMonser={addMonster}
         setAddMonster={setAddMonster}
       />
