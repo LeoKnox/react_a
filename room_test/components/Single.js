@@ -18,7 +18,11 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
   const [isEdit, setIsEdit] = useState(false);
   const [sizeError, setSizeError] = useState(false);
   const [addMonster, setAddMonster] = useState(false);
-  const [newMonster, setNewMonster] = useState({monsterName: "Mon", x:3, y:4});
+  const [newMonster, setNewMonster] = useState({
+    monsterName: "Mon",
+    x: 3,
+    y: 4,
+  });
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
@@ -83,6 +87,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
                 type="number"
                 name="width"
                 value={newRoom["width"]}
+                min={newMonster["x"]}
                 onChange={changeValue}
               />
             </>
@@ -97,6 +102,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
                 type="number"
                 name="length"
                 value={newRoom["length"]}
+                min={newMonster["y"]}
                 onChange={changeValue}
               />
             </>
