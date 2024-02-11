@@ -1,4 +1,11 @@
-export default GraphicRoom = ({ length, width }) => {
+export default GraphicRoom = ({
+  length,
+  width,
+  addMonster,
+  setAddMonster,
+  newMonster,
+  setNewMonster,
+}) => {
   const tileStyle = {
     backgroundColor: "lightgray",
     fontSize: "1.3em",
@@ -8,6 +15,7 @@ export default GraphicRoom = ({ length, width }) => {
   };
   let newWidth = [];
   let newLength = [];
+  console.log(`new monster ${JSON.stringify(newMonster)}`);
   for (let y = 0; y < parseInt(length) + 2; y++) {
     for (let x = 0; x < parseInt(width) + 2; x++) {
       if (
@@ -25,6 +33,7 @@ export default GraphicRoom = ({ length, width }) => {
     newWidth = [];
   }
   newLength[0][1] = "+";
+  newLength[newMonster["x"]][newMonster["y"]] = "m";
   return (
     <>
       {newLength.map((row, y) => (
@@ -36,6 +45,7 @@ export default GraphicRoom = ({ length, width }) => {
           ))}
         </tr>
       ))}
+      <p>{addMonster ? "true" : "false"}</p>
     </>
   );
 };
