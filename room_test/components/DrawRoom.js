@@ -1,6 +1,13 @@
 import "./GraphicRoom.js";
 
-export default DrawRoom = ({ width, length, addMonster, setAddMonster, newMonster, setNewMonster }) => {
+export default DrawRoom = ({
+  width,
+  length,
+  addMonster,
+  setAddMonster,
+  newMonster,
+  setNewMonster,
+}) => {
   const tableStyle = {
     color: "blue",
     backgroundColor: "darkgray",
@@ -17,6 +24,8 @@ export default DrawRoom = ({ width, length, addMonster, setAddMonster, newMonste
           width={width}
           addMonster={addMonster}
           setAddMonster={setAddMonster}
+          newMonster={newMonster}
+          setNewMonster={setNewMonster}
         />
       </table>
     </div>
