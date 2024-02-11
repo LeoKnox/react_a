@@ -33,7 +33,7 @@ export default GraphicRoom = ({
     newWidth = [];
   }
   newLength[0][1] = "+";
-  newLength[newMonster["x"]][newMonster["y"]] = "m";
+  newLength[newMonster["y"]][newMonster["x"]] = "m";
   return (
     <>
       {newLength.map((row, y) => (
