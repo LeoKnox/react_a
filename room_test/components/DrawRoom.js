@@ -16,7 +16,7 @@ export default DrawRoom = ({
     marginRight: "auto",
   };
   return (
-    <div>
+    <div style={{ display: "inline-block" }}>
       <p>Picture of Room</p>
       <ul>
         <li>Name: {newMonster["monsterName"]}</li>
