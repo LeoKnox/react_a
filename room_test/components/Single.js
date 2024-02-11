@@ -110,7 +110,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
         ) : (
           <button onClick={() => setIsEdit(true)}>Edit</button>
         )}
-        <button>Add Monster</button>
+        <button onClick={() => setAddMonster(!addMonster)}>Add Monster</button>
         {isEdit ? (
           <p>
             <button onClick={resetRoom}>Reset</button>
@@ -126,7 +126,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
       <DrawRoom
         width={newRoom["width"]}
         length={newRoom["length"]}
-        addMonser={addMonster}
+        addMonster={addMonster}
         setAddMonster={setAddMonster}
       />
     </>
