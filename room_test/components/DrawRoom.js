@@ -18,6 +18,11 @@ export default DrawRoom = ({
   return (
     <div>
       <p>Picture of Room</p>
+      <ul>
+        <li>Name: {newMonster["monsterName"]}</li>
+        <li>X: {newMonster["x"]}</li>
+        <li>Y: {newMonster["y"]}</li>
+      </ul>
       <table style={tableStyle}>
         <GraphicRoom
           length={length}
