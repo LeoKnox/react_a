@@ -18,6 +18,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
   const [isEdit, setIsEdit] = useState(false);
   const [sizeError, setSizeError] = useState(false);
   const [addMonster, setAddMonster] = useState(false);
+  const [newMonster, setNewMonster] = useState({});
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
@@ -128,6 +129,8 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
         length={newRoom["length"]}
         addMonster={addMonster}
         setAddMonster={setAddMonster}
+        newMonster={newMonster}
+        setNewMonster={setNewMonster}
       />
     </>
   );
