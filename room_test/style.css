@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+body {
+  background-color: #ddffff;
+}
+
 .error {
   color: darkred;
   background-color: paleGoldenRod;
