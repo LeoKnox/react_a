@@ -16,7 +16,7 @@ export default GraphicRoom = ({
   let newWidth = [];
   let newLength = [];
   const placeMonster = (y, x) => {
-    if (newMonster["x"] > 0 || newMonster["x"] < width || y > 0 || y < length) {
+    if (x > 0 && x < width && y > 0 && y < length) {
       setNewMonster({ name: "mon", x: x, y: y });
     }
   };
