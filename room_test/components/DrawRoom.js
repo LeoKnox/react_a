@@ -10,15 +10,16 @@ export default DrawRoom = ({
 }) => {
   const tableStyle = {
     color: "blue",
+    display: "inline-block",
     backgroundColor: "darkgray",
     tableLayout: "fixed",
     marginLeft: "auto",
     marginRight: "auto",
   };
   return (
-    <div style={{ display: "inline-block" }}>
+    <div>
       <p>Picture of Room</p>
-      <ul>
+      <ul style={{ display: "inline-block" }}>
         <li>Name: {newMonster["monsterName"]}</li>
         <li>X: {newMonster["x"]}</li>
         <li>Y: {newMonster["y"]}</li>
