@@ -137,6 +137,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
         setAddMonster={setAddMonster}
         newMonster={newMonster}
         setNewMonster={setNewMonster}
+        monsters={room["monsters"]}
       />
     </>
   );
