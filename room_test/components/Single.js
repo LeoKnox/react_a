@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./DrawRoom.js";
 
-export default Single = ({ roomId, room, setRoomId, updateRoom }) => {
+export default Single = ({ roomId, room, setRoomId, updateRoom, pushMonster }) => {
   const dataStyle = {
     backgroundColor: "lightblue",
     height: "8em",
