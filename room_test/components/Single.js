@@ -124,6 +124,7 @@ export default Single = ({
           <button onClick={() => setIsEdit(true)}>Edit</button>
         )}
         <button onClick={() => setAddMonster(!addMonster)}>Add Monster</button>
+        <button onClick={pushMonster}>Push</button>
         {isEdit ? (
           <p>
             <button onClick={resetRoom}>Reset</button>
@@ -144,7 +145,6 @@ export default Single = ({
         newMonster={newMonster}
         setNewMonster={setNewMonster}
         monsters={room["monsters"]}
-        pushMonster={pushMonster}
       />
     </>
   );
