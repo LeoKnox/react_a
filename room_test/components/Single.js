@@ -1,7 +1,13 @@
 import { useState } from "react";
 import "./DrawRoom.js";
 
-export default Single = ({ roomId, room, setRoomId, updateRoom, pushMonster }) => {
+export default Single = ({
+  roomId,
+  room,
+  setRoomId,
+  updateRoom,
+  pushMonster,
+}) => {
   const dataStyle = {
     backgroundColor: "lightblue",
     height: "8em",
@@ -138,6 +144,7 @@ export default Single = ({ roomId, room, setRoomId, updateRoom, pushMonster }) =
         newMonster={newMonster}
         setNewMonster={setNewMonster}
         monsters={room["monsters"]}
+        pushMonster={pushMonster}
       />
     </>
   );
