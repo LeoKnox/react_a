@@ -7,6 +7,7 @@ export default DrawRoom = ({
   setAddMonster,
   newMonster,
   setNewMonster,
+  monsters,
 }) => {
   const tableStyle = {
     color: "blue",
@@ -26,7 +27,17 @@ export default DrawRoom = ({
           marginRight: "1em",
         }}
       >
-        <li>Name: {newMonster["name"]}</li>
+        {monsters.map((monster) => (
+          <p>Name: {monster["monsterName"]}</p>
+        ))}
+        <li>
+          Name:{" "}
+          <input
+            type="text"
+            name="monsterName"
+            value={newMonster["monsterName"]}
+          />
+        </li>
         <li>X: {newMonster["x"]}</li>
         <li>Y: {newMonster["y"]}</li>
       </ul>
