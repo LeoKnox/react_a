@@ -26,7 +26,14 @@ export default DrawRoom = ({
           marginRight: "1em",
         }}
       >
-        <li>Name: {newMonster["monsterName"]}</li>
+        <li>
+          Name:{" "}
+          <input
+            type="text"
+            name="monsterName"
+            value={newMonster["monsterName"]}
+          />
+        </li>
         <li>X: {newMonster["x"]}</li>
         <li>Y: {newMonster["y"]}</li>
       </ul>
