@@ -15,9 +15,15 @@ export default function App() {
       monsters: [{ monsterName: "ichi", x: 1, y: 1 }],
     },
   ]);
-    const pushMonster = () => {
-    console.log(`pushed monster`);
-  }
+  const pushMonster = (param) => {
+    console.log(`pushed monster ${param}`);
+    const tempRooms = myRooms.map((room) => {
+      if (room["id"] === 0) {
+        room["monsters"].push({ monsterName: "Ni", x: 2, y: 2 });
+      }
+    });
+    setMyRooms(tempRooms);
+  };
   const addRoom = (roomName) => {
     let newId = 0;
     myRooms.length
