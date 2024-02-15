@@ -22,6 +22,7 @@ export default function App() {
         return room["monsters"].push({ monsterName: "Ni", x: 2, y: 2 });
       }
     });
+    console.log(`temp rooms ${tempRooms}`);
     setMyRooms(tempRooms);
   };
   const addRoom = (roomName) => {
