@@ -17,9 +17,11 @@ export default GraphicRoom = ({
   let newWidth = [];
   let newLength = [];
   const placeMonster = (y, x) => {
+    console.log(`graphic room mobname ${mobName}`);
     if (x > 0 && x < width + 1 && y > 0 && y < length + 1) {
-      setNewMonster({ name: { mobName }, x: x, y: y });
+      setNewMonster({ monsterName: mobName, x: x, y: y });
     }
+    console.log(`grphic room monster ${JSON.stringify(newMonster)}`);
   };
   for (let y = 0; y < parseInt(length) + 2; y++) {
     for (let x = 0; x < parseInt(width) + 2; x++) {
