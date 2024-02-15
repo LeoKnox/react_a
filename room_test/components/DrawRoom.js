@@ -1,4 +1,5 @@
 export default GraphicRoom = ({
+  mobName,
   length,
   width,
   addMonster,
@@ -17,7 +18,7 @@ export default GraphicRoom = ({
   let newLength = [];
   const placeMonster = (y, x) => {
     if (x > 0 && x < width + 1 && y > 0 && y < length + 1) {
-      setNewMonster({ name: newMonster["name"], x: x, y: y });
+      setNewMonster({ name: mobName, x: x, y: y });
     }
   };
   for (let y = 0; y < parseInt(length) + 2; y++) {
