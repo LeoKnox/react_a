@@ -1,66 +1,63 @@
-import "./GraphicRoom.js";
-
-export default DrawRoom = ({
-  width,
+export default GraphicRoom = ({
   length,
+  width,
   addMonster,
   setAddMonster,
   newMonster,
   setNewMonster,
-  monsters,
 }) => {
-  const tableStyle = {
-    color: "blue",
-    display: "inline-block",
-    backgroundColor: "darkgray",
-    tableLayout: "fixed",
-    marginLeft: "auto",
-    marginRight: "auto",
+  const tileStyle = {
+    backgroundColor: "lightgray",
+    fontSize: "1.3em",
+    fontWeight: "bold",
+    width: "1.1em",
+    height: "1.1em",
   };
-  const updateMonsterName = (e) => {
-    const { name, value } = e.target;
-    setNewMonster((item) => ({
-      ...item,
-      [name]: value,
-    }));
+  let newWidth = [];
+  let newLength = [];
+  const placeMonster = (y, x) => {
+    if (x > 0 && x < width + 1 && y > 0 && y < length + 1) {
+      setNewMonster({ name: newMonster["name"], x: x, y: y });
+    }
   };
+  for (let y = 0; y < parseInt(length) + 2; y++) {
+    for (let x = 0; x < parseInt(width) + 2; x++) {
+      if (
+        y === 0 ||
+        y === parseInt(length) + 1 ||
+        x === 0 ||
+        x === parseInt(width) + 1
+      ) {
+        newWidth.push("■");
+      } else {
+        newWidth.push("·");
+      }
+    }
+    newLength.push(newWidth);
+    newWidth = [];
+  }
+  newLength[0][1] = "+";
+  newLength[newMonster["y"]][newMonster["x"]] = "m";
   return (
-    <div>
-      <p>Picture of Room</p>
-      <ul
-        style={{
-          display: "inline-block",
-          verticalAlign: "top",
-          marginRight: "1em",
-        }}
-      >
-        {monsters.map((monster) => (
-          <p>
-            Name: {monster["monsterName"]} {monster["x"]} x {monster["y"]}
-          </p>
-        ))}
-        <li>
-          Name:{" "}
-          <input
-            type="text"
-            name="monsterName"
-            value={newMonster["monsterName"]}
-            onChange={updateMonsterName}
-          />
-        </li>
-        <li>X: {newMonster["x"]}</li>
-        <li>Y: {newMonster["y"]}</li>
-      </ul>
-      <table style={tableStyle}>
-        <GraphicRoom
-          length={length}
-          width={width}
-          addMonster={addMonster}
-          setAddMonster={setAddMonster}
-          newMonster={newMonster}
-          setNewMonster={setNewMonster}
-        />
-      </table>
-    </div>
+    <>
+      {newLength.map((row, y) => (
+        <tr>
+          {row.map((tile, x) => (
+            <td
+              style={tileStyle}
+              id={y + "," + x}
+              onClick={() => placeMonster(y, x)}
+            >
+              {tile}
+            </td>
+          ))}
+        </tr>
+      ))}
+      <p>
+        {addMonster
+          ? "click map to place monster"
+          : "click map to place monster for now"}
+      </p>
+    </>
   );
 };
