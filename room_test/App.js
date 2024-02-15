@@ -20,8 +20,9 @@ export default function App() {
     let newRoom = { monsterName: "Ni", x: 2, y: 2 };
     const tempRooms = myRooms.map((room) => {
       if (room["id"] === 0) {
+        room["monsters"].push(newRoom);
         console.log(`room monsters ${JSON.stringify(room["monsters"])}`);
-        return room["monsters"].push(newRoom);
+        return room;
       } else {
         return room;
       }
