@@ -35,7 +35,9 @@ export default DrawRoom = ({
         }}
       >
         {monsters.map((monster) => (
-          <p>Name: {monster["monsterName"]}</p>
+          <p>
+            Name: {monster["monsterName"]} {monster["x"]} x {monster["y"]}
+          </p>
         ))}
         <li>
           Name:{" "}
