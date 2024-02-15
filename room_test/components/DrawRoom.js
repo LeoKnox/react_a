@@ -17,6 +17,13 @@ export default DrawRoom = ({
     marginLeft: "auto",
     marginRight: "auto",
   };
+  const updateMonsterName = (e) => {
+    const { name, value } = e.target;
+    setNewMonster((item) => ({
+      ...item,
+      [name]: value,
+    }));
+  };
   return (
     <div>
       <p>Picture of Room</p>
@@ -36,6 +43,7 @@ export default DrawRoom = ({
             type="text"
             name="monsterName"
             value={newMonster["monsterName"]}
+            onChange={updateMonsterName}
           />
         </li>
         <li>X: {newMonster["x"]}</li>
