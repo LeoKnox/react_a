@@ -42,7 +42,7 @@ export default function App() {
       ? (newId = myRooms[myRooms.length - 1]["id"] + 1)
       : (newId = 0);
     roomName["id"] = newId;
-    roomName["monsters"] = [{ monsterName: "", x: 0, y: 0 }];
+    roomName["monsters"] = [];
     setMyRooms((room) => [...room, roomName]);
   };
   const deleteRoom = (id) => {
