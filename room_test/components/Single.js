@@ -127,7 +127,7 @@ export default Single = ({
           <button onClick={() => setIsEdit(true)}>Edit</button>
         )}
         <button onClick={() => setAddMonster(!addMonster)}>Add Monster</button>
-        <button onClick={() => pushMonster(newMonster)}>Push</button>
+        <button onClick={() => pushMonster(newMonster, roomId)}>Push</button>
         {isEdit ? (
           <p>
             <button onClick={resetRoom}>Reset</button>
