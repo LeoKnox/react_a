@@ -22,6 +22,8 @@ export default GraphicRoom = ({
     if (x > 0 && x < width + 1 && y > 0 && y < length + 1) {
       setNewMonster({ monsterName: mobName, x: x, y: y });
     }
+    newMonster["x"] = 0;
+    newMonster["y"] = 0;
     console.log(`grphic room monster ${JSON.stringify(newMonster)}`);
   };
   for (let y = 0; y < parseInt(length) + 2; y++) {
