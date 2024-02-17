@@ -25,9 +25,9 @@ export default function App() {
       } else {
         return room;
       }
-      let temp = { monsterName: "", x: 0, y: 0 };
-      setNewMonster(temp);
     });
+    let temp = { monsterName: "", x: 0, y: 0 };
+    setNewMonster(temp);
     console.log(`temp rooms ${tempRooms}`);
     setMyRooms(tempRooms);
   };
