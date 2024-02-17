@@ -24,6 +24,7 @@ export default DrawRoom = ({
       [name]: value,
     }));
   };
+  console.log(`draw room monsters ${monsters}`);
   return (
     <div>
       <p>Picture of Room</p>
