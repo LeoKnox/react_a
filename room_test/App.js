@@ -16,9 +16,9 @@ export default function App() {
     },
   ]);
   const [newMonster, setNewMonster] = useState({
-    monsterName: "Mon",
-    x: 3,
-    y: 4,
+    monsterName: "",
+    x: 0,
+    y: 0,
   });
   const pushMonster = (newMonster) => {
     //console.log(`pushed monster ${param}`);
