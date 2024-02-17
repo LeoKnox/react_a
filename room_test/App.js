@@ -15,6 +15,11 @@ export default function App() {
       monsters: [{ monsterName: "ichi", x: 1, y: 1 }],
     },
   ]);
+  const [newMonster, setNewMonster] = useState({
+    monsterName: "Mon",
+    x: 3,
+    y: 4,
+  });
   const pushMonster = (newMonster) => {
     //console.log(`pushed monster ${param}`);
     const tempRooms = myRooms.map((room) => {
@@ -68,6 +73,8 @@ export default function App() {
           setRoomId={setRoomId}
           updateRoom={updateRoom}
           pushMonster={pushMonster}
+          newMonster={newMonster}
+          setNewMonster={setNewMonster}
         />
       )}
     </div>
