@@ -20,10 +20,10 @@ export default function App() {
     x: 0,
     y: 0,
   });
-  const pushMonster = (newMonster) => {
+  const pushMonster = (newMonster, roomId = 0) => {
     //console.log(`pushed monster ${param}`);
     const tempRooms = myRooms.map((room) => {
-      if (room["id"] === 0) {
+      if (room["id"] === roomId) {
         room["monsters"].push(newMonster);
         console.log(`room monsters ${JSON.stringify(room["monsters"])}`);
         return room;
