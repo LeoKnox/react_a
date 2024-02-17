@@ -17,7 +17,6 @@ export default function App() {
   ]);
   const pushMonster = (newMonster) => {
     //console.log(`pushed monster ${param}`);
-    let newRoom = { monsterName: "Ni", x: 2, y: 2 };
     const tempRooms = myRooms.map((room) => {
       if (room["id"] === 0) {
         room["monsters"].push(newMonster);
@@ -26,6 +25,7 @@ export default function App() {
       } else {
         return room;
       }
+      setNewMonster({ monsterName: "", x: 0, y: 0 });
     });
     console.log(`temp rooms ${tempRooms}`);
     setMyRooms(tempRooms);
