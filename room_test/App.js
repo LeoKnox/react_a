@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function App() {
   const [roomId, setRoomId] = useState(-1);
+  const [errorList, setErrorList] = useState({});
   const [myRooms, setMyRooms] = useState([
     {
       id: 0,
@@ -65,6 +66,7 @@ export default function App() {
   };
   return (
     <div className="App">
+      {errorList["test"] ? <p>not false</p> : <p>not true</p>}
       {roomId < 0 ? (
         <Home
           myRooms={myRooms}
