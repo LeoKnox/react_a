@@ -24,15 +24,11 @@ export default function App() {
   const pushMonster = (newMonster, roomId = 0) => {
     //console.log(`pushed monster ${param}`);
     const tempRooms = myRooms.map((room) => {
-      if (newMonster["name"].length <= 2) {
-        setErrorList((errorList) => ({
-          ...errorList,
-          monsterNameLength: true,
-        }));
-      } else if (
+      if (
         room["id"] === roomId &&
         newMonster["x"] > 0 &&
-        newMonster["y"] > 0
+        newMonster["y"] > 0 &&
+        newMonster["name"].length > 2
       ) {
         room["monsters"].push(newMonster);
         console.log(`room monsters ${JSON.stringify(room["monsters"])}`);
