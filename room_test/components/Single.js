@@ -10,6 +10,7 @@ export default Single = ({
   newMonster,
   setNewMonster,
   errorList,
+  setErrorList,
 }) => {
   const dataStyle = {
     backgroundColor: "lightblue",
@@ -150,6 +151,7 @@ export default Single = ({
         setNewMonster={setNewMonster}
         monsters={room["monsters"]}
         errorList={errorList}
+        setErrorList={setErrorList}
       />
     </>
   );
