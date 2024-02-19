@@ -28,12 +28,6 @@ export default Single = ({
   const [isEdit, setIsEdit] = useState(false);
   const [sizeError, setSizeError] = useState(false);
   const [addMonster, setAddMonster] = useState(false);
-  /*
-  const [newMonster, setNewMonster] = useState({
-    monsterName: "Mon",
-    x: 3,
-    y: 4,
-  });*/
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
