@@ -9,6 +9,7 @@ export default DrawRoom = ({
   setNewMonster,
   monsters,
   errorList,
+  setErrorList,
 }) => {
   const tableStyle = {
     color: "blue",
@@ -66,6 +67,8 @@ export default DrawRoom = ({
           newMonster={newMonster}
           setNewMonster={setNewMonster}
           monsters={monsters}
+          errorList={errorList}
+          setErrorList={setErrorList}
         />
       </table>
     </div>
