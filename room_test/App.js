@@ -89,6 +89,7 @@ export default function App() {
           newMonster={newMonster}
           setNewMonster={setNewMonster}
           errorList={errorList}
+          setErrorList={setErrorList}
         />
       )}
     </div>
