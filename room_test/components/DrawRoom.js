@@ -8,6 +8,7 @@ export default DrawRoom = ({
   newMonster,
   setNewMonster,
   monsters,
+  errorList,
 }) => {
   const tableStyle = {
     color: "blue",
@@ -49,6 +50,9 @@ export default DrawRoom = ({
             onChange={updateMonsterName}
           />
         </li>
+        {errorList["monsterNameError"] ? (
+          <p>name must be 3 characters or longer</p>
+        ) : null}
         <li>X: {newMonster["x"]}</li>
         <li>Y: {newMonster["y"]}</li>
       </ul>
