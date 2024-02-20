@@ -7,6 +7,8 @@ export default GraphicRoom = ({
   newMonster,
   setNewMonster,
   monsters,
+  errorList,
+  setErrorList,
 }) => {
   const tileStyle = {
     backgroundColor: "lightgray",
@@ -21,9 +23,8 @@ export default GraphicRoom = ({
     console.log(`graphic room mobname ${mobName}`);
     if (x > 0 && x < width + 1 && y > 0 && y < length + 1) {
       setNewMonster({ monsterName: mobName, x: x, y: y });
+      setErrorList({ ...errorList, monsterNameError: undefined });
     }
-    newMonster["x"] = 0;
-    newMonster["y"] = 0;
     console.log(`grphic room monster ${JSON.stringify(newMonster)}`);
   };
   for (let y = 0; y < parseInt(length) + 2; y++) {
