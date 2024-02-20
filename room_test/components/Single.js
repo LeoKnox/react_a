@@ -28,6 +28,11 @@ export default Single = ({
   const [isEdit, setIsEdit] = useState(false);
   const [sizeError, setSizeError] = useState(false);
   const [addMonster, setAddMonster] = useState(false);
+  const [minRoomX, setMinRoomX] = useState(
+    room["monsters"].reduce((prev, current) =>
+      prev && prev["x"] > current["x"] ? prev : current
+    )
+  );
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
@@ -40,7 +45,7 @@ export default Single = ({
     const maxWidth = room["monsters"].reduce((prev, current) =>
       prev && prev["x"] > current["x"] ? prev : current
     );
-    console.log(`max width ${maxWidth["x"]}`);
+    console.log(`max width ${minRoomX["x"]}`);
     //const max = data.reduce((prev, current) => (prev && prev.y > current.y) ? prev : current)
     if (newRoom["width"] > 1 && newRoom["length"] > 1) {
       updateRoom(newRoom);
