@@ -102,7 +102,11 @@ export default Single = ({
                 type="number"
                 name="width"
                 value={newRoom["width"]}
-                min={newMonster["x"] < minRoomX ? minRoomX : newMonster["x"]}
+                min={
+                  newMonster["x"] < minRoomX["x"]
+                    ? minRoomX["x"]
+                    : newMonster["x"]
+                }
                 onChange={changeValue}
               />
             </>
