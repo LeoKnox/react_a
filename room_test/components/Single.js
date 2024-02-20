@@ -45,7 +45,7 @@ export default Single = ({
     const maxWidth = room["monsters"].reduce((prev, current) =>
       prev && prev["x"] > current["x"] ? prev : current
     );
-    console.log(`max width ${minRoomX["x"]}`);
+    console.log(`max width ${minRoomX}`);
     //const max = data.reduce((prev, current) => (prev && prev.y > current.y) ? prev : current)
     if (newRoom["width"] > 1 && newRoom["length"] > 1) {
       updateRoom(newRoom);
@@ -102,7 +102,7 @@ export default Single = ({
                 type="number"
                 name="width"
                 value={newRoom["width"]}
-                min={newMonster["x"]}
+                min={newMonster["x"] < minRoomX ? minRoomX : newMonster["x"]}
                 onChange={changeValue}
               />
             </>
