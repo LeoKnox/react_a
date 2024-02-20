@@ -103,7 +103,7 @@ export default Single = ({
                 name="width"
                 value={newRoom["width"]}
                 min={
-                  newMonster["x"] < minRoomX["x"]
+                  newMonster["x"] > minRoomX["x"]
                     ? minRoomX["x"]
                     : newMonster["x"]
                 }
