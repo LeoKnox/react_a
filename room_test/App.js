@@ -36,6 +36,7 @@ export default function App() {
         newMonster["monsterName"].length > 2
       ) {
         room["monsters"].push(newMonster);
+        setErrorList({ ...errorList, monsterNameError: undefined });
         console.log(`room monsters ${JSON.stringify(room["monsters"])}`);
         return room;
       } else {
