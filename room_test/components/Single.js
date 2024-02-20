@@ -34,9 +34,8 @@ export default Single = ({
       room["monsters"].reduce((prev, current) =>
         prev && prev["x"] > current["x"] ? prev : current
       )
-    ),
-      [room["monsters"]];
-  });
+    );
+  }, [room["monsters"]]);
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
