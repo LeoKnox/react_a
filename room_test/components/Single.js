@@ -29,16 +29,14 @@ export default Single = ({
   const [sizeError, setSizeError] = useState(false);
   const [addMonster, setAddMonster] = useState(false);
   const [minRoomX, setMinRoomX] = useState();
-  useEffect(
-    () => (
-      setMinRoomX(
-        room["monsters"].reduce((prev, current) =>
-          prev && prev["x"] > current["x"] ? prev : current
-        )
-      ),
-      [room["monsters"]]
-    )
-  );
+  useEffect(() => {
+    setMinRoomX(
+      room["monsters"].reduce((prev, current) =>
+        prev && prev["x"] > current["x"] ? prev : current
+      )
+    ),
+      [];
+  });
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
