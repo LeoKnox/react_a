@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./DrawRoom.js";
 
 export default Single = ({
@@ -28,9 +28,15 @@ export default Single = ({
   const [isEdit, setIsEdit] = useState(false);
   const [sizeError, setSizeError] = useState(false);
   const [addMonster, setAddMonster] = useState(false);
-  const [minRoomX, setMinRoomX] = useState(
-    room["monsters"].reduce((prev, current) =>
-      prev && prev["x"] > current["x"] ? prev : current
+  const [minRoomX, setMinRoomX] = useState();
+  useEffect(
+    () => (
+      setMinRoomX(
+        room["monsters"].reduce((prev, current) =>
+          prev && prev["x"] > current["x"] ? prev : current
+        )
+      ),
+      [room["monsters"]]
     )
   );
   const changeValue = (e) => {
