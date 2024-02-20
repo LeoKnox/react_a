@@ -35,7 +35,7 @@ export default Single = ({
         prev && prev["x"] > current["x"] ? prev : current
       )
     ),
-      [];
+      [room["monsters"]];
   });
   const changeValue = (e) => {
     const { name, value } = e.target;
