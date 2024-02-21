@@ -30,13 +30,20 @@ export default Single = ({
   const [addMonster, setAddMonster] = useState(false);
   const [minRoomX, setMinRoomX] = useState();
   useEffect(() => {
+    console.log(
+      `minroomx reduce ${JSON.stringify(
+        newRoom["monsters"].reduce((prev, current) =>
+          prev && prev["x"] > current["x"] ? prev : current
+        )
+      )}`
+    );
     setMinRoomX(
       newRoom["monsters"].reduce((prev, current) =>
         prev && prev["x"] > current["x"] ? prev : current
       )
     );
     alert(minRoomX);
-  }, [newRoom]);
+  }, [minRoomX]);
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
