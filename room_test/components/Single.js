@@ -34,13 +34,13 @@ export default Single = ({
       `minroomx reduce ${JSON.stringify(
         newRoom["monsters"].reduce((prev, current) =>
           prev && prev["x"] > current["x"] ? prev : current
-        )
+        )["x"]
       )}`
     );
     setMinRoomX(
       newRoom["monsters"].reduce((prev, current) =>
         prev && prev["x"] > current["x"] ? prev : current
-      )
+      )["x"]
     );
     alert(minRoomX);
   }, [minRoomX]);
@@ -114,8 +114,8 @@ export default Single = ({
                 name="width"
                 value={newRoom["width"]}
                 min={
-                  newMonster["x"] > parseInt(minRoomX["x"]) + 1
-                    ? parseInt(minRoomX["x"]) + 1
+                  newMonster["x"] > 1 + minRoomX["x"]
+                    ? 1 + minRoomX["x"]
                     : newMonster["x"]
                 }
                 onChange={changeValue}
