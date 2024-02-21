@@ -114,8 +114,8 @@ export default Single = ({
                 name="width"
                 value={newRoom["width"]}
                 min={
-                  newMonster["x"] > minRoomX["x"] + 1
-                    ? minRoomX["x"] + 1
+                  newMonster["x"] > parseInt(minRoomX["x"]) + 1
+                    ? parseInt(minRoomX["x"]) + 1
                     : newMonster["x"]
                 }
                 onChange={changeValue}
