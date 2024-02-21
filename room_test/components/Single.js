@@ -35,7 +35,8 @@ export default Single = ({
         prev && prev["x"] > current["x"] ? prev : current
       )
     );
-  }, [room["monsters"]]);
+    alert(minRoomX);
+  }, [room]);
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
@@ -106,8 +107,8 @@ export default Single = ({
                 name="width"
                 value={newRoom["width"]}
                 min={
-                  newMonster["x"] > minRoomX["x"]
-                    ? minRoomX["x"]
+                  newMonster["x"] > minRoomX["x"] + 1
+                    ? minRoomX["x"] + 1
                     : newMonster["x"]
                 }
                 onChange={changeValue}
