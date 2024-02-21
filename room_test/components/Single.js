@@ -43,7 +43,7 @@ export default Single = ({
       )["x"]
     );
     alert(minRoomX);
-  }, [minRoomX]);
+  }, [room]);
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
