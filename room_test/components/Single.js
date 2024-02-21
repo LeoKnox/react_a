@@ -31,7 +31,7 @@ export default Single = ({
   const [minRoomX, setMinRoomX] = useState();
   useEffect(() => {
     setMinRoomX(
-      room["monsters"].reduce((prev, current) =>
+      newRoom["monsters"].reduce((prev, current) =>
         prev && prev["x"] > current["x"] ? prev : current
       )
     );
