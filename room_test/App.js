@@ -22,8 +22,6 @@ export default function App() {
     y: 0,
   });
   const pushMonster = (newMonster, roomId = 0) => {
-    //console.log(`pushed monster ${param}`);
-    //console.log(`push monster ${JSON.stringify(newMonster)}`);
     if (newMonster["monsterName"].length <= 2) {
       setErrorList((errorList) => ({ ...errorList, monsterNameError: true }));
       return;
@@ -37,8 +35,6 @@ export default function App() {
       ) {
         room["monsters"].push(newMonster);
         setErrorList({ ...errorList, monsterNameError: undefined });
-        console.log(`error list push ${JSON.stringify(errorList)}`);
-        //console.log(`room monsters ${JSON.stringify(room["monsters"])}`);
         return room;
       } else {
         return room;
@@ -73,7 +69,6 @@ export default function App() {
   };
   return (
     <div className="App">
-      {errorList["test"] ? <p>not false</p> : <p>not true</p>}
       {roomId < 0 ? (
         <Home
           myRooms={myRooms}
