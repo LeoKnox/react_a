@@ -29,18 +29,17 @@ export default Single = ({
   const [sizeError, setSizeError] = useState(false);
   const [addMonster, setAddMonster] = useState(false);
   const [minRoomX, setMinRoomX] = useState();
+  const [minRoomY, setMinRoomY] = useState();
   useEffect(() => {
-    console.log(
-      `minroomx reduce ${JSON.stringify(
-        newRoom["monsters"].reduce((prev, current) =>
-          prev && prev["x"] > current["x"] ? prev : current
-        )["x"]
-      )}`
-    );
     setMinRoomX(
       newRoom["monsters"].reduce((prev, current) =>
         prev && prev["x"] > current["x"] ? prev : current
       )["x"]
+    );
+    setMinRoomY(
+      newRoom["monsters"].reduce((prev, current) =>
+        prev && prev["y"] > current["y"] ? prev : current
+      )["y"]
     );
     //alert(minRoomX);
   }, [pushMonster]);
@@ -128,7 +127,7 @@ export default Single = ({
                 type="number"
                 name="length"
                 value={newRoom["length"]}
-                min={newMonster["y"]}
+                min={newMonster["y"] < minRoomY ? minRoomY : newMonster["y"]}
                 onChange={changeValue}
               />
             </>
