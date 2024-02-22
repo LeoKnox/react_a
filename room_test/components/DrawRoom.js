@@ -1,7 +1,8 @@
-export default GraphicRoom = ({
-  mobName,
-  length,
+import "./GraphicRoom.js";
+
+export default DrawRoom = ({
   width,
+  length,
   addMonster,
   setAddMonster,
   newMonster,
@@ -10,64 +11,65 @@ export default GraphicRoom = ({
   errorList,
   setErrorList,
 }) => {
-  const tileStyle = {
-    backgroundColor: "lightgray",
-    fontSize: "1.3em",
-    fontWeight: "bold",
-    width: "1.1em",
-    height: "1.1em",
+  const tableStyle = {
+    color: "blue",
+    display: "inline-block",
+    backgroundColor: "darkgray",
+    tableLayout: "fixed",
+    marginLeft: "auto",
+    marginRight: "auto",
   };
-  let newWidth = [];
-  let newLength = [];
-  const placeMonster = (y, x) => {
-    console.log(`graphic room mobname ${mobName}`);
-    if (x > 0 && x < width + 1 && y > 0 && y < length + 1) {
-      setNewMonster({ monsterName: mobName, x: x, y: y });
-      setErrorList({ ...errorList, monsterNameError: false });
-    }
-    console.log(`grphic room monster ${JSON.stringify(newMonster)}`);
+  const updateMonsterName = (e) => {
+    const { name, value } = e.target;
+    setNewMonster((item) => ({
+      ...item,
+      [name]: value,
+    }));
   };
-  for (let y = 0; y < parseInt(length) + 2; y++) {
-    for (let x = 0; x < parseInt(width) + 2; x++) {
-      if (
-        y === 0 ||
-        y === parseInt(length) + 1 ||
-        x === 0 ||
-        x === parseInt(width) + 1
-      ) {
-        newWidth.push("■");
-      } else {
-        newWidth.push("·");
-      }
-    }
-    newLength.push(newWidth);
-    newWidth = [];
-  }
-  newLength[0][1] = "+";
-  monsters.map((monster) => {
-    newLength[monster["y"]][monster["x"]] = "M";
-  });
-  newLength[newMonster["y"]][newMonster["x"]] = "m";
   return (
-    <>
-      {newLength.map((row, y) => (
-        <tr>
-          {row.map((tile, x) => (
-            <td
-              style={tileStyle}
-              id={y + "," + x}
-              onClick={() => placeMonster(y, x)}
-            >
-              {tile}
-            </td>
-          ))}
-        </tr>
-      ))}
-      <p>
-        {addMonster
-          ? "click map to place monster"
-          : "click map to place monster for now"}
-      </p>
-    </>
+    <div>
+      <p>Picture of Room</p>
+      <ul
+        style={{
+          display: "inline-block",
+          verticalAlign: "top",
+          marginRight: "1em",
+        }}
+      >
+        {monsters.map((monster) => (
+          <p>
+            Name: {monster["monsterName"]} {monster["x"]} x {monster["y"]}
+          </p>
+        ))}
+        <li>
+          Name:{" "}
+          <input
+            type="text"
+            name="monsterName"
+            value={newMonster["monsterName"]}
+            onChange={updateMonsterName}
+          />
+        </li>
+        {errorList["monsterNameError"] ? (
+          <p>name must be 3 characters or longer</p>
+        ) : null}
+        <li>X: {newMonster["x"]}</li>
+        <li>Y: {newMonster["y"]}</li>
+      </ul>
+      <table style={tableStyle}>
+        <GraphicRoom
+          mobName={newMonster["monsterName"]}
+          length={length}
+          width={width}
+          addMonster={addMonster}
+          setAddMonster={setAddMonster}
+          newMonster={newMonster}
+          setNewMonster={setNewMonster}
+          monsters={monsters}
+          errorList={errorList}
+          setErrorList={setErrorList}
+        />
+      </table>
+    </div>
   );
 };
