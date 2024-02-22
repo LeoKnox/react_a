@@ -42,7 +42,7 @@ export default Single = ({
         prev && prev["x"] > current["x"] ? prev : current
       )["x"]
     );
-    alert(minRoomX);
+    //alert(minRoomX);
   }, [pushMonster]);
   const changeValue = (e) => {
     const { name, value } = e.target;
@@ -114,7 +114,7 @@ export default Single = ({
                 name="width"
                 value={newRoom["width"]}
                 min={
-                  newMonster["x"] > 1 + minRoomX["x"]
+                  newMonster["x"] < 1 + minRoomX["x"]
                     ? 1 + minRoomX["x"]
                     : newMonster["x"]
                 }
