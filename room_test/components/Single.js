@@ -31,16 +31,21 @@ export default Single = ({
   const [minRoomX, setMinRoomX] = useState();
   const [minRoomY, setMinRoomY] = useState();
   useEffect(() => {
-    setMinRoomX(
-      newRoom["monsters"].reduce((prev, current) =>
-        prev && prev["x"] > current["x"] ? prev : current
-      )["x"]
-    );
-    setMinRoomY(
-      newRoom["monsters"].reduce((prev, current) =>
-        prev && prev["y"] > current["y"] ? prev : current
-      )["y"]
-    );
+    if (newRoom["monsters"].length === 0) {
+      setMinRoomX(0);
+      setMinRoomY(0);
+    } else {
+      setMinRoomX(
+        newRoom["monsters"].reduce((prev, current) =>
+          prev && prev["x"] > current["x"] ? prev : current
+        )["x"]
+      );
+      setMinRoomY(
+        newRoom["monsters"].reduce((prev, current) =>
+          prev && prev["y"] > current["y"] ? prev : current
+        )["y"]
+      );
+    }
   }, [pushMonster]);
   const changeValue = (e) => {
     const { name, value } = e.target;
@@ -55,7 +60,7 @@ export default Single = ({
       prev && prev["x"] > current["x"] ? prev : current
     );
     console.log(`max width ${minRoomX}`);
-   if (newRoom["width"] > 1 && newRoom["length"] > 1) {
+    if (newRoom["width"] > 1 && newRoom["length"] > 1) {
       updateRoom(newRoom);
       setIsEdit(false);
       setSizeError(false);
