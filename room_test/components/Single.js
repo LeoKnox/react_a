@@ -41,7 +41,6 @@ export default Single = ({
         prev && prev["y"] > current["y"] ? prev : current
       )["y"]
     );
-    //alert(minRoomX);
   }, [pushMonster]);
   const changeValue = (e) => {
     const { name, value } = e.target;
@@ -56,8 +55,7 @@ export default Single = ({
       prev && prev["x"] > current["x"] ? prev : current
     );
     console.log(`max width ${minRoomX}`);
-    //const max = data.reduce((prev, current) => (prev && prev.y > current.y) ? prev : current)
-    if (newRoom["width"] > 1 && newRoom["length"] > 1) {
+   if (newRoom["width"] > 1 && newRoom["length"] > 1) {
       updateRoom(newRoom);
       setIsEdit(false);
       setSizeError(false);
@@ -66,12 +64,11 @@ export default Single = ({
     }
   };
   const resetRoom = () => {
-    console.log(`reset room ${room.name}`);
     setNewRoom(room);
   };
   return (
     <>
-      <h3>Single Room {roomId} </h3>
+      <h3>Single Room</h3>
       <button onClick={() => setRoomId(-1)}>Home</button>
       <div style={dataStyle}>
         {isEdit ? (
