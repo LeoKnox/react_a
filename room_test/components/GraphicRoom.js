@@ -42,9 +42,11 @@ export default GraphicRoom = ({
     newWidth = [];
   }
   newLength[0][1] = "+";
-  monsters.map((monster) => {
-    newLength[monster["y"]][monster["x"]] = "M";
-  });
+  monsters
+    ? monsters.map((monster) => {
+        newLength[monster["y"]][monster["x"]] = "M";
+      })
+    : null;
   newLength[newMonster["y"]][newMonster["x"]] = "m";
   return (
     <>
