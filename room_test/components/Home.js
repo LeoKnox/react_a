@@ -12,6 +12,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }));
   };
   const setRoom = () => {
+    setHomeErrorList((shortName: false));
     if (roomObj["name"] && roomObj["name"].length <= 2) {
       console.log("room length 3");
       setHomeErrorList((error) => ({ ...error, shortName: true }));
