@@ -56,10 +56,6 @@ export default Single = ({
     }));
   };
   const changeRoom = () => {
-    const maxWidth = room["monsters"].reduce((prev, current) =>
-      prev && prev["x"] > current["x"] ? prev : current
-    );
-    console.log(`max width ${minRoomX}`);
     if (newRoom["width"] > 1 && newRoom["length"] > 1) {
       updateRoom(newRoom);
       setIsEdit(false);
