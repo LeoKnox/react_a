@@ -2,7 +2,7 @@ import { memo, useState } from "react";
 
 export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
   const [roomObj, setRoomObj] = useState({});
-  const [homeErrorList, setHomeErrorLIst] = useState({});
+  const [homeErrorList, setHomeErrorList] = useState({});
   const updateRoom = (e) => {
     const { name, value } = e.target;
     setRoomObj((item) => ({
@@ -12,7 +12,6 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }));
   };
   const setRoom = () => {
-    setHomeErrorList((shortName: false));
     if (roomObj["name"] && roomObj["name"].length <= 2) {
       console.log("room length 3");
       setHomeErrorList((error) => ({ ...error, shortName: true }));
