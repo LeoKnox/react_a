@@ -12,11 +12,15 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }));
   };
   const setRoom = () => {
-    if (roomObj["name"].length <= 2) {
-      setRoomErrorList((error) => ({ ...roomRoomErrorList, shortName: true }));
+    console.log(JSON.stringify(roomObj));
+    if (roomObj["name"] && roomObj["name"].length <= 2) {
+      setHomeErrorList((error) => ({ ...roomRoomErrorList, shortName: true }));
       console.log("room length 3");
     } else {
-      setRoomErrorList((error) => ({ ...roomRoomErrorList, shortName: true }));
+      setHomeErrorList((error) => ({
+        ...roomRoomErrorList,
+        shortName: undefined,
+      }));
     }
     roomObj["length"] = +roomObj["length"];
     roomObj["width"] = +roomObj["width"];
