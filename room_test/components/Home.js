@@ -21,10 +21,12 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
         shortName: undefined,
       }));
     }
-    roomObj["length"] = +roomObj["length"];
-    roomObj["width"] = +roomObj["width"];
-    addRoom(roomObj);
-    setRoomObj({ name: "", description: "", length: 0, width: 0 });
+    if (homeErrorList["shortName"]) {
+      roomObj["length"] = +roomObj["length"];
+      roomObj["width"] = +roomObj["width"];
+      addRoom(roomObj);
+      setRoomObj({ name: "", description: "", length: 0, width: 0 });
+    }
   };
   return (
     <>
@@ -52,6 +54,9 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
           onChange={updateRoom}
         />
       </p>
+      {homeErrorList["shortName"]
+        ? "<p>name must be 3 characters or longer</p>"
+        : null}
       <p>
         description:
         <input
