@@ -54,9 +54,11 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
           onChange={updateRoom}
         />
       </p>
-      {homeErrorList["shortName"]
-        ? "<p>name must be 3 characters or longer</p>"
-        : null}
+      {homeErrorList["shortName"] ? (
+        <p>name must be 3 characters or longer</p>
+      ) : (
+        <p>{homeErrorList["shortName"]}</p>
+      )}
       <p>
         description:
         <input
