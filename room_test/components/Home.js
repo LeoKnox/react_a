@@ -75,19 +75,21 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
         <input
           type="number"
           name="length"
-          value={roomObj["length"]}
+          value={roomObj["length"] ? roomObj["length"] : 1}
           onChange={updateRoom}
         />
       </p>
+      {homeErrorList["lowLength"] ? <p>Length must be higher then 1</p> : null}
       <p>
         Width:
         <input
           type="number"
           name="width"
-          value={roomObj["width"]}
+          value={roomObj["width"] ? roomObj["width"] : 1}
           onChange={updateRoom}
         />
       </p>
+      {homeErrorList["lowWidth"] ? <p>Width must be higher then 1</p> : null}
       <p>
         <button onClick={setRoom}>set room</button>
       </p>
