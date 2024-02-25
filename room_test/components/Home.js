@@ -12,11 +12,11 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }));
   };
   const setRoom = () => {
-    let tempError = true;
+    let tempError = { shortName: true };
     if (!roomObj["name"] || roomObj["name"].length < 3) {
-      tempError = false;
+      tempError["shortName"] = false;
     }
-    if (tempError) {
+    if (tempError["shortName"]) {
       roomObj["length"] = +roomObj["length"];
       roomObj["width"] = +roomObj["width"];
       addRoom(roomObj);
