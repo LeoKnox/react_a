@@ -12,20 +12,20 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }));
   };
   const setRoom = () => {
-    if (homeErrorList["shortName"] === undefined) {
-      setHomeErrorList({ shortName: false });
-    }
+    let tempError = true;
     if (!roomObj["name"] || roomObj["name"].length < 3) {
-      setHomeErrorList({ shortName: true });
-      alert(JSON.stringify(homeErrorList));
-    } else {
-      setHomeErrorList({ shortName: false });
+      tempError = false;
     }
-    if (!homeErrorList["shortName"]) {
+    if (tempError) {
       roomObj["length"] = +roomObj["length"];
       roomObj["width"] = +roomObj["width"];
       addRoom(roomObj);
       setRoomObj({ name: "", description: "", length: 0, width: 0 });
+    } else {
+      setHomeErrorList({
+        ...homeErrorList,
+        shortName: "name must be 3 characters or longer",
+      });
     }
   };
   return (
