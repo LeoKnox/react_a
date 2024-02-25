@@ -21,6 +21,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
       roomObj["width"] = +roomObj["width"];
       addRoom(roomObj);
       setRoomObj({ name: "", description: "", length: 0, width: 0 });
+      setHomeErrorList({ ...homeErrorList, shortName: undefined });
     } else {
       setHomeErrorList({
         ...homeErrorList,
