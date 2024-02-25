@@ -12,10 +12,13 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }));
   };
   const setRoom = () => {
-    let tempError = { shortName: true };
+    let tempError = { shortName: true, lowLength: true, lowWidth: true };
     if (!roomObj["name"] || roomObj["name"].length < 3) {
       tempError["shortName"] = false;
     }
+    if (roomObj["length"] < 1) {
+      tempError["lowLength"] = false;
+      }
     if (tempError["shortName"]) {
       roomObj["length"] = +roomObj["length"];
       roomObj["width"] = +roomObj["width"];
@@ -87,6 +90,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
           onChange={updateRoom}
         />
       </p>
+      <p>{
       <button onClick={setRoom}>set room</button>
     </>
   );
