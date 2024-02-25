@@ -18,7 +18,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }
     if (roomObj["length"] < 1) {
       tempError["lowLength"] = false;
-      }
+    }
     if (tempError["shortName"]) {
       roomObj["length"] = +roomObj["length"];
       roomObj["width"] = +roomObj["width"];
@@ -60,9 +60,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
       </p>
       {homeErrorList["shortName"] ? (
         <p>name must be 3 characters or longer</p>
-      ) : (
-        <p>{homeErrorList["shortName"]}</p>
-      )}
+      ) : null}
       <p>
         description:
         <input
@@ -90,8 +88,9 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
           onChange={updateRoom}
         />
       </p>
-      <p>{
-      <button onClick={setRoom}>set room</button>
+      <p>
+        <button onClick={setRoom}>set room</button>
+      </p>
     </>
   );
 };
