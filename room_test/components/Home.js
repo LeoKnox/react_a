@@ -13,6 +13,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
   };
   const setRoom = () => {
     let tempError = { shortName: false, lowLength: false, lowWidth: false };
+
     if (!roomObj["name"] || roomObj["name"].length < 3) {
       tempError["shortName"] = true;
       console.log("run name");
@@ -39,7 +40,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
       setHomeErrorList(tempError);
     }
     console.log(`home err list ${JSON.stringify(homeErrorList)}`);
-    console.log(tempError.length);
+    console.log(Object.keys(tempError).length);
   };
   return (
     <>
