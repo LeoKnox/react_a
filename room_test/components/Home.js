@@ -15,13 +15,15 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     let tempError = { shortName: false, lowLength: false, lowWidth: false };
     if (!roomObj["name"] || roomObj["name"].length < 3) {
       tempError["shortName"] = true;
+      console.log("run name");
     }
     if (roomObj["length"] < 1) {
       tempError["lowLength"] = true;
-      setHomeErrorList({
+      console.log("run length");
+      /*setHomeErrorList({
         ...homeErrorList,
         lowLength: true,
-      });
+      });*/
     }
     if (tempError["shortName"]) {
       roomObj["length"] = +roomObj["length"];
@@ -37,6 +39,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
       setHomeErrorList(tempError);
     }
     console.log(`home err list ${JSON.stringify(homeErrorList)}`);
+    console.log(tempError.length);
   };
   return (
     <>
