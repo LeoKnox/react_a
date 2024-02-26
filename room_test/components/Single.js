@@ -56,7 +56,7 @@ export default Single = ({
     }));
   };
   const changeRoom = () => {
-    if (newRoom["width"] > 1 && newRoom["length"] > 1) {
+    if (newRoom["width"] > 0 && newRoom["length"] > 0) {
       updateRoom(newRoom);
       setIsEdit(false);
       setSizeError(false);
@@ -151,7 +151,7 @@ export default Single = ({
       </p>
       {sizeError ? (
         <p className="error">
-          Rooms must be length and width must be greater then 1
+          Rooms must be length and width must be at least 1
         </p>
       ) : null}
       <DrawRoom
