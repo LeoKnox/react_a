@@ -12,7 +12,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }));
   };
   const setRoom = () => {
-    let tempError = { shortName: false, lowLength: false, lowWidth: false };
+    let tempError = {};
 
     if (!roomObj["name"] || roomObj["name"].length < 3) {
       tempError["shortName"] = true;
@@ -26,7 +26,7 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
         lowLength: true,
       });*/
     }
-    if (tempError["shortName"]) {
+    if (Object.keys(tempError).length < 1) {
       roomObj["length"] = +roomObj["length"];
       roomObj["width"] = +roomObj["width"];
       addRoom(roomObj);
