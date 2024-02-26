@@ -25,8 +25,11 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
       addRoom(roomObj);
       setRoomObj({ name: "", description: "", length: 0, width: 0 });
       for (key in tempError) {
+        console.log(`key ${key}`);
         delete tempError[key];
       }
+      tempError = {};
+      console.log(`temp eror ${JSON.stringify(tempError)}`);
     } else {
       setHomeErrorList(tempError);
     }
