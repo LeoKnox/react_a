@@ -13,34 +13,23 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
   };
   const setRoom = () => {
     let tempError = {};
-
     if (!roomObj["name"] || roomObj["name"].length < 3) {
       tempError["shortName"] = true;
-      console.log("run name");
     }
     if (roomObj["length"] < 1) {
       tempError["lowLength"] = true;
-      console.log("run length");
-      /*setHomeErrorList({
-        ...homeErrorList,
-        lowLength: true,
-      });*/
     }
     if (Object.keys(tempError).length < 1) {
       roomObj["length"] = +roomObj["length"];
       roomObj["width"] = +roomObj["width"];
       addRoom(roomObj);
       setRoomObj({ name: "", description: "", length: 0, width: 0 });
-      setHomeErrorList({ ...homeErrorList, shortName: undefined });
+      for (key in tempError) {
+        delete tempError[key];
+      }
     } else {
-      /*setHomeErrorList({
-        ...homeErrorList,
-        shortName: "name must be 3 characters or longer",
-      });*/
       setHomeErrorList(tempError);
     }
-    console.log(`home err list ${JSON.stringify(homeErrorList)}`);
-    console.log(Object.keys(tempError).length);
   };
   return (
     <>
