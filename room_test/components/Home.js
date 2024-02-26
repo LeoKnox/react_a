@@ -18,6 +18,10 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     }
     if (roomObj["length"] < 1) {
       tempError["lowLength"] = false;
+      setHomeErrorList({
+        ...homeErrorList,
+        lowLength: true,
+      });
     }
     if (tempError["shortName"]) {
       roomObj["length"] = +roomObj["length"];
