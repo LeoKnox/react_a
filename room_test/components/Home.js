@@ -30,10 +30,10 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
       setRoomObj({ name: "", description: "", length: 0, width: 0 });
       setHomeErrorList({ ...homeErrorList, shortName: undefined });
     } else {
-      setHomeErrorList({
+      /*setHomeErrorList({
         ...homeErrorList,
         shortName: "name must be 3 characters or longer",
-      });
+      });*/
       setHomeErrorList(tempError);
     }
     console.log(`home err list ${JSON.stringify(homeErrorList)}`);
