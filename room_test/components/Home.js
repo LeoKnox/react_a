@@ -16,6 +16,9 @@ export default Home = ({ myRooms, addRoom, deleteRoom, setRoomId }) => {
     if (!roomObj["name"] || roomObj["name"].length < 3) {
       tempError["shortName"] = true;
     }
+    if (roomObj["width"] < 1) {
+      tempError["lowWidth"] = true;
+    }
     if (roomObj["length"] < 1) {
       tempError["lowLength"] = true;
     }
