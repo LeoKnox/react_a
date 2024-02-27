@@ -165,6 +165,9 @@ export default Single = ({
           Rooms must be length and width must be at least 1
         </p>
       ) : null}
+      {nameError ? (
+        <p className="error">Room name must be at least 3 characters</p>
+      ) : null}
       <DrawRoom
         width={newRoom["width"]}
         length={newRoom["length"]}
