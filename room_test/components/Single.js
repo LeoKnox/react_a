@@ -72,7 +72,11 @@ export default Single = ({
       } else {
         setNameError(false);
       }
-      setSizeError(true);
+      if (newRoom["length"] < 1 || newRoom["width"] < 1) {
+        setSizeError(true);
+      } else {
+        setSizeError(false);
+      }
     }
   };
   const resetRoom = () => {
