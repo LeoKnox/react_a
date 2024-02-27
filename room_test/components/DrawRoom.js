@@ -35,6 +35,7 @@ export default DrawRoom = ({
           verticalAlign: "top",
           marginRight: "1em",
           listStyleType: "none",
+          textAlign: "left",
         }}
       >
         {monsters.map((monster) => (
