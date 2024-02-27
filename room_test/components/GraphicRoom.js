@@ -63,11 +63,11 @@ export default GraphicRoom = ({
           ))}
         </tr>
       ))}
-      <p>
+      {/* <p>
         {addMonster
           ? "click map to place monster"
           : "click map to place monster for now"}
-      </p>
+      </p> */}
     </>
   );
 };
