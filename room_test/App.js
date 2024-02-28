@@ -22,6 +22,10 @@ export default function App() {
     x: 0,
     y: 0,
   });
+    const slayMonster = (id) => {
+    alert(JSON.stringify(newMonster));
+    //setNewMonster(monsters.filter((monster, index) => index !== id));
+  };
   const pushMonster = (newMonster, roomId = 0) => {
     if (newMonster["monsterName"].length <= 2) {
       setErrorList((errorList) => ({ ...errorList, monsterNameError: true }));
@@ -88,6 +92,7 @@ export default function App() {
           setNewMonster={setNewMonster}
           errorList={errorList}
           setErrorList={setErrorList}
+          slayMonster={slayMonster}
         />
       )}
     </div>
