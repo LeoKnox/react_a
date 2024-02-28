@@ -19,6 +19,9 @@ export default DrawRoom = ({
     marginLeft: "auto",
     marginRight: "auto",
   };
+  const slayMonster = (id) => {
+    alert(id);
+  };
   const updateMonsterName = (e) => {
     const { name, value } = e.target;
     setNewMonster((item) => ({
@@ -38,10 +41,10 @@ export default DrawRoom = ({
           textAlign: "left",
         }}
       >
-        {monsters.map((monster) => (
+        {monsters.map((monster, index) => (
           <p>
             Name: {monster["monsterName"]} {monster["x"]} x {monster["y"]}
-            <button>Slay</button>
+            <button onClick={() => slayMonster(index)}>Slay</button>
           </p>
         ))}
         <li>
