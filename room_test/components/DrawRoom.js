@@ -10,6 +10,7 @@ export default DrawRoom = ({
   monsters,
   errorList,
   setErrorList,
+  slayMonster,
 }) => {
   const tableStyle = {
     color: "blue",
@@ -18,10 +19,6 @@ export default DrawRoom = ({
     tableLayout: "fixed",
     marginLeft: "auto",
     marginRight: "auto",
-  };
-  const slayMonster = (id) => {
-    alert(JSON.stringify(newMonster));
-    setNewMonster(monsters.filter((monster, index) => index !== id));
   };
   const updateMonsterName = (e) => {
     const { name, value } = e.target;
