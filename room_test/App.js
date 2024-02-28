@@ -1,11 +1,12 @@
 import "./styles.css";
 import "./components/Home.js";
 import "./components/Single.js";
-import { useState } from "react";
+import { useState, useContext, createContext } from "react";
 
 export default function App() {
   const [roomId, setRoomId] = useState(-1);
   const [errorList, setErrorList] = useState({});
+  const roomContext = createContext;
   const [myRooms, setMyRooms] = useState([
     {
       id: 0,
@@ -51,7 +52,7 @@ export default function App() {
       ? (newId = myRooms[myRooms.length - 1]["id"] + 1)
       : (newId = 0);
     roomName["id"] = newId;
-    roomName["monsters"] = [{}];
+    roomName["monsters"] = [];
     setMyRooms((room) => [...room, roomName]);
   };
   const deleteRoom = (id) => {
