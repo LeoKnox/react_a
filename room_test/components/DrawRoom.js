@@ -20,8 +20,8 @@ export default DrawRoom = ({
     marginRight: "auto",
   };
   const slayMonster = (id) => {
-    alert(id);
-    setNewMonster(newMonster.filter((monster, index) => index !== id));
+    alert(JSON.stringify(newMonster));
+    setNewMonster(monsters.filter((monster, index) => index !== id));
   };
   const updateMonsterName = (e) => {
     const { name, value } = e.target;
