@@ -22,8 +22,10 @@ export default function App() {
     x: 0,
     y: 0,
   });
-    const slayMonster = (id) => {
-    alert(JSON.stringify(newMonster));
+  const slayMonster = (id, roomId) => {
+    //alert("slay!" + JSON.stringify(myRooms[id]["monsters"]));
+    return myRooms[roomId]["monsters"].splice(id, 1);
+    //console.log(JSON.stringify(room["monsters"]));
     //setNewMonster(monsters.filter((monster, index) => index !== id));
   };
   const pushMonster = (newMonster, roomId = 0) => {
