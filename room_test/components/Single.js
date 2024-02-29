@@ -186,6 +186,7 @@ export default Single = ({
         errorList={errorList}
         setErrorList={setErrorList}
         slayMonster={slayMonster}
+        roomId={roomId}
       />
     </>
   );
