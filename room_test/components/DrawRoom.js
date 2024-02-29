@@ -48,7 +48,7 @@ export default Single = ({
         )["y"]
       );
     }
-  }, [slayMonster, pushMonster]);
+  }, [room, pushMonster, slayMonster]);
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
