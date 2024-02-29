@@ -1,102 +1,80 @@
-import "./styles.css";
-import "./components/Home.js";
-import "./components/Single.js";
-import { useState, useContext, createContext } from "react";
+import "./GraphicRoom.js";
 
-export default function App() {
-  const [roomId, setRoomId] = useState(-1);
-  const [errorList, setErrorList] = useState({});
-  const roomContext = createContext;
-  const [myRooms, setMyRooms] = useState([
-    {
-      id: 0,
-      name: "entry",
-      description: "entrance",
-      width: 5,
-      length: 5,
-      monsters: [{ monsterName: "ichi", x: 1, y: 1 }],
-    },
-  ]);
-  const [newMonster, setNewMonster] = useState({
-    monsterName: "",
-    x: 0,
-    y: 0,
-  });
-  const slayMonster = (id) => {
-    alert("slay!" + JSON.stringify(myRooms[id]["monsters"]));
-    return myRooms[id]["monsters"].splice(id, 1);
-    //console.log(JSON.stringify(room["monsters"]));
-    //setNewMonster(monsters.filter((monster, index) => index !== id));
+export default DrawRoom = ({
+  width,
+  length,
+  addMonster,
+  setAddMonster,
+  newMonster,
+  setNewMonster,
+  monsters,
+  errorList,
+  setErrorList,
+  slayMonster,
+  roomId,
+}) => {
+  const tableStyle = {
+    color: "blue",
+    display: "inline-block",
+    backgroundColor: "darkgray",
+    tableLayout: "fixed",
+    marginLeft: "auto",
+    marginRight: "auto",
   };
-  const pushMonster = (newMonster, roomId = 0) => {
-    if (newMonster["monsterName"].length <= 2) {
-      setErrorList((errorList) => ({ ...errorList, monsterNameError: true }));
-      return;
-    }
-    const tempRooms = myRooms.map((room) => {
-      if (
-        room["id"] === roomId &&
-        newMonster["x"] > 0 &&
-        newMonster["y"] > 0 &&
-        newMonster["monsterName"].length > 2
-      ) {
-        room["monsters"].push(newMonster);
-        setErrorList({ ...errorList, monsterNameError: undefined });
-        return room;
-      } else {
-        return room;
-      }
-    });
-    let temp = { monsterName: "", x: 0, y: 0 };
-    setNewMonster(temp);
-    console.log(`temp rooms ${tempRooms}`);
-    setMyRooms(tempRooms);
-  };
-  const addRoom = (roomName) => {
-    let newId = 0;
-    myRooms.length
-      ? (newId = myRooms[myRooms.length - 1]["id"] + 1)
-      : (newId = 0);
-    roomName["id"] = newId;
-    roomName["monsters"] = [];
-    setMyRooms((room) => [...room, roomName]);
-  };
-  const deleteRoom = (id) => {
-    setMyRooms(myRooms.filter((room) => room["id"] !== id));
-  };
-  const updateRoom = (updatedRoom) => {
-    const tempRoom = myRooms.map((room) => {
-      if (roomId === room["id"]) {
-        return updatedRoom;
-      } else {
-        return room;
-      }
-    });
-    setMyRooms(tempRoom);
+  const updateMonsterName = (e) => {
+    const { name, value } = e.target;
+    setNewMonster((item) => ({
+      ...item,
+      [name]: value,
+    }));
   };
   return (
-    <div className="App">
-      {roomId < 0 ? (
-        <Home
-          myRooms={myRooms}
-          addRoom={addRoom}
-          setRoomId={setRoomId}
-          deleteRoom={(id) => deleteRoom(id)}
-        />
-      ) : (
-        <Single
-          roomId={roomId}
-          room={myRooms[roomId]}
-          setRoomId={setRoomId}
-          updateRoom={updateRoom}
-          pushMonster={pushMonster}
+    <div>
+      <p>Picture of Room</p>
+      <ul
+        style={{
+          display: "inline-block",
+          verticalAlign: "top",
+          marginRight: "1em",
+          listStyleType: "none",
+          textAlign: "left",
+        }}
+      >
+        {monsters.map((monster, index) => (
+          <p>
+            Name: {monster["monsterName"]} {monster["x"]} x {monster["y"]}
+            <button onClick={() => slayMonster(index, roomId)}>Slay</button>
+          </p>
+        ))}
+        <li>
+          Name: <br />
+          <input
+            type="text"
+            name="monsterName"
+            value={newMonster["monsterName"]}
+            onChange={updateMonsterName}
+          />
+        </li>
+        {errorList["monsterNameError"] ? (
+          <p>name must be 3 characters or longer</p>
+        ) : null}
+        <li>X: {newMonster["x"]}</li>
+        <li>Y: {newMonster["y"]}</li>
+      </ul>
+      <table style={tableStyle}>
+        <GraphicRoom
+          mobName={newMonster["monsterName"]}
+          length={length}
+          width={width}
+          addMonster={addMonster}
+          setAddMonster={setAddMonster}
           newMonster={newMonster}
           setNewMonster={setNewMonster}
+          monsters={monsters}
           errorList={errorList}
           setErrorList={setErrorList}
-          slayMonster={slayMonster}
         />
-      )}
+      </table>
     </div>
   );
-}
+};
