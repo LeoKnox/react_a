@@ -49,7 +49,7 @@ export default Single = ({
       );
       room = room;
     }
-  }, [room, room["monsters"], pushMonster, slayMonster]);
+  }, [room, room["monsters"], pushMonster, slayMonster, addMonster]);
   const changeValue = (e) => {
     const { name, value } = e.target;
     setNewRoom((item) => ({
