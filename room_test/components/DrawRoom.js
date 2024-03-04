@@ -1,193 +1,84 @@
-import { useState, useEffect } from "react";
-import "./DrawRoom.js";
+import "./GraphicRoom.js";
 
-export default Single = ({
-  roomId,
-  room,
-  setRoomId,
-  updateRoom,
-  pushMonster,
+export default DrawRoom = ({
+  width,
+  length,
+  addMonster,
+  setAddMonster,
   newMonster,
   setNewMonster,
+  monsters,
   errorList,
   setErrorList,
   slayMonster,
+  roomId,
 }) => {
-  const dataStyle = {
-    backgroundColor: "lightblue",
-    height: "8em",
-    padding: "1em",
-    width: "50%",
+  const tableStyle = {
+    color: "blue",
+    display: "inline-block",
+    backgroundColor: "darkgray",
+    tableLayout: "fixed",
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: "1em",
   };
-  const inputStyle = {
-    width: "3em",
+  const slayLocal = (index) => {
+    monsters.splice(index, 1);
   };
-  const [newRoom, setNewRoom] = useState(room);
-  const [isEdit, setIsEdit] = useState(false);
-  const [sizeError, setSizeError] = useState(false);
-  const [nameError, setNameError] = useState(false);
-  const [addMonster, setAddMonster] = useState(false);
-  const [minRoomX, setMinRoomX] = useState();
-  const [minRoomY, setMinRoomY] = useState();
-  useEffect(() => {
-    if (newRoom["monsters"].length === 0) {
-      setMinRoomX(0);
-      setMinRoomY(0);
-    } else {
-      setMinRoomX(
-        newRoom["monsters"].reduce((prev, current) =>
-          prev && prev["x"] > current["x"] ? prev : current
-        )["x"]
-      );
-      setMinRoomY(
-        newRoom["monsters"].reduce((prev, current) =>
-          prev && prev["y"] > current["y"] ? prev : current
-        )["y"]
-      );
-    }
-  }, [room, pushMonster, slayMonster]);
-  const changeValue = (e) => {
+  const updateMonsterName = (e) => {
     const { name, value } = e.target;
-    setNewRoom((item) => ({
+    setNewMonster((item) => ({
       ...item,
-      ...item.newRoom,
       [name]: value,
     }));
   };
-  const changeRoom = () => {
-    if (
-      newRoom["width"] > 0 &&
-      newRoom["length"] > 0 &&
-      newRoom["name"].length > 2
-    ) {
-      updateRoom(newRoom);
-      setIsEdit(false);
-      setSizeError(false);
-      setNameError(false);
-    } else {
-      if (newRoom["name"].length < 3) {
-        setNameError(true);
-      } else {
-        setNameError(false);
-      }
-      if (newRoom["length"] < 1 || newRoom["width"] < 1) {
-        setSizeError(true);
-      } else {
-        setSizeError(false);
-      }
-    }
-  };
-  const resetRoom = () => {
-    setNewRoom(room);
-  };
   return (
-    <>
-      <h3>Single Room</h3>
-      <button onClick={() => setRoomId(-1)}>Home</button>
-      <div style={dataStyle}>
-        {isEdit ? (
+    <div>
+      <p>Picture of Room</p>
+      <ul
+        style={{
+          display: "inline-block",
+          verticalAlign: "top",
+          marginRight: "1em",
+          listStyleType: "none",
+          textAlign: "left",
+        }}
+      >
+        {monsters.map((monster, index) => (
           <p>
-            Name:&nbsp;
-            <input
-              type="text"
-              name="name"
-              autoFocus
-              value={newRoom["name"]}
-              onChange={changeValue}
-            />
+            Name: {monster["monsterName"]} {monster["x"]} x {monster["y"]}
+            <button onClick={() => slayMonster(index, roomId)}>Slay</button>
+            <button onClick={() => slayLocal(index)}>Slay2</button>
           </p>
-        ) : (
-          <p>{room["name"]}</p>
-        )}
-        <p>
-          {isEdit ? (
-            <>
-              Description:{" "}
-              <input
-                type="text"
-                name="description"
-                value={newRoom["description"]}
-                onChange={changeValue}
-              />
-            </>
-          ) : (
-            <>Description: {room["description"]}</>
-          )}
-        </p>
-        <p>
-          {isEdit ? (
-            <>
-              Width:{" "}
-              <input
-                style={inputStyle}
-                type="number"
-                name="width"
-                value={newRoom["width"]}
-                min={newMonster["x"] < minRoomX ? minRoomX : newMonster["x"]}
-                onChange={changeValue}
-              />
-            </>
-          ) : (
-            <>Width: {room["width"]}</>
-          )}{" "}
-          {isEdit ? (
-            <>
-              Length:{" "}
-              <input
-                style={inputStyle}
-                type="number"
-                name="length"
-                value={newRoom["length"]}
-                min={newMonster["y"] < minRoomY ? minRoomY : newMonster["y"]}
-                onChange={changeValue}
-              />
-            </>
-          ) : (
-            <>Length: {room["length"]}</>
-          )}
-        </p>
-      </div>
-      <p>
-        {isEdit ? (
-          <button onClick={() => setIsEdit(false)}>Cancel</button>
-        ) : (
-          <button onClick={() => setIsEdit(true)}>Edit</button>
-        )}
-        {/* <button onClick={() => setAddMonster(!addMonster)}>Add Monster</button> */}
-        <button onClick={() => pushMonster(newMonster, roomId)}>
-          Push Monster
-        </button>
-        {isEdit ? (
-          <p>
-            <button onClick={resetRoom}>Reset</button>
-            <button onClick={changeRoom}>Update</button>
-          </p>
+        ))}
+        <li>
+          Name: <br />
+          <input
+            type="text"
+            name="monsterName"
+            value={newMonster["monsterName"]}
+            onChange={updateMonsterName}
+          />
+        </li>
+        {errorList["monsterNameError"] ? (
+          <p>name must be 3 characters or longer</p>
         ) : null}
-      </p>
-      {sizeError ? (
-        <p className="error">
-          Rooms must be length and width must be at least 1
-        </p>
-      ) : null}
-      {nameError ? (
-        <p className="error">Room name must be at least 3 characters</p>
-      ) : null}
-      <DrawRoom
-        width={newRoom["width"]}
-        length={newRoom["length"]}
-        addMonster={addMonster}
-        setAddMonster={setAddMonster}
-        newMonster={newMonster}
-        setNewMonster={setNewMonster}
-        monsters={room["monsters"]}
-        errorList={errorList}
-        setErrorList={setErrorList}
-        slayMonster={slayMonster}
-        roomId={roomId}
-      />
-    </>
+        <li>X: {newMonster["x"]}</li>
+        <li>Y: {newMonster["y"]}</li>
+      </ul>
+      <table style={tableStyle}>
+        <GraphicRoom
+          mobName={newMonster["monsterName"]}
+          length={length}
+          width={width}
+          addMonster={addMonster}
+          setAddMonster={setAddMonster}
+          newMonster={newMonster}
+          setNewMonster={setNewMonster}
+          monsters={monsters}
+          errorList={errorList}
+          setErrorList={setErrorList}
+        />
+      </table>
+    </div>
   );
 };
