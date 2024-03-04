@@ -52,6 +52,7 @@ export default Single = ({
   }, [room, room["monsters"], pushMonster, slayMonster, addMonster]);
   const localSlay = (pos) => {
     room["monsters"].splice(pos, 1);
+    console.log(rooom["monsters"]);
   };
   const changeValue = (e) => {
     const { name, value } = e.target;
