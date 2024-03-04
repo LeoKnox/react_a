@@ -12,6 +12,7 @@ export default DrawRoom = ({
   setErrorList,
   slayMonster,
   roomId,
+  localSlay,
 }) => {
   const tableStyle = {
     color: "blue",
@@ -47,7 +48,7 @@ export default DrawRoom = ({
           <p>
             Name: {monster["monsterName"]} {monster["x"]} x {monster["y"]}
             <button onClick={() => slayMonster(index, roomId)}>Slay</button>
-            <button onClick={() => slayLocal(index)}>Slay2</button>
+            <button onClick={() => localSlay(index)}>Slay2</button>
           </p>
         ))}
         <li>
