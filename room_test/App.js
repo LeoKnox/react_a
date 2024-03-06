@@ -1,193 +1,110 @@
-import { useState, useEffect } from "react";
-import "./DrawRoom.js";
+import "./styles.css";
+import "./components/Home.js";
+import "./components/Single.js";
+import { useState, useContext, createContext } from "react";
 
-export default Single = ({
-  roomId,
-  room,
-  setRoomId,
-  updateRoom,
-  pushMonster,
-  newMonster,
-  setNewMonster,
-  errorList,
-  setErrorList,
-  slayMonster,
-}) => {
-  const dataStyle = {
-    backgroundColor: "lightblue",
-    height: "8em",
-    padding: "1em",
-    width: "50%",
-    marginLeft: "auto",
-    marginRight: "auto",
-    marginTop: "1em",
-  };
-  const inputStyle = {
-    width: "3em",
-  };
-  const [newRoom, setNewRoom] = useState(room);
-  const [isEdit, setIsEdit] = useState(false);
-  const [sizeError, setSizeError] = useState(false);
-  const [nameError, setNameError] = useState(false);
-  const [addMonster, setAddMonster] = useState(false);
-  const [minRoomX, setMinRoomX] = useState();
-  const [minRoomY, setMinRoomY] = useState();
-  useEffect(() => {
-    if (newRoom["monsters"].length === 0) {
-      setMinRoomX(0);
-      setMinRoomY(0);
-    } else {
-      setMinRoomX(
-        newRoom["monsters"].reduce((prev, current) =>
-          prev && prev["x"] > current["x"] ? prev : current
-        )["x"]
-      );
-      setMinRoomY(
-        newRoom["monsters"].reduce((prev, current) =>
-          prev && prev["y"] > current["y"] ? prev : current
-        )["y"]
-      );
-    }
-  }, [newMonster, room["monsters"], pushMonster, slayMonster]);
-  const changeValue = (e) => {
-    const { name, value } = e.target;
-    setNewRoom((item) => ({
-      ...item,
-      ...item.newRoom,
-      [name]: value,
-    }));
-  };
-  const changeRoom = () => {
-    if (
-      newRoom["width"] > 0 &&
-      newRoom["length"] > 0 &&
-      newRoom["name"].length > 2
-    ) {
-      updateRoom(newRoom);
-      setIsEdit(false);
-      setSizeError(false);
-      setNameError(false);
-    } else {
-      if (newRoom["name"].length < 3) {
-        setNameError(true);
+export default function App() {
+  const [roomId, setRoomId] = useState(-1);
+  const [errorList, setErrorList] = useState({});
+  const roomContext = createContext;
+  const [myRooms, setMyRooms] = useState([
+    {
+      id: 0,
+      name: "entry",
+      description: "entrance",
+      width: 5,
+      length: 5,
+      monsters: [{ monsterName: "ichi", x: 1, y: 1 }],
+    },
+  ]);
+  const [newMonster, setNewMonster] = useState({
+    monsterName: "",
+    x: 0,
+    y: 0,
+  });
+  const slayMonster = (id, roomId) => {
+    let tempRoooms = myRooms.map((room) => {
+      if (room["id"] === roomId) {
+        room["monsters"].splice(id, 1);
+        return room;
       } else {
-        setNameError(false);
+        return room;
       }
-      if (newRoom["length"] < 1 || newRoom["width"] < 1) {
-        setSizeError(true);
-      } else {
-        setSizeError(false);
-      }
-    }
+    });
+    //alert("slay!" + JSON.stringify(myRooms[id]["monsters"]));
+    //return myRooms[roomId]["monsters"].splice(id, 1);
+    //console.log(JSON.stringify(room["monsters"]));
+    //setNewMonster(monsters.filter((monster, index) => index !== id));
   };
-  const resetRoom = () => {
-    setNewRoom(room);
+  const pushMonster = (newMonster, roomId = 0) => {
+    if (newMonster["monsterName"].length <= 2) {
+      setErrorList((errorList) => ({ ...errorList, monsterNameError: true }));
+      return;
+    }
+    const tempRooms = myRooms.map((room) => {
+      if (
+        room["id"] === roomId &&
+        newMonster["x"] > 0 &&
+        newMonster["y"] > 0 &&
+        newMonster["monsterName"].length > 2
+      ) {
+        room["monsters"].push(newMonster);
+        setErrorList({ ...errorList, monsterNameError: undefined });
+        return room;
+      } else {
+        return room;
+      }
+    });
+    let temp = { monsterName: "", x: 0, y: 0 };
+    setNewMonster(temp);
+    console.log(`temp rooms ${tempRooms}`);
+    setMyRooms(tempRooms);
+  };
+  const addRoom = (roomName) => {
+    let newId = 0;
+    myRooms.length
+      ? (newId = myRooms[myRooms.length - 1]["id"] + 1)
+      : (newId = 0);
+    roomName["id"] = newId;
+    roomName["monsters"] = [];
+    setMyRooms((room) => [...room, roomName]);
+  };
+  const deleteRoom = (id) => {
+    setMyRooms(myRooms.filter((room) => room["id"] !== id));
+  };
+  const updateRoom = (updatedRoom) => {
+    const tempRoom = myRooms.map((room) => {
+      if (roomId === room["id"]) {
+        return updatedRoom;
+      } else {
+        return room;
+      }
+    });
+    setMyRooms(tempRoom);
   };
   return (
-    <>
-      <h3>Single Room</h3>
-      <button onClick={() => setRoomId(-1)}>Home</button>
-      <div style={dataStyle}>
-        {isEdit ? (
-          <p>
-            Name:&nbsp;
-            <input
-              type="text"
-              name="name"
-              autoFocus
-              value={newRoom["name"]}
-              onChange={changeValue}
-            />
-          </p>
-        ) : (
-          <p>{room["name"]}</p>
-        )}
-        <p>
-          {isEdit ? (
-            <>
-              Description:{" "}
-              <input
-                type="text"
-                name="description"
-                value={newRoom["description"]}
-                onChange={changeValue}
-              />
-            </>
-          ) : (
-            <>Description: {room["description"]}</>
-          )}
-        </p>
-        <p>
-          {isEdit ? (
-            <>
-              Width:{" "}
-              <input
-                style={inputStyle}
-                type="number"
-                name="width"
-                value={newRoom["width"]}
-                min={newMonster["x"] < minRoomX ? minRoomX : newMonster["x"]}
-                onChange={changeValue}
-              />
-            </>
-          ) : (
-            <>Width: {room["width"]}</>
-          )}{" "}
-          {isEdit ? (
-            <>
-              Length:{" "}
-              <input
-                style={inputStyle}
-                type="number"
-                name="length"
-                value={newRoom["length"]}
-                min={newMonster["y"] < minRoomY ? minRoomY : newMonster["y"]}
-                onChange={changeValue}
-              />
-            </>
-          ) : (
-            <>Length: {room["length"]}</>
-          )}
-        </p>
-      </div>
-      <p>
-        {isEdit ? (
-          <button onClick={() => setIsEdit(false)}>Cancel</button>
-        ) : (
-          <button onClick={() => setIsEdit(true)}>Edit</button>
-        )}
-        {/* <button onClick={() => setAddMonster(!addMonster)}>Add Monster</button> */}
-        <button onClick={() => pushMonster(newMonster, roomId)}>
-          Push Monster
-        </button>
-        {isEdit ? (
-          <p>
-            <button onClick={resetRoom}>Reset</button>
-            <button onClick={changeRoom}>Update</button>
-          </p>
-        ) : null}
-      </p>
-      {sizeError ? (
-        <p className="error">
-          Rooms must be length and width must be at least 1
-        </p>
-      ) : null}
-      {nameError ? (
-        <p className="error">Room name must be at least 3 characters</p>
-      ) : null}
-      <DrawRoom
-        width={newRoom["width"]}
-        length={newRoom["length"]}
-        addMonster={addMonster}
-        setAddMonster={setAddMonster}
-        newMonster={newMonster}
-        setNewMonster={setNewMonster}
-        monsters={room["monsters"]}
-        errorList={errorList}
-        setErrorList={setErrorList}
-        slayMonster={slayMonster}
-        roomId={roomId}
-      />
-    </>
+    <div className="App">
+      {roomId < 0 ? (
+        <Home
+          myRooms={myRooms}
+          addRoom={addRoom}
+          setRoomId={setRoomId}
+          deleteRoom={(id) => deleteRoom(id)}
+        />
+      ) : (
+        <Single
+          roomId={roomId}
+          room={myRooms[roomId]}
+          setRoomId={setRoomId}
+          updateRoom={updateRoom}
+          pushMonster={pushMonster}
+          newMonster={newMonster}
+          setNewMonster={setNewMonster}
+          errorList={errorList}
+          setErrorList={setErrorList}
+          slayMonster={slayMonster}
+        />
+      )}
+    </div>
   );
-};
+}
