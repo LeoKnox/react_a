@@ -23,7 +23,7 @@ export default function App() {
     y: 0,
   });
   const slayMonster = (id, roomId) => {
-    let tempRoooms = myRooms.map((room) => {
+    let tempRooms = myRooms.map((room) => {
       if (room["id"] === roomId) {
         room["monsters"].splice(id, 1);
         return room;
@@ -31,6 +31,7 @@ export default function App() {
         return room;
       }
     });
+    setMyRooms(tempRooms);
     //alert("slay!" + JSON.stringify(myRooms[id]["monsters"]));
     //return myRooms[roomId]["monsters"].splice(id, 1);
     //console.log(JSON.stringify(room["monsters"]));
