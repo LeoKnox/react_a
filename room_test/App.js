@@ -32,10 +32,6 @@ export default function App() {
       }
     });
     setMyRooms(tempRooms);
-    //alert("slay!" + JSON.stringify(myRooms[id]["monsters"]));
-    //return myRooms[roomId]["monsters"].splice(id, 1);
-    //console.log(JSON.stringify(room["monsters"]));
-    //setNewMonster(monsters.filter((monster, index) => index !== id));
   };
   const pushMonster = (newMonster, roomId = 0) => {
     if (newMonster["monsterName"].length <= 2) {
