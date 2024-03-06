@@ -4,10 +4,15 @@
 }
 
 body {
-  background-color: #ddffff;
+  background-color: #eeffff;
 }
 
 .error {
   color: darkred;
   background-color: paleGoldenRod;
+}
+
+input {
+  box-sizing: border-box;
+  background-color: #ddeeee;
 }
