@@ -58,7 +58,9 @@ export default DrawRoom = ({
         {errorList["monsterNameError"] ? (
           <p>name must be 3 characters or longer</p>
         ) : null}
-        <li>X: {newMonster["x"]}</li>
+        <li>
+          <input type="text" value={`X: ${newMonster["x"]}`} disabled />
+        </li>
         <li>Y: {newMonster["y"]}</li>
       </ul>
       <table style={tableStyle}>
