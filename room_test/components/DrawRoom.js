@@ -12,7 +12,6 @@ export default DrawRoom = ({
   setErrorList,
   slayMonster,
   roomId,
-  localSlay,
 }) => {
   const tableStyle = {
     color: "blue",
@@ -21,9 +20,6 @@ export default DrawRoom = ({
     tableLayout: "fixed",
     marginLeft: "auto",
     marginRight: "auto",
-  };
-  const slayLocal = (index) => {
-    monsters.splice(index, 1);
   };
   const updateMonsterName = (e) => {
     const { name, value } = e.target;
@@ -48,7 +44,6 @@ export default DrawRoom = ({
           <p>
             Name: {monster["monsterName"]} {monster["x"]} x {monster["y"]}
             <button onClick={() => slayMonster(index, roomId)}>Slay</button>
-            <button onClick={() => localSlay(index)}>Slay2</button>
           </p>
         ))}
         <li>
