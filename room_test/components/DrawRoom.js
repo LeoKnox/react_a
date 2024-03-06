@@ -59,7 +59,8 @@ export default DrawRoom = ({
           <p>name must be 3 characters or longer</p>
         ) : null}
         <li>
-          <input type="text" value={`X: ${newMonster["x"]}`} disabled />
+          X:
+          <input type="text" value={newMonster["x"]} disabled />
         </li>
         <li>Y: {newMonster["y"]}</li>
       </ul>
